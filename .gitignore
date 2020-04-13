@@ -1,0 +1,20 @@
+### Python ###
+__pycache__/
+*.py[cod]
+*$py.class
+
+### Jupyter ###
+.ipynb_checkpoints
+
+### Editors ###
+.vscode/
+*~
+*.swp
+*.swo
+
+### MacOS ###
+.DS_Store
+
+### Other ###
+backup/
+rawdata/
