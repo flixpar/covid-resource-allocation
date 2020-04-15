@@ -1,42 +1,42 @@
 State,Abbreviation,Capitol
-Alabama,AL,Montgomery
 Alaska,AK,Juneau
-Arizona,AZ,Phoenix
+Alabama,AL,Montgomery
 Arkansas,AR,Little Rock
+Arizona,AZ,Phoenix
 California,CA,Sacramento
 Colorado,CO,Denver
 Connecticut,CT,Hartford
-Delaware,DE,Dover
 District of Columbia,DC,"Washington, D.C."
+Delaware,DE,Dover
 Florida,FL,Tallahassee
 Georgia,GA,Atlanta
 Hawaii,HI,Honolulu
+Iowa,IA,Des Moines
 Idaho,ID,Boise
 Illinois,IL,Springfield
 Indiana,IN,Indianapolis
-Iowa,IA,Des Moines
 Kansas,KS,Topeka
 Kentucky,KY,Frankfort
 Louisiana,LA,Baton Rouge
+Massachusetts,MA,Boston
+Maryland,MD,Annapolis
 Maine,ME,Augusta
-Montana,MT,Annapolis
-Nebraska,NE,Boston
-Nevada,NV,Lansing
-New Hampshire,NH,Saint Paul
-New Jersey,NJ,Jackson
-New Mexico,NM,Jefferson City
-New York,NY,Helena
-North Carolina,NC,Lincoln
-North Dakota,ND,Carson City
-Ohio,OH,Concord
-Oklahoma,OK,Trenton
-Oregon,OR,Santa Fe
-Maryland,MD,Albany
-Massachusetts,MA,Raleigh
-Michigan,MI,Bismarck
-Minnesota,MN,Columbus
-Mississippi,MS,Oklahoma City
-Missouri,MO,Salem
+Michigan,MI,Lansing
+Minnesota,MN,Saint Paul
+Missouri,MO,Jefferson City
+Mississippi,MS,Jackson
+Montana,MT,Helena
+North Carolina,NC,Raleigh
+North Dakota,ND,Bismarck
+Nebraska,NE,Lincoln
+New Hampshire,NH,Concord
+New Jersey,NJ,Trenton
+New Mexico,NM,Santa Fe
+Nevada,NV,Carson City
+New York,NY,Albany
+Ohio,OH,Columbus
+Oklahoma,OK,Oklahoma City
+Oregon,OR,Salem
 Pennsylvania,PA,Harrisburg
 Rhode Island,RI,Providence
 South Carolina,SC,Columbia
@@ -44,9 +44,9 @@ South Dakota,SD,Pierre
 Tennessee,TN,Nashville
 Texas,TX,Austin
 Utah,UT,Salt Lake City
-Vermont,VT,Montpelier
 Virginia,VA,Richmond
+Vermont,VT,Montpelier
 Washington,WA,Olympia
-West Virginia,WV,Charleston
 Wisconsin,WI,Madison
+West Virginia,WV,Charleston
 Wyoming,WY,Cheyenne
