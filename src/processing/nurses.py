@@ -46,19 +46,9 @@ def get_cbsa_df():
     cbsa_df.columns = ['code', 'title', 'category']
 
     df = pd.merge(cbsa_df, df, on='code', how='inner')
-    df = df[df.category == 'Metropolitan']
+    # df = df[df.category == 'Metropolitan']
     df.columns = ['area', 'title', 'category', 'county_code', 'div_code', 'county_name']
 
-    return df
-
-
-def get_county_df():
-    county_df = pd.read_csv(os.path.join(DATADIR, 'geography/county_codes.csv')).astype({'code': str})
-    county_df.code = county_df.apply(lambda x: '0' + x.code if len(x.code) < 5 else x.code, axis=1)
-    county_df.columns = ['code', 'county', 'abbrev']
-    state_df = pd.read_csv(os.path.join(DATADIR, 'geography/state_name.csv'))
-    state_df.columns = ['state', 'nickname', 'abbrev']
-    df = pd.merge(county_df, state_df, on='abbrev', how='inner')
     return df
 
 
@@ -74,6 +64,30 @@ def get_metarea_df():
         df.tot_emp = df.tot_emp.apply(pd.to_numeric, errors='coerce').fillna(0, downcast='infer')
         with open(filename + '.pkl', 'wb') as pickle_file:
             pickle.dump(df, pickle_file)
+    return df
+
+
+def disaggregate_to_county(county_df):
+    cbsa_df = get_cbsa_df()
+    metarea_df = get_metarea_df()
+    df = pd.merge(metarea_df, cbsa_df, on='area', how='inner').rename(columns={'county_code': 'code'})
+    df = df.loc[:, ['area', 'title', 'category', 'occ_code', 'occ_title', 'tot_emp', 'code']]
+    df = pd.DataFrame({
+          col:np.repeat(df[col].values, df['code'].str.len())
+          for col in df.columns.drop('code')}
+        ).assign(**{'code':np.concatenate(df['code'].values)})[df.columns]
+    df = pd.merge(df, county_df, on='code', how='inner')
+    df = df.loc[:, ['code', 'county', 'abbrev', 'state', 'area', 'title', 'category', 'occ_code', 'occ_title', 'tot_emp']].rename(columns={'area': 'cbsa'})
+    return df
+
+
+def get_county_df():
+    county_df = pd.read_csv(os.path.join(DATADIR, 'geography/county_codes.csv')).astype({'code': str})
+    county_df.code = county_df.apply(lambda x: '0' + x.code if len(x.code) < 5 else x.code, axis=1)
+    county_df.columns = ['code', 'county', 'abbrev']
+    state_df = pd.read_csv(os.path.join(DATADIR, 'geography/state_name.csv'))
+    state_df.columns = ['state', 'nickname', 'abbrev']
+    df = pd.merge(county_df, state_df, on='abbrev', how='inner')
     return df
 
 
@@ -101,69 +115,66 @@ def get_hospital_beds(county_df):
 
 
 def disaggregate_df(df, feature_df, feature):
-    def process_entry(entry, df, feature):
-        if isinstance(entry, list):
+    def process_entry(code, df, feature):
+        if isinstance(code, str):
             if feature == 'population':
-                return [df[df.code == str(code)][2019].iat[0].astype(int) for code in entry if str(code) in df.code.tolist()]
+                return df[df.code == str(code)][2019].iat[0].astype(int) if code in df.code.tolist() else 0
+                # return [df[df.code == str(code)][2019].iat[0].astype(int) for code in entry if str(code) in df.code.tolist()]
             elif 'beds' in feature:
-                return [df[df.code == str(code)][feature].iat[0].astype(int) for code in entry if str(code) in df.code.tolist()]
+                return df[df.code == str(code)][feature].iat[0].astype(int) if code in df.code.tolist() else 0
+                # return [df[df.code == str(code)][feature].iat[0].astype(int) for code in entry if str(code) in df.code.tolist()]
         return np.nan
-
-    df[feature] = df.apply(lambda x: process_entry(x.county_code, feature_df, feature), axis=1)
+    df[feature] = df.apply(lambda x: process_entry(x.code, feature_df, feature), axis=1)
     return df
 
 
 def distribute_resources(df, feature):
-    def process_entry(employees, features):
-        if isinstance(features, list):
-            total = np.sum(features)
+    def process_entry(employees, cbsa, df, count, feature):
+        if isinstance(count, int):
+            total = np.sum(df[df.cbsa == cbsa][feature])
             if total == 0 or employees == '**':
-                return [0 for feature in features]
-            return [np.floor(employees * feature / total).astype(int) for feature in features]
+                return 0
+            return np.floor(employees * count / total).astype(int)
         return np.nan
 
-    df['emp_distributed_by_' + feature] = df.apply(lambda x: process_entry(x.tot_emp, x[feature]), axis=1)
+    df['emp_distributed_by_' + feature] = df.apply(lambda x: process_entry(x.tot_emp, x.cbsa, df, x[feature], feature), axis=1)
     return df
 
 
 def weighted_distribution(df):
     WEIGHTS = {'staffed_beds': 0.2/0.7, 'icu_beds': 0.5/0.7}
-    def process_entry(employees, staffed_beds, icu_beds):
-        assert len(staffed_beds) == len(icu_beds)
-        if isinstance(staffed_beds, list) and isinstance(icu_beds, list):
-            total_staffed = np.sum(staffed_beds)
-            total_icu = np.sum(icu_beds)
+    def process_entry(employees, cbsa, df, staffed_beds, icu_beds):
+        if isinstance(staffed_beds, int) and isinstance(icu_beds, int):
+            df = df[df.cbsa == cbsa].loc[:, ['staffed_beds', 'icu_beds']]
+            total_staffed = np.sum(df.staffed_beds)
+            total_icu = np.sum(df.icu_beds)
             if employees == '**' or (total_staffed == 0 and total_icu == 0):
-                return [0 for staffed_bed, icu_bed in zip(staffed_beds, icu_beds)]
+                return 0
             elif total_staffed > 0 and total_icu == 0:
-                return [np.floor(employees * staffed_bed / total_staffed).astype(int) for staffed_bed in staffed_beds]
+                return np.floor(employees * staffed_beds / total_staffed).astype(int)
             elif total_staffed == 0 and total_icu > 0:
-                return [np.floor(employees * icu_bed / total_icu).astype(int) for icu_bed in icu_beds]
+                return np.floor(employees * icu_beds / total_icu).astype(int)
             else:
-                return [np.floor(employees * (WEIGHTS['staffed_beds'] * staffed_bed / total_staffed
-                    + WEIGHTS['icu_beds'] * icu_bed / total_icu)).astype(int) for staffed_bed, icu_bed in zip(staffed_beds, icu_beds)]
+                return np.floor(employees * (WEIGHTS['staffed_beds'] * staffed_beds / total_staffed
+                    + WEIGHTS['icu_beds'] * icu_beds / total_icu)).astype(int)
         return np.nan
 
-    df['weighted_emp_distribution'] = df.apply(lambda x: process_entry(x.tot_emp, x['staffed_beds'], x['icu_beds']), axis=1)
+    df['weighted_emp_distribution'] = df.apply(lambda x: process_entry(x.tot_emp, x.cbsa, df, x.staffed_beds, x.icu_beds), axis=1)
     return df
 
 
 def main():
     features = ['staffed_beds', 'icu_beds']
-
-    cbsa_df = get_cbsa_df()
     county_df = get_county_df()
+    df = disaggregate_to_county(county_df)
     population_df = get_population_df(county_df)
     hospital_bed_df = get_hospital_beds(county_df)
-    metarea_df = get_metarea_df()
-    df = pd.merge(metarea_df, cbsa_df, on='area', how='inner')
     for feature in features:
         df = disaggregate_df(df, hospital_bed_df, feature)
         df = distribute_resources(df, feature)
     df = weighted_distribution(df)
 
-
-    df = df.loc[:, ['area', 'tot_emp', 'county_name', 'staffed_beds', 'icu_beds', 'emp_distributed_by_staffed_beds', 'emp_distributed_by_icu_beds', 'weighted_emp_distribution']]
+    # df = df.loc[:, ['area', 'tot_emp', 'county_name', 'staffed_beds', 'icu_beds', 'emp_distributed_by_staffed_beds', 'emp_distributed_by_icu_beds', 'weighted_emp_distribution']]
     df.to_csv(os.path.join(DATADIR, 'nurses/deaggregated_by_hospital_beds.csv'), index=False)
 
 if __name__ == '__main__':

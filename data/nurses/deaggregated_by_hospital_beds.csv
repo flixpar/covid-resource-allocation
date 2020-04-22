@@ -1,326 +1,959 @@
-area,tot_emp,county_name,staffed_beds,icu_beds,emp_distributed_by_staffed_beds,emp_distributed_by_icu_beds,weighted_emp_distribution
-10180,1630,"['      Callahan County, TX', '      Jones County, TX', '      Taylor County, TX']","[7, 31]","[1, 0]","[300, 1329]","[1630, 0]","[1250, 379]"
-10380,650,"['      Aguada Municipio, PR', '      Aguadilla Municipio, PR', '      Aasco Municipio, PR', '      Isabela Municipio, PR', '      Lares Municipio, PR', '      Moca Municipio, PR', '      Rincn Municipio, PR', '      San Sebastin Municipio, PR']",[],[],[],[],[]
-10420,8490,"['      Portage County, OH', '      Summit County, OH']","[191, 23]","[16, 0]","[7577, 912]","[8490, 0]","[8229, 260]"
-10580,10010,"['      Albany County, NY', '      Rensselaer County, NY', '      Saratoga County, NY', '      Schenectady County, NY', '      Schoharie County, NY']","[67, 20, 88, 334, 40]","[2, 4, 0, 36, 7]","[1221, 364, 1604, 6089, 729]","[408, 817, 0, 7354, 1430]","[640, 687, 458, 6993, 1229]"
-10740,10160,"['      Bernalillo County, NM', '      Sandoval County, NM', '      Torrance County, NM', '      Valencia County, NM']","[48, 60]","[0, 11]","[4515, 5644]","[0, 10160]","[1290, 8869]"
-10780,1870,"['      Grant Parish, LA', '      Rapides Parish, LA']",[16],[0],[1870],[0],[1870]
-10900,9750,"['      Warren County, NJ', '      Carbon County, PA', '      Lehigh County, PA', '      Northampton County, PA']","[92, 68, 120, 108]","[12, 6, 0, 12]","[2311, 1708, 3015, 2713]","[3900, 1950, 0, 3900]","[3446, 1881, 861, 3561]"
-11020,1850,"['      Blair County, PA']",[80],[0],[1850],[0],[1850]
-11100,2620,"['      Armstrong County, TX', '      Carson County, TX', '      Potter County, TX', '      Randall County, TX']",[72],[11],[2620],[2620],[2620]
-11180,810,"['      Story County, IA']",[17],[3],[810],[810],[810]
-11260,4270,"['      Anchorage Municipality, AK', '      Matanuska-Susitna Borough, AK']","[0, 74]","[0, 14]","[0, 4270]","[0, 4270]","[0, 4270]"
-11460,9340,"['      Washtenaw County, MI']",[24],[4],[9340],[9340],[9340]
-11500,920,"['      Calhoun County, AL']",[125],[6],[920],[920],[920]
-11540,1920,"['      Calumet County, WI', '      Outagamie County, WI']","[25, 147]","[4, 22]","[279, 1640]","[295, 1624]","[290, 1629]"
-11700,6210,"['      Buncombe County, NC', '      Haywood County, NC', '      Henderson County, NC', '      Madison County, NC']","[34, 122, 160]","[5, 12, 13]","[668, 2397, 3144]","[1035, 2484, 2691]","[930, 2459, 2820]"
-12020,1680,"['      Clarke County, GA', '      Madison County, GA', '      Oconee County, GA', '      Oglethorpe County, GA']",[165],[68],[1680],[1680],[1680]
-12060,40830,"['      Barrow County, GA', '      Bartow County, GA', '      Butts County, GA', '      Carroll County, GA', '      Cherokee County, GA', '      Clayton County, GA', '      Cobb County, GA', '      Coweta County, GA', '      Dawson County, GA', '      DeKalb County, GA', '      Douglas County, GA', '      Fayette County, GA', '      Forsyth County, GA', '      Fulton County, GA', '      Gwinnett County, GA', '      Haralson County, GA', '      Heard County, GA', '      Henry County, GA', '      Jasper County, GA', '      Lamar County, GA', '      Meriwether County, GA', '      Newton County, GA', '      Paulding County, GA', '      Pickens County, GA', '      Pike County, GA', '      Rockdale County, GA', '      Spalding County, GA', '      Walton County, GA']","[56, 119, 25, 157, 114, 244, 367, 50, 56, 102, 221, 304, 110, 90, 15, 215, 12, 25, 94, 112, 52, 138, 160, 88]","[6, 21, 4, 22, 20, 34, 34, 0, 0, 8, 66, 24, 14, 0, 3, 33, 2, 4, 10, 8, 6, 16, 22, 0]","[781, 1660, 348, 2190, 1590, 3404, 5121, 697, 781, 1423, 3083, 4242, 1534, 1255, 209, 3000, 167, 348, 1311, 1562, 725, 1925, 2232, 1227]","[686, 2401, 457, 2516, 2287, 3888, 3888, 0, 0, 914, 7548, 2744, 1601, 0, 343, 3774, 228, 457, 1143, 914, 686, 1829, 2516, 0]","[713, 2189, 426, 2423, 2088, 3750, 4240, 199, 223, 1060, 6272, 3172, 1582, 358, 304, 3553, 211, 426, 1191, 1100, 697, 1857, 2435, 350]"
-12100,3260,"['      Atlantic County, NJ']",[0],[0],[0],[0],[0]
-12220,960,"['      Lee County, AL']",[372],[20],[960],[960],[960]
-12260,6750,"['      Burke County, GA', '      Columbia County, GA', '      McDuffie County, GA', '      Richmond County, GA', '      Aiken County, SC', '      Edgefield County, SC']","[40, 25, 0, 204, 25]","[7, 4, 1, 35, 4]","[918, 573, 0, 4683, 573]","[926, 529, 132, 4632, 529]","[924, 542, 94, 4647, 542]"
-12420,14860,"['      Bastrop County, TX', '      Caldwell County, TX', '      Hays County, TX', '      Travis County, TX', '      Williamson County, TX']","[8, 34, 40, 211, 54]","[1, 6, 0, 60, 9]","[342, 1456, 1712, 9035, 2312]","[195, 1173, 0, 11731, 1759]","[237, 1253, 489, 10961, 1917]"
-12540,5290,"['      Kern County, CA']",[90],[0],[5290],[0],[5290]
-12580,32020,"['      Anne Arundel County, MD', '      Baltimore County, MD', '      Carroll County, MD', '      Harford County, MD', '      Howard County, MD', ""      Queen Anne's County, MD"", '      Baltimore city, MD']","[325, 639, 153, 82, 245, 0]","[20, 0, 12, 5, 16, 4]","[7206, 14169, 3392, 1818, 5432, 0]","[11235, 0, 6741, 2808, 8988, 2247]","[10084, 4048, 5784, 2525, 7972, 1605]"
-12940,5640,"['      Ascension Parish, LA', '      East Baton Rouge Parish, LA', '      East Feliciana Parish, LA', '      Iberville Parish, LA', '      Livingston Parish, LA', '      Pointe Coupee Parish, LA', '      St. Helena Parish, LA', '      West Baton Rouge Parish, LA', '      West Feliciana Parish, LA']","[0, 64, 337, 10, 0, 25, 25, 25]","[32, 0, 0, 0, 0, 4, 4, 4]","[0, 742, 3910, 116, 0, 290, 290, 290]","[4101, 0, 0, 0, 0, 512, 512, 512]","[2929, 212, 1117, 33, 0, 449, 449, 449]"
-12980,1670,"['      Calhoun County, MI']",[25],[5],[1670],[1670],[1670]
-13020,900,"['      Bay County, MI']",[297],[32],[900],[900],[900]
-13140,2690,"['      Hardin County, TX', '      Jefferson County, TX', '      Orange County, TX']","[0, 27]","[0, 0]","[0, 2690]","[0, 0]","[0, 2690]"
-13380,0,"['      Whatcom County, WA']",[207],[24],[0],[0],[0]
-13460,1950,"['      Deschutes County, OR']",[48],[6],[1950],[1950],[1950]
-13780,2540,"['      Broome County, NY', '      Tioga County, NY']",[161],[10],[2540],[2540],[2540]
-13820,16760,"['      Bibb County, AL', '      Blount County, AL', '      Chilton County, AL', '      Jefferson County, AL', '      St. Clair County, AL', '      Shelby County, AL', '      Walker County, AL']","[25, 25, 26, 0, 40, 34, 207]","[4, 6, 6, 0, 6, 0, 12]","[1173, 1173, 1220, 0, 1877, 1596, 9717]","[1971, 2957, 2957, 0, 2957, 0, 5915]","[1743, 2447, 2461, 0, 2649, 456, 7001]"
-13900,2120,"['      Burleigh County, ND', '      Morton County, ND']","[205, 41]","[13, 6]","[1766, 353]","[1450, 669]","[1540, 579]"
-13980,1060,"['      Giles County, VA', '      Montgomery County, VA', '      Pulaski County, VA', '      Radford city, VA']","[25, 88, 92]","[4, 10, 8]","[129, 455, 475]","[192, 481, 385]","[174, 474, 411]"
-14020,1320,"['      Greene County, IN', '      Monroe County, IN', '      Owen County, IN']","[25, 71]","[5, 0]","[343, 976]","[1320, 0]","[1041, 278]"
-14260,6570,"['      Ada County, ID', '      Boise County, ID', '      Canyon County, ID', '      Gem County, ID', '      Owyhee County, ID']","[72, 70, 13]","[0, 10, 2]","[3051, 2967, 551]","[0, 5475, 1095]","[871, 4758, 939]"
-14500,3170,"['      Boulder County, CO']",[139],[18],[3170],[3170],[3170]
-14540,1620,"['      Edmonson County, KY', '      Warren County, KY']",[162],[16],[1620],[1620],[1620]
-14740,1450,"['      Kitsap County, WA']",[298],[20],[1450],[1450],[1450]
-15180,2160,"['      Cameron County, TX']",[94],[0],[2160],[0],[2160]
-15260,1260,"['      Brantley County, GA', '      Glynn County, GA', '      McIntosh County, GA']",[300],[12],[1260],[1260],[1260]
-15380,12280,"['      Erie County, NY', '      Niagara County, NY']","[46, 133]","[0, 12]","[3155, 9124]","[0, 12280]","[901, 11378]"
-15500,880,"['      Alamance County, NC']",[176],[20],[880],[880],[880]
-15940,3710,"['      Carroll County, OH', '      Stark County, OH']",[30],[5],[3710],[3710],[3710]
-15980,5100,"['      Lee County, FL']",[60],[10],[5100],[5100],[5100]
-16180,780,"['      Carson City, NV']",[29],[5],[780],[780],[780]
-16220,1070,"['      Natrona County, WY']",[16],[3],[1070],[1070],[1070]
-16300,2490,"['      Benton County, IA', '      Jones County, IA', '      Linn County, IA']","[25, 22, 301]","[4, 4, 16]","[178, 157, 2153]","[415, 415, 1660]","[347, 341, 1801]"
-16580,2300,"['      Champaign County, IL', '      Ford County, IL', '      Piatt County, IL']","[77, 25, 16]","[0, 2, 3]","[1500, 487, 311]","[0, 920, 1380]","[428, 796, 1074]"
-16620,3530,"['      Boone County, WV', '      Clay County, WV', '      Kanawha County, WV', '      Lincoln County, WV', '      Putnam County, WV']","[25, 822]","[4, 95]","[104, 3425]","[142, 3387]","[131, 3398]"
-16700,10650,"['      Berkeley County, SC', '      Charleston County, SC', '      Dorchester County, SC']","[0, 0]","[32, 72]","[0, 0]","[3276, 7373]","[3276, 7373]"
-16740,23720,"['      Anson County, NC', '      Cabarrus County, NC', '      Gaston County, NC', '      Mecklenburg County, NC', '      Union County, NC', '      York County, SC']","[15, 447, 383, 46, 182, 50]","[3, 15, 57, 4, 14, 0]","[316, 9441, 8089, 971, 3844, 1056]","[765, 3825, 14538, 1020, 3570, 0]","[637, 5430, 12695, 1006, 3648, 301]"
-16820,3880,"['      Albemarle County, VA', '      Fluvanna County, VA', '      Greene County, VA', '      Nelson County, VA', '      Charlottesville city, VA']","[50, 585]","[0, 14]","[305, 3574]","[0, 3880]","[87, 3792]"
-16860,6260,"['      Catoosa County, GA', '      Dade County, GA', '      Walker County, GA', '      Hamilton County, TN', '      Marion County, TN', '      Sequatchie County, TN']","[36, 36, 88]","[6, 6, 0]","[1408, 1408, 3443]","[3130, 3130, 0]","[2638, 2638, 983]"
-16940,920,"['      Laramie County, WY']",[30],[1],[920],[920],[920]
-16980,97030,"['      Lake County, IL', '      Kenosha County, WI']","[190, 74]","[23, 12]","[69832, 27197]","[63762, 33267]","[65496, 31533]"
-17020,2250,"['      Butte County, CA']",[298],[33],[2250],[2250],[2250]
-17140,24480,"['      Dearborn County, IN', '      Franklin County, IN', '      Ohio County, IN', '      Boone County, KY', '      Bracken County, KY', '      Campbell County, KY', '      Gallatin County, KY', '      Grant County, KY', '      Kenton County, KY', '      Pendleton County, KY', '      Brown County, OH', '      Butler County, OH', '      Clermont County, OH', '      Hamilton County, OH', '      Warren County, OH']","[16, 40, 123, 15, 197, 96, 147, 60, 16]","[0, 0, 21, 3, 0, 0, 16, 0, 6]","[551, 1379, 4240, 517, 6792, 3309, 5068, 2068, 551]","[0, 0, 11175, 1596, 0, 0, 8514, 0, 3193]","[157, 394, 9194, 1288, 1940, 945, 7530, 591, 2438]"
-17300,1150,"['      Christian County, KY', '      Trigg County, KY', '      Montgomery County, TN', '      Stewart County, TN']","[97, 25, 41]","[0, 4, 0]","[684, 176, 289]","[0, 1150, 0]","[195, 871, 82]"
-17420,540,"['      Bradley County, TN', '      Polk County, TN']",[183],[27],[540],[540],[540]
-17460,25600,"['      Cuyahoga County, OH', '      Geauga County, OH', '      Lake County, OH', '      Lorain County, OH', '      Medina County, OH']","[72, 124, 312, 126, 130]","[0, 12, 27, 12, 12]","[2412, 4154, 10454, 4221, 4356]","[0, 4876, 10971, 4876, 4876]","[689, 4670, 10823, 4689, 4727]"
-17660,1500,"['      Kootenai County, ID']",[30],[9],[1500],[1500],[1500]
-17780,1600,"['      Brazos County, TX', '      Burleson County, TX', '      Robertson County, TX']","[72, 15]","[0, 3]","[1324, 275]","[0, 1600]","[378, 1221]"
-17820,5970,"['      El Paso County, CO', '      Teller County, CO']","[0, 15]","[35, 3]","[0, 5970]","[5498, 471]","[3927, 2042]"
-17860,3410,"['      Boone County, MO', '      Howard County, MO']",[18],[3],[3410],[3410],[3410]
-17900,8670,"['      Calhoun County, SC', '      Fairfield County, SC', '      Kershaw County, SC', '      Lexington County, SC', '      Richland County, SC', '      Saluda County, SC']","[121, 122, 178]","[10, 0, 31]","[2491, 2512, 3665]","[2114, 0, 6555]","[2222, 717, 5729]"
-17980,2310,"['      Russell County, AL', '      Chattahoochee County, GA', '      Harris County, GA', '      Marion County, GA', '      Muscogee County, GA']","[47, 250, 334]","[8, 0, 28]","[172, 915, 1222]","[513, 0, 1796]","[415, 261, 1632]"
-18020,590,"['      Bartholomew County, IN']",[225],[17],[590],[590],[590]
-18140,23250,"['      Delaware County, OH', '      Fairfield County, OH', '      Franklin County, OH', '      Licking County, OH', '      Madison County, OH', '      Morrow County, OH', '      Pickaway County, OH', '      Union County, OH']","[60, 213, 144, 227, 45, 23, 83, 60]","[0, 20, 0, 13, 13, 3, 8, 7]","[1631, 5792, 3915, 6172, 1223, 625, 2257, 1631]","[0, 7265, 0, 4722, 4722, 1089, 2906, 2542]","[466, 6844, 1118, 5136, 3722, 957, 2720, 2282]"
-18580,3770,"['      Aransas County, TX', '      Nueces County, TX', '      San Patricio County, TX']",[19],[2],[3770],[3770],[3770]
-19060,1300,"['      Allegany County, MD', '      Mineral County, WV']","[200, 25]","[14, 4]","[1155, 144]","[1011, 288]","[1052, 247]"
-19100,60620,"['      Johnson County, TX', '      Parker County, TX', '      Tarrant County, TX', '      Wise County, TX']","[109, 26, 36, 49]","[7, 0, 6, 21]","[30034, 7164, 9919, 13501]","[12480, 0, 10697, 37441]","[17495, 2046, 10475, 30601]"
-19140,850,"['      Murray County, GA', '      Whitfield County, GA']","[29, 246]","[5, 34]","[89, 760]","[108, 741]","[103, 746]"
-19180,600,"['      Vermilion County, IL']",[22],[4],[600],[600],[600]
-19340,4450,"['      Henry County, IL', '      Mercer County, IL', '      Rock Island County, IL', '      Scott County, IA']","[25, 22, 145, 50]","[3, 4, 7, 8]","[459, 404, 2666, 919]","[606, 809, 1415, 1618]","[564, 693, 1773, 1418]"
-19380,12100,"['      Greene County, OH', '      Miami County, OH', '      Montgomery County, OH', '      Preble County, OH']","[49, 0, 12]","[8, 32, 2]","[9719, 0, 2380]","[2304, 9219, 576]","[4423, 6585, 1091]"
-19460,960,"['      Lawrence County, AL', '      Morgan County, AL']","[43, 200]","[6, 23]","[169, 790]","[198, 761]","[190, 769]"
-19500,1160,"['      Macon County, IL']",[202],[22],[1160],[1160],[1160]
-19660,5120,"['      Volusia County, FL']",[34],[8],[5120],[5120],[5120]
-19740,29710,"['      Adams County, CO', '      Arapahoe County, CO', '      Broomfield County, CO', '      Clear Creek County, CO', '      Denver County, CO', '      Douglas County, CO', '      Elbert County, CO', '      Gilpin County, CO', '      Jefferson County, CO', '      Park County, CO']","[0, 40, 0, 53, 10]","[1, 0, 0, 8, 2]","[0, 11537, 0, 15287, 2884]","[2700, 0, 0, 21607, 5401]","[1929, 3296, 0, 19801, 4682]"
-19780,7280,"['      Dallas County, IA', '      Guthrie County, IA', '      Madison County, IA', '      Polk County, IA', '      Warren County, IA']","[25, 25, 25, 30]","[4, 4, 4, 7]","[1733, 1733, 1733, 2080]","[1532, 1532, 1532, 2682]","[1589, 1589, 1589, 2510]"
-19820,41400,"['      Lapeer County, MI', '      Livingston County, MI', '      Macomb County, MI', '      Oakland County, MI', '      St. Clair County, MI']","[183, 43, 36, 44, 65]","[10, 8, 15, 7, 3]","[20421, 4798, 4017, 4909, 7253]","[9627, 7702, 14441, 6739, 2888]","[12711, 6872, 11463, 6216, 4135]"
-20020,1980,"['      Geneva County, AL', '      Henry County, AL', '      Houston County, AL']","[73, 235]","[6, 26]","[469, 1510]","[371, 1608]","[399, 1580]"
-20100,1520,"['      Kent County, DE']",[34],[0],[1520],[0],[1520]
-20220,1410,"['      Dubuque County, IA']",[87],[10],[1410],[1410],[1410]
-20260,4720,"['      Carlton County, MN', '      St. Louis County, MN', '      Douglas County, WI']","[22, 16, 25]","[4, 3, 4]","[1648, 1198, 1873]","[1716, 1287, 1716]","[1696, 1261, 1761]"
-20500,12470,"['      Chatham County, NC', '      Durham County, NC', '      Orange County, NC', '      Person County, NC']","[25, 0, 83, 38]","[4, 32, 15, 6]","[2135, 0, 7089, 3245]","[875, 7000, 3281, 1312]","[1235, 5000, 4369, 1864]"
-20740,2190,"['      Chippewa County, WI', '      Eau Claire County, WI']","[25, 44]","[4, 8]","[793, 1396]","[730, 1460]","[748, 1441]"
-20940,960,"['      Imperial County, CA']",[161],[20],[960],[960],[960]
-21060,1210,"['      Hardin County, KY', '      Larue County, KY']",[40],[0],[1210],[0],[1210]
-21140,2010,"['      Elkhart County, IN']",[16],[0],[2010],[0],[2010]
-21300,1130,"['      Chemung County, NY']",[80],[0],[1130],[0],[1130]
-21340,5950,"['      El Paso County, TX']",[106],[12],[5950],[5950],[5950]
-21500,3200,"['      Erie County, PA']",[50],[9],[3200],[3200],[3200]
-21660,3370,"['      Lane County, OR']",[150],[0],[3370],[0],[3370]
-21780,4390,"['      Gibson County, IN', '      Posey County, IN', '      Vanderburgh County, IN', '      Warrick County, IN', '      Henderson County, KY', '      Webster County, KY']","[25, 400, 0, 118]","[5, 60, 32, 12]","[202, 3233, 0, 953]","[201, 2416, 1288, 483]","[201, 2650, 920, 617]"
-21820,700,"['      Fairbanks North Star Borough, AK']",[122],[13],[700],[700],[700]
-22020,4260,"['      Clay County, MN', '      Cass County, ND']",[42],[0],[4260],[0],[4260]
-22140,790,"['      San Juan County, NM']",[184],[10],[790],[790],[790]
-22180,3010,"['      Cumberland County, NC', '      Hoke County, NC']","[0, 41]","[0, 7]","[0, 3010]","[0, 3010]","[0, 3010]"
-22220,3610,"['      Benton County, AR', '      Madison County, AR', '      Washington County, AR', '      McDonald County, MO']","[36, 24]","[0, 9]","[2166, 1444]","[0, 3610]","[618, 2991]"
-22420,4210,"['      Genesee County, MI']",[370],[57],[4210],[4210],[4210]
-22500,3050,"['      Darlington County, SC', '      Florence County, SC']","[116, 88]","[12, 0]","[1734, 1315]","[3050, 0]","[2674, 375]"
-22520,1410,"['      Colbert County, AL', '      Lauderdale County, AL']","[122, 233]","[10, 36]","[484, 925]","[306, 1103]","[357, 1052]"
-22660,3850,"['      Larimer County, CO']",[23],[4],[3850],[3850],[3850]
-22900,2310,"['      Crawford County, AR', '      Franklin County, AR', '      Sebastian County, AR', '      Le Flore County, OK', '      Sequoyah County, OK']","[35, 25, 249, 25, 41]","[8, 4, 31, 4, 7]","[215, 154, 1533, 154, 252]","[342, 171, 1326, 171, 299]","[306, 166, 1385, 166, 286]"
-23060,5560,"['      Allen County, IN', '      Wells County, IN', '      Whitley County, IN']","[16, 62, 30]","[0, 7, 5]","[823, 3191, 1544]","[0, 3243, 2316]","[235, 3228, 2096]"
-23420,7640,"['      Fresno County, CA']",[16],[0],[7640],[0],[7640]
-23460,1220,"['      Etowah County, AL']",[222],[40],[1220],[1220],[1220]
-23540,5590,"['      Alachua County, FL', '      Gilchrist County, FL']",[48],[8],[5590],[5590],[5590]
-24140,1130,"['      Wayne County, NC']",[261],[16],[1130],[1130],[1130]
-24300,1820,"['      Mesa County, CO']",[0],[1],[0],[1820],[1820]
-24340,12820,"['      Barry County, MI', '      Ionia County, MI', '      Kent County, MI', '      Newaygo County, MI']","[25, 25, 119, 25]","[6, 2, 1, 9]","[1652, 1652, 7863, 1652]","[4273, 1424, 712, 6410]","[3524, 1489, 2755, 5050]"
-24500,0,"['      Cascade County, MT']",[312],[20],[0],[0],[0]
-24540,1170,"['      Weld County, CO']",[0],[7],[0],[1170],[1170]
-24580,4040,"['      Brown County, WI', '      Kewaunee County, WI', '      Oconto County, WI']","[32, 22]","[6, 4]","[2394, 1645]","[2424, 1616]","[2415, 1624]"
-24660,6140,"['      Guilford County, NC', '      Randolph County, NC', '      Rockingham County, NC']","[101, 145, 108]","[6, 12, 9]","[1751, 2514, 1873]","[1364, 2728, 2046]","[1475, 2667, 1997]"
-24780,3550,"['      Greene County, NC', '      Pitt County, NC']",[48],[0],[3550],[0],[3550]
-24860,9040,"['      Greenville County, SC', '      Laurens County, SC', '      Pickens County, SC']","[53, 43, 42]","[0, 9, 4]","[3471, 2816, 2751]","[0, 6258, 2781]","[991, 5275, 2772]"
-25020,140,"['      Arroyo Municipio, PR', '      Guayama Municipio, PR', '      Patillas Municipio, PR']",[],[],[],[],[]
-25060,3890,"['      Hancock County, MS', '      Harrison County, MS', '      Stone County, MS']","[47, 33, 25]","[6, 0, 4]","[1741, 1222, 926]","[2334, 0, 1556]","[2164, 349, 1376]"
-25180,2490,"['      Washington County, MD', '      Berkeley County, WV', '      Morgan County, WV']","[65, 0, 25]","[0, 1, 4]","[1798, 0, 691]","[0, 498, 1992]","[513, 355, 1620]"
-25260,0,"['      Kings County, CA']",[142],[22],[0],[0],[0]
-25420,8630,"['      Cumberland County, PA', '      Dauphin County, PA', '      Perry County, PA']","[75, 55]","[0, 0]","[4978, 3651]","[0, 0]","[4978, 3651]"
-25620,0,"['      Forrest County, MS', '      Lamar County, MS', '      Perry County, MS']","[427, 45, 22]","[40, 0, 4]","[0, 0, 0]","[0, 0, 0]","[0, 0, 0]"
-25860,2820,"['      Alexander County, NC', '      Burke County, NC', '      Caldwell County, NC', '      Catawba County, NC']","[431, 110, 200]","[0, 12, 28]","[1640, 418, 761]","[0, 846, 1974]","[468, 723, 1627]"
-25980,170,"['      Liberty County, GA', '      Long County, GA']",[25],[4],[170],[170],[170]
-26300,990,"['      Garland County, AR']",[40],[3],[990],[990],[990]
-26380,1800,"['      Lafourche Parish, LA', '      Terrebonne Parish, LA']","[130, 20]","[16, 0]","[1560, 240]","[1800, 0]","[1731, 68]"
-26420,54780,"['      Austin County, TX', '      Brazoria County, TX', '      Chambers County, TX', '      Fort Bend County, TX', '      Galveston County, TX', '      Harris County, TX', '      Liberty County, TX', '      Montgomery County, TX', '      San Jacinto County, TX', '      Waller County, TX']","[32, 49, 14, 0, 132, 24, 16, 146]","[6, 8, 2, 1, 0, 0, 3, 16]","[4244, 6499, 1856, 0, 17508, 3183, 2122, 19365]","[9130, 12173, 3043, 1521, 0, 0, 4565, 24346]","[7734, 10552, 2704, 1086, 5002, 909, 3867, 22923]"
-26580,4850,"['      Boyd County, KY', '      Greenup County, KY', '      Lawrence County, OH', '      Cabell County, WV', '      Wayne County, WV']","[439, 135, 8, 330, 80]","[38, 12, 1, 44, 1]","[2146, 660, 39, 1613, 391]","[1919, 606, 50, 2222, 50]","[1984, 621, 47, 2048, 147]"
-26620,5000,"['      Limestone County, AL', '      Madison County, AL']","[31, 877]","[8, 67]","[170, 4829]","[533, 4466]","[429, 4570]"
-26820,1230,"['      Bonneville County, ID', '      Jefferson County, ID']",[0],[32],[0],[1230],[1230]
-26900,26670,"['      Boone County, IN', '      Brown County, IN', '      Hamilton County, IN', '      Hancock County, IN', '      Hendricks County, IN', '      Johnson County, IN', '      Marion County, IN', '      Morgan County, IN', '      Putnam County, IN', '      Shelby County, IN']","[68, 20, 12, 127, 44, 66, 83, 25, 46]","[8, 4, 2, 16, 0, 0, 10, 6, 6]","[3693, 1086, 651, 6898, 2389, 3584, 4508, 1357, 2498]","[4103, 2051, 1025, 8206, 0, 0, 5128, 3077, 3077]","[3986, 1775, 918, 7832, 682, 1024, 4951, 2586, 2911]"
-26980,3600,"['      Johnson County, IA', '      Washington County, IA']","[28, 25]","[5, 4]","[1901, 1698]","[2000, 1600]","[1971, 1628]"
-27060,970,"['      Tompkins County, NY']",[163],[16],[970],[970],[970]
-27100,1420,"['      Jackson County, MI']",[112],[20],[1420],[1420],[1420]
-27140,9030,"['      Copiah County, MS', '      Hinds County, MS', '      Madison County, MS', '      Rankin County, MS', '      Simpson County, MS']","[25, 25, 67, 160, 25]","[4, 7, 7, 10, 4]","[747, 747, 2003, 4784, 747]","[1128, 1975, 1975, 2821, 1128]","[1019, 1624, 1983, 3382, 1019]"
-27180,1970,"['      Chester County, TN', '      Madison County, TN']",[40],[0],[1970],[0],[1970]
-27260,14800,"['      Baker County, FL', '      Clay County, FL', '      Duval County, FL', '      Nassau County, FL', '      St. Johns County, FL']","[21, 273, 92, 54, 335]","[4, 28, 16, 9, 47]","[401, 5213, 1756, 1031, 6397]","[569, 3984, 2276, 1280, 6688]","[521, 4335, 2128, 1209, 6605]"
-27340,730,"['      Onslow County, NC']",[162],[14],[730],[730],[730]
-27500,1670,"['      Rock County, WI']",[18],[3],[1670],[1670],[1670]
-27620,1440,"['      Callaway County, MO', '      Cole County, MO', '      Moniteau County, MO', '      Osage County, MO']","[38, 100]","[0, 12]","[396, 1043]","[0, 1440]","[113, 1326]"
-27740,2800,"['      Carter County, TN', '      Unicoi County, TN', '      Washington County, TN']","[109, 10, 36]","[8, 3, 0]","[1969, 180, 650]","[2036, 763, 0]","[2017, 597, 185]"
-27780,1500,"['      Cambria County, PA']",[39],[7],[1500],[1500],[1500]
-27860,1570,"['      Craighead County, AR', '      Poinsett County, AR']",[44],[8],[1570],[1570],[1570]
-27900,2390,"['      Jasper County, MO', '      Newton County, MO']","[25, 339]","[4, 39]","[164, 2225]","[222, 2167]","[205, 2184]"
-28100,1400,"['      Kankakee County, IL']",[169],[9],[1400],[1400],[1400]
-28140,26420,"['      Franklin County, KS', '      Johnson County, KS', '      Leavenworth County, KS', '      Linn County, KS', '      Miami County, KS', '      Wyandotte County, KS', '      Bates County, MO', '      Caldwell County, MO', '      Cass County, MO', '      Clay County, MO', '      Clinton County, MO', '      Jackson County, MO', '      Lafayette County, MO', '      Platte County, MO', '      Ray County, MO']","[44, 4, 0, 18, 0, 44, 25, 72, 34, 0, 25, 118, 25]","[5, 1, 0, 3, 32, 8, 4, 0, 5, 0, 2, 12, 4]","[2842, 258, 0, 1162, 0, 2842, 1614, 4650, 2196, 0, 1614, 7622, 1614]","[1738, 347, 0, 1042, 11124, 2781, 1390, 0, 1738, 0, 695, 4171, 1390]","[2053, 322, 0, 1077, 7945, 2798, 1454, 1328, 1869, 0, 958, 5157, 1454]"
-28420,2080,"['      Benton County, WA', '      Franklin County, WA']","[111, 25]","[14, 4]","[1697, 382]","[1617, 462]","[1640, 439]"
-28660,3390,"['      Bell County, TX', '      Coryell County, TX', '      Lampasas County, TX']","[36, 25, 25]","[0, 4, 4]","[1419, 985, 985]","[0, 1695, 1695]","[405, 1492, 1492]"
-28700,2610,"['      Hawkins County, TN', '      Sullivan County, TN', '      Scott County, VA', '      Washington County, VA', '      Bristol city, VA']","[32, 72, 115, 25]","[6, 0, 14, 0]","[342, 770, 1230, 267]","[783, 0, 1827, 0]","[657, 220, 1656, 76]"
-28740,1140,"['      Ulster County, NY']",[45],[5],[1140],[1140],[1140]
-28940,7890,"['      Anderson County, TN', '      Blount County, TN', '      Knox County, TN', '      Loudon County, TN', '      Union County, TN']","[0, 155, 35, 30]","[0, 0, 5, 5]","[0, 5558, 1255, 1075]","[0, 0, 3945, 3945]","[0, 1588, 3176, 3125]"
-29020,860,"['      Howard County, IN', '      Tipton County, IN']","[111, 25]","[13, 4]","[701, 158]","[657, 202]","[670, 189]"
-29100,2990,"['      Houston County, MN', '      La Crosse County, WI']",[142],[28],[2990],[2990],[2990]
-29180,3510,"['      Lafayette Parish, LA', '      St. Martin Parish, LA']","[161, 25]","[64, 4]","[3038, 471]","[3303, 206]","[3227, 282]"
-29340,1770,"['      Calcasieu Parish, LA', '      Cameron Parish, LA']","[42, 49]","[7, 9]","[816, 953]","[774, 995]","[786, 983]"
-29460,3860,"['      Polk County, FL']",[93],[8],[3860],[3860],[3860]
-29540,5050,"['      Lancaster County, PA']",[126],[0],[5050],[0],[5050]
-29620,3910,"['      Clinton County, MI', '      Eaton County, MI', '      Ingham County, MI']","[34, 25, 533]","[0, 4, 99]","[224, 165, 3520]","[0, 151, 3758]","[64, 155, 3690]"
-29700,1290,"['      Webb County, TX']",[20],[2],[1290],[1290],[1290]
-29740,1270,"['      Dona Ana County, NM']",[119],[0],[1270],[0],[1270]
-29820,17210,"['      Clark County, NV']",[152],[0],[17210],[0],[17210]
-29940,760,"['      Douglas County, KS']",[110],[10],[760],[760],[760]
-30020,900,"['      Comanche County, OK']",[14],[0],[900],[0],[900]
-30140,1340,"['      Lebanon County, PA']",[103],[0],[1340],[0],[1340]
-30300,860,"['      Nez Perce County, ID', '      Asotin County, WA']","[110, 25]","[9, 4]","[700, 159]","[595, 264]","[625, 234]"
-30460,7400,"['      Bourbon County, KY', '      Clark County, KY', '      Fayette County, KY', '      Jessamine County, KY', '      Scott County, KY', '      Woodford County, KY']","[34, 54, 0, 75, 25]","[4, 8, 32, 6, 4]","[1338, 2125, 0, 2952, 984]","[548, 1096, 4385, 822, 548]","[773, 1390, 3132, 1430, 672]"
-30620,1830,"['      Allen County, OH']",[25],[4],[1830],[1830],[1830]
-30700,4130,"['      Lancaster County, NE', '      Seward County, NE']","[24, 24]","[6, 4]","[2065, 2065]","[2478, 1652]","[2360, 1770]"
-30780,9380,"['      Faulkner County, AR', '      Grant County, AR', '      Lonoke County, AR', '      Perry County, AR', '      Pulaski County, AR', '      Saline County, AR']","[110, 0, 130]","[8, 0, 16]","[4299, 0, 5080]","[3126, 0, 6253]","[3461, 0, 5918]"
-30860,810,"['      Franklin County, ID', '      Cache County, UT']","[20, 130]","[3, 14]","[108, 702]","[142, 667]","[132, 677]"
-30980,2330,"['      Gregg County, TX', '      Rusk County, TX', '      Upshur County, TX']","[36, 41]","[0, 7]","[1089, 1240]","[0, 2330]","[311, 2018]"
-31020,0,"['      Cowlitz County, WA']",[166],[18],[0],[0],[0]
-31140,14750,"['      Clark County, IN', '      Floyd County, IN', '      Harrison County, IN', '      Washington County, IN', '      Bullitt County, KY', '      Henry County, KY', '      Jefferson County, KY', '      Meade County, KY', '      Nelson County, KY', '      Oldham County, KY', '      Shelby County, KY', '      Spencer County, KY', '      Trimble County, KY']","[100, 225, 25, 25, 0, 40, 90, 30]","[0, 16, 4, 4, 32, 4, 8, 4]","[2757, 6203, 689, 689, 0, 1102, 2481, 827]","[0, 3277, 819, 819, 6555, 819, 1638, 819]","[787, 4113, 782, 782, 4682, 900, 1879, 821]"
-31180,3730,"['      Crosby County, TX', '      Lubbock County, TX']","[25, 550]","[4, 96]","[162, 3567]","[149, 3580]","[152, 3577]"
-31340,2300,"['      Amherst County, VA', '      Appomattox County, VA', '      Bedford County, VA', '      Campbell County, VA', '      Bedford city, VA', '      Lynchburg city, VA']","[34, 36]","[6, 6]","[1117, 1182]","[1150, 1150]","[1140, 1159]"
-31420,2790,"['      Bibb County, GA', '      Crawford County, GA', '      Jones County, GA', '      Monroe County, GA', '      Twiggs County, GA']","[179, 25]","[28, 5]","[2448, 341]","[2367, 422]","[2390, 399]"
-31540,8650,"['      Columbia County, WI', '      Dane County, WI', '      Iowa County, WI']","[25, 56, 25]","[4, 10, 4]","[2040, 4569, 2040]","[1922, 4805, 1922]","[1955, 4738, 1955]"
-31900,1100,"['      Richland County, OH']",[26],[7],[1100],[1100],[1100]
-32420,1090,"['      Hormigueros Municipio, PR', '      Mayagez Municipio, PR']",[],[],[],[],[]
-32580,5120,"['      Hidalgo County, TX']",[0],[32],[0],[5120],[5120]
-32780,2170,"['      Jackson County, OR']",[0],[0],[0],[0],[0]
-32820,13180,"['      Crittenden County, AR', '      DeSoto County, MS', '      Marshall County, MS', '      Tate County, MS', '      Tunica County, MS', '      Fayette County, TN', '      Shelby County, TN', '      Tipton County, TN']","[52, 309, 27, 30, 47]","[0, 54, 5, 5, 8]","[1473, 8758, 765, 850, 1332]","[0, 9885, 915, 915, 1464]","[421, 9563, 872, 896, 1426]"
-32900,860,"['      Merced County, CA']",[186],[20],[860],[860],[860]
-33100,54020,"['      Palm Beach County, FL']",[356],[52],[54020],[54020],[54020]
-33140,860,"['      LaPorte County, IN']",[129],[20],[860],[860],[860]
-33260,1230,"['      Midland County, TX']",[80],[0],[1230],[0],[1230]
-33340,21010,"['      Milwaukee County, WI', '      Ozaukee County, WI', '      Washington County, WI', '      Waukesha County, WI']","[581, 120, 70, 240]","[107, 32, 6, 24]","[12073, 2493, 1454, 4987]","[13302, 3978, 745, 2983]","[12951, 3554, 948, 3556]"
-33460,41640,"['      Anoka County, MN', '      Carver County, MN', '      Chisago County, MN', '      Dakota County, MN', '      Hennepin County, MN', '      Isanti County, MN', '      Ramsey County, MN', '      Scott County, MN', '      Sherburne County, MN', '      Washington County, MN', '      Wright County, MN', '      Pierce County, WI', '      St. Croix County, WI']","[200, 109, 55, 37, 50, 70, 60, 89, 33, 86, 16, 25]","[0, 18, 10, 6, 9, 12, 10, 16, 4, 18, 0, 4]","[10033, 5468, 2759, 1856, 2508, 3511, 3010, 4465, 1655, 4314, 802, 1254]","[0, 7004, 3891, 2334, 3502, 4669, 3891, 6226, 1556, 7004, 0, 1556]","[2866, 6565, 3568, 2198, 3218, 4339, 3639, 5723, 1584, 6236, 229, 1470]"
-33540,1360,"['      Missoula County, MT']",[158],[24],[1360],[1360],[1360]
-33660,5320,"['      Mobile County, AL']",[149],[32],[5320],[5320],[5320]
-33700,4880,"['      Stanislaus County, CA']",[96],[15],[4880],[4880],[4880]
-33740,1700,"['      Ouachita Parish, LA', '      Union Parish, LA']","[0, 15]","[0, 3]","[0, 1700]","[0, 1700]","[0, 1700]"
-33780,590,"['      Monroe County, MI']",[153],[14],[590],[590],[590]
-33860,3760,"['      Autauga County, AL', '      Elmore County, AL', '      Lowndes County, AL', '      Montgomery County, AL']","[55, 37, 150]","[6, 5, 12]","[854, 574, 2330]","[980, 817, 1961]","[944, 748, 2067]"
-34060,3210,"['      Monongalia County, WV', '      Preston County, WV']","[0, 25]","[32, 4]","[0, 3210]","[2853, 356]","[2038, 1171]"
-34100,630,"['      Grainger County, TN', '      Hamblen County, TN', '      Jefferson County, TN']","[116, 58]","[20, 6]","[420, 210]","[484, 145]","[466, 163]"
-34580,1060,"['      Skagit County, WA']",[43],[6],[1060],[1060],[1060]
-34620,1080,"['      Delaware County, IN']",[32],[8],[1080],[1080],[1080]
-34740,0,"['      Muskegon County, MI']",[331],[44],[0],[0],[0]
-34820,2600,"['      Horry County, SC']",[0],[0],[0],[0],[0]
-34900,1890,"['      Napa County, CA']",[152],[36],[1890],[1890],[1890]
-34940,2950,"['      Collier County, FL']",[50],[8],[2950],[2950],[2950]
-34980,21600,"['      Cannon County, TN', '      Cheatham County, TN', '      Davidson County, TN', '      Dickson County, TN', '      Hickman County, TN', '      Macon County, TN', '      Robertson County, TN', '      Rutherford County, TN', '      Smith County, TN', '      Sumner County, TN', '      Trousdale County, TN', '      Williamson County, TN', '      Wilson County, TN']","[30, 12, 207, 91, 25, 25, 109, 347, 25, 126, 25, 80, 170]","[5, 2, 46, 6, 4, 4, 8, 1, 2, 18, 4, 0, 12]","[509, 203, 3515, 1545, 424, 424, 1850, 5892, 424, 2139, 424, 1358, 2886]","[964, 385, 8871, 1157, 771, 771, 1542, 192, 385, 3471, 771, 0, 2314]","[834, 333, 7341, 1268, 672, 672, 1630, 1821, 396, 3090, 672, 388, 2477]"
-35380,14050,"['      Jefferson Parish, LA', '      Orleans Parish, LA', '      Plaquemines Parish, LA', '      St. Bernard Parish, LA', '      St. Charles Parish, LA', '      St. John the Baptist Parish, LA', '      St. Tammany Parish, LA']","[36, 0, 40, 39, 82, 24]","[0, 72, 8, 8, 0, 2]","[2288, 0, 2542, 2479, 5213, 1525]","[0, 11240, 1248, 1248, 0, 312]","[653, 8028, 1618, 1600, 1489, 658]"
-35620,174210,"['      Essex County, NJ', '      Hunterdon County, NJ', '      Morris County, NJ', '      Sussex County, NJ', '      Union County, NJ', '      Pike County, PA']","[152, 170, 0, 130, 44]","[0, 12, 0, 10, 0]","[53386, 59709, 0, 45659, 15454]","[0, 95023, 0, 79186, 0]","[15253, 84933, 0, 69607, 4415]"
-35660,1060,"['      Berrien County, MI']",[196],[20],[1060],[1060],[1060]
-36100,2020,"['      Marion County, FL']",[60],[0],[2020],[0],[2020]
-36140,710,"['      Cape May County, NJ']",[149],[16],[710],[710],[710]
-36220,1210,"['      Ector County, TX']",[25],[4],[1210],[1210],[1210]
-36260,3380,"['      Davis County, UT', '      Morgan County, UT', '      Weber County, UT']","[43, 40]","[8, 5]","[1751, 1628]","[2080, 1300]","[1986, 1393]"
-36420,13470,"['      Canadian County, OK', '      Cleveland County, OK', '      Grady County, OK', '      Lincoln County, OK', '      Logan County, OK', '      McClain County, OK', '      Oklahoma County, OK']","[74, 0, 49, 25, 25, 39, 160]","[8, 0, 9, 4, 4, 7, 61]","[2679, 0, 1774, 905, 905, 1412, 5793]","[1158, 0, 1303, 579, 579, 1013, 8835]","[1593, 0, 1438, 672, 672, 1127, 7966]"
-36500,1840,"['      Thurston County, WA']",[0],[0],[0],[0],[0]
-36540,13130,"['      Harrison County, IA', '      Mills County, IA', '      Pottawattamie County, IA', '      Cass County, NE', '      Douglas County, NE', '      Sarpy County, NE', '      Saunders County, NE', '      Washington County, NE']","[25, 110, 64, 28, 16, 21]","[4, 13, 1, 5, 3, 4]","[1243, 5470, 3183, 1392, 795, 1044]","[1750, 5689, 437, 2188, 1313, 1750]","[1605, 5627, 1222, 1960, 1165, 1548]"
-36740,21280,"['      Lake County, FL', '      Orange County, FL', '      Osceola County, FL', '      Seminole County, FL']","[308, 96, 64, 60]","[46, 0, 0, 1]","[12413, 3869, 2579, 2418]","[20827, 0, 0, 452]","[18423, 1105, 736, 1014]"
-36780,1650,"['      Winnebago County, WI']",[72],[12],[1650],[1650],[1650]
-36980,1630,"['      Daviess County, KY', '      Hancock County, KY', '      McLean County, KY']",[80],[0],[1630],[0],[1630]
-37100,4730,"['      Ventura County, CA']",[144],[24],[4730],[4730],[4730]
-37340,4970,"['      Brevard County, FL']",[80],[0],[4970],[0],[4970]
-37460,1330,"['      Bay County, FL']",[222],[20],[1330],[1330],[1330]
-37620,860,"['      Washington County, OH', '      Pleasants County, WV', '      Wirt County, WV', '      Wood County, WV']","[188, 230]","[11, 18]","[386, 473]","[326, 533]","[343, 516]"
-37860,3990,"['      Escambia County, FL', '      Santa Rosa County, FL']","[561, 65]","[34, 8]","[3575, 414]","[3230, 760]","[3328, 661]"
-37900,5740,"['      Marshall County, IL', '      Peoria County, IL', '      Stark County, IL', '      Tazewell County, IL', '      Woodford County, IL']","[198, 107, 25]","[24, 8, 4]","[3444, 1861, 434]","[3826, 1275, 637]","[3717, 1442, 579]"
-37980,71120,"['      New Castle County, DE', '      Cecil County, MD', '      Salem County, NJ']","[37, 82, 126]","[1, 5, 12]","[10740, 23803, 36576]","[3951, 19755, 47413]","[5890, 20912, 44316]"
-38060,38370,"['      Maricopa County, AZ', '      Pinal County, AZ']","[18, 141]","[3, 22]","[4343, 34026]","[4604, 33765]","[4529, 33840]"
-38220,640,"['      Cleveland County, AR', '      Jefferson County, AR', '      Lincoln County, AR']",[271],[34],[640],[640],[640]
-38300,33600,"['      Allegheny County, PA', '      Armstrong County, PA', '      Beaver County, PA', '      Butler County, PA', '      Fayette County, PA', '      Washington County, PA', '      Westmoreland County, PA']","[41, 131, 35, 0, 149, 14, 0]","[6, 12, 5, 0, 15, 2, 32]","[3723, 11896, 3178, 0, 13530, 1271, 0]","[2800, 5600, 2333, 0, 7000, 933, 14933]","[3063, 7398, 2574, 0, 8865, 1029, 10666]"
-38540,920,"['      Bannock County, ID', '      Power County, ID']","[137, 10]","[20, 2]","[857, 62]","[836, 83]","[842, 77]"
-38660,1610,"['      Juana Daz Municipio, PR', '      Ponce Municipio, PR', '      Villalba Municipio, PR']",[],[],[],[],[]
-38900,22100,"['      Clackamas County, OR', '      Columbia County, OR', '      Multnomah County, OR', '      Washington County, OR', '      Yamhill County, OR', '      Clark County, WA', '      Skamania County, WA']","[111, 85, 94, 50, 72]","[8, 0, 0, 7, 3]","[5954, 4559, 5042, 2682, 3862]","[9822, 0, 0, 8594, 3683]","[8717, 1302, 1440, 6905, 3734]"
-38940,4430,"['      Martin County, FL', '      St. Lucie County, FL']","[54, 312]","[0, 36]","[653, 3776]","[0, 4430]","[186, 4243]"
-39140,1380,"['      Yavapai County, AZ']",[21],[0],[1380],[0],[1380]
-39340,3430,"['      Juab County, UT', '      Utah County, UT']","[25, 58]","[4, 0]","[1033, 2396]","[3430, 0]","[2745, 684]"
-39380,2060,"['      Pueblo County, CO']",[0],[0],[0],[0],[0]
-39460,1510,"['      Charlotte County, FL']",[124],[10],[1510],[1510],[1510]
-39540,1270,"['      Racine County, WI']",[249],[23],[1270],[1270],[1270]
-39580,11460,"['      Franklin County, NC', '      Johnston County, NC', '      Wake County, NC']","[179, 216]","[24, 38]","[5193, 6266]","[4436, 7023]","[4652, 6807]"
-39660,2280,"['      Meade County, SD', '      Pennington County, SD']","[25, 0]","[3, 32]","[2280, 0]","[195, 2084]","[791, 1488]"
-39740,3840,"['      Berks County, PA']",[52],[0],[3840],[0],[3840]
-39820,1500,"['      Shasta County, CA']",[16],[0],[1500],[0],[1500]
-39900,4180,"['      Storey County, NV', '      Washoe County, NV']",[21],[3],[4180],[4180],[4180]
-40060,13000,"['      Amelia County, VA', '      Caroline County, VA', '      Charles City County, VA', '      Chesterfield County, VA', '      Cumberland County, VA', '      Dinwiddie County, VA', '      Goochland County, VA', '      Hanover County, VA', '      Henrico County, VA', '      King and Queen County, VA', '      King William County, VA', '      Louisa County, VA', '      New Kent County, VA', '      Powhatan County, VA', '      Prince George County, VA', '      Sussex County, VA', '      Colonial Heights city, VA', '      Hopewell city, VA', '      Petersburg city, VA', '      Richmond city, VA']","[28, 4, 40, 60, 94, 107, 64, 168]","[2, 1, 3, 10, 36, 17, 1, 64]","[644, 92, 920, 1380, 2162, 2461, 1472, 3865]","[194, 97, 291, 970, 3492, 1649, 97, 6208]","[322, 95, 470, 1087, 3112, 1881, 490, 5539]"
-40140,29780,"['      Riverside County, CA', '      San Bernardino County, CA']","[50, 25]","[0, 0]","[19853, 9926]","[0, 0]","[19853, 9926]"
-40220,4390,"['      Botetourt County, VA', '      Craig County, VA', '      Franklin County, VA', '      Roanoke County, VA', '      Roanoke city, VA', '      Salem city, VA']","[37, 270, 621, 330]","[4, 0, 47, 24]","[129, 942, 2167, 1151]","[234, 0, 2751, 1404]","[204, 269, 2584, 1332]"
-40340,0,"['      Dodge County, MN', '      Olmsted County, MN', '      Wabasha County, MN']","[0, 14]","[32, 2]","[0, 0]","[0, 0]","[0, 0]"
-40380,12400,"['      Livingston County, NY', '      Monroe County, NY', '      Ontario County, NY', '      Orleans County, NY', '      Wayne County, NY']","[67, 174, 77, 25, 101]","[12, 0, 6, 4, 8]","[1871, 4859, 2150, 698, 2820]","[4960, 0, 2480, 1653, 3306]","[4077, 1388, 2385, 1380, 3167]"
-40420,3740,"['      Boone County, IL', '      Winnebago County, IL']",[52],[9],[3740],[3740],[3740]
-40580,1130,"['      Edgecombe County, NC', '      Nash County, NC']","[101, 50]","[15, 8]","[755, 374]","[736, 393]","[742, 387]"
-40660,1420,"['      Floyd County, GA']",[208],[16],[1420],[1420],[1420]
-40900,19860,"['      El Dorado County, CA', '      Placer County, CA', '      Sacramento County, CA', '      Yolo County, CA']","[110, 64, 53, 48]","[20, 8, 0, 6]","[7944, 4621, 3827, 3466]","[11682, 4672, 0, 3504]","[10614, 4658, 1093, 3493]"
-40980,2790,"['      Saginaw County, MI']",[204],[22],[2790],[2790],[2790]
-41060,2960,"['      Benton County, MN', '      Stearns County, MN']",[457],[42],[2960],[2960],[2960]
-41100,1360,"['      Washington County, UT']",[164],[32],[1360],[1360],[1360]
-41140,1200,"['      Doniphan County, KS', '      Andrew County, MO', '      Buchanan County, MO', '      DeKalb County, MO']",[108],[0],[1200],[0],[1200]
-41180,33100,"['      Bond County, IL', '      Calhoun County, IL', '      Clinton County, IL', '      Jersey County, IL', '      Macoupin County, IL', '      Madison County, IL', '      Monroe County, IL', '      St. Clair County, IL', '      Crawford County, MO (pt.)*', '      Franklin County, MO', '      Jefferson County, MO', '      Lincoln County, MO', '      St. Charles County, MO', '      St. Louis County, MO', '      Warren County, MO', '      Washington County, MO', '      St. Louis city, MO']","[32, 46, 46, 25, 25, 94, 25, 148, 279, 25, 63, 38, 25, 50]","[6, 8, 4, 4, 4, 6, 4, 13, 28, 4, 11, 6, 4, 0]","[1150, 1653, 1653, 898, 898, 3378, 898, 5319, 10027, 898, 2264, 1365, 898, 1796]","[1947, 2596, 1298, 1298, 1298, 1947, 1298, 4218, 9086, 1298, 3569, 1947, 1298, 0]","[1719, 2326, 1399, 1183, 1183, 2355, 1183, 4533, 9355, 1183, 3196, 1780, 1183, 513]"
-41420,3780,"['      Marion County, OR', '      Polk County, OR']","[0, 15]","[0, 3]","[0, 3780]","[0, 3780]","[0, 3780]"
-41500,2740,"['      Monterey County, CA']",[240],[13],[2740],[2740],[2740]
-41540,3810,"['      Somerset County, MD', '      Wicomico County, MD']",[0],[0],[0],[0],[0]
-41620,11220,"['      Salt Lake County, UT', '      Summit County, UT', '      Tooele County, UT']","[94, 37, 36]","[0, 4, 4]","[6315, 2485, 2418]","[0, 5610, 5610]","[1804, 4717, 4698]"
-41660,1240,"['      Irion County, TX', '      Tom Green County, TX']",[80],[0],[1240],[0],[1240]
-41700,21140,"['      Atascosa County, TX', '      Bandera County, TX', '      Bexar County, TX', '      Comal County, TX', '      Guadalupe County, TX', '      Kendall County, TX', '      Medina County, TX', '      Wilson County, TX']","[67, 66, 112, 117, 25, 44]","[6, 0, 16, 9, 4, 4]","[3286, 3237, 5493, 5738, 1226, 2158]","[3252, 0, 8672, 4878, 2168, 2168]","[3262, 924, 7764, 5124, 1899, 2165]"
-41740,25260,"['      San Diego County, CA']",[321],[56],[25260],[25260],[25260]
-41860,38580,"['      Marin County, CA', '      San Francisco County, CA', '      San Mateo County, CA']","[116, 289, 241]","[12, 51, 24]","[6927, 17259, 14392]","[5321, 22615, 10642]","[5780, 21085, 11714]"
-41900,570,"['      Cabo Rojo Municipio, PR', '      Lajas Municipio, PR', '      Sabana Grande Municipio, PR', '      San Germn Municipio, PR']",[],[],[],[],[]
-41940,16650,"['      San Benito County, CA', '      Santa Clara County, CA']","[49, 80]","[8, 0]","[6324, 10325]","[16650, 0]","[13699, 2950]"
-41980,14360,"['      Aguas Buenas Municipio, PR', '      Aibonito Municipio, PR', '      Arecibo Municipio, PR', '      Barceloneta Municipio, PR', '      Barranquitas Municipio, PR', '      Bayamn Municipio, PR', '      Caguas Municipio, PR', '      Camuy Municipio, PR', '      Canvanas Municipio, PR', '      Carolina Municipio, PR', '      Catao Municipio, PR', '      Cayey Municipio, PR', '      Ciales Municipio, PR', '      Cidra Municipio, PR', '      Comero Municipio, PR', '      Corozal Municipio, PR', '      Dorado Municipio, PR', '      Florida Municipio, PR', '      Guaynabo Municipio, PR', '      Gurabo Municipio, PR', '      Hatillo Municipio, PR', '      Humacao Municipio, PR', '      Juncos Municipio, PR', '      Las Piedras Municipio, PR', '      Loza Municipio, PR', '      Manat Municipio, PR', '      Maunabo Municipio, PR', '      Morovis Municipio, PR', '      Naguabo Municipio, PR', '      Naranjito Municipio, PR', '      Orocovis Municipio, PR', '      Quebradillas Municipio, PR', '      Ro Grande Municipio, PR', '      San Juan Municipio, PR', '      San Lorenzo Municipio, PR', '      Toa Alta Municipio, PR', '      Toa Baja Municipio, PR', '      Trujillo Alto Municipio, PR', '      Vega Alta Municipio, PR', '      Vega Baja Municipio, PR', '      Yabucoa Municipio, PR']",[],[],[],[],[]
-42020,1810,"['      San Luis Obispo County, CA']",[50],[9],[1810],[1810],[1810]
-42100,1410,"['      Santa Cruz County, CA']",[16],[0],[1410],[0],[1410]
-42140,950,"['      Santa Fe County, NM']",[36],[6],[950],[950],[950]
-42220,3230,"['      Sonoma County, CA']",[37],[5],[3230],[3230],[3230]
-42340,3570,"['      Bryan County, GA', '      Chatham County, GA', '      Effingham County, GA']","[50, 25]","[0, 4]","[2380, 1190]","[0, 3570]","[680, 2890]"
-42540,5840,"['      Lackawanna County, PA', '      Luzerne County, PA', '      Wyoming County, PA']","[203, 36, 44]","[0, 6, 6]","[4189, 742, 907]","[0, 2920, 2920]","[1196, 2297, 2345]"
-42660,33180,"['      Pierce County, WA']",[47],[0],[33180],[0],[33180]
-43100,690,"['      Sheboygan County, WI']",[53],[7],[690],[690],[690]
-43300,1710,"['      Grayson County, TX']",[60],[0],[1710],[0],[1710]
-43340,5350,"['      Bossier Parish, LA', '      Caddo Parish, LA', '      De Soto Parish, LA']","[6, 0, 34]","[1, 1, 6]","[802, 0, 4547]","[668, 668, 4012]","[706, 477, 4165]"
-43580,1860,"['      Woodbury County, IA', '      Dakota County, NE', '      Dixon County, NE', '      Union County, SD']","[157, 38]","[19, 7]","[1497, 362]","[1359, 500]","[1398, 461]"
-43620,6310,"['      Lincoln County, SD', '      McCook County, SD', '      Minnehaha County, SD', '      Turner County, SD']","[11, 0, 12]","[2, 32, 2]","[3017, 0, 3292]","[350, 5608, 350]","[1112, 4006, 1191]"
-43780,2460,"['      St. Joseph County, IN', '      Cass County, MI']","[0, 25]","[32, 4]","[0, 2460]","[2186, 273]","[1561, 898]"
-43900,2990,"['      Spartanburg County, SC']",[40],[4],[2990],[2990],[2990]
-44060,5090,"['      Spokane County, WA']",[100],[0],[5090],[0],[5090]
-44100,3790,"['      Menard County, IL', '      Sangamon County, IL']",[369],[45],[3790],[3790],[3790]
-44180,5360,"['      Christian County, MO', '      Dallas County, MO', '      Greene County, MO', '      Polk County, MO', '      Webster County, MO']","[0, 52]","[32, 8]","[0, 5360]","[4288, 1072]","[3062, 2297]"
-44220,1010,"['      Clark County, OH']",[230],[38],[1010],[1010],[1010]
-44300,1440,"['      Centre County, PA']",[73],[0],[1440],[0],[1440]
-44700,4470,"['      San Joaquin County, CA']",[0],[0],[0],[0],[0]
-44940,760,"['      Sumter County, SC']",[173],[17],[760],[760],[760]
-45060,6120,"['      Madison County, NY', '      Onondaga County, NY', '      Oswego County, NY']","[25, 435, 132]","[4, 44, 8]","[258, 4496, 1364]","[437, 4808, 874]","[386, 4719, 1014]"
-45220,3200,"['      Gadsden County, FL', '      Jefferson County, FL', '      Leon County, FL', '      Wakulla County, FL']","[24, 266]","[4, 20]","[264, 2935]","[533, 2666]","[456, 2743]"
-45300,30390,"['      Hernando County, FL', '      Hillsborough County, FL', '      Pasco County, FL', '      Pinellas County, FL']","[280, 60, 126, 311]","[24, 0, 0, 26]","[10951, 2346, 4928, 12163]","[14587, 0, 0, 15802]","[13548, 670, 1408, 14763]"
-45460,1650,"['      Clay County, IN', '      Sullivan County, IN', '      Vermillion County, IN', '      Vigo County, IN']","[25, 25, 25, 16]","[4, 4, 6, 0]","[453, 453, 453, 290]","[471, 471, 707, 0]","[466, 466, 634, 82]"
-45780,6400,"['      Fulton County, OH', '      Lucas County, OH', '      Ottawa County, OH', '      Wood County, OH']","[25, 40, 25, 46]","[7, 4, 4, 8]","[1176, 1882, 1176, 2164]","[1947, 1113, 1113, 2226]","[1727, 1332, 1131, 2208]"
-45820,3090,"['      Jackson County, KS', '      Jefferson County, KS', '      Osage County, KS', '      Shawnee County, KS', '      Wabaunsee County, KS']","[12, 25, 24]","[2, 4, 0]","[607, 1266, 1215]","[1030, 2060, 0]","[909, 1833, 347]"
-45940,4450,"['      Mercer County, NJ']",[18],[3],[4450],[4450],[4450]
-46060,8590,"['      Pima County, AZ']",[74],[0],[8590],[0],[8590]
-46140,9000,"['      Creek County, OK', '      Okmulgee County, OK', '      Osage County, OK', '      Pawnee County, OK', '      Rogers County, OK', '      Tulsa County, OK', '      Wagoner County, OK']","[55, 4, 15, 14, 54, 40, 100]","[10, 1, 3, 2, 6, 4, 6]","[1755, 127, 478, 446, 1723, 1276, 3191]","[2812, 281, 843, 562, 1687, 1125, 1687]","[2510, 237, 739, 529, 1697, 1168, 2117]"
-46220,2840,"['      Greene County, AL', '      Hale County, AL', '      Tuscaloosa County, AL']","[20, 28, 497]","[4, 5, 52]","[104, 145, 2589]","[186, 232, 2420]","[162, 207, 2469]"
-46340,3710,"['      Smith County, TX']",[402],[70],[3710],[3710],[3710]
-46540,2720,"['      Herkimer County, NY', '      Oneida County, NY']","[25, 0]","[4, 0]","[2720, 0]","[2720, 0]","[2720, 0]"
-46660,1400,"['      Brooks County, GA', '      Echols County, GA', '      Lanier County, GA', '      Lowndes County, GA']","[25, 25, 103]","[4, 4, 0]","[228, 228, 942]","[700, 700, 0]","[565, 565, 269]"
-46700,3720,"['      Solano County, CA']",[64],[11],[3720],[3720],[3720]
-47020,1240,"['      Calhoun County, TX', '      Goliad County, TX', '      Victoria County, TX']","[25, 26]","[6, 0]","[607, 632]","[1240, 0]","[1059, 180]"
-47220,1240,"['      Cumberland County, NJ']",[280],[24],[1240],[1240],[1240]
-47260,13900,"['      Currituck County, NC', '      Gloucester County, VA', '      Isle of Wight County, VA', '      James City County, VA', '      Mathews County, VA', '      Surry County, VA', '      York County, VA', '      Chesapeake city, VA', '      Hampton city, VA', '      Newport News city, VA', '      Norfolk city, VA', '      Poquoson city, VA', '      Portsmouth city, VA', '      Suffolk city, VA', '      Virginia Beach city, VA', '      Williamsburg city, VA']","[67, 57, 50, 310, 79, 108, 82, 202, 155, 100, 40]","[7, 0, 0, 28, 0, 0, 0, 1, 12, 1, 10]","[745, 633, 556, 3447, 878, 1200, 911, 2246, 1723, 1112, 444]","[1649, 0, 0, 6596, 0, 0, 0, 235, 2827, 235, 2355]","[1390, 181, 158, 5696, 250, 343, 260, 810, 2511, 485, 1809]"
-47300,2050,"['      Tulare County, CA']",[403],[41],[2050],[2050],[2050]
-47380,2160,"['      McLennan County, TX']",[0],[0],[0],[0],[0]
-47580,1040,"['      Houston County, GA']",[237],[32],[1040],[1040],[1040]
-47900,43450,"['      District of Columbia, DC', '      Calvert County, MD', '      Charles County, MD', ""      Prince George's County, MD"", '      Arlington County, VA', '      Clarke County, VA', '      Fairfax County, VA', '      Fauquier County, VA', '      Loudoun County, VA', '      Prince William County, VA', '      Spotsylvania County, VA', '      Stafford County, VA', '      Warren County, VA', '      Alexandria city, VA', '      Fairfax city, VA', '      Falls Church city, VA', '      Fredericksburg city, VA', '      Manassas city, VA', '      Manassas Park city, VA', '      Jefferson County, WV']","[0, 41, 98, 190, 305, 923, 97, 100, 60, 105, 90, 46, 5, 58, 94, 25]","[1, 4, 10, 22, 32, 162, 8, 0, 8, 12, 4, 8, 0, 0, 11, 5]","[0, 796, 1903, 3690, 5924, 17927, 1884, 1942, 1165, 2039, 1748, 893, 97, 1126, 1825, 485]","[151, 605, 1513, 3330, 4844, 24525, 1211, 0, 1211, 1816, 605, 1211, 0, 0, 1665, 756]","[108, 660, 1625, 3433, 5153, 22640, 1403, 554, 1198, 1880, 932, 1120, 27, 321, 1711, 679]"
-47940,2220,"['      Black Hawk County, IA', '      Bremer County, IA', '      Grundy County, IA']","[187, 16, 25]","[12, 3, 4]","[1820, 155, 243]","[1402, 350, 467]","[1521, 294, 403]"
-48140,1650,"['      Marathon County, WI']",[223],[28],[1650],[1650],[1650]
-48260,920,"['      Jefferson County, OH', '      Brooke County, WV', '      Hancock County, WV']","[171, 72]","[20, 11]","[647, 272]","[593, 326]","[608, 311]"
-48300,1330,"['      Chelan County, WA', '      Douglas County, WA']",[176],[20],[1330],[1330],[1330]
-48540,1810,"['      Belmont County, OH', '      Marshall County, WV', '      Ohio County, WV']","[100, 59, 72]","[0, 9, 13]","[783, 462, 564]","[0, 740, 1069]","[223, 660, 925]"
-48620,6010,"['      Butler County, KS', '      Harvey County, KS', '      Sedgwick County, KS', '      Sumner County, KS']","[55, 74, 46, 25]","[10, 6, 18, 4]","[1652, 2223, 1382, 751]","[1581, 948, 2846, 632]","[1601, 1313, 2428, 666]"
-48660,1380,"['      Archer County, TX', '      Clay County, TX', '      Wichita County, TX']","[25, 31]","[4, 6]","[616, 763]","[552, 828]","[570, 809]"
-48700,1190,"['      Lycoming County, PA']",[31],[0],[1190],[0],[1190]
-48900,3470,"['      Brunswick County, NC', '      New Hanover County, NC', '      Pender County, NC']","[40, 92, 25]","[0, 16, 4]","[884, 2033, 552]","[0, 2776, 694]","[252, 2563, 653]"
-49020,1540,"['      Frederick County, VA', '      Winchester city, VA', '      Hampshire County, WV']","[389, 14]","[48, 2]","[1486, 53]","[1478, 61]","[1480, 59]"
-49180,8890,"['      Davie County, NC', '      Forsyth County, NC', '      Stokes County, NC', '      Yadkin County, NC']","[50, 68, 25]","[9, 0, 4]","[3108, 4227, 1554]","[6154, 0, 2735]","[5284, 1207, 2397]"
-49420,1800,"['      Yakima County, WA']",[25],[7],[1800],[1800],[1800]
-49620,3050,"['      York County, PA']",[90],[0],[3050],[0],[3050]
-49660,4290,"['      Mahoning County, OH', '      Trumbull County, OH', '      Mercer County, PA']","[24, 76, 122]","[4, 0, 6]","[463, 1468, 2357]","[1716, 0, 2574]","[1358, 419, 2512]"
-49700,920,"['      Sutter County, CA', '      Yuba County, CA']","[14, 149]","[2, 24]","[79, 840]","[70, 849]","[73, 846]"
-49740,1090,"['      Yuma County, AZ']",[406],[42],[1090],[1090],[1090]
+code,county,abbrev,state,cbsa,title,category,occ_code,occ_title,tot_emp,staffed_beds,emp_distributed_by_staffed_beds,icu_beds,emp_distributed_by_icu_beds,weighted_emp_distribution
+48059,Callahan,TX,Texas,10180,"Abilene, TX",Metropolitan,29-1141,Registered Nurses,1630,0,0,0,0,0
+48253,Jones,TX,Texas,10180,"Abilene, TX",Metropolitan,29-1141,Registered Nurses,1630,7,300,1,1630,1250
+48441,Taylor,TX,Texas,10180,"Abilene, TX",Metropolitan,29-1141,Registered Nurses,1630,31,1329,0,0,379
+39133,Portage,OH,Ohio,10420,"Akron, OH",Metropolitan,29-1141,Registered Nurses,8490,191,7577,16,8490,8229
+39153,Summit,OH,Ohio,10420,"Akron, OH",Metropolitan,29-1141,Registered Nurses,8490,23,912,0,0,260
+36001,Albany,NY,New York,10580,"Albany-Schenectady-Troy, NY",Metropolitan,29-1141,Registered Nurses,10010,67,1221,2,408,640
+36083,Rensselaer,NY,New York,10580,"Albany-Schenectady-Troy, NY",Metropolitan,29-1141,Registered Nurses,10010,20,364,4,817,687
+36091,Saratoga,NY,New York,10580,"Albany-Schenectady-Troy, NY",Metropolitan,29-1141,Registered Nurses,10010,88,1604,0,0,458
+36093,Schenectady,NY,New York,10580,"Albany-Schenectady-Troy, NY",Metropolitan,29-1141,Registered Nurses,10010,334,6089,36,7354,6993
+36095,Schoharie,NY,New York,10580,"Albany-Schenectady-Troy, NY",Metropolitan,29-1141,Registered Nurses,10010,40,729,7,1430,1229
+35001,Bernalillo,NM,New Mexico,10740,"Albuquerque, NM",Metropolitan,29-1141,Registered Nurses,10160,48,4515,0,0,1290
+35043,Sandoval,NM,New Mexico,10740,"Albuquerque, NM",Metropolitan,29-1141,Registered Nurses,10160,60,5644,11,10160,8869
+35057,Torrance,NM,New Mexico,10740,"Albuquerque, NM",Metropolitan,29-1141,Registered Nurses,10160,0,0,0,0,0
+35061,Valencia,NM,New Mexico,10740,"Albuquerque, NM",Metropolitan,29-1141,Registered Nurses,10160,0,0,0,0,0
+22043,Grant,LA,Louisiana,10780,"Alexandria, LA",Metropolitan,29-1141,Registered Nurses,1870,0,0,0,0,0
+22079,Rapides,LA,Louisiana,10780,"Alexandria, LA",Metropolitan,29-1141,Registered Nurses,1870,16,1870,0,0,1870
+34041,Warren,NJ,New Jersey,10900,"Allentown-Bethlehem-Easton, PA-NJ",Metropolitan,29-1141,Registered Nurses,9750,92,2311,12,3900,3446
+42025,Carbon,PA,Pennsylvania,10900,"Allentown-Bethlehem-Easton, PA-NJ",Metropolitan,29-1141,Registered Nurses,9750,68,1708,6,1950,1881
+42077,Lehigh,PA,Pennsylvania,10900,"Allentown-Bethlehem-Easton, PA-NJ",Metropolitan,29-1141,Registered Nurses,9750,120,3015,0,0,861
+42095,Northampton,PA,Pennsylvania,10900,"Allentown-Bethlehem-Easton, PA-NJ",Metropolitan,29-1141,Registered Nurses,9750,108,2713,12,3900,3561
+42013,Blair,PA,Pennsylvania,11020,"Altoona, PA",Metropolitan,29-1141,Registered Nurses,1850,80,1850,0,0,1850
+48011,Armstrong,TX,Texas,11100,"Amarillo, TX",Metropolitan,29-1141,Registered Nurses,2620,0,0,0,0,0
+48065,Carson,TX,Texas,11100,"Amarillo, TX",Metropolitan,29-1141,Registered Nurses,2620,0,0,0,0,0
+48375,Potter,TX,Texas,11100,"Amarillo, TX",Metropolitan,29-1141,Registered Nurses,2620,72,2620,11,2620,2620
+48381,Randall,TX,Texas,11100,"Amarillo, TX",Metropolitan,29-1141,Registered Nurses,2620,0,0,0,0,0
+19169,Story,IA,Iowa,11180,"Ames, IA",Metropolitan,29-1141,Registered Nurses,810,17,810,3,810,810
+02020,Anchorage,AK,Alaska,11260,"Anchorage, AK",Metropolitan,29-1141,Registered Nurses,4270,0,0,0,0,0
+02170,Matanuska-Susitna,AK,Alaska,11260,"Anchorage, AK",Metropolitan,29-1141,Registered Nurses,4270,74,4270,14,4270,4270
+26161,Washtenaw,MI,Michigan,11460,"Ann Arbor, MI",Metropolitan,29-1141,Registered Nurses,9340,24,9340,4,9340,9340
+01015,Calhoun,AL,Alabama,11500,"Anniston-Oxford-Jacksonville, AL",Metropolitan,29-1141,Registered Nurses,920,125,920,6,920,920
+55015,Calumet,WI,Wisconsin,11540,"Appleton, WI",Metropolitan,29-1141,Registered Nurses,1920,25,279,4,295,290
+55087,Outagamie,WI,Wisconsin,11540,"Appleton, WI",Metropolitan,29-1141,Registered Nurses,1920,147,1640,22,1624,1629
+37021,Buncombe,NC,North Carolina,11700,"Asheville, NC",Metropolitan,29-1141,Registered Nurses,6210,34,668,5,1035,930
+37087,Haywood,NC,North Carolina,11700,"Asheville, NC",Metropolitan,29-1141,Registered Nurses,6210,122,2397,12,2484,2459
+37089,Henderson,NC,North Carolina,11700,"Asheville, NC",Metropolitan,29-1141,Registered Nurses,6210,160,3144,13,2691,2820
+37115,Madison,NC,North Carolina,11700,"Asheville, NC",Metropolitan,29-1141,Registered Nurses,6210,0,0,0,0,0
+13059,Clarke,GA,Georgia,12020,"Athens-Clarke County, GA",Metropolitan,29-1141,Registered Nurses,1680,165,1680,68,1680,1680
+13195,Madison,GA,Georgia,12020,"Athens-Clarke County, GA",Metropolitan,29-1141,Registered Nurses,1680,0,0,0,0,0
+13219,Oconee,GA,Georgia,12020,"Athens-Clarke County, GA",Metropolitan,29-1141,Registered Nurses,1680,0,0,0,0,0
+13221,Oglethorpe,GA,Georgia,12020,"Athens-Clarke County, GA",Metropolitan,29-1141,Registered Nurses,1680,0,0,0,0,0
+13013,Barrow,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,56,781,6,686,713
+13015,Bartow,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,119,1660,21,2401,2189
+13035,Butts,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,25,348,4,457,426
+13045,Carroll,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,157,2190,22,2516,2423
+13057,Cherokee,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,114,1590,20,2287,2088
+13063,Clayton,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,244,3404,34,3888,3750
+13067,Cobb,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,367,5121,34,3888,4240
+13077,Coweta,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,50,697,0,0,199
+13085,Dawson,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,0,0,0,0,0
+13089,De Kalb,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,56,781,0,0,223
+13097,Douglas,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,102,1423,8,914,1060
+13113,Fayette,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,221,3083,66,7548,6272
+13117,Forsyth,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,304,4242,24,2744,3172
+13121,Fulton,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,110,1534,14,1601,1582
+13135,Gwinnett,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,90,1255,0,0,358
+13143,Haralson,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,15,209,3,343,304
+13149,Heard,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,0,0,0,0,0
+13151,Henry,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,215,3000,33,3774,3553
+13159,Jasper,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,12,167,2,228,211
+13171,Lamar,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,0,0,0,0,0
+13199,Meriwether,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,25,348,4,457,426
+13217,Newton,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,94,1311,10,1143,1191
+13223,Paulding,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,112,1562,8,914,1100
+13227,Pickens,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,52,725,6,686,697
+13231,Pike,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,0,0,0,0,0
+13247,Rockdale,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,138,1925,16,1829,1857
+13255,Spalding,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,160,2232,22,2516,2435
+13297,Walton,GA,Georgia,12060,"Atlanta-Sandy Springs-Roswell, GA",Metropolitan,29-1141,Registered Nurses,40830,88,1227,0,0,350
+34001,Atlantic,NJ,New Jersey,12100,"Atlantic City-Hammonton, NJ",Metropolitan,29-1141,Registered Nurses,3260,0,0,0,0,0
+01081,Lee,AL,Alabama,12220,"Auburn-Opelika, AL",Metropolitan,29-1141,Registered Nurses,960,372,960,20,960,960
+13033,Burke,GA,Georgia,12260,"Augusta-Richmond County, GA-SC",Metropolitan,29-1141,Registered Nurses,6750,40,918,7,926,924
+13073,Columbia,GA,Georgia,12260,"Augusta-Richmond County, GA-SC",Metropolitan,29-1141,Registered Nurses,6750,0,0,0,0,0
+13189,McDuffie,GA,Georgia,12260,"Augusta-Richmond County, GA-SC",Metropolitan,29-1141,Registered Nurses,6750,25,573,4,529,542
+13245,Richmond,GA,Georgia,12260,"Augusta-Richmond County, GA-SC",Metropolitan,29-1141,Registered Nurses,6750,0,0,1,132,94
+45003,Aiken,SC,South Carolina,12260,"Augusta-Richmond County, GA-SC",Metropolitan,29-1141,Registered Nurses,6750,204,4683,35,4632,4647
+45037,Edgefield,SC,South Carolina,12260,"Augusta-Richmond County, GA-SC",Metropolitan,29-1141,Registered Nurses,6750,25,573,4,529,542
+48021,Bastrop,TX,Texas,12420,"Austin-Round Rock, TX",Metropolitan,29-1141,Registered Nurses,14860,8,342,1,195,237
+48055,Caldwell,TX,Texas,12420,"Austin-Round Rock, TX",Metropolitan,29-1141,Registered Nurses,14860,34,1456,6,1173,1253
+48209,Hays,TX,Texas,12420,"Austin-Round Rock, TX",Metropolitan,29-1141,Registered Nurses,14860,40,1712,0,0,489
+48453,Travis,TX,Texas,12420,"Austin-Round Rock, TX",Metropolitan,29-1141,Registered Nurses,14860,211,9035,60,11731,10961
+48491,Williamson,TX,Texas,12420,"Austin-Round Rock, TX",Metropolitan,29-1141,Registered Nurses,14860,54,2312,9,1759,1917
+06029,Kern,CA,California,12540,"Bakersfield, CA",Metropolitan,29-1141,Registered Nurses,5290,90,5290,0,0,5290
+24003,Anne Arundel,MD,Maryland,12580,"Baltimore-Columbia-Towson, MD",Metropolitan,29-1141,Registered Nurses,32020,325,7206,20,11235,10084
+24005,Baltimore,MD,Maryland,12580,"Baltimore-Columbia-Towson, MD",Metropolitan,29-1141,Registered Nurses,32020,639,14169,0,0,4048
+24013,Carroll,MD,Maryland,12580,"Baltimore-Columbia-Towson, MD",Metropolitan,29-1141,Registered Nurses,32020,153,3392,12,6741,5784
+24025,Harford,MD,Maryland,12580,"Baltimore-Columbia-Towson, MD",Metropolitan,29-1141,Registered Nurses,32020,82,1818,5,2808,2525
+24027,Howard,MD,Maryland,12580,"Baltimore-Columbia-Towson, MD",Metropolitan,29-1141,Registered Nurses,32020,245,5432,16,8988,7972
+24035,Queen Annes,MD,Maryland,12580,"Baltimore-Columbia-Towson, MD",Metropolitan,29-1141,Registered Nurses,32020,0,0,0,0,0
+24510,Baltimore City,MD,Maryland,12580,"Baltimore-Columbia-Towson, MD",Metropolitan,29-1141,Registered Nurses,32020,0,0,4,2247,1605
+22005,Ascension,LA,Louisiana,12940,"Baton Rouge, LA",Metropolitan,29-1141,Registered Nurses,5640,0,0,32,4101,2929
+22033,East Baton Rouge,LA,Louisiana,12940,"Baton Rouge, LA",Metropolitan,29-1141,Registered Nurses,5640,64,742,0,0,212
+22037,East Feliciana,LA,Louisiana,12940,"Baton Rouge, LA",Metropolitan,29-1141,Registered Nurses,5640,337,3910,0,0,1117
+22047,Iberville,LA,Louisiana,12940,"Baton Rouge, LA",Metropolitan,29-1141,Registered Nurses,5640,10,116,0,0,33
+22063,Livingston,LA,Louisiana,12940,"Baton Rouge, LA",Metropolitan,29-1141,Registered Nurses,5640,0,0,0,0,0
+22077,Pointe Coupee,LA,Louisiana,12940,"Baton Rouge, LA",Metropolitan,29-1141,Registered Nurses,5640,25,290,4,512,449
+22091,St Helena,LA,Louisiana,12940,"Baton Rouge, LA",Metropolitan,29-1141,Registered Nurses,5640,25,290,4,512,449
+22121,West Baton Rouge,LA,Louisiana,12940,"Baton Rouge, LA",Metropolitan,29-1141,Registered Nurses,5640,0,0,0,0,0
+22125,West Feliciana,LA,Louisiana,12940,"Baton Rouge, LA",Metropolitan,29-1141,Registered Nurses,5640,25,290,4,512,449
+26025,Calhoun,MI,Michigan,12980,"Battle Creek, MI",Metropolitan,29-1141,Registered Nurses,1670,25,1670,5,1670,1670
+26017,Bay,MI,Michigan,13020,"Bay City, MI",Metropolitan,29-1141,Registered Nurses,900,297,900,32,900,900
+48199,Hardin,TX,Texas,13140,"Beaumont-Port Arthur, TX",Metropolitan,29-1141,Registered Nurses,2690,0,0,0,0,0
+48245,Jefferson,TX,Texas,13140,"Beaumont-Port Arthur, TX",Metropolitan,29-1141,Registered Nurses,2690,27,2690,0,0,2690
+48361,Orange,TX,Texas,13140,"Beaumont-Port Arthur, TX",Metropolitan,29-1141,Registered Nurses,2690,0,0,0,0,0
+53073,Whatcom,WA,Washington,13380,"Bellingham, WA",Metropolitan,29-1141,Registered Nurses,0,207,0,24,0,0
+41017,Deschutes,OR,Oregon,13460,"Bend-Redmond, OR",Metropolitan,29-1141,Registered Nurses,1950,48,1950,6,1950,1950
+36007,Broome,NY,New York,13780,"Binghamton, NY",Metropolitan,29-1141,Registered Nurses,2540,161,2540,10,2540,2540
+36107,Tioga,NY,New York,13780,"Binghamton, NY",Metropolitan,29-1141,Registered Nurses,2540,0,0,0,0,0
+01007,Bibb,AL,Alabama,13820,"Birmingham-Hoover, AL",Metropolitan,29-1141,Registered Nurses,16760,25,1173,4,1971,1743
+01009,Blount,AL,Alabama,13820,"Birmingham-Hoover, AL",Metropolitan,29-1141,Registered Nurses,16760,25,1173,6,2957,2447
+01021,Chilton,AL,Alabama,13820,"Birmingham-Hoover, AL",Metropolitan,29-1141,Registered Nurses,16760,26,1220,6,2957,2461
+01073,Jefferson,AL,Alabama,13820,"Birmingham-Hoover, AL",Metropolitan,29-1141,Registered Nurses,16760,0,0,0,0,0
+01115,St Clair,AL,Alabama,13820,"Birmingham-Hoover, AL",Metropolitan,29-1141,Registered Nurses,16760,40,1877,6,2957,2649
+01117,Shelby,AL,Alabama,13820,"Birmingham-Hoover, AL",Metropolitan,29-1141,Registered Nurses,16760,34,1596,0,0,456
+01127,Walker,AL,Alabama,13820,"Birmingham-Hoover, AL",Metropolitan,29-1141,Registered Nurses,16760,207,9717,12,5915,7001
+38015,Burleigh,ND,North Dakota,13900,"Bismarck, ND",Metropolitan,29-1141,Registered Nurses,2120,205,1766,13,1450,1540
+38059,Morton,ND,North Dakota,13900,"Bismarck, ND",Metropolitan,29-1141,Registered Nurses,2120,41,353,6,669,579
+51071,Giles,VA,Virginia,13980,"Blacksburg-Christiansburg-Radford, VA",Metropolitan,29-1141,Registered Nurses,1060,25,129,4,192,174
+51121,Montgomery,VA,Virginia,13980,"Blacksburg-Christiansburg-Radford, VA",Metropolitan,29-1141,Registered Nurses,1060,88,455,10,481,474
+51155,Pulaski,VA,Virginia,13980,"Blacksburg-Christiansburg-Radford, VA",Metropolitan,29-1141,Registered Nurses,1060,92,475,8,385,411
+51750,Radford City,VA,Virginia,13980,"Blacksburg-Christiansburg-Radford, VA",Metropolitan,29-1141,Registered Nurses,1060,0,0,0,0,0
+18055,Greene,IN,Indiana,14020,"Bloomington, IN",Metropolitan,29-1141,Registered Nurses,1320,25,343,5,1320,1041
+18105,Monroe,IN,Indiana,14020,"Bloomington, IN",Metropolitan,29-1141,Registered Nurses,1320,71,976,0,0,278
+18119,Owen,IN,Indiana,14020,"Bloomington, IN",Metropolitan,29-1141,Registered Nurses,1320,0,0,0,0,0
+16001,Ada,ID,Idaho,14260,"Boise City, ID",Metropolitan,29-1141,Registered Nurses,6570,72,3051,0,0,871
+16015,Boise,ID,Idaho,14260,"Boise City, ID",Metropolitan,29-1141,Registered Nurses,6570,0,0,0,0,0
+16027,Canyon,ID,Idaho,14260,"Boise City, ID",Metropolitan,29-1141,Registered Nurses,6570,70,2967,10,5475,4758
+16045,Gem,ID,Idaho,14260,"Boise City, ID",Metropolitan,29-1141,Registered Nurses,6570,13,551,2,1095,939
+16073,Owyhee,ID,Idaho,14260,"Boise City, ID",Metropolitan,29-1141,Registered Nurses,6570,0,0,0,0,0
+08013,Boulder,CO,Colorado,14500,"Boulder, CO",Metropolitan,29-1141,Registered Nurses,3170,139,3170,18,3170,3170
+21061,Edmonson,KY,Kentucky,14540,"Bowling Green, KY",Metropolitan,29-1141,Registered Nurses,1620,0,0,0,0,0
+21227,Warren,KY,Kentucky,14540,"Bowling Green, KY",Metropolitan,29-1141,Registered Nurses,1620,162,1620,16,1620,1620
+53035,Kitsap,WA,Washington,14740,"Bremerton-Silverdale, WA",Metropolitan,29-1141,Registered Nurses,1450,298,1450,20,1450,1450
+48061,Cameron,TX,Texas,15180,"Brownsville-Harlingen, TX",Metropolitan,29-1141,Registered Nurses,2160,94,2160,0,0,2160
+13025,Brantley,GA,Georgia,15260,"Brunswick, GA",Metropolitan,29-1141,Registered Nurses,1260,0,0,0,0,0
+13127,Glynn,GA,Georgia,15260,"Brunswick, GA",Metropolitan,29-1141,Registered Nurses,1260,300,1260,12,1260,1260
+13191,McIntosh,GA,Georgia,15260,"Brunswick, GA",Metropolitan,29-1141,Registered Nurses,1260,0,0,0,0,0
+36029,Erie,NY,New York,15380,"Buffalo-Cheektowaga-Niagara Falls, NY",Metropolitan,29-1141,Registered Nurses,12280,46,3155,0,0,901
+36063,Niagara,NY,New York,15380,"Buffalo-Cheektowaga-Niagara Falls, NY",Metropolitan,29-1141,Registered Nurses,12280,133,9124,12,12280,11378
+37001,Alamance,NC,North Carolina,15500,"Burlington, NC",Metropolitan,29-1141,Registered Nurses,880,176,880,20,880,880
+39019,Carroll,OH,Ohio,15940,"Canton-Massillon, OH",Metropolitan,29-1141,Registered Nurses,3710,0,0,0,0,0
+39151,Stark,OH,Ohio,15940,"Canton-Massillon, OH",Metropolitan,29-1141,Registered Nurses,3710,30,3710,5,3710,3710
+12071,Lee,FL,Florida,15980,"Cape Coral-Fort Myers, FL",Metropolitan,29-1141,Registered Nurses,5100,60,5100,10,5100,5100
+32510,Carson City,NV,Nevada,16180,"Carson City, NV",Metropolitan,29-1141,Registered Nurses,780,29,780,5,780,780
+56025,Natrona,WY,Wyoming,16220,"Casper, WY",Metropolitan,29-1141,Registered Nurses,1070,16,1070,3,1070,1070
+19011,Benton,IA,Iowa,16300,"Cedar Rapids, IA",Metropolitan,29-1141,Registered Nurses,2490,25,178,4,415,347
+19105,Jones,IA,Iowa,16300,"Cedar Rapids, IA",Metropolitan,29-1141,Registered Nurses,2490,22,157,4,415,341
+19113,Linn,IA,Iowa,16300,"Cedar Rapids, IA",Metropolitan,29-1141,Registered Nurses,2490,301,2153,16,1660,1801
+17019,Champaign,IL,Illinois,16580,"Champaign-Urbana, IL",Metropolitan,29-1141,Registered Nurses,2300,77,1500,0,0,428
+17053,Ford,IL,Illinois,16580,"Champaign-Urbana, IL",Metropolitan,29-1141,Registered Nurses,2300,25,487,2,920,796
+17147,Piatt,IL,Illinois,16580,"Champaign-Urbana, IL",Metropolitan,29-1141,Registered Nurses,2300,16,311,3,1380,1074
+54005,Boone,WV,West Virginia,16620,"Charleston, WV",Metropolitan,29-1141,Registered Nurses,3530,25,104,4,142,131
+54015,Clay,WV,West Virginia,16620,"Charleston, WV",Metropolitan,29-1141,Registered Nurses,3530,0,0,0,0,0
+54039,Kanawha,WV,West Virginia,16620,"Charleston, WV",Metropolitan,29-1141,Registered Nurses,3530,822,3425,95,3387,3398
+54043,Lincoln,WV,West Virginia,16620,"Charleston, WV",Metropolitan,29-1141,Registered Nurses,3530,0,0,0,0,0
+54079,Putnam,WV,West Virginia,16620,"Charleston, WV",Metropolitan,29-1141,Registered Nurses,3530,0,0,0,0,0
+45015,Berkeley,SC,South Carolina,16700,"Charleston-North Charleston, SC",Metropolitan,29-1141,Registered Nurses,10650,0,0,32,3276,3276
+45019,Charleston,SC,South Carolina,16700,"Charleston-North Charleston, SC",Metropolitan,29-1141,Registered Nurses,10650,0,0,72,7373,7373
+45035,Dorchester,SC,South Carolina,16700,"Charleston-North Charleston, SC",Metropolitan,29-1141,Registered Nurses,10650,0,0,0,0,0
+37007,Anson,NC,North Carolina,16740,"Charlotte-Concord-Gastonia, NC-SC",Metropolitan,29-1141,Registered Nurses,23720,15,316,3,765,637
+37025,Cabarrus,NC,North Carolina,16740,"Charlotte-Concord-Gastonia, NC-SC",Metropolitan,29-1141,Registered Nurses,23720,447,9441,15,3825,5430
+37071,Gaston,NC,North Carolina,16740,"Charlotte-Concord-Gastonia, NC-SC",Metropolitan,29-1141,Registered Nurses,23720,383,8089,57,14538,12695
+37119,Mecklenburg,NC,North Carolina,16740,"Charlotte-Concord-Gastonia, NC-SC",Metropolitan,29-1141,Registered Nurses,23720,46,971,4,1020,1006
+37179,Union,NC,North Carolina,16740,"Charlotte-Concord-Gastonia, NC-SC",Metropolitan,29-1141,Registered Nurses,23720,182,3844,14,3570,3648
+45091,York,SC,South Carolina,16740,"Charlotte-Concord-Gastonia, NC-SC",Metropolitan,29-1141,Registered Nurses,23720,50,1056,0,0,301
+51003,Albemarle,VA,Virginia,16820,"Charlottesville, VA",Metropolitan,29-1141,Registered Nurses,3880,50,305,0,0,87
+51065,Fluvanna,VA,Virginia,16820,"Charlottesville, VA",Metropolitan,29-1141,Registered Nurses,3880,0,0,0,0,0
+51079,Greene,VA,Virginia,16820,"Charlottesville, VA",Metropolitan,29-1141,Registered Nurses,3880,0,0,0,0,0
+51125,Nelson,VA,Virginia,16820,"Charlottesville, VA",Metropolitan,29-1141,Registered Nurses,3880,0,0,0,0,0
+51540,Charlottesville City,VA,Virginia,16820,"Charlottesville, VA",Metropolitan,29-1141,Registered Nurses,3880,585,3574,14,3880,3792
+13047,Catoosa,GA,Georgia,16860,"Chattanooga, TN-GA",Metropolitan,29-1141,Registered Nurses,6260,36,1408,6,3130,2638
+13083,Dade,GA,Georgia,16860,"Chattanooga, TN-GA",Metropolitan,29-1141,Registered Nurses,6260,36,1408,6,3130,2638
+13295,Walker,GA,Georgia,16860,"Chattanooga, TN-GA",Metropolitan,29-1141,Registered Nurses,6260,0,0,0,0,0
+47065,Hamilton,TN,Tennessee,16860,"Chattanooga, TN-GA",Metropolitan,29-1141,Registered Nurses,6260,88,3443,0,0,983
+47115,Marion,TN,Tennessee,16860,"Chattanooga, TN-GA",Metropolitan,29-1141,Registered Nurses,6260,0,0,0,0,0
+47153,Sequatchie,TN,Tennessee,16860,"Chattanooga, TN-GA",Metropolitan,29-1141,Registered Nurses,6260,0,0,0,0,0
+56021,Laramie,WY,Wyoming,16940,"Cheyenne, WY",Metropolitan,29-1141,Registered Nurses,920,30,920,1,920,920
+17097,Lake,IL,Illinois,16980,"Chicago-Naperville-Elgin, IL-IN-WI",Metropolitan,29-1141,Registered Nurses,97030,190,69832,23,63762,65496
+55059,Kenosha,WI,Wisconsin,16980,"Chicago-Naperville-Elgin, IL-IN-WI",Metropolitan,29-1141,Registered Nurses,97030,74,27197,12,33267,31533
+06007,Butte,CA,California,17020,"Chico, CA",Metropolitan,29-1141,Registered Nurses,2250,298,2250,33,2250,2250
+18029,Dearborn,IN,Indiana,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,16,551,0,0,157
+18047,Franklin,IN,Indiana,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,0,0,0,0,0
+18115,Ohio,IN,Indiana,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,0,0,0,0,0
+21015,Boone,KY,Kentucky,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,40,1379,0,0,394
+21023,Bracken,KY,Kentucky,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,0,0,0,0,0
+21037,Campbell,KY,Kentucky,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,123,4240,21,11175,9194
+21077,Gallatin,KY,Kentucky,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,0,0,0,0,0
+21081,Grant,KY,Kentucky,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,15,517,3,1596,1288
+21117,Kenton,KY,Kentucky,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,197,6792,0,0,1940
+21191,Pendleton,KY,Kentucky,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,0,0,0,0,0
+39015,Brown,OH,Ohio,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,0,0,0,0,0
+39017,Butler,OH,Ohio,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,96,3309,0,0,945
+39025,Clermont,OH,Ohio,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,147,5068,16,8514,7530
+39061,Hamilton,OH,Ohio,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,60,2068,0,0,591
+39165,Warren,OH,Ohio,17140,"Cincinnati, OH-KY-IN",Metropolitan,29-1141,Registered Nurses,24480,16,551,6,3193,2438
+21047,Christian,KY,Kentucky,17300,"Clarksville, TN-KY",Metropolitan,29-1141,Registered Nurses,1150,97,684,0,0,195
+21221,Trigg,KY,Kentucky,17300,"Clarksville, TN-KY",Metropolitan,29-1141,Registered Nurses,1150,25,176,4,1150,871
+47125,Montgomery,TN,Tennessee,17300,"Clarksville, TN-KY",Metropolitan,29-1141,Registered Nurses,1150,41,289,0,0,82
+47161,Stewart,TN,Tennessee,17300,"Clarksville, TN-KY",Metropolitan,29-1141,Registered Nurses,1150,0,0,0,0,0
+47011,Bradley,TN,Tennessee,17420,"Cleveland, TN",Metropolitan,29-1141,Registered Nurses,540,183,540,27,540,540
+47139,Polk,TN,Tennessee,17420,"Cleveland, TN",Metropolitan,29-1141,Registered Nurses,540,0,0,0,0,0
+39035,Cuyahoga,OH,Ohio,17460,"Cleveland-Elyria, OH",Metropolitan,29-1141,Registered Nurses,25600,72,2412,0,0,689
+39055,Geauga,OH,Ohio,17460,"Cleveland-Elyria, OH",Metropolitan,29-1141,Registered Nurses,25600,124,4154,12,4876,4670
+39085,Lake,OH,Ohio,17460,"Cleveland-Elyria, OH",Metropolitan,29-1141,Registered Nurses,25600,312,10454,27,10971,10823
+39093,Lorain,OH,Ohio,17460,"Cleveland-Elyria, OH",Metropolitan,29-1141,Registered Nurses,25600,126,4221,12,4876,4689
+39103,Medina,OH,Ohio,17460,"Cleveland-Elyria, OH",Metropolitan,29-1141,Registered Nurses,25600,130,4356,12,4876,4727
+16055,Kootenai,ID,Idaho,17660,"Coeur d'Alene, ID",Metropolitan,29-1141,Registered Nurses,1500,30,1500,9,1500,1500
+48041,Brazos,TX,Texas,17780,"College Station-Bryan, TX",Metropolitan,29-1141,Registered Nurses,1600,72,1324,0,0,378
+48051,Burleson,TX,Texas,17780,"College Station-Bryan, TX",Metropolitan,29-1141,Registered Nurses,1600,15,275,3,1600,1221
+48395,Robertson,TX,Texas,17780,"College Station-Bryan, TX",Metropolitan,29-1141,Registered Nurses,1600,0,0,0,0,0
+08041,El Paso,CO,Colorado,17820,"Colorado Springs, CO",Metropolitan,29-1141,Registered Nurses,5970,0,0,35,5498,3927
+08119,Teller,CO,Colorado,17820,"Colorado Springs, CO",Metropolitan,29-1141,Registered Nurses,5970,15,5970,3,471,2042
+29019,Boone,MO,Missouri,17860,"Columbia, MO",Metropolitan,29-1141,Registered Nurses,3410,18,3410,3,3410,3410
+29089,Howard,MO,Missouri,17860,"Columbia, MO",Metropolitan,29-1141,Registered Nurses,3410,0,0,0,0,0
+45017,Calhoun,SC,South Carolina,17900,"Columbia, SC",Metropolitan,29-1141,Registered Nurses,8670,0,0,0,0,0
+45039,Fairfield,SC,South Carolina,17900,"Columbia, SC",Metropolitan,29-1141,Registered Nurses,8670,0,0,0,0,0
+45055,Kershaw,SC,South Carolina,17900,"Columbia, SC",Metropolitan,29-1141,Registered Nurses,8670,121,2491,10,2114,2222
+45063,Lexington,SC,South Carolina,17900,"Columbia, SC",Metropolitan,29-1141,Registered Nurses,8670,122,2512,0,0,717
+45079,Richland,SC,South Carolina,17900,"Columbia, SC",Metropolitan,29-1141,Registered Nurses,8670,178,3665,31,6555,5729
+45081,Saluda,SC,South Carolina,17900,"Columbia, SC",Metropolitan,29-1141,Registered Nurses,8670,0,0,0,0,0
+01113,Russell,AL,Alabama,17980,"Columbus, GA-AL",Metropolitan,29-1141,Registered Nurses,2310,47,172,8,513,415
+13053,Chattahoochee,GA,Georgia,17980,"Columbus, GA-AL",Metropolitan,29-1141,Registered Nurses,2310,250,915,0,0,261
+13145,Harris,GA,Georgia,17980,"Columbus, GA-AL",Metropolitan,29-1141,Registered Nurses,2310,0,0,0,0,0
+13197,Marion,GA,Georgia,17980,"Columbus, GA-AL",Metropolitan,29-1141,Registered Nurses,2310,0,0,0,0,0
+13215,Muscogee,GA,Georgia,17980,"Columbus, GA-AL",Metropolitan,29-1141,Registered Nurses,2310,334,1222,28,1796,1632
+18005,Bartholomew,IN,Indiana,18020,"Columbus, IN",Metropolitan,29-1141,Registered Nurses,590,225,590,17,590,590
+39041,Delaware,OH,Ohio,18140,"Columbus, OH",Metropolitan,29-1141,Registered Nurses,23250,60,1631,0,0,466
+39045,Fairfield,OH,Ohio,18140,"Columbus, OH",Metropolitan,29-1141,Registered Nurses,23250,213,5792,20,7265,6844
+39049,Franklin,OH,Ohio,18140,"Columbus, OH",Metropolitan,29-1141,Registered Nurses,23250,144,3915,0,0,1118
+39089,Licking,OH,Ohio,18140,"Columbus, OH",Metropolitan,29-1141,Registered Nurses,23250,227,6172,13,4722,5136
+39097,Madison,OH,Ohio,18140,"Columbus, OH",Metropolitan,29-1141,Registered Nurses,23250,45,1223,13,4722,3722
+39117,Morrow,OH,Ohio,18140,"Columbus, OH",Metropolitan,29-1141,Registered Nurses,23250,23,625,3,1089,957
+39129,Pickaway,OH,Ohio,18140,"Columbus, OH",Metropolitan,29-1141,Registered Nurses,23250,83,2257,8,2906,2720
+39159,Union,OH,Ohio,18140,"Columbus, OH",Metropolitan,29-1141,Registered Nurses,23250,60,1631,7,2542,2282
+48007,Aransas,TX,Texas,18580,"Corpus Christi, TX",Metropolitan,29-1141,Registered Nurses,3770,0,0,0,0,0
+48355,Nueces,TX,Texas,18580,"Corpus Christi, TX",Metropolitan,29-1141,Registered Nurses,3770,19,3770,2,3770,3770
+48409,San Patricio,TX,Texas,18580,"Corpus Christi, TX",Metropolitan,29-1141,Registered Nurses,3770,0,0,0,0,0
+24001,Allegany,MD,Maryland,19060,"Cumberland, MD-WV",Metropolitan,29-1141,Registered Nurses,1300,200,1155,14,1011,1052
+54057,Mineral,WV,West Virginia,19060,"Cumberland, MD-WV",Metropolitan,29-1141,Registered Nurses,1300,25,144,4,288,247
+48251,Johnson,TX,Texas,19100,"Dallas-Fort Worth-Arlington, TX",Metropolitan,29-1141,Registered Nurses,60620,109,30034,7,12480,17495
+48367,Parker,TX,Texas,19100,"Dallas-Fort Worth-Arlington, TX",Metropolitan,29-1141,Registered Nurses,60620,26,7164,0,0,2046
+48439,Tarrant,TX,Texas,19100,"Dallas-Fort Worth-Arlington, TX",Metropolitan,29-1141,Registered Nurses,60620,36,9919,6,10697,10475
+48497,Wise,TX,Texas,19100,"Dallas-Fort Worth-Arlington, TX",Metropolitan,29-1141,Registered Nurses,60620,49,13501,21,37441,30601
+13213,Murray,GA,Georgia,19140,"Dalton, GA",Metropolitan,29-1141,Registered Nurses,850,29,89,5,108,103
+13313,Whitfield,GA,Georgia,19140,"Dalton, GA",Metropolitan,29-1141,Registered Nurses,850,246,760,34,741,746
+17183,Vermilion,IL,Illinois,19180,"Danville, IL",Metropolitan,29-1141,Registered Nurses,600,22,600,4,600,600
+17073,Henry,IL,Illinois,19340,"Davenport-Moline-Rock Island, IA-IL",Metropolitan,29-1141,Registered Nurses,4450,25,459,3,606,564
+17131,Mercer,IL,Illinois,19340,"Davenport-Moline-Rock Island, IA-IL",Metropolitan,29-1141,Registered Nurses,4450,22,404,4,809,693
+17161,Rock Island,IL,Illinois,19340,"Davenport-Moline-Rock Island, IA-IL",Metropolitan,29-1141,Registered Nurses,4450,145,2666,7,1415,1773
+19163,Scott,IA,Iowa,19340,"Davenport-Moline-Rock Island, IA-IL",Metropolitan,29-1141,Registered Nurses,4450,50,919,8,1618,1418
+39057,Greene,OH,Ohio,19380,"Dayton, OH",Metropolitan,29-1141,Registered Nurses,12100,49,9719,8,2304,4423
+39109,Miami,OH,Ohio,19380,"Dayton, OH",Metropolitan,29-1141,Registered Nurses,12100,0,0,32,9219,6585
+39113,Montgomery,OH,Ohio,19380,"Dayton, OH",Metropolitan,29-1141,Registered Nurses,12100,12,2380,2,576,1091
+39135,Preble,OH,Ohio,19380,"Dayton, OH",Metropolitan,29-1141,Registered Nurses,12100,0,0,0,0,0
+01079,Lawrence,AL,Alabama,19460,"Decatur, AL",Metropolitan,29-1141,Registered Nurses,960,43,169,6,198,190
+01103,Morgan,AL,Alabama,19460,"Decatur, AL",Metropolitan,29-1141,Registered Nurses,960,200,790,23,761,769
+17115,Macon,IL,Illinois,19500,"Decatur, IL",Metropolitan,29-1141,Registered Nurses,1160,202,1160,22,1160,1160
+12127,Volusia,FL,Florida,19660,"Deltona-Daytona Beach-Ormond Beach, FL",Metropolitan,29-1141,Registered Nurses,5120,34,5120,8,5120,5120
+08001,Adams,CO,Colorado,19740,"Denver-Aurora-Lakewood, CO",Metropolitan,29-1141,Registered Nurses,29710,0,0,1,2700,1929
+08005,Arapahoe,CO,Colorado,19740,"Denver-Aurora-Lakewood, CO",Metropolitan,29-1141,Registered Nurses,29710,40,11537,0,0,3296
+08019,Clear Creek,CO,Colorado,19740,"Denver-Aurora-Lakewood, CO",Metropolitan,29-1141,Registered Nurses,29710,0,0,0,0,0
+08031,Denver,CO,Colorado,19740,"Denver-Aurora-Lakewood, CO",Metropolitan,29-1141,Registered Nurses,29710,0,0,0,0,0
+08035,Douglas,CO,Colorado,19740,"Denver-Aurora-Lakewood, CO",Metropolitan,29-1141,Registered Nurses,29710,53,15287,8,21607,19801
+08039,Elbert,CO,Colorado,19740,"Denver-Aurora-Lakewood, CO",Metropolitan,29-1141,Registered Nurses,29710,0,0,0,0,0
+08047,Gilpin,CO,Colorado,19740,"Denver-Aurora-Lakewood, CO",Metropolitan,29-1141,Registered Nurses,29710,0,0,0,0,0
+08059,Jefferson,CO,Colorado,19740,"Denver-Aurora-Lakewood, CO",Metropolitan,29-1141,Registered Nurses,29710,10,2884,2,5401,4682
+08093,Park,CO,Colorado,19740,"Denver-Aurora-Lakewood, CO",Metropolitan,29-1141,Registered Nurses,29710,0,0,0,0,0
+19049,Dallas,IA,Iowa,19780,"Des Moines-West Des Moines, IA",Metropolitan,29-1141,Registered Nurses,7280,25,1733,4,1532,1589
+19077,Guthrie,IA,Iowa,19780,"Des Moines-West Des Moines, IA",Metropolitan,29-1141,Registered Nurses,7280,25,1733,4,1532,1589
+19121,Madison,IA,Iowa,19780,"Des Moines-West Des Moines, IA",Metropolitan,29-1141,Registered Nurses,7280,25,1733,4,1532,1589
+19153,Polk,IA,Iowa,19780,"Des Moines-West Des Moines, IA",Metropolitan,29-1141,Registered Nurses,7280,30,2080,7,2682,2510
+19181,Warren,IA,Iowa,19780,"Des Moines-West Des Moines, IA",Metropolitan,29-1141,Registered Nurses,7280,0,0,0,0,0
+26087,Lapeer,MI,Michigan,19820,"Detroit-Warren-Dearborn, MI",Metropolitan,29-1141,Registered Nurses,41400,183,20421,10,9627,12711
+26093,Livingston,MI,Michigan,19820,"Detroit-Warren-Dearborn, MI",Metropolitan,29-1141,Registered Nurses,41400,43,4798,8,7702,6872
+26099,Macomb,MI,Michigan,19820,"Detroit-Warren-Dearborn, MI",Metropolitan,29-1141,Registered Nurses,41400,36,4017,15,14441,11463
+26125,Oakland,MI,Michigan,19820,"Detroit-Warren-Dearborn, MI",Metropolitan,29-1141,Registered Nurses,41400,44,4909,7,6739,6216
+26147,St Clair,MI,Michigan,19820,"Detroit-Warren-Dearborn, MI",Metropolitan,29-1141,Registered Nurses,41400,65,7253,3,2888,4135
+01061,Geneva,AL,Alabama,20020,"Dothan, AL",Metropolitan,29-1141,Registered Nurses,1980,73,469,6,371,399
+01067,Henry,AL,Alabama,20020,"Dothan, AL",Metropolitan,29-1141,Registered Nurses,1980,0,0,0,0,0
+01069,Houston,AL,Alabama,20020,"Dothan, AL",Metropolitan,29-1141,Registered Nurses,1980,235,1510,26,1608,1580
+10001,Kent,DE,Delaware,20100,"Dover, DE",Metropolitan,29-1141,Registered Nurses,1520,34,1520,0,0,1520
+19061,Dubuque,IA,Iowa,20220,"Dubuque, IA",Metropolitan,29-1141,Registered Nurses,1410,87,1410,10,1410,1410
+27017,Carlton,MN,Minnesota,20260,"Duluth, MN-WI",Metropolitan,29-1141,Registered Nurses,4720,22,1648,4,1716,1696
+27137,St Louis,MN,Minnesota,20260,"Duluth, MN-WI",Metropolitan,29-1141,Registered Nurses,4720,16,1198,3,1287,1261
+55031,Douglas,WI,Wisconsin,20260,"Duluth, MN-WI",Metropolitan,29-1141,Registered Nurses,4720,25,1873,4,1716,1761
+37037,Chatham,NC,North Carolina,20500,"Durham-Chapel Hill, NC",Metropolitan,29-1141,Registered Nurses,12470,25,2135,4,875,1235
+37063,Durham,NC,North Carolina,20500,"Durham-Chapel Hill, NC",Metropolitan,29-1141,Registered Nurses,12470,0,0,32,7000,5000
+37135,Orange,NC,North Carolina,20500,"Durham-Chapel Hill, NC",Metropolitan,29-1141,Registered Nurses,12470,83,7089,15,3281,4369
+37145,Person,NC,North Carolina,20500,"Durham-Chapel Hill, NC",Metropolitan,29-1141,Registered Nurses,12470,38,3245,6,1312,1864
+55017,Chippewa,WI,Wisconsin,20740,"Eau Claire, WI",Metropolitan,29-1141,Registered Nurses,2190,25,793,4,730,748
+55035,Eau Claire,WI,Wisconsin,20740,"Eau Claire, WI",Metropolitan,29-1141,Registered Nurses,2190,44,1396,8,1460,1441
+06025,Imperial,CA,California,20940,"El Centro, CA",Metropolitan,29-1141,Registered Nurses,960,161,960,20,960,960
+21093,Hardin,KY,Kentucky,21060,"Elizabethtown-Fort Knox, KY",Metropolitan,29-1141,Registered Nurses,1210,40,1210,0,0,1210
+21123,Larue,KY,Kentucky,21060,"Elizabethtown-Fort Knox, KY",Metropolitan,29-1141,Registered Nurses,1210,0,0,0,0,0
+18039,Elkhart,IN,Indiana,21140,"Elkhart-Goshen, IN",Metropolitan,29-1141,Registered Nurses,2010,16,2010,0,0,2010
+36015,Chemung,NY,New York,21300,"Elmira, NY",Metropolitan,29-1141,Registered Nurses,1130,80,1130,0,0,1130
+48141,El Paso,TX,Texas,21340,"El Paso, TX",Metropolitan,29-1141,Registered Nurses,5950,106,5950,12,5950,5950
+42049,Erie,PA,Pennsylvania,21500,"Erie, PA",Metropolitan,29-1141,Registered Nurses,3200,50,3200,9,3200,3200
+41039,Lane,OR,Oregon,21660,"Eugene, OR",Metropolitan,29-1141,Registered Nurses,3370,150,3370,0,0,3370
+18051,Gibson,IN,Indiana,21780,"Evansville, IN-KY",Metropolitan,29-1141,Registered Nurses,4390,25,202,5,201,201
+18129,Posey,IN,Indiana,21780,"Evansville, IN-KY",Metropolitan,29-1141,Registered Nurses,4390,0,0,0,0,0
+18163,Vanderburgh,IN,Indiana,21780,"Evansville, IN-KY",Metropolitan,29-1141,Registered Nurses,4390,400,3233,60,2416,2650
+18173,Warrick,IN,Indiana,21780,"Evansville, IN-KY",Metropolitan,29-1141,Registered Nurses,4390,0,0,32,1288,920
+21101,Henderson,KY,Kentucky,21780,"Evansville, IN-KY",Metropolitan,29-1141,Registered Nurses,4390,118,953,12,483,617
+21233,Webster,KY,Kentucky,21780,"Evansville, IN-KY",Metropolitan,29-1141,Registered Nurses,4390,0,0,0,0,0
+02090,Fairbanks North Star,AK,Alaska,21820,"Fairbanks, AK",Metropolitan,29-1141,Registered Nurses,700,122,700,13,700,700
+27027,Clay,MN,Minnesota,22020,"Fargo, ND-MN",Metropolitan,29-1141,Registered Nurses,4260,0,0,0,0,0
+38017,Cass,ND,North Dakota,22020,"Fargo, ND-MN",Metropolitan,29-1141,Registered Nurses,4260,42,4260,0,0,4260
+35045,San Juan,NM,New Mexico,22140,"Farmington, NM",Metropolitan,29-1141,Registered Nurses,790,184,790,10,790,790
+37051,Cumberland,NC,North Carolina,22180,"Fayetteville, NC",Metropolitan,29-1141,Registered Nurses,3010,0,0,0,0,0
+37093,Hoke,NC,North Carolina,22180,"Fayetteville, NC",Metropolitan,29-1141,Registered Nurses,3010,41,3010,7,3010,3010
+05007,Benton,AR,Arkansas,22220,"Fayetteville-Springdale-Rogers, AR-MO",Metropolitan,29-1141,Registered Nurses,3610,36,2166,0,0,618
+05087,Madison,AR,Arkansas,22220,"Fayetteville-Springdale-Rogers, AR-MO",Metropolitan,29-1141,Registered Nurses,3610,0,0,0,0,0
+05143,Washington,AR,Arkansas,22220,"Fayetteville-Springdale-Rogers, AR-MO",Metropolitan,29-1141,Registered Nurses,3610,24,1444,9,3610,2991
+29119,McDonald,MO,Missouri,22220,"Fayetteville-Springdale-Rogers, AR-MO",Metropolitan,29-1141,Registered Nurses,3610,0,0,0,0,0
+26049,Genesee,MI,Michigan,22420,"Flint, MI",Metropolitan,29-1141,Registered Nurses,4210,370,4210,57,4210,4210
+45031,Darlington,SC,South Carolina,22500,"Florence, SC",Metropolitan,29-1141,Registered Nurses,3050,116,1734,12,3050,2674
+45041,Florence,SC,South Carolina,22500,"Florence, SC",Metropolitan,29-1141,Registered Nurses,3050,88,1315,0,0,375
+01033,Colbert,AL,Alabama,22520,"Florence-Muscle Shoals, AL",Metropolitan,29-1141,Registered Nurses,1410,122,484,10,306,357
+01077,Lauderdale,AL,Alabama,22520,"Florence-Muscle Shoals, AL",Metropolitan,29-1141,Registered Nurses,1410,233,925,36,1103,1052
+08069,Larimer,CO,Colorado,22660,"Fort Collins, CO",Metropolitan,29-1141,Registered Nurses,3850,23,3850,4,3850,3850
+05033,Crawford,AR,Arkansas,22900,"Fort Smith, AR-OK",Metropolitan,29-1141,Registered Nurses,2310,35,215,8,342,306
+05047,Franklin,AR,Arkansas,22900,"Fort Smith, AR-OK",Metropolitan,29-1141,Registered Nurses,2310,25,154,4,171,166
+05131,Sebastian,AR,Arkansas,22900,"Fort Smith, AR-OK",Metropolitan,29-1141,Registered Nurses,2310,249,1533,31,1326,1385
+40079,Le Flore,OK,Oklahoma,22900,"Fort Smith, AR-OK",Metropolitan,29-1141,Registered Nurses,2310,25,154,4,171,166
+40135,Sequoyah,OK,Oklahoma,22900,"Fort Smith, AR-OK",Metropolitan,29-1141,Registered Nurses,2310,41,252,7,299,286
+18003,Allen,IN,Indiana,23060,"Fort Wayne, IN",Metropolitan,29-1141,Registered Nurses,5560,16,823,0,0,235
+18179,Wells,IN,Indiana,23060,"Fort Wayne, IN",Metropolitan,29-1141,Registered Nurses,5560,62,3191,7,3243,3228
+18183,Whitley,IN,Indiana,23060,"Fort Wayne, IN",Metropolitan,29-1141,Registered Nurses,5560,30,1544,5,2316,2096
+06019,Fresno,CA,California,23420,"Fresno, CA",Metropolitan,29-1141,Registered Nurses,7640,16,7640,0,0,7640
+01055,Etowah,AL,Alabama,23460,"Gadsden, AL",Metropolitan,29-1141,Registered Nurses,1220,222,1220,40,1220,1220
+12001,Alachua,FL,Florida,23540,"Gainesville, FL",Metropolitan,29-1141,Registered Nurses,5590,48,5590,8,5590,5590
+12041,Gilchrist,FL,Florida,23540,"Gainesville, FL",Metropolitan,29-1141,Registered Nurses,5590,0,0,0,0,0
+37191,Wayne,NC,North Carolina,24140,"Goldsboro, NC",Metropolitan,29-1141,Registered Nurses,1130,261,1130,16,1130,1130
+08077,Mesa,CO,Colorado,24300,"Grand Junction, CO",Metropolitan,29-1141,Registered Nurses,1820,0,0,1,1820,1820
+26015,Barry,MI,Michigan,24340,"Grand Rapids-Wyoming, MI",Metropolitan,29-1141,Registered Nurses,12820,25,1652,6,4273,3524
+26067,Ionia,MI,Michigan,24340,"Grand Rapids-Wyoming, MI",Metropolitan,29-1141,Registered Nurses,12820,25,1652,2,1424,1489
+26081,Kent,MI,Michigan,24340,"Grand Rapids-Wyoming, MI",Metropolitan,29-1141,Registered Nurses,12820,119,7863,1,712,2755
+26123,Newaygo,MI,Michigan,24340,"Grand Rapids-Wyoming, MI",Metropolitan,29-1141,Registered Nurses,12820,25,1652,9,6410,5050
+30013,Cascade,MT,Montana,24500,"Great Falls, MT",Metropolitan,29-1141,Registered Nurses,0,312,0,20,0,0
+08123,Weld,CO,Colorado,24540,"Greeley, CO",Metropolitan,29-1141,Registered Nurses,1170,0,0,7,1170,1170
+55009,Brown,WI,Wisconsin,24580,"Green Bay, WI",Metropolitan,29-1141,Registered Nurses,4040,32,2394,6,2424,2415
+55061,Kewaunee,WI,Wisconsin,24580,"Green Bay, WI",Metropolitan,29-1141,Registered Nurses,4040,0,0,0,0,0
+55083,Oconto,WI,Wisconsin,24580,"Green Bay, WI",Metropolitan,29-1141,Registered Nurses,4040,22,1645,4,1616,1624
+37081,Guilford,NC,North Carolina,24660,"Greensboro-High Point, NC",Metropolitan,29-1141,Registered Nurses,6140,101,1751,6,1364,1475
+37151,Randolph,NC,North Carolina,24660,"Greensboro-High Point, NC",Metropolitan,29-1141,Registered Nurses,6140,145,2514,12,2728,2667
+37157,Rockingham,NC,North Carolina,24660,"Greensboro-High Point, NC",Metropolitan,29-1141,Registered Nurses,6140,108,1873,9,2046,1997
+37079,Greene,NC,North Carolina,24780,"Greenville, NC",Metropolitan,29-1141,Registered Nurses,3550,0,0,0,0,0
+37147,Pitt,NC,North Carolina,24780,"Greenville, NC",Metropolitan,29-1141,Registered Nurses,3550,48,3550,0,0,3550
+45045,Greenville,SC,South Carolina,24860,"Greenville-Anderson-Mauldin, SC",Metropolitan,29-1141,Registered Nurses,9040,53,3471,0,0,991
+45059,Laurens,SC,South Carolina,24860,"Greenville-Anderson-Mauldin, SC",Metropolitan,29-1141,Registered Nurses,9040,43,2816,9,6258,5275
+45077,Pickens,SC,South Carolina,24860,"Greenville-Anderson-Mauldin, SC",Metropolitan,29-1141,Registered Nurses,9040,42,2751,4,2781,2772
+28045,Hancock,MS,Mississippi,25060,"Gulfport-Biloxi-Pascagoula, MS",Metropolitan,29-1141,Registered Nurses,3890,47,1741,6,2334,2164
+28047,Harrison,MS,Mississippi,25060,"Gulfport-Biloxi-Pascagoula, MS",Metropolitan,29-1141,Registered Nurses,3890,33,1222,0,0,349
+28131,Stone,MS,Mississippi,25060,"Gulfport-Biloxi-Pascagoula, MS",Metropolitan,29-1141,Registered Nurses,3890,25,926,4,1556,1376
+24043,Washington,MD,Maryland,25180,"Hagerstown-Martinsburg, MD-WV",Metropolitan,29-1141,Registered Nurses,2490,65,1798,0,0,513
+54003,Berkeley,WV,West Virginia,25180,"Hagerstown-Martinsburg, MD-WV",Metropolitan,29-1141,Registered Nurses,2490,0,0,1,498,355
+54065,Morgan,WV,West Virginia,25180,"Hagerstown-Martinsburg, MD-WV",Metropolitan,29-1141,Registered Nurses,2490,25,691,4,1992,1620
+06031,Kings,CA,California,25260,"Hanford-Corcoran, CA",Metropolitan,29-1141,Registered Nurses,0,142,0,22,0,0
+42041,Cumberland,PA,Pennsylvania,25420,"Harrisburg-Carlisle, PA",Metropolitan,29-1141,Registered Nurses,8630,75,4978,0,0,4978
+42043,Dauphin,PA,Pennsylvania,25420,"Harrisburg-Carlisle, PA",Metropolitan,29-1141,Registered Nurses,8630,55,3651,0,0,3651
+42099,Perry,PA,Pennsylvania,25420,"Harrisburg-Carlisle, PA",Metropolitan,29-1141,Registered Nurses,8630,0,0,0,0,0
+28035,Forrest,MS,Mississippi,25620,"Hattiesburg, MS",Metropolitan,29-1141,Registered Nurses,0,427,0,40,0,0
+28073,Lamar,MS,Mississippi,25620,"Hattiesburg, MS",Metropolitan,29-1141,Registered Nurses,0,45,0,0,0,0
+28111,Perry,MS,Mississippi,25620,"Hattiesburg, MS",Metropolitan,29-1141,Registered Nurses,0,22,0,4,0,0
+37003,Alexander,NC,North Carolina,25860,"Hickory-Lenoir-Morganton, NC",Metropolitan,29-1141,Registered Nurses,2820,0,0,0,0,0
+37023,Burke,NC,North Carolina,25860,"Hickory-Lenoir-Morganton, NC",Metropolitan,29-1141,Registered Nurses,2820,431,1640,0,0,468
+37027,Caldwell,NC,North Carolina,25860,"Hickory-Lenoir-Morganton, NC",Metropolitan,29-1141,Registered Nurses,2820,110,418,12,846,723
+37035,Catawba,NC,North Carolina,25860,"Hickory-Lenoir-Morganton, NC",Metropolitan,29-1141,Registered Nurses,2820,200,761,28,1974,1627
+13179,Liberty,GA,Georgia,25980,"Hinesville, GA",Metropolitan,29-1141,Registered Nurses,170,25,170,4,170,170
+13183,Long,GA,Georgia,25980,"Hinesville, GA",Metropolitan,29-1141,Registered Nurses,170,0,0,0,0,0
+05051,Garland,AR,Arkansas,26300,"Hot Springs, AR",Metropolitan,29-1141,Registered Nurses,990,40,990,3,990,990
+22057,Lafourche,LA,Louisiana,26380,"Houma-Thibodaux, LA",Metropolitan,29-1141,Registered Nurses,1800,130,1560,16,1800,1731
+22109,Terrebonne,LA,Louisiana,26380,"Houma-Thibodaux, LA",Metropolitan,29-1141,Registered Nurses,1800,20,240,0,0,68
+48015,Austin,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,32,4244,6,9130,7734
+48039,Brazoria,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,49,6499,8,12173,10552
+48071,Chambers,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,14,1856,2,3043,2704
+48157,Fort Bend,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,0,0,1,1521,1086
+48167,Galveston,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,132,17508,0,0,5002
+48201,Harris,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,24,3183,0,0,909
+48291,Liberty,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,16,2122,3,4565,3867
+48339,Montgomery,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,146,19365,16,24346,22923
+48407,San Jacinto,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,0,0,0,0,0
+48473,Waller,TX,Texas,26420,"Houston-The Woodlands-Sugar Land, TX",Metropolitan,29-1141,Registered Nurses,54780,0,0,0,0,0
+21019,Boyd,KY,Kentucky,26580,"Huntington-Ashland, WV-KY-OH",Metropolitan,29-1141,Registered Nurses,4850,439,2146,38,1919,1984
+21089,Greenup,KY,Kentucky,26580,"Huntington-Ashland, WV-KY-OH",Metropolitan,29-1141,Registered Nurses,4850,135,660,12,606,621
+39087,Lawrence,OH,Ohio,26580,"Huntington-Ashland, WV-KY-OH",Metropolitan,29-1141,Registered Nurses,4850,8,39,1,50,47
+54011,Cabell,WV,West Virginia,26580,"Huntington-Ashland, WV-KY-OH",Metropolitan,29-1141,Registered Nurses,4850,330,1613,44,2222,2048
+54099,Wayne,WV,West Virginia,26580,"Huntington-Ashland, WV-KY-OH",Metropolitan,29-1141,Registered Nurses,4850,80,391,1,50,147
+01083,Limestone,AL,Alabama,26620,"Huntsville, AL",Metropolitan,29-1141,Registered Nurses,5000,31,170,8,533,429
+01089,Madison,AL,Alabama,26620,"Huntsville, AL",Metropolitan,29-1141,Registered Nurses,5000,877,4829,67,4466,4570
+16019,Bonneville,ID,Idaho,26820,"Idaho Falls, ID",Metropolitan,29-1141,Registered Nurses,1230,0,0,32,1230,1230
+16051,Jefferson,ID,Idaho,26820,"Idaho Falls, ID",Metropolitan,29-1141,Registered Nurses,1230,0,0,0,0,0
+18011,Boone,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,68,3693,8,4103,3986
+18013,Brown,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,0,0,0,0,0
+18057,Hamilton,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,20,1086,4,2051,1775
+18059,Hancock,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,12,651,2,1025,918
+18063,Hendricks,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,127,6898,16,8206,7832
+18081,Johnson,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,44,2389,0,0,682
+18097,Marion,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,66,3584,0,0,1024
+18109,Morgan,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,83,4508,10,5128,4951
+18133,Putnam,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,25,1357,6,3077,2586
+18145,Shelby,IN,Indiana,26900,"Indianapolis-Carmel-Anderson, IN",Metropolitan,29-1141,Registered Nurses,26670,46,2498,6,3077,2911
+19103,Johnson,IA,Iowa,26980,"Iowa City, IA",Metropolitan,29-1141,Registered Nurses,3600,28,1901,5,2000,1971
+19183,Washington,IA,Iowa,26980,"Iowa City, IA",Metropolitan,29-1141,Registered Nurses,3600,25,1698,4,1600,1628
+36109,Tompkins,NY,New York,27060,"Ithaca, NY",Metropolitan,29-1141,Registered Nurses,970,163,970,16,970,970
+26075,Jackson,MI,Michigan,27100,"Jackson, MI",Metropolitan,29-1141,Registered Nurses,1420,112,1420,20,1420,1420
+28029,Copiah,MS,Mississippi,27140,"Jackson, MS",Metropolitan,29-1141,Registered Nurses,9030,25,747,4,1128,1019
+28049,Hinds,MS,Mississippi,27140,"Jackson, MS",Metropolitan,29-1141,Registered Nurses,9030,25,747,7,1975,1624
+28089,Madison,MS,Mississippi,27140,"Jackson, MS",Metropolitan,29-1141,Registered Nurses,9030,67,2003,7,1975,1983
+28121,Rankin,MS,Mississippi,27140,"Jackson, MS",Metropolitan,29-1141,Registered Nurses,9030,160,4784,10,2821,3382
+28127,Simpson,MS,Mississippi,27140,"Jackson, MS",Metropolitan,29-1141,Registered Nurses,9030,25,747,4,1128,1019
+47023,Chester,TN,Tennessee,27180,"Jackson, TN",Metropolitan,29-1141,Registered Nurses,1970,0,0,0,0,0
+47113,Madison,TN,Tennessee,27180,"Jackson, TN",Metropolitan,29-1141,Registered Nurses,1970,40,1970,0,0,1970
+12003,Baker,FL,Florida,27260,"Jacksonville, FL",Metropolitan,29-1141,Registered Nurses,14800,21,401,4,569,521
+12019,Clay,FL,Florida,27260,"Jacksonville, FL",Metropolitan,29-1141,Registered Nurses,14800,273,5213,28,3984,4335
+12031,Duval,FL,Florida,27260,"Jacksonville, FL",Metropolitan,29-1141,Registered Nurses,14800,92,1756,16,2276,2128
+12089,Nassau,FL,Florida,27260,"Jacksonville, FL",Metropolitan,29-1141,Registered Nurses,14800,54,1031,9,1280,1209
+12109,St Johns,FL,Florida,27260,"Jacksonville, FL",Metropolitan,29-1141,Registered Nurses,14800,335,6397,47,6688,6605
+37133,Onslow,NC,North Carolina,27340,"Jacksonville, NC",Metropolitan,29-1141,Registered Nurses,730,162,730,14,730,730
+55105,Rock,WI,Wisconsin,27500,"Janesville-Beloit, WI",Metropolitan,29-1141,Registered Nurses,1670,18,1670,3,1670,1670
+29027,Callaway,MO,Missouri,27620,"Jefferson City, MO",Metropolitan,29-1141,Registered Nurses,1440,38,396,0,0,113
+29051,Cole,MO,Missouri,27620,"Jefferson City, MO",Metropolitan,29-1141,Registered Nurses,1440,100,1043,12,1440,1326
+29135,Moniteau,MO,Missouri,27620,"Jefferson City, MO",Metropolitan,29-1141,Registered Nurses,1440,0,0,0,0,0
+29151,Osage,MO,Missouri,27620,"Jefferson City, MO",Metropolitan,29-1141,Registered Nurses,1440,0,0,0,0,0
+47019,Carter,TN,Tennessee,27740,"Johnson City, TN",Metropolitan,29-1141,Registered Nurses,2800,109,1969,8,2036,2017
+47171,Unicoi,TN,Tennessee,27740,"Johnson City, TN",Metropolitan,29-1141,Registered Nurses,2800,10,180,3,763,597
+47179,Washington,TN,Tennessee,27740,"Johnson City, TN",Metropolitan,29-1141,Registered Nurses,2800,36,650,0,0,185
+42021,Cambria,PA,Pennsylvania,27780,"Johnstown, PA",Metropolitan,29-1141,Registered Nurses,1500,39,1500,7,1500,1500
+05031,Craighead,AR,Arkansas,27860,"Jonesboro, AR",Metropolitan,29-1141,Registered Nurses,1570,44,1570,8,1570,1570
+05111,Poinsett,AR,Arkansas,27860,"Jonesboro, AR",Metropolitan,29-1141,Registered Nurses,1570,0,0,0,0,0
+29097,Jasper,MO,Missouri,27900,"Joplin, MO",Metropolitan,29-1141,Registered Nurses,2390,25,164,4,222,205
+29145,Newton,MO,Missouri,27900,"Joplin, MO",Metropolitan,29-1141,Registered Nurses,2390,339,2225,39,2167,2184
+17091,Kankakee,IL,Illinois,28100,"Kankakee, IL",Metropolitan,29-1141,Registered Nurses,1400,169,1400,9,1400,1400
+20059,Franklin,KS,Kansas,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,44,2842,5,1738,2053
+20091,Johnson,KS,Kansas,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,4,258,1,347,322
+20103,Leavenworth,KS,Kansas,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,0,0,0,0,0
+20107,Linn,KS,Kansas,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,0,0,0,0,0
+20121,Miami,KS,Kansas,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,18,1162,3,1042,1077
+20209,Wyandotte,KS,Kansas,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,0,0,32,11124,7945
+29013,Bates,MO,Missouri,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,44,2842,8,2781,2798
+29025,Caldwell,MO,Missouri,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,0,0,0,0,0
+29037,Cass,MO,Missouri,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,25,1614,4,1390,1454
+29047,Clay,MO,Missouri,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,72,4650,0,0,1328
+29049,Clinton,MO,Missouri,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,34,2196,5,1738,1869
+29095,Jackson,MO,Missouri,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,0,0,0,0,0
+29107,Lafayette,MO,Missouri,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,25,1614,2,695,958
+29165,Platte,MO,Missouri,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,118,7622,12,4171,5157
+29177,Ray,MO,Missouri,28140,"Kansas City, MO-KS",Metropolitan,29-1141,Registered Nurses,26420,25,1614,4,1390,1454
+53005,Benton,WA,Washington,28420,"Kennewick-Richland, WA",Metropolitan,29-1141,Registered Nurses,2080,111,1697,14,1617,1640
+53021,Franklin,WA,Washington,28420,"Kennewick-Richland, WA",Metropolitan,29-1141,Registered Nurses,2080,25,382,4,462,439
+48027,Bell,TX,Texas,28660,"Killeen-Temple, TX",Metropolitan,29-1141,Registered Nurses,3390,36,1419,0,0,405
+48099,Coryell,TX,Texas,28660,"Killeen-Temple, TX",Metropolitan,29-1141,Registered Nurses,3390,25,985,4,1695,1492
+48281,Lampasas,TX,Texas,28660,"Killeen-Temple, TX",Metropolitan,29-1141,Registered Nurses,3390,25,985,4,1695,1492
+47073,Hawkins,TN,Tennessee,28700,"Kingsport-Bristol-Bristol, TN-VA",Metropolitan,29-1141,Registered Nurses,2610,32,342,6,783,657
+47163,Sullivan,TN,Tennessee,28700,"Kingsport-Bristol-Bristol, TN-VA",Metropolitan,29-1141,Registered Nurses,2610,72,770,0,0,220
+51169,Scott,VA,Virginia,28700,"Kingsport-Bristol-Bristol, TN-VA",Metropolitan,29-1141,Registered Nurses,2610,0,0,0,0,0
+51191,Washington,VA,Virginia,28700,"Kingsport-Bristol-Bristol, TN-VA",Metropolitan,29-1141,Registered Nurses,2610,115,1230,14,1827,1656
+51520,Bristol City,VA,Virginia,28700,"Kingsport-Bristol-Bristol, TN-VA",Metropolitan,29-1141,Registered Nurses,2610,25,267,0,0,76
+36111,Ulster,NY,New York,28740,"Kingston, NY",Metropolitan,29-1141,Registered Nurses,1140,45,1140,5,1140,1140
+47001,Anderson,TN,Tennessee,28940,"Knoxville, TN",Metropolitan,29-1141,Registered Nurses,7890,0,0,0,0,0
+47009,Blount,TN,Tennessee,28940,"Knoxville, TN",Metropolitan,29-1141,Registered Nurses,7890,155,5558,0,0,1588
+47093,Knox,TN,Tennessee,28940,"Knoxville, TN",Metropolitan,29-1141,Registered Nurses,7890,35,1255,5,3945,3176
+47105,Loudon,TN,Tennessee,28940,"Knoxville, TN",Metropolitan,29-1141,Registered Nurses,7890,30,1075,5,3945,3125
+47173,Union,TN,Tennessee,28940,"Knoxville, TN",Metropolitan,29-1141,Registered Nurses,7890,0,0,0,0,0
+18067,Howard,IN,Indiana,29020,"Kokomo, IN",Metropolitan,29-1141,Registered Nurses,860,111,701,13,657,670
+18159,Tipton,IN,Indiana,29020,"Kokomo, IN",Metropolitan,29-1141,Registered Nurses,860,25,158,4,202,189
+27055,Houston,MN,Minnesota,29100,"La Crosse-Onalaska, WI-MN",Metropolitan,29-1141,Registered Nurses,2990,0,0,0,0,0
+55063,La Crosse,WI,Wisconsin,29100,"La Crosse-Onalaska, WI-MN",Metropolitan,29-1141,Registered Nurses,2990,142,2990,28,2990,2990
+22055,Lafayette,LA,Louisiana,29180,"Lafayette, LA",Metropolitan,29-1141,Registered Nurses,3510,161,3038,64,3303,3227
+22099,St Martin,LA,Louisiana,29180,"Lafayette, LA",Metropolitan,29-1141,Registered Nurses,3510,25,471,4,206,282
+22019,Calcasieu,LA,Louisiana,29340,"Lake Charles, LA",Metropolitan,29-1141,Registered Nurses,1770,42,816,7,774,786
+22023,Cameron,LA,Louisiana,29340,"Lake Charles, LA",Metropolitan,29-1141,Registered Nurses,1770,49,953,9,995,983
+12105,Polk,FL,Florida,29460,"Lakeland-Winter Haven, FL",Metropolitan,29-1141,Registered Nurses,3860,93,3860,8,3860,3860
+42071,Lancaster,PA,Pennsylvania,29540,"Lancaster, PA",Metropolitan,29-1141,Registered Nurses,5050,126,5050,0,0,5050
+26037,Clinton,MI,Michigan,29620,"Lansing-East Lansing, MI",Metropolitan,29-1141,Registered Nurses,3910,34,224,0,0,64
+26045,Eaton,MI,Michigan,29620,"Lansing-East Lansing, MI",Metropolitan,29-1141,Registered Nurses,3910,25,165,4,151,155
+26065,Ingham,MI,Michigan,29620,"Lansing-East Lansing, MI",Metropolitan,29-1141,Registered Nurses,3910,533,3520,99,3758,3690
+48479,Webb,TX,Texas,29700,"Laredo, TX",Metropolitan,29-1141,Registered Nurses,1290,20,1290,2,1290,1290
+35013,Dona Ana,NM,New Mexico,29740,"Las Cruces, NM",Metropolitan,29-1141,Registered Nurses,1270,119,1270,0,0,1270
+32003,Clark,NV,Nevada,29820,"Las Vegas-Henderson-Paradise, NV",Metropolitan,29-1141,Registered Nurses,17210,152,17210,0,0,17210
+20045,Douglas,KS,Kansas,29940,"Lawrence, KS",Metropolitan,29-1141,Registered Nurses,760,110,760,10,760,760
+40031,Comanche,OK,Oklahoma,30020,"Lawton, OK",Metropolitan,29-1141,Registered Nurses,900,14,900,0,0,900
+42075,Lebanon,PA,Pennsylvania,30140,"Lebanon, PA",Metropolitan,29-1141,Registered Nurses,1340,103,1340,0,0,1340
+16069,Nez Perce,ID,Idaho,30300,"Lewiston, ID-WA",Metropolitan,29-1141,Registered Nurses,860,110,700,9,595,625
+53003,Asotin,WA,Washington,30300,"Lewiston, ID-WA",Metropolitan,29-1141,Registered Nurses,860,25,159,4,264,234
+21017,Bourbon,KY,Kentucky,30460,"Lexington-Fayette, KY",Metropolitan,29-1141,Registered Nurses,7400,34,1338,4,548,773
+21049,Clark,KY,Kentucky,30460,"Lexington-Fayette, KY",Metropolitan,29-1141,Registered Nurses,7400,54,2125,8,1096,1390
+21067,Fayette,KY,Kentucky,30460,"Lexington-Fayette, KY",Metropolitan,29-1141,Registered Nurses,7400,0,0,32,4385,3132
+21113,Jessamine,KY,Kentucky,30460,"Lexington-Fayette, KY",Metropolitan,29-1141,Registered Nurses,7400,0,0,0,0,0
+21209,Scott,KY,Kentucky,30460,"Lexington-Fayette, KY",Metropolitan,29-1141,Registered Nurses,7400,75,2952,6,822,1430
+21239,Woodford,KY,Kentucky,30460,"Lexington-Fayette, KY",Metropolitan,29-1141,Registered Nurses,7400,25,984,4,548,672
+39003,Allen,OH,Ohio,30620,"Lima, OH",Metropolitan,29-1141,Registered Nurses,1830,25,1830,4,1830,1830
+31109,Lancaster,NE,Nebraska,30700,"Lincoln, NE",Metropolitan,29-1141,Registered Nurses,4130,24,2065,6,2478,2360
+31159,Seward,NE,Nebraska,30700,"Lincoln, NE",Metropolitan,29-1141,Registered Nurses,4130,24,2065,4,1652,1770
+05045,Faulkner,AR,Arkansas,30780,"Little Rock-North Little Rock-Conway, AR",Metropolitan,29-1141,Registered Nurses,9380,110,4299,8,3126,3461
+05053,Grant,AR,Arkansas,30780,"Little Rock-North Little Rock-Conway, AR",Metropolitan,29-1141,Registered Nurses,9380,0,0,0,0,0
+05085,Lonoke,AR,Arkansas,30780,"Little Rock-North Little Rock-Conway, AR",Metropolitan,29-1141,Registered Nurses,9380,0,0,0,0,0
+05105,Perry,AR,Arkansas,30780,"Little Rock-North Little Rock-Conway, AR",Metropolitan,29-1141,Registered Nurses,9380,0,0,0,0,0
+05119,Pulaski,AR,Arkansas,30780,"Little Rock-North Little Rock-Conway, AR",Metropolitan,29-1141,Registered Nurses,9380,0,0,0,0,0
+05125,Saline,AR,Arkansas,30780,"Little Rock-North Little Rock-Conway, AR",Metropolitan,29-1141,Registered Nurses,9380,130,5080,16,6253,5918
+16041,Franklin,ID,Idaho,30860,"Logan, UT-ID",Metropolitan,29-1141,Registered Nurses,810,20,108,3,142,132
+49005,Cache,UT,Utah,30860,"Logan, UT-ID",Metropolitan,29-1141,Registered Nurses,810,130,702,14,667,677
+48183,Gregg,TX,Texas,30980,"Longview, TX",Metropolitan,29-1141,Registered Nurses,2330,36,1089,0,0,311
+48401,Rusk,TX,Texas,30980,"Longview, TX",Metropolitan,29-1141,Registered Nurses,2330,41,1240,7,2330,2018
+48459,Upshur,TX,Texas,30980,"Longview, TX",Metropolitan,29-1141,Registered Nurses,2330,0,0,0,0,0
+53015,Cowlitz,WA,Washington,31020,"Longview, WA",Metropolitan,29-1141,Registered Nurses,0,166,0,18,0,0
+18019,Clark,IN,Indiana,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,100,2757,0,0,787
+18043,Floyd,IN,Indiana,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,225,6203,16,3277,4113
+18061,Harrison,IN,Indiana,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,25,689,4,819,782
+18175,Washington,IN,Indiana,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,25,689,4,819,782
+21029,Bullitt,KY,Kentucky,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,0,0,0,0,0
+21103,Henry,KY,Kentucky,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,0,0,0,0,0
+21111,Jefferson,KY,Kentucky,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,0,0,32,6555,4682
+21163,Meade,KY,Kentucky,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,0,0,0,0,0
+21179,Nelson,KY,Kentucky,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,40,1102,4,819,900
+21185,Oldham,KY,Kentucky,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,90,2481,8,1638,1879
+21211,Shelby,KY,Kentucky,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,30,827,4,819,821
+21215,Spencer,KY,Kentucky,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,0,0,0,0,0
+21223,Trimble,KY,Kentucky,31140,"Louisville/Jefferson County, KY-IN",Metropolitan,29-1141,Registered Nurses,14750,0,0,0,0,0
+48107,Crosby,TX,Texas,31180,"Lubbock, TX",Metropolitan,29-1141,Registered Nurses,3730,25,162,4,149,152
+48303,Lubbock,TX,Texas,31180,"Lubbock, TX",Metropolitan,29-1141,Registered Nurses,3730,550,3567,96,3580,3577
+51009,Amherst,VA,Virginia,31340,"Lynchburg, VA",Metropolitan,29-1141,Registered Nurses,2300,0,0,0,0,0
+51011,Appomattox,VA,Virginia,31340,"Lynchburg, VA",Metropolitan,29-1141,Registered Nurses,2300,0,0,0,0,0
+51019,Bedford,VA,Virginia,31340,"Lynchburg, VA",Metropolitan,29-1141,Registered Nurses,2300,34,1117,6,1150,1140
+51031,Campbell,VA,Virginia,31340,"Lynchburg, VA",Metropolitan,29-1141,Registered Nurses,2300,0,0,0,0,0
+51515,Bedford City,VA,Virginia,31340,"Lynchburg, VA",Metropolitan,29-1141,Registered Nurses,2300,0,0,0,0,0
+51680,Lynchburg City,VA,Virginia,31340,"Lynchburg, VA",Metropolitan,29-1141,Registered Nurses,2300,36,1182,6,1150,1159
+13021,Bibb,GA,Georgia,31420,"Macon, GA",Metropolitan,29-1141,Registered Nurses,2790,179,2448,28,2367,2390
+13079,Crawford,GA,Georgia,31420,"Macon, GA",Metropolitan,29-1141,Registered Nurses,2790,0,0,0,0,0
+13169,Jones,GA,Georgia,31420,"Macon, GA",Metropolitan,29-1141,Registered Nurses,2790,0,0,0,0,0
+13207,Monroe,GA,Georgia,31420,"Macon, GA",Metropolitan,29-1141,Registered Nurses,2790,25,341,5,422,399
+13289,Twiggs,GA,Georgia,31420,"Macon, GA",Metropolitan,29-1141,Registered Nurses,2790,0,0,0,0,0
+55021,Columbia,WI,Wisconsin,31540,"Madison, WI",Metropolitan,29-1141,Registered Nurses,8650,25,2040,4,1922,1955
+55025,Dane,WI,Wisconsin,31540,"Madison, WI",Metropolitan,29-1141,Registered Nurses,8650,56,4569,10,4805,4738
+55049,Iowa,WI,Wisconsin,31540,"Madison, WI",Metropolitan,29-1141,Registered Nurses,8650,25,2040,4,1922,1955
+39139,Richland,OH,Ohio,31900,"Mansfield, OH",Metropolitan,29-1141,Registered Nurses,1100,26,1100,7,1100,1100
+48215,Hidalgo,TX,Texas,32580,"McAllen-Edinburg-Mission, TX",Metropolitan,29-1141,Registered Nurses,5120,0,0,32,5120,5120
+41029,Jackson,OR,Oregon,32780,"Medford, OR",Metropolitan,29-1141,Registered Nurses,2170,0,0,0,0,0
+05035,Crittenden,AR,Arkansas,32820,"Memphis, TN-MS-AR",Metropolitan,29-1141,Registered Nurses,13180,52,1473,0,0,421
+28033,De Soto,MS,Mississippi,32820,"Memphis, TN-MS-AR",Metropolitan,29-1141,Registered Nurses,13180,309,8758,54,9885,9563
+28093,Marshall,MS,Mississippi,32820,"Memphis, TN-MS-AR",Metropolitan,29-1141,Registered Nurses,13180,27,765,5,915,872
+28137,Tate,MS,Mississippi,32820,"Memphis, TN-MS-AR",Metropolitan,29-1141,Registered Nurses,13180,0,0,0,0,0
+28143,Tunica,MS,Mississippi,32820,"Memphis, TN-MS-AR",Metropolitan,29-1141,Registered Nurses,13180,0,0,0,0,0
+47047,Fayette,TN,Tennessee,32820,"Memphis, TN-MS-AR",Metropolitan,29-1141,Registered Nurses,13180,0,0,0,0,0
+47157,Shelby,TN,Tennessee,32820,"Memphis, TN-MS-AR",Metropolitan,29-1141,Registered Nurses,13180,30,850,5,915,896
+47167,Tipton,TN,Tennessee,32820,"Memphis, TN-MS-AR",Metropolitan,29-1141,Registered Nurses,13180,47,1332,8,1464,1426
+06047,Merced,CA,California,32900,"Merced, CA",Metropolitan,29-1141,Registered Nurses,860,186,860,20,860,860
+12099,Palm Beach,FL,Florida,33100,"Miami-Fort Lauderdale-West Palm Beach, FL",Metropolitan,29-1141,Registered Nurses,54020,356,54020,52,54020,54020
+18091,La Porte,IN,Indiana,33140,"Michigan City-La Porte, IN",Metropolitan,29-1141,Registered Nurses,860,129,860,20,860,860
+48329,Midland,TX,Texas,33260,"Midland, TX",Metropolitan,29-1141,Registered Nurses,1230,80,1230,0,0,1230
+55079,Milwaukee,WI,Wisconsin,33340,"Milwaukee-Waukesha-West Allis, WI",Metropolitan,29-1141,Registered Nurses,21010,581,12073,107,13302,12951
+55089,Ozaukee,WI,Wisconsin,33340,"Milwaukee-Waukesha-West Allis, WI",Metropolitan,29-1141,Registered Nurses,21010,120,2493,32,3978,3554
+55131,Washington,WI,Wisconsin,33340,"Milwaukee-Waukesha-West Allis, WI",Metropolitan,29-1141,Registered Nurses,21010,70,1454,6,745,948
+55133,Waukesha,WI,Wisconsin,33340,"Milwaukee-Waukesha-West Allis, WI",Metropolitan,29-1141,Registered Nurses,21010,240,4987,24,2983,3556
+27003,Anoka,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,200,10033,0,0,2866
+27019,Carver,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,109,5468,18,7004,6565
+27025,Chisago,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,55,2759,10,3891,3568
+27037,Dakota,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,37,1856,6,2334,2198
+27053,Hennepin,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,50,2508,9,3502,3218
+27059,Isanti,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,70,3511,12,4669,4339
+27123,Ramsey,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,60,3010,10,3891,3639
+27139,Scott,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,89,4465,16,6226,5723
+27141,Sherburne,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,33,1655,4,1556,1584
+27163,Washington,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,86,4314,18,7004,6236
+27171,Wright,MN,Minnesota,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,16,802,0,0,229
+55093,Pierce,WI,Wisconsin,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,0,0,0,0,0
+55109,St Croix,WI,Wisconsin,33460,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan,29-1141,Registered Nurses,41640,25,1254,4,1556,1470
+30063,Missoula,MT,Montana,33540,"Missoula, MT",Metropolitan,29-1141,Registered Nurses,1360,158,1360,24,1360,1360
+01097,Mobile,AL,Alabama,33660,"Mobile, AL",Metropolitan,29-1141,Registered Nurses,5320,149,5320,32,5320,5320
+06099,Stanislaus,CA,California,33700,"Modesto, CA",Metropolitan,29-1141,Registered Nurses,4880,96,4880,15,4880,4880
+22073,Ouachita,LA,Louisiana,33740,"Monroe, LA",Metropolitan,29-1141,Registered Nurses,1700,0,0,0,0,0
+22111,Union,LA,Louisiana,33740,"Monroe, LA",Metropolitan,29-1141,Registered Nurses,1700,15,1700,3,1700,1700
+26115,Monroe,MI,Michigan,33780,"Monroe, MI",Metropolitan,29-1141,Registered Nurses,590,153,590,14,590,590
+01001,Autauga,AL,Alabama,33860,"Montgomery, AL",Metropolitan,29-1141,Registered Nurses,3760,55,854,6,980,944
+01051,Elmore,AL,Alabama,33860,"Montgomery, AL",Metropolitan,29-1141,Registered Nurses,3760,37,574,5,817,748
+01085,Lowndes,AL,Alabama,33860,"Montgomery, AL",Metropolitan,29-1141,Registered Nurses,3760,0,0,0,0,0
+01101,Montgomery,AL,Alabama,33860,"Montgomery, AL",Metropolitan,29-1141,Registered Nurses,3760,150,2330,12,1961,2067
+54061,Monongalia,WV,West Virginia,34060,"Morgantown, WV",Metropolitan,29-1141,Registered Nurses,3210,0,0,32,2853,2038
+54077,Preston,WV,West Virginia,34060,"Morgantown, WV",Metropolitan,29-1141,Registered Nurses,3210,25,3210,4,356,1171
+47057,Grainger,TN,Tennessee,34100,"Morristown, TN",Metropolitan,29-1141,Registered Nurses,630,0,0,0,0,0
+47063,Hamblen,TN,Tennessee,34100,"Morristown, TN",Metropolitan,29-1141,Registered Nurses,630,116,420,20,484,466
+47089,Jefferson,TN,Tennessee,34100,"Morristown, TN",Metropolitan,29-1141,Registered Nurses,630,58,210,6,145,163
+53057,Skagit,WA,Washington,34580,"Mount Vernon-Anacortes, WA",Metropolitan,29-1141,Registered Nurses,1060,43,1060,6,1060,1060
+18035,Delaware,IN,Indiana,34620,"Muncie, IN",Metropolitan,29-1141,Registered Nurses,1080,32,1080,8,1080,1080
+26121,Muskegon,MI,Michigan,34740,"Muskegon, MI",Metropolitan,29-1141,Registered Nurses,0,331,0,44,0,0
+45051,Horry,SC,South Carolina,34820,"Myrtle Beach-Conway-North Myrtle Beach, SC-NC",Metropolitan,29-1141,Registered Nurses,2600,0,0,0,0,0
+06055,Napa,CA,California,34900,"Napa, CA",Metropolitan,29-1141,Registered Nurses,1890,152,1890,36,1890,1890
+12021,Collier,FL,Florida,34940,"Naples-Immokalee-Marco Island, FL",Metropolitan,29-1141,Registered Nurses,2950,50,2950,8,2950,2950
+47015,Cannon,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,30,509,5,964,834
+47021,Cheatham,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,12,203,2,385,333
+47037,Davidson,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,207,3515,46,8871,7341
+47043,Dickson,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,91,1545,6,1157,1268
+47081,Hickman,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,25,424,4,771,672
+47111,Macon,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,25,424,4,771,672
+47147,Robertson,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,109,1850,8,1542,1630
+47149,Rutherford,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,347,5892,1,192,1821
+47159,Smith,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,25,424,2,385,396
+47165,Sumner,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,126,2139,18,3471,3090
+47169,Trousdale,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,25,424,4,771,672
+47187,Williamson,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,80,1358,0,0,388
+47189,Wilson,TN,Tennessee,34980,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan,29-1141,Registered Nurses,21600,170,2886,12,2314,2477
+22051,Jefferson,LA,Louisiana,35380,"New Orleans-Metairie, LA",Metropolitan,29-1141,Registered Nurses,14050,36,2288,0,0,653
+22071,Orleans,LA,Louisiana,35380,"New Orleans-Metairie, LA",Metropolitan,29-1141,Registered Nurses,14050,0,0,72,11240,8028
+22075,Plaquemines,LA,Louisiana,35380,"New Orleans-Metairie, LA",Metropolitan,29-1141,Registered Nurses,14050,0,0,0,0,0
+22087,St Bernard,LA,Louisiana,35380,"New Orleans-Metairie, LA",Metropolitan,29-1141,Registered Nurses,14050,40,2542,8,1248,1618
+22089,St Charles,LA,Louisiana,35380,"New Orleans-Metairie, LA",Metropolitan,29-1141,Registered Nurses,14050,39,2479,8,1248,1600
+22095,St John the Baptist,LA,Louisiana,35380,"New Orleans-Metairie, LA",Metropolitan,29-1141,Registered Nurses,14050,82,5213,0,0,1489
+22103,St Tammany,LA,Louisiana,35380,"New Orleans-Metairie, LA",Metropolitan,29-1141,Registered Nurses,14050,24,1525,2,312,658
+34013,Essex,NJ,New Jersey,35620,"New York-Newark-Jersey City, NY-NJ-PA",Metropolitan,29-1141,Registered Nurses,174210,152,53386,0,0,15253
+34019,Hunterdon,NJ,New Jersey,35620,"New York-Newark-Jersey City, NY-NJ-PA",Metropolitan,29-1141,Registered Nurses,174210,170,59709,12,95023,84933
+34027,Morris,NJ,New Jersey,35620,"New York-Newark-Jersey City, NY-NJ-PA",Metropolitan,29-1141,Registered Nurses,174210,0,0,0,0,0
+34037,Sussex,NJ,New Jersey,35620,"New York-Newark-Jersey City, NY-NJ-PA",Metropolitan,29-1141,Registered Nurses,174210,130,45659,10,79186,69607
+34039,Union,NJ,New Jersey,35620,"New York-Newark-Jersey City, NY-NJ-PA",Metropolitan,29-1141,Registered Nurses,174210,44,15454,0,0,4415
+42103,Pike,PA,Pennsylvania,35620,"New York-Newark-Jersey City, NY-NJ-PA",Metropolitan,29-1141,Registered Nurses,174210,0,0,0,0,0
+26021,Berrien,MI,Michigan,35660,"Niles-Benton Harbor, MI",Metropolitan,29-1141,Registered Nurses,1060,196,1060,20,1060,1060
+12083,Marion,FL,Florida,36100,"Ocala, FL",Metropolitan,29-1141,Registered Nurses,2020,60,2020,0,0,2020
+34009,Cape May,NJ,New Jersey,36140,"Ocean City, NJ",Metropolitan,29-1141,Registered Nurses,710,149,710,16,710,710
+48135,Ector,TX,Texas,36220,"Odessa, TX",Metropolitan,29-1141,Registered Nurses,1210,25,1210,4,1210,1210
+49011,Davis,UT,Utah,36260,"Ogden-Clearfield, UT",Metropolitan,29-1141,Registered Nurses,3380,43,1751,8,2080,1986
+49029,Morgan,UT,Utah,36260,"Ogden-Clearfield, UT",Metropolitan,29-1141,Registered Nurses,3380,0,0,0,0,0
+49057,Weber,UT,Utah,36260,"Ogden-Clearfield, UT",Metropolitan,29-1141,Registered Nurses,3380,40,1628,5,1300,1393
+40017,Canadian,OK,Oklahoma,36420,"Oklahoma City, OK",Metropolitan,29-1141,Registered Nurses,13470,74,2679,8,1158,1593
+40027,Cleveland,OK,Oklahoma,36420,"Oklahoma City, OK",Metropolitan,29-1141,Registered Nurses,13470,0,0,0,0,0
+40051,Grady,OK,Oklahoma,36420,"Oklahoma City, OK",Metropolitan,29-1141,Registered Nurses,13470,49,1774,9,1303,1438
+40081,Lincoln,OK,Oklahoma,36420,"Oklahoma City, OK",Metropolitan,29-1141,Registered Nurses,13470,25,905,4,579,672
+40083,Logan,OK,Oklahoma,36420,"Oklahoma City, OK",Metropolitan,29-1141,Registered Nurses,13470,25,905,4,579,672
+40087,McClain,OK,Oklahoma,36420,"Oklahoma City, OK",Metropolitan,29-1141,Registered Nurses,13470,39,1412,7,1013,1127
+40109,Oklahoma,OK,Oklahoma,36420,"Oklahoma City, OK",Metropolitan,29-1141,Registered Nurses,13470,160,5793,61,8835,7966
+53067,Thurston,WA,Washington,36500,"Olympia-Tumwater, WA",Metropolitan,29-1141,Registered Nurses,1840,0,0,0,0,0
+19085,Harrison,IA,Iowa,36540,"Omaha-Council Bluffs, NE-IA",Metropolitan,29-1141,Registered Nurses,13130,25,1243,4,1750,1605
+19129,Mills,IA,Iowa,36540,"Omaha-Council Bluffs, NE-IA",Metropolitan,29-1141,Registered Nurses,13130,0,0,0,0,0
+19155,Pottawattamie,IA,Iowa,36540,"Omaha-Council Bluffs, NE-IA",Metropolitan,29-1141,Registered Nurses,13130,110,5470,13,5689,5627
+31025,Cass,NE,Nebraska,36540,"Omaha-Council Bluffs, NE-IA",Metropolitan,29-1141,Registered Nurses,13130,0,0,0,0,0
+31055,Douglas,NE,Nebraska,36540,"Omaha-Council Bluffs, NE-IA",Metropolitan,29-1141,Registered Nurses,13130,64,3183,1,437,1222
+31153,Sarpy,NE,Nebraska,36540,"Omaha-Council Bluffs, NE-IA",Metropolitan,29-1141,Registered Nurses,13130,28,1392,5,2188,1960
+31155,Saunders,NE,Nebraska,36540,"Omaha-Council Bluffs, NE-IA",Metropolitan,29-1141,Registered Nurses,13130,16,795,3,1313,1165
+31177,Washington,NE,Nebraska,36540,"Omaha-Council Bluffs, NE-IA",Metropolitan,29-1141,Registered Nurses,13130,21,1044,4,1750,1548
+12069,Lake,FL,Florida,36740,"Orlando-Kissimmee-Sanford, FL",Metropolitan,29-1141,Registered Nurses,21280,308,12413,46,20827,18423
+12095,Orange,FL,Florida,36740,"Orlando-Kissimmee-Sanford, FL",Metropolitan,29-1141,Registered Nurses,21280,96,3869,0,0,1105
+12097,Osceola,FL,Florida,36740,"Orlando-Kissimmee-Sanford, FL",Metropolitan,29-1141,Registered Nurses,21280,64,2579,0,0,736
+12117,Seminole,FL,Florida,36740,"Orlando-Kissimmee-Sanford, FL",Metropolitan,29-1141,Registered Nurses,21280,60,2418,1,452,1014
+55139,Winnebago,WI,Wisconsin,36780,"Oshkosh-Neenah, WI",Metropolitan,29-1141,Registered Nurses,1650,72,1650,12,1650,1650
+21059,Daviess,KY,Kentucky,36980,"Owensboro, KY",Metropolitan,29-1141,Registered Nurses,1630,80,1630,0,0,1630
+21091,Hancock,KY,Kentucky,36980,"Owensboro, KY",Metropolitan,29-1141,Registered Nurses,1630,0,0,0,0,0
+21149,McLean,KY,Kentucky,36980,"Owensboro, KY",Metropolitan,29-1141,Registered Nurses,1630,0,0,0,0,0
+06111,Ventura,CA,California,37100,"Oxnard-Thousand Oaks-Ventura, CA",Metropolitan,29-1141,Registered Nurses,4730,144,4730,24,4730,4730
+12009,Brevard,FL,Florida,37340,"Palm Bay-Melbourne-Titusville, FL",Metropolitan,29-1141,Registered Nurses,4970,80,4970,0,0,4970
+12005,Bay,FL,Florida,37460,"Panama City, FL",Metropolitan,29-1141,Registered Nurses,1330,222,1330,20,1330,1330
+39167,Washington,OH,Ohio,37620,"Parkersburg-Vienna, WV",Metropolitan,29-1141,Registered Nurses,860,188,386,11,326,343
+54073,Pleasants,WV,West Virginia,37620,"Parkersburg-Vienna, WV",Metropolitan,29-1141,Registered Nurses,860,0,0,0,0,0
+54105,Wirt,WV,West Virginia,37620,"Parkersburg-Vienna, WV",Metropolitan,29-1141,Registered Nurses,860,0,0,0,0,0
+54107,Wood,WV,West Virginia,37620,"Parkersburg-Vienna, WV",Metropolitan,29-1141,Registered Nurses,860,230,473,18,533,516
+12033,Escambia,FL,Florida,37860,"Pensacola-Ferry Pass-Brent, FL",Metropolitan,29-1141,Registered Nurses,3990,561,3575,34,3230,3328
+12113,Santa Rosa,FL,Florida,37860,"Pensacola-Ferry Pass-Brent, FL",Metropolitan,29-1141,Registered Nurses,3990,65,414,8,760,661
+17123,Marshall,IL,Illinois,37900,"Peoria, IL",Metropolitan,29-1141,Registered Nurses,5740,0,0,0,0,0
+17143,Peoria,IL,Illinois,37900,"Peoria, IL",Metropolitan,29-1141,Registered Nurses,5740,198,3444,24,3826,3717
+17175,Stark,IL,Illinois,37900,"Peoria, IL",Metropolitan,29-1141,Registered Nurses,5740,0,0,0,0,0
+17179,Tazewell,IL,Illinois,37900,"Peoria, IL",Metropolitan,29-1141,Registered Nurses,5740,107,1861,8,1275,1442
+17203,Woodford,IL,Illinois,37900,"Peoria, IL",Metropolitan,29-1141,Registered Nurses,5740,25,434,4,637,579
+10003,New Castle,DE,Delaware,37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",Metropolitan,29-1141,Registered Nurses,71120,37,10740,1,3951,5890
+24015,Cecil,MD,Maryland,37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",Metropolitan,29-1141,Registered Nurses,71120,82,23803,5,19755,20912
+34033,Salem,NJ,New Jersey,37980,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",Metropolitan,29-1141,Registered Nurses,71120,126,36576,12,47413,44316
+04013,Maricopa,AZ,Arizona,38060,"Phoenix-Mesa-Scottsdale, AZ",Metropolitan,29-1141,Registered Nurses,38370,18,4343,3,4604,4529
+04021,Pinal,AZ,Arizona,38060,"Phoenix-Mesa-Scottsdale, AZ",Metropolitan,29-1141,Registered Nurses,38370,141,34026,22,33765,33840
+05025,Cleveland,AR,Arkansas,38220,"Pine Bluff, AR",Metropolitan,29-1141,Registered Nurses,640,0,0,0,0,0
+05069,Jefferson,AR,Arkansas,38220,"Pine Bluff, AR",Metropolitan,29-1141,Registered Nurses,640,271,640,34,640,640
+05079,Lincoln,AR,Arkansas,38220,"Pine Bluff, AR",Metropolitan,29-1141,Registered Nurses,640,0,0,0,0,0
+42003,Allegheny,PA,Pennsylvania,38300,"Pittsburgh, PA",Metropolitan,29-1141,Registered Nurses,33600,41,3723,6,2800,3063
+42005,Armstrong,PA,Pennsylvania,38300,"Pittsburgh, PA",Metropolitan,29-1141,Registered Nurses,33600,131,11896,12,5600,7398
+42007,Beaver,PA,Pennsylvania,38300,"Pittsburgh, PA",Metropolitan,29-1141,Registered Nurses,33600,35,3178,5,2333,2574
+42019,Butler,PA,Pennsylvania,38300,"Pittsburgh, PA",Metropolitan,29-1141,Registered Nurses,33600,0,0,0,0,0
+42051,Fayette,PA,Pennsylvania,38300,"Pittsburgh, PA",Metropolitan,29-1141,Registered Nurses,33600,149,13530,15,7000,8865
+42125,Washington,PA,Pennsylvania,38300,"Pittsburgh, PA",Metropolitan,29-1141,Registered Nurses,33600,14,1271,2,933,1029
+42129,Westmoreland,PA,Pennsylvania,38300,"Pittsburgh, PA",Metropolitan,29-1141,Registered Nurses,33600,0,0,32,14933,10666
+16005,Bannock,ID,Idaho,38540,"Pocatello, ID",Metropolitan,29-1141,Registered Nurses,920,137,857,20,836,842
+16077,Power,ID,Idaho,38540,"Pocatello, ID",Metropolitan,29-1141,Registered Nurses,920,10,62,2,83,77
+41005,Clackamas,OR,Oregon,38900,"Portland-Vancouver-Hillsboro, OR-WA",Metropolitan,29-1141,Registered Nurses,22100,111,5954,8,9822,8717
+41009,Columbia,OR,Oregon,38900,"Portland-Vancouver-Hillsboro, OR-WA",Metropolitan,29-1141,Registered Nurses,22100,0,0,0,0,0
+41051,Multnomah,OR,Oregon,38900,"Portland-Vancouver-Hillsboro, OR-WA",Metropolitan,29-1141,Registered Nurses,22100,85,4559,0,0,1302
+41067,Washington,OR,Oregon,38900,"Portland-Vancouver-Hillsboro, OR-WA",Metropolitan,29-1141,Registered Nurses,22100,94,5042,0,0,1440
+41071,Yamhill,OR,Oregon,38900,"Portland-Vancouver-Hillsboro, OR-WA",Metropolitan,29-1141,Registered Nurses,22100,50,2682,7,8594,6905
+53011,Clark,WA,Washington,38900,"Portland-Vancouver-Hillsboro, OR-WA",Metropolitan,29-1141,Registered Nurses,22100,72,3862,3,3683,3734
+53059,Skamania,WA,Washington,38900,"Portland-Vancouver-Hillsboro, OR-WA",Metropolitan,29-1141,Registered Nurses,22100,0,0,0,0,0
+12085,Martin,FL,Florida,38940,"Port St. Lucie, FL",Metropolitan,29-1141,Registered Nurses,4430,54,653,0,0,186
+12111,St Lucie,FL,Florida,38940,"Port St. Lucie, FL",Metropolitan,29-1141,Registered Nurses,4430,312,3776,36,4430,4243
+04025,Yavapai,AZ,Arizona,39140,"Prescott, AZ",Metropolitan,29-1141,Registered Nurses,1380,21,1380,0,0,1380
+49023,Juab,UT,Utah,39340,"Provo-Orem, UT",Metropolitan,29-1141,Registered Nurses,3430,25,1033,4,3430,2745
+49049,Utah,UT,Utah,39340,"Provo-Orem, UT",Metropolitan,29-1141,Registered Nurses,3430,58,2396,0,0,684
+08101,Pueblo,CO,Colorado,39380,"Pueblo, CO",Metropolitan,29-1141,Registered Nurses,2060,0,0,0,0,0
+12015,Charlotte,FL,Florida,39460,"Punta Gorda, FL",Metropolitan,29-1141,Registered Nurses,1510,124,1510,10,1510,1510
+55101,Racine,WI,Wisconsin,39540,"Racine, WI",Metropolitan,29-1141,Registered Nurses,1270,249,1270,23,1270,1270
+37069,Franklin,NC,North Carolina,39580,"Raleigh, NC",Metropolitan,29-1141,Registered Nurses,11460,0,0,0,0,0
+37101,Johnston,NC,North Carolina,39580,"Raleigh, NC",Metropolitan,29-1141,Registered Nurses,11460,179,5193,24,4436,4652
+37183,Wake,NC,North Carolina,39580,"Raleigh, NC",Metropolitan,29-1141,Registered Nurses,11460,216,6266,38,7023,6807
+46093,Meade,SD,South Dakota,39660,"Rapid City, SD",Metropolitan,29-1141,Registered Nurses,2280,25,2280,3,195,791
+46103,Pennington,SD,South Dakota,39660,"Rapid City, SD",Metropolitan,29-1141,Registered Nurses,2280,0,0,32,2084,1488
+42011,Berks,PA,Pennsylvania,39740,"Reading, PA",Metropolitan,29-1141,Registered Nurses,3840,52,3840,0,0,3840
+06089,Shasta,CA,California,39820,"Redding, CA",Metropolitan,29-1141,Registered Nurses,1500,16,1500,0,0,1500
+32029,Storey,NV,Nevada,39900,"Reno, NV",Metropolitan,29-1141,Registered Nurses,4180,0,0,0,0,0
+32031,Washoe,NV,Nevada,39900,"Reno, NV",Metropolitan,29-1141,Registered Nurses,4180,21,4180,3,4180,4180
+51007,Amelia,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51033,Caroline,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51036,Charles City,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51041,Chesterfield,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,28,644,2,194,322
+51049,Cumberland,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51053,Dinwiddie,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,4,92,1,97,95
+51075,Goochland,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51085,Hanover,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,40,920,3,291,470
+51087,Henrico,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,60,1380,10,970,1087
+51097,King and Queen,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51101,King William,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51109,Louisa,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51127,New Kent,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,94,2162,36,3492,3112
+51145,Powhatan,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51149,Prince George,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51183,Sussex,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51570,Colonial Heights Cit,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,0,0,0,0,0
+51670,Hopewell City,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,107,2461,17,1649,1881
+51730,Petersburg City,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,64,1472,1,97,490
+51760,Richmond City,VA,Virginia,40060,"Richmond, VA",Metropolitan,29-1141,Registered Nurses,13000,168,3865,64,6208,5539
+06065,Riverside,CA,California,40140,"Riverside-San Bernardino-Ontario, CA",Metropolitan,29-1141,Registered Nurses,29780,50,19853,0,0,19853
+06071,San Bernardino,CA,California,40140,"Riverside-San Bernardino-Ontario, CA",Metropolitan,29-1141,Registered Nurses,29780,25,9926,0,0,9926
+51023,Botetourt,VA,Virginia,40220,"Roanoke, VA",Metropolitan,29-1141,Registered Nurses,4390,0,0,0,0,0
+51045,Craig,VA,Virginia,40220,"Roanoke, VA",Metropolitan,29-1141,Registered Nurses,4390,0,0,0,0,0
+51067,Franklin,VA,Virginia,40220,"Roanoke, VA",Metropolitan,29-1141,Registered Nurses,4390,37,129,4,234,204
+51161,Roanoke,VA,Virginia,40220,"Roanoke, VA",Metropolitan,29-1141,Registered Nurses,4390,270,942,0,0,269
+51770,Roanoke City,VA,Virginia,40220,"Roanoke, VA",Metropolitan,29-1141,Registered Nurses,4390,621,2167,47,2751,2584
+51775,Salem City,VA,Virginia,40220,"Roanoke, VA",Metropolitan,29-1141,Registered Nurses,4390,330,1151,24,1404,1332
+27039,Dodge,MN,Minnesota,40340,"Rochester, MN",Metropolitan,29-1141,Registered Nurses,0,0,0,0,0,0
+27109,Olmsted,MN,Minnesota,40340,"Rochester, MN",Metropolitan,29-1141,Registered Nurses,0,0,0,32,0,0
+27157,Wabasha,MN,Minnesota,40340,"Rochester, MN",Metropolitan,29-1141,Registered Nurses,0,14,0,2,0,0
+36051,Livingston,NY,New York,40380,"Rochester, NY",Metropolitan,29-1141,Registered Nurses,12400,67,1871,12,4960,4077
+36055,Monroe,NY,New York,40380,"Rochester, NY",Metropolitan,29-1141,Registered Nurses,12400,174,4859,0,0,1388
+36069,Ontario,NY,New York,40380,"Rochester, NY",Metropolitan,29-1141,Registered Nurses,12400,77,2150,6,2480,2385
+36073,Orleans,NY,New York,40380,"Rochester, NY",Metropolitan,29-1141,Registered Nurses,12400,25,698,4,1653,1380
+36117,Wayne,NY,New York,40380,"Rochester, NY",Metropolitan,29-1141,Registered Nurses,12400,101,2820,8,3306,3167
+17007,Boone,IL,Illinois,40420,"Rockford, IL",Metropolitan,29-1141,Registered Nurses,3740,0,0,0,0,0
+17201,Winnebago,IL,Illinois,40420,"Rockford, IL",Metropolitan,29-1141,Registered Nurses,3740,52,3740,9,3740,3740
+37065,Edgecombe,NC,North Carolina,40580,"Rocky Mount, NC",Metropolitan,29-1141,Registered Nurses,1130,101,755,15,736,742
+37127,Nash,NC,North Carolina,40580,"Rocky Mount, NC",Metropolitan,29-1141,Registered Nurses,1130,50,374,8,393,387
+13115,Floyd,GA,Georgia,40660,"Rome, GA",Metropolitan,29-1141,Registered Nurses,1420,208,1420,16,1420,1420
+06017,El Dorado,CA,California,40900,"Sacramento--Roseville--Arden-Arcade, CA",Metropolitan,29-1141,Registered Nurses,19860,110,7944,20,11682,10614
+06061,Placer,CA,California,40900,"Sacramento--Roseville--Arden-Arcade, CA",Metropolitan,29-1141,Registered Nurses,19860,64,4621,8,4672,4658
+06067,Sacramento,CA,California,40900,"Sacramento--Roseville--Arden-Arcade, CA",Metropolitan,29-1141,Registered Nurses,19860,53,3827,0,0,1093
+06113,Yolo,CA,California,40900,"Sacramento--Roseville--Arden-Arcade, CA",Metropolitan,29-1141,Registered Nurses,19860,48,3466,6,3504,3493
+26145,Saginaw,MI,Michigan,40980,"Saginaw, MI",Metropolitan,29-1141,Registered Nurses,2790,204,2790,22,2790,2790
+27009,Benton,MN,Minnesota,41060,"St. Cloud, MN",Metropolitan,29-1141,Registered Nurses,2960,0,0,0,0,0
+27145,Stearns,MN,Minnesota,41060,"St. Cloud, MN",Metropolitan,29-1141,Registered Nurses,2960,457,2960,42,2960,2960
+49053,Washington,UT,Utah,41100,"St. George, UT",Metropolitan,29-1141,Registered Nurses,1360,164,1360,32,1360,1360
+20043,Doniphan,KS,Kansas,41140,"St. Joseph, MO-KS",Metropolitan,29-1141,Registered Nurses,1200,0,0,0,0,0
+29003,Andrew,MO,Missouri,41140,"St. Joseph, MO-KS",Metropolitan,29-1141,Registered Nurses,1200,0,0,0,0,0
+29021,Buchanan,MO,Missouri,41140,"St. Joseph, MO-KS",Metropolitan,29-1141,Registered Nurses,1200,108,1200,0,0,1200
+29063,De Kalb,MO,Missouri,41140,"St. Joseph, MO-KS",Metropolitan,29-1141,Registered Nurses,1200,0,0,0,0,0
+17005,Bond,IL,Illinois,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,32,1150,6,1947,1719
+17013,Calhoun,IL,Illinois,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,0,0,0,0,0
+17027,Clinton,IL,Illinois,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,46,1653,8,2596,2326
+17083,Jersey,IL,Illinois,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,46,1653,4,1298,1399
+17117,Macoupin,IL,Illinois,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,25,898,4,1298,1183
+17119,Madison,IL,Illinois,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,25,898,4,1298,1183
+17133,Monroe,IL,Illinois,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,0,0,0,0,0
+17163,St Clair,IL,Illinois,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,94,3378,6,1947,2355
+29055,Crawford,MO,Missouri,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,25,898,4,1298,1183
+29071,Franklin,MO,Missouri,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,148,5319,13,4218,4533
+29099,Jefferson,MO,Missouri,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,279,10027,28,9086,9355
+29113,Lincoln,MO,Missouri,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,25,898,4,1298,1183
+29183,St Charles,MO,Missouri,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,63,2264,11,3569,3196
+29189,St Louis,MO,Missouri,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,38,1365,6,1947,1780
+29219,Warren,MO,Missouri,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,0,0,0,0,0
+29221,Washington,MO,Missouri,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,25,898,4,1298,1183
+29510,St Louis City,MO,Missouri,41180,"St. Louis, MO-IL",Metropolitan,29-1141,Registered Nurses,33100,50,1796,0,0,513
+41047,Marion,OR,Oregon,41420,"Salem, OR",Metropolitan,29-1141,Registered Nurses,3780,0,0,0,0,0
+41053,Polk,OR,Oregon,41420,"Salem, OR",Metropolitan,29-1141,Registered Nurses,3780,15,3780,3,3780,3780
+06053,Monterey,CA,California,41500,"Salinas, CA",Metropolitan,29-1141,Registered Nurses,2740,240,2740,13,2740,2740
+24039,Somerset,MD,Maryland,41540,"Salisbury, MD-DE",Metropolitan,29-1141,Registered Nurses,3810,0,0,0,0,0
+24045,Wicomico,MD,Maryland,41540,"Salisbury, MD-DE",Metropolitan,29-1141,Registered Nurses,3810,0,0,0,0,0
+49035,Salt Lake,UT,Utah,41620,"Salt Lake City, UT",Metropolitan,29-1141,Registered Nurses,11220,94,6315,0,0,1804
+49043,Summit,UT,Utah,41620,"Salt Lake City, UT",Metropolitan,29-1141,Registered Nurses,11220,37,2485,4,5610,4717
+49045,Tooele,UT,Utah,41620,"Salt Lake City, UT",Metropolitan,29-1141,Registered Nurses,11220,36,2418,4,5610,4698
+48235,Irion,TX,Texas,41660,"San Angelo, TX",Metropolitan,29-1141,Registered Nurses,1240,0,0,0,0,0
+48451,Tom Green,TX,Texas,41660,"San Angelo, TX",Metropolitan,29-1141,Registered Nurses,1240,80,1240,0,0,1240
+48013,Atascosa,TX,Texas,41700,"San Antonio-New Braunfels, TX",Metropolitan,29-1141,Registered Nurses,21140,67,3286,6,3252,3262
+48019,Bandera,TX,Texas,41700,"San Antonio-New Braunfels, TX",Metropolitan,29-1141,Registered Nurses,21140,0,0,0,0,0
+48029,Bexar,TX,Texas,41700,"San Antonio-New Braunfels, TX",Metropolitan,29-1141,Registered Nurses,21140,66,3237,0,0,924
+48091,Comal,TX,Texas,41700,"San Antonio-New Braunfels, TX",Metropolitan,29-1141,Registered Nurses,21140,112,5493,16,8672,7764
+48187,Guadalupe,TX,Texas,41700,"San Antonio-New Braunfels, TX",Metropolitan,29-1141,Registered Nurses,21140,117,5738,9,4878,5124
+48259,Kendall,TX,Texas,41700,"San Antonio-New Braunfels, TX",Metropolitan,29-1141,Registered Nurses,21140,0,0,0,0,0
+48325,Medina,TX,Texas,41700,"San Antonio-New Braunfels, TX",Metropolitan,29-1141,Registered Nurses,21140,25,1226,4,2168,1899
+48493,Wilson,TX,Texas,41700,"San Antonio-New Braunfels, TX",Metropolitan,29-1141,Registered Nurses,21140,44,2158,4,2168,2165
+06073,San Diego,CA,California,41740,"San Diego-Carlsbad, CA",Metropolitan,29-1141,Registered Nurses,25260,321,25260,56,25260,25260
+06041,Marin,CA,California,41860,"San Francisco-Oakland-Hayward, CA",Metropolitan,29-1141,Registered Nurses,38580,116,6927,12,5321,5780
+06075,San Francisco,CA,California,41860,"San Francisco-Oakland-Hayward, CA",Metropolitan,29-1141,Registered Nurses,38580,289,17259,51,22615,21085
+06081,San Mateo,CA,California,41860,"San Francisco-Oakland-Hayward, CA",Metropolitan,29-1141,Registered Nurses,38580,241,14392,24,10642,11714
+06069,San Benito,CA,California,41940,"San Jose-Sunnyvale-Santa Clara, CA",Metropolitan,29-1141,Registered Nurses,16650,49,6324,8,16650,13699
+06085,Santa Clara,CA,California,41940,"San Jose-Sunnyvale-Santa Clara, CA",Metropolitan,29-1141,Registered Nurses,16650,80,10325,0,0,2950
+06079,San Luis Obispo,CA,California,42020,"San Luis Obispo-Paso Robles-Arroyo Grande, CA",Metropolitan,29-1141,Registered Nurses,1810,50,1810,9,1810,1810
+06087,Santa Cruz,CA,California,42100,"Santa Cruz-Watsonville, CA",Metropolitan,29-1141,Registered Nurses,1410,16,1410,0,0,1410
+35049,Santa Fe,NM,New Mexico,42140,"Santa Fe, NM",Metropolitan,29-1141,Registered Nurses,950,36,950,6,950,950
+06097,Sonoma,CA,California,42220,"Santa Rosa, CA",Metropolitan,29-1141,Registered Nurses,3230,37,3230,5,3230,3230
+13029,Bryan,GA,Georgia,42340,"Savannah, GA",Metropolitan,29-1141,Registered Nurses,3570,0,0,0,0,0
+13051,Chatham,GA,Georgia,42340,"Savannah, GA",Metropolitan,29-1141,Registered Nurses,3570,50,2380,0,0,680
+13103,Effingham,GA,Georgia,42340,"Savannah, GA",Metropolitan,29-1141,Registered Nurses,3570,25,1190,4,3570,2890
+42069,Lackawanna,PA,Pennsylvania,42540,"Scranton--Wilkes-Barre--Hazleton, PA",Metropolitan,29-1141,Registered Nurses,5840,203,4189,0,0,1196
+42079,Luzerne,PA,Pennsylvania,42540,"Scranton--Wilkes-Barre--Hazleton, PA",Metropolitan,29-1141,Registered Nurses,5840,36,742,6,2920,2297
+42131,Wyoming,PA,Pennsylvania,42540,"Scranton--Wilkes-Barre--Hazleton, PA",Metropolitan,29-1141,Registered Nurses,5840,44,907,6,2920,2345
+53053,Pierce,WA,Washington,42660,"Seattle-Tacoma-Bellevue, WA",Metropolitan,29-1141,Registered Nurses,33180,47,33180,0,0,33180
+55117,Sheboygan,WI,Wisconsin,43100,"Sheboygan, WI",Metropolitan,29-1141,Registered Nurses,690,53,690,7,690,690
+48181,Grayson,TX,Texas,43300,"Sherman-Denison, TX",Metropolitan,29-1141,Registered Nurses,1710,60,1710,0,0,1710
+22015,Bossier,LA,Louisiana,43340,"Shreveport-Bossier City, LA",Metropolitan,29-1141,Registered Nurses,5350,6,802,1,668,706
+22017,Caddo,LA,Louisiana,43340,"Shreveport-Bossier City, LA",Metropolitan,29-1141,Registered Nurses,5350,0,0,1,668,477
+22031,De Soto,LA,Louisiana,43340,"Shreveport-Bossier City, LA",Metropolitan,29-1141,Registered Nurses,5350,34,4547,6,4012,4165
+19193,Woodbury,IA,Iowa,43580,"Sioux City, IA-NE-SD",Metropolitan,29-1141,Registered Nurses,1860,157,1497,19,1359,1398
+31043,Dakota,NE,Nebraska,43580,"Sioux City, IA-NE-SD",Metropolitan,29-1141,Registered Nurses,1860,0,0,0,0,0
+31051,Dixon,NE,Nebraska,43580,"Sioux City, IA-NE-SD",Metropolitan,29-1141,Registered Nurses,1860,0,0,0,0,0
+46127,Union,SD,South Dakota,43580,"Sioux City, IA-NE-SD",Metropolitan,29-1141,Registered Nurses,1860,38,362,7,500,461
+46083,Lincoln,SD,South Dakota,43620,"Sioux Falls, SD",Metropolitan,29-1141,Registered Nurses,6310,11,3017,2,350,1112
+46087,McCook,SD,South Dakota,43620,"Sioux Falls, SD",Metropolitan,29-1141,Registered Nurses,6310,0,0,0,0,0
+46099,Minnehaha,SD,South Dakota,43620,"Sioux Falls, SD",Metropolitan,29-1141,Registered Nurses,6310,0,0,32,5608,4006
+46125,Turner,SD,South Dakota,43620,"Sioux Falls, SD",Metropolitan,29-1141,Registered Nurses,6310,12,3292,2,350,1191
+18141,St Joseph,IN,Indiana,43780,"South Bend-Mishawaka, IN-MI",Metropolitan,29-1141,Registered Nurses,2460,0,0,32,2186,1561
+26027,Cass,MI,Michigan,43780,"South Bend-Mishawaka, IN-MI",Metropolitan,29-1141,Registered Nurses,2460,25,2460,4,273,898
+45083,Spartanburg,SC,South Carolina,43900,"Spartanburg, SC",Metropolitan,29-1141,Registered Nurses,2990,40,2990,4,2990,2990
+53063,Spokane,WA,Washington,44060,"Spokane-Spokane Valley, WA",Metropolitan,29-1141,Registered Nurses,5090,100,5090,0,0,5090
+17129,Menard,IL,Illinois,44100,"Springfield, IL",Metropolitan,29-1141,Registered Nurses,3790,0,0,0,0,0
+17167,Sangamon,IL,Illinois,44100,"Springfield, IL",Metropolitan,29-1141,Registered Nurses,3790,369,3790,45,3790,3790
+29043,Christian,MO,Missouri,44180,"Springfield, MO",Metropolitan,29-1141,Registered Nurses,5360,0,0,0,0,0
+29059,Dallas,MO,Missouri,44180,"Springfield, MO",Metropolitan,29-1141,Registered Nurses,5360,0,0,0,0,0
+29077,Greene,MO,Missouri,44180,"Springfield, MO",Metropolitan,29-1141,Registered Nurses,5360,0,0,32,4288,3062
+29167,Polk,MO,Missouri,44180,"Springfield, MO",Metropolitan,29-1141,Registered Nurses,5360,52,5360,8,1072,2297
+29225,Webster,MO,Missouri,44180,"Springfield, MO",Metropolitan,29-1141,Registered Nurses,5360,0,0,0,0,0
+39023,Clark,OH,Ohio,44220,"Springfield, OH",Metropolitan,29-1141,Registered Nurses,1010,230,1010,38,1010,1010
+42027,Centre,PA,Pennsylvania,44300,"State College, PA",Metropolitan,29-1141,Registered Nurses,1440,73,1440,0,0,1440
+06077,San Joaquin,CA,California,44700,"Stockton-Lodi, CA",Metropolitan,29-1141,Registered Nurses,4470,0,0,0,0,0
+45085,Sumter,SC,South Carolina,44940,"Sumter, SC",Metropolitan,29-1141,Registered Nurses,760,173,760,17,760,760
+36053,Madison,NY,New York,45060,"Syracuse, NY",Metropolitan,29-1141,Registered Nurses,6120,25,258,4,437,386
+36067,Onondaga,NY,New York,45060,"Syracuse, NY",Metropolitan,29-1141,Registered Nurses,6120,435,4496,44,4808,4719
+36075,Oswego,NY,New York,45060,"Syracuse, NY",Metropolitan,29-1141,Registered Nurses,6120,132,1364,8,874,1014
+12039,Gadsden,FL,Florida,45220,"Tallahassee, FL",Metropolitan,29-1141,Registered Nurses,3200,24,264,4,533,456
+12065,Jefferson,FL,Florida,45220,"Tallahassee, FL",Metropolitan,29-1141,Registered Nurses,3200,0,0,0,0,0
+12073,Leon,FL,Florida,45220,"Tallahassee, FL",Metropolitan,29-1141,Registered Nurses,3200,266,2935,20,2666,2743
+12129,Wakulla,FL,Florida,45220,"Tallahassee, FL",Metropolitan,29-1141,Registered Nurses,3200,0,0,0,0,0
+12053,Hernando,FL,Florida,45300,"Tampa-St. Petersburg-Clearwater, FL",Metropolitan,29-1141,Registered Nurses,30390,280,10951,24,14587,13548
+12057,Hillsborough,FL,Florida,45300,"Tampa-St. Petersburg-Clearwater, FL",Metropolitan,29-1141,Registered Nurses,30390,60,2346,0,0,670
+12101,Pasco,FL,Florida,45300,"Tampa-St. Petersburg-Clearwater, FL",Metropolitan,29-1141,Registered Nurses,30390,126,4928,0,0,1408
+12103,Pinellas,FL,Florida,45300,"Tampa-St. Petersburg-Clearwater, FL",Metropolitan,29-1141,Registered Nurses,30390,311,12163,26,15802,14763
+18021,Clay,IN,Indiana,45460,"Terre Haute, IN",Metropolitan,29-1141,Registered Nurses,1650,25,453,4,471,466
+18153,Sullivan,IN,Indiana,45460,"Terre Haute, IN",Metropolitan,29-1141,Registered Nurses,1650,25,453,4,471,466
+18165,Vermillion,IN,Indiana,45460,"Terre Haute, IN",Metropolitan,29-1141,Registered Nurses,1650,25,453,6,707,634
+18167,Vigo,IN,Indiana,45460,"Terre Haute, IN",Metropolitan,29-1141,Registered Nurses,1650,16,290,0,0,82
+39051,Fulton,OH,Ohio,45780,"Toledo, OH",Metropolitan,29-1141,Registered Nurses,6400,25,1176,7,1947,1727
+39095,Lucas,OH,Ohio,45780,"Toledo, OH",Metropolitan,29-1141,Registered Nurses,6400,40,1882,4,1113,1332
+39123,Ottawa,OH,Ohio,45780,"Toledo, OH",Metropolitan,29-1141,Registered Nurses,6400,25,1176,4,1113,1131
+39173,Wood,OH,Ohio,45780,"Toledo, OH",Metropolitan,29-1141,Registered Nurses,6400,46,2164,8,2226,2208
+20085,Jackson,KS,Kansas,45820,"Topeka, KS",Metropolitan,29-1141,Registered Nurses,3090,12,607,2,1030,909
+20087,Jefferson,KS,Kansas,45820,"Topeka, KS",Metropolitan,29-1141,Registered Nurses,3090,25,1266,4,2060,1833
+20139,Osage,KS,Kansas,45820,"Topeka, KS",Metropolitan,29-1141,Registered Nurses,3090,0,0,0,0,0
+20177,Shawnee,KS,Kansas,45820,"Topeka, KS",Metropolitan,29-1141,Registered Nurses,3090,24,1215,0,0,347
+20197,Wabaunsee,KS,Kansas,45820,"Topeka, KS",Metropolitan,29-1141,Registered Nurses,3090,0,0,0,0,0
+34021,Mercer,NJ,New Jersey,45940,"Trenton, NJ",Metropolitan,29-1141,Registered Nurses,4450,18,4450,3,4450,4450
+04019,Pima,AZ,Arizona,46060,"Tucson, AZ",Metropolitan,29-1141,Registered Nurses,8590,74,8590,0,0,8590
+40037,Creek,OK,Oklahoma,46140,"Tulsa, OK",Metropolitan,29-1141,Registered Nurses,9000,55,1755,10,2812,2510
+40111,Okmulgee,OK,Oklahoma,46140,"Tulsa, OK",Metropolitan,29-1141,Registered Nurses,9000,4,127,1,281,237
+40113,Osage,OK,Oklahoma,46140,"Tulsa, OK",Metropolitan,29-1141,Registered Nurses,9000,15,478,3,843,739
+40117,Pawnee,OK,Oklahoma,46140,"Tulsa, OK",Metropolitan,29-1141,Registered Nurses,9000,14,446,2,562,529
+40131,Rogers,OK,Oklahoma,46140,"Tulsa, OK",Metropolitan,29-1141,Registered Nurses,9000,54,1723,6,1687,1697
+40143,Tulsa,OK,Oklahoma,46140,"Tulsa, OK",Metropolitan,29-1141,Registered Nurses,9000,40,1276,4,1125,1168
+40145,Wagoner,OK,Oklahoma,46140,"Tulsa, OK",Metropolitan,29-1141,Registered Nurses,9000,100,3191,6,1687,2117
+01063,Greene,AL,Alabama,46220,"Tuscaloosa, AL",Metropolitan,29-1141,Registered Nurses,2840,20,104,4,186,162
+01065,Hale,AL,Alabama,46220,"Tuscaloosa, AL",Metropolitan,29-1141,Registered Nurses,2840,28,145,5,232,207
+01125,Tuscaloosa,AL,Alabama,46220,"Tuscaloosa, AL",Metropolitan,29-1141,Registered Nurses,2840,497,2589,52,2420,2469
+48423,Smith,TX,Texas,46340,"Tyler, TX",Metropolitan,29-1141,Registered Nurses,3710,402,3710,70,3710,3710
+36043,Herkimer,NY,New York,46540,"Utica-Rome, NY",Metropolitan,29-1141,Registered Nurses,2720,25,2720,4,2720,2720
+36065,Oneida,NY,New York,46540,"Utica-Rome, NY",Metropolitan,29-1141,Registered Nurses,2720,0,0,0,0,0
+13027,Brooks,GA,Georgia,46660,"Valdosta, GA",Metropolitan,29-1141,Registered Nurses,1400,25,228,4,700,565
+13101,Echols,GA,Georgia,46660,"Valdosta, GA",Metropolitan,29-1141,Registered Nurses,1400,0,0,0,0,0
+13173,Lanier,GA,Georgia,46660,"Valdosta, GA",Metropolitan,29-1141,Registered Nurses,1400,25,228,4,700,565
+13185,Lowndes,GA,Georgia,46660,"Valdosta, GA",Metropolitan,29-1141,Registered Nurses,1400,103,942,0,0,269
+06095,Solano,CA,California,46700,"Vallejo-Fairfield, CA",Metropolitan,29-1141,Registered Nurses,3720,64,3720,11,3720,3720
+48057,Calhoun,TX,Texas,47020,"Victoria, TX",Metropolitan,29-1141,Registered Nurses,1240,25,607,6,1240,1059
+48175,Goliad,TX,Texas,47020,"Victoria, TX",Metropolitan,29-1141,Registered Nurses,1240,0,0,0,0,0
+48469,Victoria,TX,Texas,47020,"Victoria, TX",Metropolitan,29-1141,Registered Nurses,1240,26,632,0,0,180
+34011,Cumberland,NJ,New Jersey,47220,"Vineland-Bridgeton, NJ",Metropolitan,29-1141,Registered Nurses,1240,280,1240,24,1240,1240
+37053,Currituck,NC,North Carolina,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,0,0,0,0,0
+51073,Gloucester,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,67,745,7,1649,1390
+51093,Isle of Wight,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,0,0,0,0,0
+51095,James City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,57,633,0,0,181
+51115,Mathews,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,0,0,0,0,0
+51181,Surry,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,0,0,0,0,0
+51199,York,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,50,556,0,0,158
+51550,Chesapeake City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,310,3447,28,6596,5696
+51650,Hampton City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,79,878,0,0,250
+51700,Newport News City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,108,1200,0,0,343
+51710,Norfolk City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,82,911,0,0,260
+51735,Poquoson City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,0,0,0,0,0
+51740,Portsmouth City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,202,2246,1,235,810
+51800,Suffolk City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,155,1723,12,2827,2511
+51810,Virginia Beach City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,100,1112,1,235,485
+51830,Williamsburg City,VA,Virginia,47260,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan,29-1141,Registered Nurses,13900,40,444,10,2355,1809
+06107,Tulare,CA,California,47300,"Visalia-Porterville, CA",Metropolitan,29-1141,Registered Nurses,2050,403,2050,41,2050,2050
+48309,McLennan,TX,Texas,47380,"Waco, TX",Metropolitan,29-1141,Registered Nurses,2160,0,0,0,0,0
+13153,Houston,GA,Georgia,47580,"Warner Robins, GA",Metropolitan,29-1141,Registered Nurses,1040,237,1040,32,1040,1040
+11001,Washington,DC,District of Columbia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,0,0,1,151,108
+24009,Calvert,MD,Maryland,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,41,796,4,605,660
+24017,Charles,MD,Maryland,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,98,1903,10,1513,1625
+24033,Prince Georges,MD,Maryland,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,190,3690,22,3330,3433
+51013,Arlington,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,305,5924,32,4844,5153
+51043,Clarke,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,0,0,0,0,0
+51059,Fairfax,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,923,17927,162,24525,22640
+51061,Fauquier,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,97,1884,8,1211,1403
+51107,Loudoun,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,100,1942,0,0,554
+51153,Prince William,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,60,1165,8,1211,1198
+51177,Spotsylvania,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,105,2039,12,1816,1880
+51179,Stafford,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,90,1748,4,605,932
+51187,Warren,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,46,893,8,1211,1120
+51510,Alexandria City,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,5,97,0,0,27
+51600,Fairfax City,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,0,0,0,0,0
+51610,Falls Church City,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,0,0,0,0,0
+51630,Fredericksburg City,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,58,1126,0,0,321
+51683,Manassas City,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,94,1825,11,1665,1711
+51685,Manassas Park City,VA,Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,0,0,0,0,0
+54037,Jefferson,WV,West Virginia,47900,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan,29-1141,Registered Nurses,43450,25,485,5,756,679
+19013,Black Hawk,IA,Iowa,47940,"Waterloo-Cedar Falls, IA",Metropolitan,29-1141,Registered Nurses,2220,187,1820,12,1402,1521
+19017,Bremer,IA,Iowa,47940,"Waterloo-Cedar Falls, IA",Metropolitan,29-1141,Registered Nurses,2220,16,155,3,350,294
+19075,Grundy,IA,Iowa,47940,"Waterloo-Cedar Falls, IA",Metropolitan,29-1141,Registered Nurses,2220,25,243,4,467,403
+55073,Marathon,WI,Wisconsin,48140,"Wausau, WI",Metropolitan,29-1141,Registered Nurses,1650,223,1650,28,1650,1650
+39081,Jefferson,OH,Ohio,48260,"Weirton-Steubenville, WV-OH",Metropolitan,29-1141,Registered Nurses,920,171,647,20,593,608
+54009,Brooke,WV,West Virginia,48260,"Weirton-Steubenville, WV-OH",Metropolitan,29-1141,Registered Nurses,920,72,272,11,326,311
+54029,Hancock,WV,West Virginia,48260,"Weirton-Steubenville, WV-OH",Metropolitan,29-1141,Registered Nurses,920,0,0,0,0,0
+53007,Chelan,WA,Washington,48300,"Wenatchee, WA",Metropolitan,29-1141,Registered Nurses,1330,176,1330,20,1330,1330
+53017,Douglas,WA,Washington,48300,"Wenatchee, WA",Metropolitan,29-1141,Registered Nurses,1330,0,0,0,0,0
+39013,Belmont,OH,Ohio,48540,"Wheeling, WV-OH",Metropolitan,29-1141,Registered Nurses,1810,100,783,0,0,223
+54051,Marshall,WV,West Virginia,48540,"Wheeling, WV-OH",Metropolitan,29-1141,Registered Nurses,1810,59,462,9,740,660
+54069,Ohio,WV,West Virginia,48540,"Wheeling, WV-OH",Metropolitan,29-1141,Registered Nurses,1810,72,564,13,1069,925
+20015,Butler,KS,Kansas,48620,"Wichita, KS",Metropolitan,29-1141,Registered Nurses,6010,55,1652,10,1581,1601
+20079,Harvey,KS,Kansas,48620,"Wichita, KS",Metropolitan,29-1141,Registered Nurses,6010,74,2223,6,948,1313
+20173,Sedgwick,KS,Kansas,48620,"Wichita, KS",Metropolitan,29-1141,Registered Nurses,6010,46,1382,18,2846,2428
+20191,Sumner,KS,Kansas,48620,"Wichita, KS",Metropolitan,29-1141,Registered Nurses,6010,25,751,4,632,666
+48009,Archer,TX,Texas,48660,"Wichita Falls, TX",Metropolitan,29-1141,Registered Nurses,1380,0,0,0,0,0
+48077,Clay,TX,Texas,48660,"Wichita Falls, TX",Metropolitan,29-1141,Registered Nurses,1380,25,616,4,552,570
+48485,Wichita,TX,Texas,48660,"Wichita Falls, TX",Metropolitan,29-1141,Registered Nurses,1380,31,763,6,828,809
+42081,Lycoming,PA,Pennsylvania,48700,"Williamsport, PA",Metropolitan,29-1141,Registered Nurses,1190,31,1190,0,0,1190
+37019,Brunswick,NC,North Carolina,48900,"Wilmington, NC",Metropolitan,29-1141,Registered Nurses,3470,40,884,0,0,252
+37129,New Hanover,NC,North Carolina,48900,"Wilmington, NC",Metropolitan,29-1141,Registered Nurses,3470,92,2033,16,2776,2563
+37141,Pender,NC,North Carolina,48900,"Wilmington, NC",Metropolitan,29-1141,Registered Nurses,3470,25,552,4,694,653
+51069,Frederick,VA,Virginia,49020,"Winchester, VA-WV",Metropolitan,29-1141,Registered Nurses,1540,0,0,0,0,0
+51840,Winchester City,VA,Virginia,49020,"Winchester, VA-WV",Metropolitan,29-1141,Registered Nurses,1540,389,1486,48,1478,1480
+54027,Hampshire,WV,West Virginia,49020,"Winchester, VA-WV",Metropolitan,29-1141,Registered Nurses,1540,14,53,2,61,59
+37059,Davie,NC,North Carolina,49180,"Winston-Salem, NC",Metropolitan,29-1141,Registered Nurses,8890,50,3108,9,6154,5284
+37067,Forsyth,NC,North Carolina,49180,"Winston-Salem, NC",Metropolitan,29-1141,Registered Nurses,8890,68,4227,0,0,1207
+37169,Stokes,NC,North Carolina,49180,"Winston-Salem, NC",Metropolitan,29-1141,Registered Nurses,8890,25,1554,4,2735,2397
+37197,Yadkin,NC,North Carolina,49180,"Winston-Salem, NC",Metropolitan,29-1141,Registered Nurses,8890,0,0,0,0,0
+53077,Yakima,WA,Washington,49420,"Yakima, WA",Metropolitan,29-1141,Registered Nurses,1800,25,1800,7,1800,1800
+42133,York,PA,Pennsylvania,49620,"York-Hanover, PA",Metropolitan,29-1141,Registered Nurses,3050,90,3050,0,0,3050
+39099,Mahoning,OH,Ohio,49660,"Youngstown-Warren-Boardman, OH-PA",Metropolitan,29-1141,Registered Nurses,4290,24,463,4,1716,1358
+39155,Trumbull,OH,Ohio,49660,"Youngstown-Warren-Boardman, OH-PA",Metropolitan,29-1141,Registered Nurses,4290,76,1468,0,0,419
+42085,Mercer,PA,Pennsylvania,49660,"Youngstown-Warren-Boardman, OH-PA",Metropolitan,29-1141,Registered Nurses,4290,122,2357,6,2574,2512
+06101,Sutter,CA,California,49700,"Yuba City, CA",Metropolitan,29-1141,Registered Nurses,920,14,79,2,70,73
+06115,Yuba,CA,California,49700,"Yuba City, CA",Metropolitan,29-1141,Registered Nurses,920,149,840,24,849,846
+04027,Yuma,AZ,Arizona,49740,"Yuma, AZ",Metropolitan,29-1141,Registered Nurses,1090,406,1090,42,1090,1090
