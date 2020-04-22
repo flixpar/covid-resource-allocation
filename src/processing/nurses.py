@@ -7,47 +7,51 @@ from collections import defaultdict
 
 DATADIR = '../../data'
 
-
-def get_field(line):
-    field = line[:5].strip()
-    if len(field) == 0:
-        field = None
-    return field, line[8:]
-
-
 def get_cbsa_df():
+    # def get_field(line):
+    #     field = line[:5].strip()
+    #     if len(field) == 0:
+    #         field = None
+    #     return field, line[8:]
+
     datadir = os.path.join(DATADIR, 'geography')
 
-    with open(os.path.join(datadir, '0312msa.txt'), 'rb') as f:
-        lines = f.readlines()
-    lines = lines[11:-21] # skip headers and footers
+    # with open(os.path.join(datadir, '0312msa.txt'), 'rb') as f:
+    #     lines = f.readlines()
+    # lines = lines[11:-21] # skip headers and footers
 
-    conversion = defaultdict(list)
-    for line in lines:
-        line = line.decode('utf-8',errors='ignore').strip()
-        if len(line) == 0: continue
-        cbsa, line = get_field(line)
-        div, line = get_field(line)
-        county, components = get_field(line)
-        if not county:
-            key = cbsa
-            conversion[key] = {'div': [], 'county': [], 'components': []}
-            continue
-        conversion[key]['div'].append(div)
-        conversion[key]['county'].append(county)
-        conversion[key]['components'].append(components)
+    # conversion = defaultdict(list)
+    # for line in lines:
+    #     line = line.decode('utf-8',errors='ignore').strip()
+    #     print(line)
+    #     if len(line) == 0: continue
+    #     cbsa, line = get_field(line)
+    #     div, line = get_field(line)
+    #     county, components = get_field(line)
+    #     if not county:
+    #         key = cbsa
+    #         conversion[key] = {'div': [], 'county': [], 'components': []}
+    #         continue
+    #     conversion[key]['div'].append(div)
+    #     conversion[key]['county'].append(county)
+    #     conversion[key]['components'].append(components)
+    df = pd.read_csv('../../data/geography/cbsa-est2019-alldata.csv', encoding='latin-1').astype({'CBSA': str})
+    df = df.loc[:, ['CBSA', 'STCOU', 'NAME']].rename(columns={'CBSA': 'cbsa', 'STCOU': 'code', 'NAME': 'county_name'})
+    df = df[df['code'].notna()].astype({'code': int}).astype({'code': str})
+    df.code = df.apply(lambda x: '0' + x.code if len(x.code) < 5 else x.code, axis=1)
 
 
-    df = pd.DataFrame(columns=['code', 'county_code', 'div_code', 'county_name'])
-    for i, (k, v) in enumerate(conversion.items()):
-        df.loc[i] = [k, v['county'], v['div'], v['components']]
+    # df = pd.DataFrame(columns=['code', 'county_code', 'div_code', 'county_name'])
+    # for i, (k, v) in enumerate(conversion.items()):
+    #     df.loc[i] = [k, v['county'], v['div'], v['components']]
 
-    cbsa_df = pd.read_csv(os.path.join(datadir, 'cbsas.csv')).astype({'CBSA Code': str})
-    cbsa_df.columns = ['code', 'title', 'category']
+    cbsa_df = pd.read_csv(os.path.join(datadir, 'cbsa_codes.csv')).astype({'code': str})
+    cbsa_df = cbsa_df.loc[:, ['code', 'title', 'category']].rename(columns={'code': 'cbsa'})
+    # import pdb; pdb.set_trace()
 
-    df = pd.merge(cbsa_df, df, on='code', how='inner')
+    df = pd.merge(cbsa_df, df, on='cbsa', how='inner')
     # df = df[df.category == 'Metropolitan']
-    df.columns = ['area', 'title', 'category', 'county_code', 'div_code', 'county_name']
+    df.columns = ['cbsa', 'title', 'category', 'code', 'county_name']
 
     return df
 
@@ -69,15 +73,18 @@ def get_metarea_df():
 
 def disaggregate_to_county(county_df):
     cbsa_df = get_cbsa_df()
-    metarea_df = get_metarea_df()
-    df = pd.merge(metarea_df, cbsa_df, on='area', how='inner').rename(columns={'county_code': 'code'})
-    df = df.loc[:, ['area', 'title', 'category', 'occ_code', 'occ_title', 'tot_emp', 'code']]
-    df = pd.DataFrame({
-          col:np.repeat(df[col].values, df['code'].str.len())
-          for col in df.columns.drop('code')}
-        ).assign(**{'code':np.concatenate(df['code'].values)})[df.columns]
-    df = pd.merge(df, county_df, on='code', how='inner')
-    df = df.loc[:, ['code', 'county', 'abbrev', 'state', 'area', 'title', 'category', 'occ_code', 'occ_title', 'tot_emp']].rename(columns={'area': 'cbsa'})
+    metarea_df = get_metarea_df().rename(columns={'area': 'cbsa'})
+    df = pd.merge(metarea_df, cbsa_df, on='cbsa', how='inner').rename(columns={'county_code': 'code'})
+    df['county'] = df.apply(lambda x: x.county_name.split(', ')[0], axis=1)
+    df['state'] = df.apply(lambda x: x.county_name.split(', ')[1], axis=1)
+    df.drop('county_name', axis=1, inplace=True)
+    df = df.loc[:, ['code', 'county', 'state', 'cbsa', 'title', 'category', 'occ_code', 'occ_title', 'tot_emp']]
+    # df = pd.DataFrame({
+    #       col:np.repeat(df[col].values, df['code'].str.len())
+    #       for col in df.columns.drop('code')}
+    #     ).assign(**{'code':np.concatenate(df['code'].values)})[df.columns]
+    # df = pd.merge(df, county_df, on='code', how='inner')
+    # df = df.loc[:, ['code', 'county', 'abbrev', 'state', 'cbsa', 'title', 'category', 'occ_code', 'occ_title', 'tot_emp']].rename(columns={'area': 'cbsa'})
     return df
 
 
