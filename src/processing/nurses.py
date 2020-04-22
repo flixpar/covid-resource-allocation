@@ -127,7 +127,7 @@ def distribute_resources(df, feature):
 
 
 def weighted_distribution(df):
-    WEIGHTS = {'staffed_beds': 5/7, 'icu_beds': 2/7}
+    WEIGHTS = {'staffed_beds': 0.2/0.7, 'icu_beds': 0.5/0.7}
     def process_entry(employees, staffed_beds, icu_beds):
         assert len(staffed_beds) == len(icu_beds)
         if isinstance(staffed_beds, list) and isinstance(icu_beds, list):

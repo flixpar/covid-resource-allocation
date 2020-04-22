@@ -1,91 +1,91 @@
 area,tot_emp,county_name,staffed_beds,icu_beds,emp_distributed_by_staffed_beds,emp_distributed_by_icu_beds,weighted_emp_distribution
-10180,1630,"['      Callahan County, TX', '      Jones County, TX', '      Taylor County, TX']","[7, 31]","[1, 0]","[300, 1329]","[1630, 0]","[680, 949]"
+10180,1630,"['      Callahan County, TX', '      Jones County, TX', '      Taylor County, TX']","[7, 31]","[1, 0]","[300, 1329]","[1630, 0]","[1250, 379]"
 10380,650,"['      Aguada Municipio, PR', '      Aguadilla Municipio, PR', '      Aasco Municipio, PR', '      Isabela Municipio, PR', '      Lares Municipio, PR', '      Moca Municipio, PR', '      Rincn Municipio, PR', '      San Sebastin Municipio, PR']",[],[],[],[],[]
-10420,8490,"['      Portage County, OH', '      Summit County, OH']","[191, 23]","[16, 0]","[7577, 912]","[8490, 0]","[7838, 651]"
-10580,10010,"['      Albany County, NY', '      Rensselaer County, NY', '      Saratoga County, NY', '      Schenectady County, NY', '      Schoharie County, NY']","[67, 20, 88, 334, 40]","[2, 4, 0, 36, 7]","[1221, 364, 1604, 6089, 729]","[408, 817, 0, 7354, 1430]","[989, 493, 1146, 6451, 929]"
-10740,10160,"['      Bernalillo County, NM', '      Sandoval County, NM', '      Torrance County, NM', '      Valencia County, NM']","[48, 60]","[0, 11]","[4515, 5644]","[0, 10160]","[3225, 6934]"
+10420,8490,"['      Portage County, OH', '      Summit County, OH']","[191, 23]","[16, 0]","[7577, 912]","[8490, 0]","[8229, 260]"
+10580,10010,"['      Albany County, NY', '      Rensselaer County, NY', '      Saratoga County, NY', '      Schenectady County, NY', '      Schoharie County, NY']","[67, 20, 88, 334, 40]","[2, 4, 0, 36, 7]","[1221, 364, 1604, 6089, 729]","[408, 817, 0, 7354, 1430]","[640, 687, 458, 6993, 1229]"
+10740,10160,"['      Bernalillo County, NM', '      Sandoval County, NM', '      Torrance County, NM', '      Valencia County, NM']","[48, 60]","[0, 11]","[4515, 5644]","[0, 10160]","[1290, 8869]"
 10780,1870,"['      Grant Parish, LA', '      Rapides Parish, LA']",[16],[0],[1870],[0],[1870]
-10900,9750,"['      Warren County, NJ', '      Carbon County, PA', '      Lehigh County, PA', '      Northampton County, PA']","[92, 68, 120, 108]","[12, 6, 0, 12]","[2311, 1708, 3015, 2713]","[3900, 1950, 0, 3900]","[2765, 1777, 2153, 3052]"
+10900,9750,"['      Warren County, NJ', '      Carbon County, PA', '      Lehigh County, PA', '      Northampton County, PA']","[92, 68, 120, 108]","[12, 6, 0, 12]","[2311, 1708, 3015, 2713]","[3900, 1950, 0, 3900]","[3446, 1881, 861, 3561]"
 11020,1850,"['      Blair County, PA']",[80],[0],[1850],[0],[1850]
 11100,2620,"['      Armstrong County, TX', '      Carson County, TX', '      Potter County, TX', '      Randall County, TX']",[72],[11],[2620],[2620],[2620]
 11180,810,"['      Story County, IA']",[17],[3],[810],[810],[810]
 11260,4270,"['      Anchorage Municipality, AK', '      Matanuska-Susitna Borough, AK']","[0, 74]","[0, 14]","[0, 4270]","[0, 4270]","[0, 4270]"
 11460,9340,"['      Washtenaw County, MI']",[24],[4],[9340],[9340],[9340]
 11500,920,"['      Calhoun County, AL']",[125],[6],[920],[920],[920]
-11540,1920,"['      Calumet County, WI', '      Outagamie County, WI']","[25, 147]","[4, 22]","[279, 1640]","[295, 1624]","[283, 1636]"
-11700,6210,"['      Buncombe County, NC', '      Haywood County, NC', '      Henderson County, NC', '      Madison County, NC']","[34, 122, 160]","[5, 12, 13]","[668, 2397, 3144]","[1035, 2484, 2691]","[772, 2422, 3014]"
+11540,1920,"['      Calumet County, WI', '      Outagamie County, WI']","[25, 147]","[4, 22]","[279, 1640]","[295, 1624]","[290, 1629]"
+11700,6210,"['      Buncombe County, NC', '      Haywood County, NC', '      Henderson County, NC', '      Madison County, NC']","[34, 122, 160]","[5, 12, 13]","[668, 2397, 3144]","[1035, 2484, 2691]","[930, 2459, 2820]"
 12020,1680,"['      Clarke County, GA', '      Madison County, GA', '      Oconee County, GA', '      Oglethorpe County, GA']",[165],[68],[1680],[1680],[1680]
-12060,40830,"['      Barrow County, GA', '      Bartow County, GA', '      Butts County, GA', '      Carroll County, GA', '      Cherokee County, GA', '      Clayton County, GA', '      Cobb County, GA', '      Coweta County, GA', '      Dawson County, GA', '      DeKalb County, GA', '      Douglas County, GA', '      Fayette County, GA', '      Forsyth County, GA', '      Fulton County, GA', '      Gwinnett County, GA', '      Haralson County, GA', '      Heard County, GA', '      Henry County, GA', '      Jasper County, GA', '      Lamar County, GA', '      Meriwether County, GA', '      Newton County, GA', '      Paulding County, GA', '      Pickens County, GA', '      Pike County, GA', '      Rockdale County, GA', '      Spalding County, GA', '      Walton County, GA']","[56, 119, 25, 157, 114, 244, 367, 50, 56, 102, 221, 304, 110, 90, 15, 215, 12, 25, 94, 112, 52, 138, 160, 88]","[6, 21, 4, 22, 20, 34, 34, 0, 0, 8, 66, 24, 14, 0, 3, 33, 2, 4, 10, 8, 6, 16, 22, 0]","[781, 1660, 348, 2190, 1590, 3404, 5121, 697, 781, 1423, 3083, 4242, 1534, 1255, 209, 3000, 167, 348, 1311, 1562, 725, 1925, 2232, 1227]","[686, 2401, 457, 2516, 2287, 3888, 3888, 0, 0, 914, 7548, 2744, 1601, 0, 343, 3774, 228, 457, 1143, 914, 686, 1829, 2516, 0]","[754, 1872, 379, 2283, 1789, 3543, 4769, 498, 558, 1278, 4359, 3814, 1553, 897, 247, 3221, 184, 379, 1263, 1377, 714, 1898, 2313, 877]"
+12060,40830,"['      Barrow County, GA', '      Bartow County, GA', '      Butts County, GA', '      Carroll County, GA', '      Cherokee County, GA', '      Clayton County, GA', '      Cobb County, GA', '      Coweta County, GA', '      Dawson County, GA', '      DeKalb County, GA', '      Douglas County, GA', '      Fayette County, GA', '      Forsyth County, GA', '      Fulton County, GA', '      Gwinnett County, GA', '      Haralson County, GA', '      Heard County, GA', '      Henry County, GA', '      Jasper County, GA', '      Lamar County, GA', '      Meriwether County, GA', '      Newton County, GA', '      Paulding County, GA', '      Pickens County, GA', '      Pike County, GA', '      Rockdale County, GA', '      Spalding County, GA', '      Walton County, GA']","[56, 119, 25, 157, 114, 244, 367, 50, 56, 102, 221, 304, 110, 90, 15, 215, 12, 25, 94, 112, 52, 138, 160, 88]","[6, 21, 4, 22, 20, 34, 34, 0, 0, 8, 66, 24, 14, 0, 3, 33, 2, 4, 10, 8, 6, 16, 22, 0]","[781, 1660, 348, 2190, 1590, 3404, 5121, 697, 781, 1423, 3083, 4242, 1534, 1255, 209, 3000, 167, 348, 1311, 1562, 725, 1925, 2232, 1227]","[686, 2401, 457, 2516, 2287, 3888, 3888, 0, 0, 914, 7548, 2744, 1601, 0, 343, 3774, 228, 457, 1143, 914, 686, 1829, 2516, 0]","[713, 2189, 426, 2423, 2088, 3750, 4240, 199, 223, 1060, 6272, 3172, 1582, 358, 304, 3553, 211, 426, 1191, 1100, 697, 1857, 2435, 350]"
 12100,3260,"['      Atlantic County, NJ']",[0],[0],[0],[0],[0]
 12220,960,"['      Lee County, AL']",[372],[20],[960],[960],[960]
-12260,6750,"['      Burke County, GA', '      Columbia County, GA', '      McDuffie County, GA', '      Richmond County, GA', '      Aiken County, SC', '      Edgefield County, SC']","[40, 25, 0, 204, 25]","[7, 4, 1, 35, 4]","[918, 573, 0, 4683, 573]","[926, 529, 132, 4632, 529]","[920, 561, 37, 4669, 561]"
-12420,14860,"['      Bastrop County, TX', '      Caldwell County, TX', '      Hays County, TX', '      Travis County, TX', '      Williamson County, TX']","[8, 34, 40, 211, 54]","[1, 6, 0, 60, 9]","[342, 1456, 1712, 9035, 2312]","[195, 1173, 0, 11731, 1759]","[300, 1375, 1223, 9806, 2154]"
+12260,6750,"['      Burke County, GA', '      Columbia County, GA', '      McDuffie County, GA', '      Richmond County, GA', '      Aiken County, SC', '      Edgefield County, SC']","[40, 25, 0, 204, 25]","[7, 4, 1, 35, 4]","[918, 573, 0, 4683, 573]","[926, 529, 132, 4632, 529]","[924, 542, 94, 4647, 542]"
+12420,14860,"['      Bastrop County, TX', '      Caldwell County, TX', '      Hays County, TX', '      Travis County, TX', '      Williamson County, TX']","[8, 34, 40, 211, 54]","[1, 6, 0, 60, 9]","[342, 1456, 1712, 9035, 2312]","[195, 1173, 0, 11731, 1759]","[237, 1253, 489, 10961, 1917]"
 12540,5290,"['      Kern County, CA']",[90],[0],[5290],[0],[5290]
-12580,32020,"['      Anne Arundel County, MD', '      Baltimore County, MD', '      Carroll County, MD', '      Harford County, MD', '      Howard County, MD', ""      Queen Anne's County, MD"", '      Baltimore city, MD']","[325, 639, 153, 82, 245, 0]","[20, 0, 12, 5, 16, 4]","[7206, 14169, 3392, 1818, 5432, 0]","[11235, 0, 6741, 2808, 8988, 2247]","[8357, 10121, 4349, 2101, 6448, 642]"
-12940,5640,"['      Ascension Parish, LA', '      East Baton Rouge Parish, LA', '      East Feliciana Parish, LA', '      Iberville Parish, LA', '      Livingston Parish, LA', '      Pointe Coupee Parish, LA', '      St. Helena Parish, LA', '      West Baton Rouge Parish, LA', '      West Feliciana Parish, LA']","[0, 64, 337, 10, 0, 25, 25, 25]","[32, 0, 0, 0, 0, 4, 4, 4]","[0, 742, 3910, 116, 0, 290, 290, 290]","[4101, 0, 0, 0, 0, 512, 512, 512]","[1171, 530, 2793, 82, 0, 353, 353, 353]"
+12580,32020,"['      Anne Arundel County, MD', '      Baltimore County, MD', '      Carroll County, MD', '      Harford County, MD', '      Howard County, MD', ""      Queen Anne's County, MD"", '      Baltimore city, MD']","[325, 639, 153, 82, 245, 0]","[20, 0, 12, 5, 16, 4]","[7206, 14169, 3392, 1818, 5432, 0]","[11235, 0, 6741, 2808, 8988, 2247]","[10084, 4048, 5784, 2525, 7972, 1605]"
+12940,5640,"['      Ascension Parish, LA', '      East Baton Rouge Parish, LA', '      East Feliciana Parish, LA', '      Iberville Parish, LA', '      Livingston Parish, LA', '      Pointe Coupee Parish, LA', '      St. Helena Parish, LA', '      West Baton Rouge Parish, LA', '      West Feliciana Parish, LA']","[0, 64, 337, 10, 0, 25, 25, 25]","[32, 0, 0, 0, 0, 4, 4, 4]","[0, 742, 3910, 116, 0, 290, 290, 290]","[4101, 0, 0, 0, 0, 512, 512, 512]","[2929, 212, 1117, 33, 0, 449, 449, 449]"
 12980,1670,"['      Calhoun County, MI']",[25],[5],[1670],[1670],[1670]
 13020,900,"['      Bay County, MI']",[297],[32],[900],[900],[900]
 13140,2690,"['      Hardin County, TX', '      Jefferson County, TX', '      Orange County, TX']","[0, 27]","[0, 0]","[0, 2690]","[0, 0]","[0, 2690]"
 13380,0,"['      Whatcom County, WA']",[207],[24],[0],[0],[0]
 13460,1950,"['      Deschutes County, OR']",[48],[6],[1950],[1950],[1950]
 13780,2540,"['      Broome County, NY', '      Tioga County, NY']",[161],[10],[2540],[2540],[2540]
-13820,16760,"['      Bibb County, AL', '      Blount County, AL', '      Chilton County, AL', '      Jefferson County, AL', '      St. Clair County, AL', '      Shelby County, AL', '      Walker County, AL']","[25, 25, 26, 0, 40, 34, 207]","[4, 6, 6, 0, 6, 0, 12]","[1173, 1173, 1220, 0, 1877, 1596, 9717]","[1971, 2957, 2957, 0, 2957, 0, 5915]","[1401, 1683, 1716, 0, 2186, 1140, 8631]"
-13900,2120,"['      Burleigh County, ND', '      Morton County, ND']","[205, 41]","[13, 6]","[1766, 353]","[1450, 669]","[1676, 443]"
-13980,1060,"['      Giles County, VA', '      Montgomery County, VA', '      Pulaski County, VA', '      Radford city, VA']","[25, 88, 92]","[4, 10, 8]","[129, 455, 475]","[192, 481, 385]","[147, 462, 449]"
-14020,1320,"['      Greene County, IN', '      Monroe County, IN', '      Owen County, IN']","[25, 71]","[5, 0]","[343, 976]","[1320, 0]","[622, 697]"
-14260,6570,"['      Ada County, ID', '      Boise County, ID', '      Canyon County, ID', '      Gem County, ID', '      Owyhee County, ID']","[72, 70, 13]","[0, 10, 2]","[3051, 2967, 551]","[0, 5475, 1095]","[2179, 3683, 706]"
+13820,16760,"['      Bibb County, AL', '      Blount County, AL', '      Chilton County, AL', '      Jefferson County, AL', '      St. Clair County, AL', '      Shelby County, AL', '      Walker County, AL']","[25, 25, 26, 0, 40, 34, 207]","[4, 6, 6, 0, 6, 0, 12]","[1173, 1173, 1220, 0, 1877, 1596, 9717]","[1971, 2957, 2957, 0, 2957, 0, 5915]","[1743, 2447, 2461, 0, 2649, 456, 7001]"
+13900,2120,"['      Burleigh County, ND', '      Morton County, ND']","[205, 41]","[13, 6]","[1766, 353]","[1450, 669]","[1540, 579]"
+13980,1060,"['      Giles County, VA', '      Montgomery County, VA', '      Pulaski County, VA', '      Radford city, VA']","[25, 88, 92]","[4, 10, 8]","[129, 455, 475]","[192, 481, 385]","[174, 474, 411]"
+14020,1320,"['      Greene County, IN', '      Monroe County, IN', '      Owen County, IN']","[25, 71]","[5, 0]","[343, 976]","[1320, 0]","[1041, 278]"
+14260,6570,"['      Ada County, ID', '      Boise County, ID', '      Canyon County, ID', '      Gem County, ID', '      Owyhee County, ID']","[72, 70, 13]","[0, 10, 2]","[3051, 2967, 551]","[0, 5475, 1095]","[871, 4758, 939]"
 14500,3170,"['      Boulder County, CO']",[139],[18],[3170],[3170],[3170]
 14540,1620,"['      Edmonson County, KY', '      Warren County, KY']",[162],[16],[1620],[1620],[1620]
 14740,1450,"['      Kitsap County, WA']",[298],[20],[1450],[1450],[1450]
 15180,2160,"['      Cameron County, TX']",[94],[0],[2160],[0],[2160]
 15260,1260,"['      Brantley County, GA', '      Glynn County, GA', '      McIntosh County, GA']",[300],[12],[1260],[1260],[1260]
-15380,12280,"['      Erie County, NY', '      Niagara County, NY']","[46, 133]","[0, 12]","[3155, 9124]","[0, 12280]","[2254, 10025]"
+15380,12280,"['      Erie County, NY', '      Niagara County, NY']","[46, 133]","[0, 12]","[3155, 9124]","[0, 12280]","[901, 11378]"
 15500,880,"['      Alamance County, NC']",[176],[20],[880],[880],[880]
 15940,3710,"['      Carroll County, OH', '      Stark County, OH']",[30],[5],[3710],[3710],[3710]
 15980,5100,"['      Lee County, FL']",[60],[10],[5100],[5100],[5100]
 16180,780,"['      Carson City, NV']",[29],[5],[780],[780],[780]
 16220,1070,"['      Natrona County, WY']",[16],[3],[1070],[1070],[1070]
-16300,2490,"['      Benton County, IA', '      Jones County, IA', '      Linn County, IA']","[25, 22, 301]","[4, 4, 16]","[178, 157, 2153]","[415, 415, 1660]","[246, 231, 2012]"
-16580,2300,"['      Champaign County, IL', '      Ford County, IL', '      Piatt County, IL']","[77, 25, 16]","[0, 2, 3]","[1500, 487, 311]","[0, 920, 1380]","[1072, 610, 617]"
-16620,3530,"['      Boone County, WV', '      Clay County, WV', '      Kanawha County, WV', '      Lincoln County, WV', '      Putnam County, WV']","[25, 822]","[4, 95]","[104, 3425]","[142, 3387]","[115, 3414]"
+16300,2490,"['      Benton County, IA', '      Jones County, IA', '      Linn County, IA']","[25, 22, 301]","[4, 4, 16]","[178, 157, 2153]","[415, 415, 1660]","[347, 341, 1801]"
+16580,2300,"['      Champaign County, IL', '      Ford County, IL', '      Piatt County, IL']","[77, 25, 16]","[0, 2, 3]","[1500, 487, 311]","[0, 920, 1380]","[428, 796, 1074]"
+16620,3530,"['      Boone County, WV', '      Clay County, WV', '      Kanawha County, WV', '      Lincoln County, WV', '      Putnam County, WV']","[25, 822]","[4, 95]","[104, 3425]","[142, 3387]","[131, 3398]"
 16700,10650,"['      Berkeley County, SC', '      Charleston County, SC', '      Dorchester County, SC']","[0, 0]","[32, 72]","[0, 0]","[3276, 7373]","[3276, 7373]"
-16740,23720,"['      Anson County, NC', '      Cabarrus County, NC', '      Gaston County, NC', '      Mecklenburg County, NC', '      Union County, NC', '      York County, SC']","[15, 447, 383, 46, 182, 50]","[3, 15, 57, 4, 14, 0]","[316, 9441, 8089, 971, 3844, 1056]","[765, 3825, 14538, 1020, 3570, 0]","[444, 7837, 9932, 985, 3766, 754]"
-16820,3880,"['      Albemarle County, VA', '      Fluvanna County, VA', '      Greene County, VA', '      Nelson County, VA', '      Charlottesville city, VA']","[50, 585]","[0, 14]","[305, 3574]","[0, 3880]","[218, 3661]"
-16860,6260,"['      Catoosa County, GA', '      Dade County, GA', '      Walker County, GA', '      Hamilton County, TN', '      Marion County, TN', '      Sequatchie County, TN']","[36, 36, 88]","[6, 6, 0]","[1408, 1408, 3443]","[3130, 3130, 0]","[1900, 1900, 2459]"
+16740,23720,"['      Anson County, NC', '      Cabarrus County, NC', '      Gaston County, NC', '      Mecklenburg County, NC', '      Union County, NC', '      York County, SC']","[15, 447, 383, 46, 182, 50]","[3, 15, 57, 4, 14, 0]","[316, 9441, 8089, 971, 3844, 1056]","[765, 3825, 14538, 1020, 3570, 0]","[637, 5430, 12695, 1006, 3648, 301]"
+16820,3880,"['      Albemarle County, VA', '      Fluvanna County, VA', '      Greene County, VA', '      Nelson County, VA', '      Charlottesville city, VA']","[50, 585]","[0, 14]","[305, 3574]","[0, 3880]","[87, 3792]"
+16860,6260,"['      Catoosa County, GA', '      Dade County, GA', '      Walker County, GA', '      Hamilton County, TN', '      Marion County, TN', '      Sequatchie County, TN']","[36, 36, 88]","[6, 6, 0]","[1408, 1408, 3443]","[3130, 3130, 0]","[2638, 2638, 983]"
 16940,920,"['      Laramie County, WY']",[30],[1],[920],[920],[920]
-16980,97030,"['      Lake County, IL', '      Kenosha County, WI']","[190, 74]","[23, 12]","[69832, 27197]","[63762, 33267]","[68098, 28931]"
+16980,97030,"['      Lake County, IL', '      Kenosha County, WI']","[190, 74]","[23, 12]","[69832, 27197]","[63762, 33267]","[65496, 31533]"
 17020,2250,"['      Butte County, CA']",[298],[33],[2250],[2250],[2250]
-17140,24480,"['      Dearborn County, IN', '      Franklin County, IN', '      Ohio County, IN', '      Boone County, KY', '      Bracken County, KY', '      Campbell County, KY', '      Gallatin County, KY', '      Grant County, KY', '      Kenton County, KY', '      Pendleton County, KY', '      Brown County, OH', '      Butler County, OH', '      Clermont County, OH', '      Hamilton County, OH', '      Warren County, OH']","[16, 40, 123, 15, 197, 96, 147, 60, 16]","[0, 0, 21, 3, 0, 0, 16, 0, 6]","[551, 1379, 4240, 517, 6792, 3309, 5068, 2068, 551]","[0, 0, 11175, 1596, 0, 0, 8514, 0, 3193]","[394, 985, 6222, 825, 4851, 2364, 6053, 1477, 1306]"
-17300,1150,"['      Christian County, KY', '      Trigg County, KY', '      Montgomery County, TN', '      Stewart County, TN']","[97, 25, 41]","[0, 4, 0]","[684, 176, 289]","[0, 1150, 0]","[488, 454, 206]"
+17140,24480,"['      Dearborn County, IN', '      Franklin County, IN', '      Ohio County, IN', '      Boone County, KY', '      Bracken County, KY', '      Campbell County, KY', '      Gallatin County, KY', '      Grant County, KY', '      Kenton County, KY', '      Pendleton County, KY', '      Brown County, OH', '      Butler County, OH', '      Clermont County, OH', '      Hamilton County, OH', '      Warren County, OH']","[16, 40, 123, 15, 197, 96, 147, 60, 16]","[0, 0, 21, 3, 0, 0, 16, 0, 6]","[551, 1379, 4240, 517, 6792, 3309, 5068, 2068, 551]","[0, 0, 11175, 1596, 0, 0, 8514, 0, 3193]","[157, 394, 9194, 1288, 1940, 945, 7530, 591, 2438]"
+17300,1150,"['      Christian County, KY', '      Trigg County, KY', '      Montgomery County, TN', '      Stewart County, TN']","[97, 25, 41]","[0, 4, 0]","[684, 176, 289]","[0, 1150, 0]","[195, 871, 82]"
 17420,540,"['      Bradley County, TN', '      Polk County, TN']",[183],[27],[540],[540],[540]
-17460,25600,"['      Cuyahoga County, OH', '      Geauga County, OH', '      Lake County, OH', '      Lorain County, OH', '      Medina County, OH']","[72, 124, 312, 126, 130]","[0, 12, 27, 12, 12]","[2412, 4154, 10454, 4221, 4356]","[0, 4876, 10971, 4876, 4876]","[1723, 4361, 10602, 4408, 4504]"
+17460,25600,"['      Cuyahoga County, OH', '      Geauga County, OH', '      Lake County, OH', '      Lorain County, OH', '      Medina County, OH']","[72, 124, 312, 126, 130]","[0, 12, 27, 12, 12]","[2412, 4154, 10454, 4221, 4356]","[0, 4876, 10971, 4876, 4876]","[689, 4670, 10823, 4689, 4727]"
 17660,1500,"['      Kootenai County, ID']",[30],[9],[1500],[1500],[1500]
-17780,1600,"['      Brazos County, TX', '      Burleson County, TX', '      Robertson County, TX']","[72, 15]","[0, 3]","[1324, 275]","[0, 1600]","[945, 654]"
-17820,5970,"['      El Paso County, CO', '      Teller County, CO']","[0, 15]","[35, 3]","[0, 5970]","[5498, 471]","[1571, 4398]"
+17780,1600,"['      Brazos County, TX', '      Burleson County, TX', '      Robertson County, TX']","[72, 15]","[0, 3]","[1324, 275]","[0, 1600]","[378, 1221]"
+17820,5970,"['      El Paso County, CO', '      Teller County, CO']","[0, 15]","[35, 3]","[0, 5970]","[5498, 471]","[3927, 2042]"
 17860,3410,"['      Boone County, MO', '      Howard County, MO']",[18],[3],[3410],[3410],[3410]
-17900,8670,"['      Calhoun County, SC', '      Fairfield County, SC', '      Kershaw County, SC', '      Lexington County, SC', '      Richland County, SC', '      Saluda County, SC']","[121, 122, 178]","[10, 0, 31]","[2491, 2512, 3665]","[2114, 0, 6555]","[2384, 1794, 4491]"
-17980,2310,"['      Russell County, AL', '      Chattahoochee County, GA', '      Harris County, GA', '      Marion County, GA', '      Muscogee County, GA']","[47, 250, 334]","[8, 0, 28]","[172, 915, 1222]","[513, 0, 1796]","[269, 653, 1386]"
+17900,8670,"['      Calhoun County, SC', '      Fairfield County, SC', '      Kershaw County, SC', '      Lexington County, SC', '      Richland County, SC', '      Saluda County, SC']","[121, 122, 178]","[10, 0, 31]","[2491, 2512, 3665]","[2114, 0, 6555]","[2222, 717, 5729]"
+17980,2310,"['      Russell County, AL', '      Chattahoochee County, GA', '      Harris County, GA', '      Marion County, GA', '      Muscogee County, GA']","[47, 250, 334]","[8, 0, 28]","[172, 915, 1222]","[513, 0, 1796]","[415, 261, 1632]"
 18020,590,"['      Bartholomew County, IN']",[225],[17],[590],[590],[590]
-18140,23250,"['      Delaware County, OH', '      Fairfield County, OH', '      Franklin County, OH', '      Licking County, OH', '      Madison County, OH', '      Morrow County, OH', '      Pickaway County, OH', '      Union County, OH']","[60, 213, 144, 227, 45, 23, 83, 60]","[0, 20, 0, 13, 13, 3, 8, 7]","[1631, 5792, 3915, 6172, 1223, 625, 2257, 1631]","[0, 7265, 0, 4722, 4722, 1089, 2906, 2542]","[1165, 6213, 2796, 5758, 2223, 758, 2442, 1891]"
+18140,23250,"['      Delaware County, OH', '      Fairfield County, OH', '      Franklin County, OH', '      Licking County, OH', '      Madison County, OH', '      Morrow County, OH', '      Pickaway County, OH', '      Union County, OH']","[60, 213, 144, 227, 45, 23, 83, 60]","[0, 20, 0, 13, 13, 3, 8, 7]","[1631, 5792, 3915, 6172, 1223, 625, 2257, 1631]","[0, 7265, 0, 4722, 4722, 1089, 2906, 2542]","[466, 6844, 1118, 5136, 3722, 957, 2720, 2282]"
 18580,3770,"['      Aransas County, TX', '      Nueces County, TX', '      San Patricio County, TX']",[19],[2],[3770],[3770],[3770]
-19060,1300,"['      Allegany County, MD', '      Mineral County, WV']","[200, 25]","[14, 4]","[1155, 144]","[1011, 288]","[1114, 185]"
-19100,60620,"['      Johnson County, TX', '      Parker County, TX', '      Tarrant County, TX', '      Wise County, TX']","[109, 26, 36, 49]","[7, 0, 6, 21]","[30034, 7164, 9919, 13501]","[12480, 0, 10697, 37441]","[25019, 5117, 10141, 20341]"
-19140,850,"['      Murray County, GA', '      Whitfield County, GA']","[29, 246]","[5, 34]","[89, 760]","[108, 741]","[95, 754]"
+19060,1300,"['      Allegany County, MD', '      Mineral County, WV']","[200, 25]","[14, 4]","[1155, 144]","[1011, 288]","[1052, 247]"
+19100,60620,"['      Johnson County, TX', '      Parker County, TX', '      Tarrant County, TX', '      Wise County, TX']","[109, 26, 36, 49]","[7, 0, 6, 21]","[30034, 7164, 9919, 13501]","[12480, 0, 10697, 37441]","[17495, 2046, 10475, 30601]"
+19140,850,"['      Murray County, GA', '      Whitfield County, GA']","[29, 246]","[5, 34]","[89, 760]","[108, 741]","[103, 746]"
 19180,600,"['      Vermilion County, IL']",[22],[4],[600],[600],[600]
-19340,4450,"['      Henry County, IL', '      Mercer County, IL', '      Rock Island County, IL', '      Scott County, IA']","[25, 22, 145, 50]","[3, 4, 7, 8]","[459, 404, 2666, 919]","[606, 809, 1415, 1618]","[501, 520, 2309, 1119]"
-19380,12100,"['      Greene County, OH', '      Miami County, OH', '      Montgomery County, OH', '      Preble County, OH']","[49, 0, 12]","[8, 32, 2]","[9719, 0, 2380]","[2304, 9219, 576]","[7601, 2634, 1864]"
-19460,960,"['      Lawrence County, AL', '      Morgan County, AL']","[43, 200]","[6, 23]","[169, 790]","[198, 761]","[178, 781]"
-19500,1160,"['      Macon County, IL']",[202],[22],[1160],[1160],[1159]
+19340,4450,"['      Henry County, IL', '      Mercer County, IL', '      Rock Island County, IL', '      Scott County, IA']","[25, 22, 145, 50]","[3, 4, 7, 8]","[459, 404, 2666, 919]","[606, 809, 1415, 1618]","[564, 693, 1773, 1418]"
+19380,12100,"['      Greene County, OH', '      Miami County, OH', '      Montgomery County, OH', '      Preble County, OH']","[49, 0, 12]","[8, 32, 2]","[9719, 0, 2380]","[2304, 9219, 576]","[4423, 6585, 1091]"
+19460,960,"['      Lawrence County, AL', '      Morgan County, AL']","[43, 200]","[6, 23]","[169, 790]","[198, 761]","[190, 769]"
+19500,1160,"['      Macon County, IL']",[202],[22],[1160],[1160],[1160]
 19660,5120,"['      Volusia County, FL']",[34],[8],[5120],[5120],[5120]
-19740,29710,"['      Adams County, CO', '      Arapahoe County, CO', '      Broomfield County, CO', '      Clear Creek County, CO', '      Denver County, CO', '      Douglas County, CO', '      Elbert County, CO', '      Gilpin County, CO', '      Jefferson County, CO', '      Park County, CO']","[0, 40, 0, 53, 10]","[1, 0, 0, 8, 2]","[0, 11537, 0, 15287, 2884]","[2700, 0, 0, 21607, 5401]","[771, 8241, 0, 17093, 3603]"
-19780,7280,"['      Dallas County, IA', '      Guthrie County, IA', '      Madison County, IA', '      Polk County, IA', '      Warren County, IA']","[25, 25, 25, 30]","[4, 4, 4, 7]","[1733, 1733, 1733, 2080]","[1532, 1532, 1532, 2682]","[1675, 1675, 1675, 2252]"
-19820,41400,"['      Lapeer County, MI', '      Livingston County, MI', '      Macomb County, MI', '      Oakland County, MI', '      St. Clair County, MI']","[183, 43, 36, 44, 65]","[10, 8, 15, 7, 3]","[20421, 4798, 4017, 4909, 7253]","[9627, 7702, 14441, 6739, 2888]","[17337, 5628, 6995, 5432, 6006]"
-20020,1980,"['      Geneva County, AL', '      Henry County, AL', '      Houston County, AL']","[73, 235]","[6, 26]","[469, 1510]","[371, 1608]","[441, 1538]"
+19740,29710,"['      Adams County, CO', '      Arapahoe County, CO', '      Broomfield County, CO', '      Clear Creek County, CO', '      Denver County, CO', '      Douglas County, CO', '      Elbert County, CO', '      Gilpin County, CO', '      Jefferson County, CO', '      Park County, CO']","[0, 40, 0, 53, 10]","[1, 0, 0, 8, 2]","[0, 11537, 0, 15287, 2884]","[2700, 0, 0, 21607, 5401]","[1929, 3296, 0, 19801, 4682]"
+19780,7280,"['      Dallas County, IA', '      Guthrie County, IA', '      Madison County, IA', '      Polk County, IA', '      Warren County, IA']","[25, 25, 25, 30]","[4, 4, 4, 7]","[1733, 1733, 1733, 2080]","[1532, 1532, 1532, 2682]","[1589, 1589, 1589, 2510]"
+19820,41400,"['      Lapeer County, MI', '      Livingston County, MI', '      Macomb County, MI', '      Oakland County, MI', '      St. Clair County, MI']","[183, 43, 36, 44, 65]","[10, 8, 15, 7, 3]","[20421, 4798, 4017, 4909, 7253]","[9627, 7702, 14441, 6739, 2888]","[12711, 6872, 11463, 6216, 4135]"
+20020,1980,"['      Geneva County, AL', '      Henry County, AL', '      Houston County, AL']","[73, 235]","[6, 26]","[469, 1510]","[371, 1608]","[399, 1580]"
 20100,1520,"['      Kent County, DE']",[34],[0],[1520],[0],[1520]
 20220,1410,"['      Dubuque County, IA']",[87],[10],[1410],[1410],[1410]
-20260,4720,"['      Carlton County, MN', '      St. Louis County, MN', '      Douglas County, WI']","[22, 16, 25]","[4, 3, 4]","[1648, 1198, 1873]","[1716, 1287, 1716]","[1667, 1224, 1828]"
-20500,12470,"['      Chatham County, NC', '      Durham County, NC', '      Orange County, NC', '      Person County, NC']","[25, 0, 83, 38]","[4, 32, 15, 6]","[2135, 0, 7089, 3245]","[875, 7000, 3281, 1312]","[1775, 2000, 6001, 2693]"
-20740,2190,"['      Chippewa County, WI', '      Eau Claire County, WI']","[25, 44]","[4, 8]","[793, 1396]","[730, 1460]","[775, 1414]"
+20260,4720,"['      Carlton County, MN', '      St. Louis County, MN', '      Douglas County, WI']","[22, 16, 25]","[4, 3, 4]","[1648, 1198, 1873]","[1716, 1287, 1716]","[1696, 1261, 1761]"
+20500,12470,"['      Chatham County, NC', '      Durham County, NC', '      Orange County, NC', '      Person County, NC']","[25, 0, 83, 38]","[4, 32, 15, 6]","[2135, 0, 7089, 3245]","[875, 7000, 3281, 1312]","[1235, 5000, 4369, 1864]"
+20740,2190,"['      Chippewa County, WI', '      Eau Claire County, WI']","[25, 44]","[4, 8]","[793, 1396]","[730, 1460]","[748, 1441]"
 20940,960,"['      Imperial County, CA']",[161],[20],[960],[960],[960]
 21060,1210,"['      Hardin County, KY', '      Larue County, KY']",[40],[0],[1210],[0],[1210]
 21140,2010,"['      Elkhart County, IN']",[16],[0],[2010],[0],[2010]
@@ -93,234 +93,234 @@ area,tot_emp,county_name,staffed_beds,icu_beds,emp_distributed_by_staffed_beds,e
 21340,5950,"['      El Paso County, TX']",[106],[12],[5950],[5950],[5950]
 21500,3200,"['      Erie County, PA']",[50],[9],[3200],[3200],[3200]
 21660,3370,"['      Lane County, OR']",[150],[0],[3370],[0],[3370]
-21780,4390,"['      Gibson County, IN', '      Posey County, IN', '      Vanderburgh County, IN', '      Warrick County, IN', '      Henderson County, KY', '      Webster County, KY']","[25, 400, 0, 118]","[5, 60, 32, 12]","[202, 3233, 0, 953]","[201, 2416, 1288, 483]","[201, 3000, 368, 819]"
+21780,4390,"['      Gibson County, IN', '      Posey County, IN', '      Vanderburgh County, IN', '      Warrick County, IN', '      Henderson County, KY', '      Webster County, KY']","[25, 400, 0, 118]","[5, 60, 32, 12]","[202, 3233, 0, 953]","[201, 2416, 1288, 483]","[201, 2650, 920, 617]"
 21820,700,"['      Fairbanks North Star Borough, AK']",[122],[13],[700],[700],[700]
 22020,4260,"['      Clay County, MN', '      Cass County, ND']",[42],[0],[4260],[0],[4260]
 22140,790,"['      San Juan County, NM']",[184],[10],[790],[790],[790]
 22180,3010,"['      Cumberland County, NC', '      Hoke County, NC']","[0, 41]","[0, 7]","[0, 3010]","[0, 3010]","[0, 3010]"
-22220,3610,"['      Benton County, AR', '      Madison County, AR', '      Washington County, AR', '      McDonald County, MO']","[36, 24]","[0, 9]","[2166, 1444]","[0, 3610]","[1547, 2062]"
+22220,3610,"['      Benton County, AR', '      Madison County, AR', '      Washington County, AR', '      McDonald County, MO']","[36, 24]","[0, 9]","[2166, 1444]","[0, 3610]","[618, 2991]"
 22420,4210,"['      Genesee County, MI']",[370],[57],[4210],[4210],[4210]
-22500,3050,"['      Darlington County, SC', '      Florence County, SC']","[116, 88]","[12, 0]","[1734, 1315]","[3050, 0]","[2110, 939]"
-22520,1410,"['      Colbert County, AL', '      Lauderdale County, AL']","[122, 233]","[10, 36]","[484, 925]","[306, 1103]","[433, 976]"
+22500,3050,"['      Darlington County, SC', '      Florence County, SC']","[116, 88]","[12, 0]","[1734, 1315]","[3050, 0]","[2674, 375]"
+22520,1410,"['      Colbert County, AL', '      Lauderdale County, AL']","[122, 233]","[10, 36]","[484, 925]","[306, 1103]","[357, 1052]"
 22660,3850,"['      Larimer County, CO']",[23],[4],[3850],[3850],[3850]
-22900,2310,"['      Crawford County, AR', '      Franklin County, AR', '      Sebastian County, AR', '      Le Flore County, OK', '      Sequoyah County, OK']","[35, 25, 249, 25, 41]","[8, 4, 31, 4, 7]","[215, 154, 1533, 154, 252]","[342, 171, 1326, 171, 299]","[251, 158, 1474, 158, 265]"
-23060,5560,"['      Allen County, IN', '      Wells County, IN', '      Whitley County, IN']","[16, 62, 30]","[0, 7, 5]","[823, 3191, 1544]","[0, 3243, 2316]","[588, 3206, 1765]"
+22900,2310,"['      Crawford County, AR', '      Franklin County, AR', '      Sebastian County, AR', '      Le Flore County, OK', '      Sequoyah County, OK']","[35, 25, 249, 25, 41]","[8, 4, 31, 4, 7]","[215, 154, 1533, 154, 252]","[342, 171, 1326, 171, 299]","[306, 166, 1385, 166, 286]"
+23060,5560,"['      Allen County, IN', '      Wells County, IN', '      Whitley County, IN']","[16, 62, 30]","[0, 7, 5]","[823, 3191, 1544]","[0, 3243, 2316]","[235, 3228, 2096]"
 23420,7640,"['      Fresno County, CA']",[16],[0],[7640],[0],[7640]
 23460,1220,"['      Etowah County, AL']",[222],[40],[1220],[1220],[1220]
 23540,5590,"['      Alachua County, FL', '      Gilchrist County, FL']",[48],[8],[5590],[5590],[5590]
 24140,1130,"['      Wayne County, NC']",[261],[16],[1130],[1130],[1130]
 24300,1820,"['      Mesa County, CO']",[0],[1],[0],[1820],[1820]
-24340,12820,"['      Barry County, MI', '      Ionia County, MI', '      Kent County, MI', '      Newaygo County, MI']","[25, 25, 119, 25]","[6, 2, 1, 9]","[1652, 1652, 7863, 1652]","[4273, 1424, 712, 6410]","[2400, 1587, 5820, 3011]"
+24340,12820,"['      Barry County, MI', '      Ionia County, MI', '      Kent County, MI', '      Newaygo County, MI']","[25, 25, 119, 25]","[6, 2, 1, 9]","[1652, 1652, 7863, 1652]","[4273, 1424, 712, 6410]","[3524, 1489, 2755, 5050]"
 24500,0,"['      Cascade County, MT']",[312],[20],[0],[0],[0]
 24540,1170,"['      Weld County, CO']",[0],[7],[0],[1170],[1170]
-24580,4040,"['      Brown County, WI', '      Kewaunee County, WI', '      Oconto County, WI']","[32, 22]","[6, 4]","[2394, 1645]","[2424, 1616]","[2402, 1637]"
-24660,6140,"['      Guilford County, NC', '      Randolph County, NC', '      Rockingham County, NC']","[101, 145, 108]","[6, 12, 9]","[1751, 2514, 1873]","[1364, 2728, 2046]","[1641, 2576, 1922]"
+24580,4040,"['      Brown County, WI', '      Kewaunee County, WI', '      Oconto County, WI']","[32, 22]","[6, 4]","[2394, 1645]","[2424, 1616]","[2415, 1624]"
+24660,6140,"['      Guilford County, NC', '      Randolph County, NC', '      Rockingham County, NC']","[101, 145, 108]","[6, 12, 9]","[1751, 2514, 1873]","[1364, 2728, 2046]","[1475, 2667, 1997]"
 24780,3550,"['      Greene County, NC', '      Pitt County, NC']",[48],[0],[3550],[0],[3550]
-24860,9040,"['      Greenville County, SC', '      Laurens County, SC', '      Pickens County, SC']","[53, 43, 42]","[0, 9, 4]","[3471, 2816, 2751]","[0, 6258, 2781]","[2479, 3800, 2759]"
+24860,9040,"['      Greenville County, SC', '      Laurens County, SC', '      Pickens County, SC']","[53, 43, 42]","[0, 9, 4]","[3471, 2816, 2751]","[0, 6258, 2781]","[991, 5275, 2772]"
 25020,140,"['      Arroyo Municipio, PR', '      Guayama Municipio, PR', '      Patillas Municipio, PR']",[],[],[],[],[]
-25060,3890,"['      Hancock County, MS', '      Harrison County, MS', '      Stone County, MS']","[47, 33, 25]","[6, 0, 4]","[1741, 1222, 926]","[2334, 0, 1556]","[1910, 873, 1106]"
-25180,2490,"['      Washington County, MD', '      Berkeley County, WV', '      Morgan County, WV']","[65, 0, 25]","[0, 1, 4]","[1798, 0, 691]","[0, 498, 1992]","[1284, 142, 1063]"
+25060,3890,"['      Hancock County, MS', '      Harrison County, MS', '      Stone County, MS']","[47, 33, 25]","[6, 0, 4]","[1741, 1222, 926]","[2334, 0, 1556]","[2164, 349, 1376]"
+25180,2490,"['      Washington County, MD', '      Berkeley County, WV', '      Morgan County, WV']","[65, 0, 25]","[0, 1, 4]","[1798, 0, 691]","[0, 498, 1992]","[513, 355, 1620]"
 25260,0,"['      Kings County, CA']",[142],[22],[0],[0],[0]
 25420,8630,"['      Cumberland County, PA', '      Dauphin County, PA', '      Perry County, PA']","[75, 55]","[0, 0]","[4978, 3651]","[0, 0]","[4978, 3651]"
 25620,0,"['      Forrest County, MS', '      Lamar County, MS', '      Perry County, MS']","[427, 45, 22]","[40, 0, 4]","[0, 0, 0]","[0, 0, 0]","[0, 0, 0]"
-25860,2820,"['      Alexander County, NC', '      Burke County, NC', '      Caldwell County, NC', '      Catawba County, NC']","[431, 110, 200]","[0, 12, 28]","[1640, 418, 761]","[0, 846, 1974]","[1171, 540, 1107]"
+25860,2820,"['      Alexander County, NC', '      Burke County, NC', '      Caldwell County, NC', '      Catawba County, NC']","[431, 110, 200]","[0, 12, 28]","[1640, 418, 761]","[0, 846, 1974]","[468, 723, 1627]"
 25980,170,"['      Liberty County, GA', '      Long County, GA']",[25],[4],[170],[170],[170]
 26300,990,"['      Garland County, AR']",[40],[3],[990],[990],[990]
-26380,1800,"['      Lafourche Parish, LA', '      Terrebonne Parish, LA']","[130, 20]","[16, 0]","[1560, 240]","[1800, 0]","[1628, 171]"
-26420,54780,"['      Austin County, TX', '      Brazoria County, TX', '      Chambers County, TX', '      Fort Bend County, TX', '      Galveston County, TX', '      Harris County, TX', '      Liberty County, TX', '      Montgomery County, TX', '      San Jacinto County, TX', '      Waller County, TX']","[32, 49, 14, 0, 132, 24, 16, 146]","[6, 8, 2, 1, 0, 0, 3, 16]","[4244, 6499, 1856, 0, 17508, 3183, 2122, 19365]","[9130, 12173, 3043, 1521, 0, 0, 4565, 24346]","[5640, 8120, 2195, 434, 12505, 2273, 2820, 20788]"
-26580,4850,"['      Boyd County, KY', '      Greenup County, KY', '      Lawrence County, OH', '      Cabell County, WV', '      Wayne County, WV']","[439, 135, 8, 330, 80]","[38, 12, 1, 44, 1]","[2146, 660, 39, 1613, 391]","[1919, 606, 50, 2222, 50]","[2081, 644, 42, 1787, 293]"
-26620,5000,"['      Limestone County, AL', '      Madison County, AL']","[31, 877]","[8, 67]","[170, 4829]","[533, 4466]","[274, 4725]"
+26380,1800,"['      Lafourche Parish, LA', '      Terrebonne Parish, LA']","[130, 20]","[16, 0]","[1560, 240]","[1800, 0]","[1731, 68]"
+26420,54780,"['      Austin County, TX', '      Brazoria County, TX', '      Chambers County, TX', '      Fort Bend County, TX', '      Galveston County, TX', '      Harris County, TX', '      Liberty County, TX', '      Montgomery County, TX', '      San Jacinto County, TX', '      Waller County, TX']","[32, 49, 14, 0, 132, 24, 16, 146]","[6, 8, 2, 1, 0, 0, 3, 16]","[4244, 6499, 1856, 0, 17508, 3183, 2122, 19365]","[9130, 12173, 3043, 1521, 0, 0, 4565, 24346]","[7734, 10552, 2704, 1086, 5002, 909, 3867, 22923]"
+26580,4850,"['      Boyd County, KY', '      Greenup County, KY', '      Lawrence County, OH', '      Cabell County, WV', '      Wayne County, WV']","[439, 135, 8, 330, 80]","[38, 12, 1, 44, 1]","[2146, 660, 39, 1613, 391]","[1919, 606, 50, 2222, 50]","[1984, 621, 47, 2048, 147]"
+26620,5000,"['      Limestone County, AL', '      Madison County, AL']","[31, 877]","[8, 67]","[170, 4829]","[533, 4466]","[429, 4570]"
 26820,1230,"['      Bonneville County, ID', '      Jefferson County, ID']",[0],[32],[0],[1230],[1230]
-26900,26670,"['      Boone County, IN', '      Brown County, IN', '      Hamilton County, IN', '      Hancock County, IN', '      Hendricks County, IN', '      Johnson County, IN', '      Marion County, IN', '      Morgan County, IN', '      Putnam County, IN', '      Shelby County, IN']","[68, 20, 12, 127, 44, 66, 83, 25, 46]","[8, 4, 2, 16, 0, 0, 10, 6, 6]","[3693, 1086, 651, 6898, 2389, 3584, 4508, 1357, 2498]","[4103, 2051, 1025, 8206, 0, 0, 5128, 3077, 3077]","[3810, 1362, 758, 7272, 1707, 2560, 4685, 1849, 2663]"
-26980,3600,"['      Johnson County, IA', '      Washington County, IA']","[28, 25]","[5, 4]","[1901, 1698]","[2000, 1600]","[1929, 1670]"
+26900,26670,"['      Boone County, IN', '      Brown County, IN', '      Hamilton County, IN', '      Hancock County, IN', '      Hendricks County, IN', '      Johnson County, IN', '      Marion County, IN', '      Morgan County, IN', '      Putnam County, IN', '      Shelby County, IN']","[68, 20, 12, 127, 44, 66, 83, 25, 46]","[8, 4, 2, 16, 0, 0, 10, 6, 6]","[3693, 1086, 651, 6898, 2389, 3584, 4508, 1357, 2498]","[4103, 2051, 1025, 8206, 0, 0, 5128, 3077, 3077]","[3986, 1775, 918, 7832, 682, 1024, 4951, 2586, 2911]"
+26980,3600,"['      Johnson County, IA', '      Washington County, IA']","[28, 25]","[5, 4]","[1901, 1698]","[2000, 1600]","[1971, 1628]"
 27060,970,"['      Tompkins County, NY']",[163],[16],[970],[970],[970]
 27100,1420,"['      Jackson County, MI']",[112],[20],[1420],[1420],[1420]
-27140,9030,"['      Copiah County, MS', '      Hinds County, MS', '      Madison County, MS', '      Rankin County, MS', '      Simpson County, MS']","[25, 25, 67, 160, 25]","[4, 7, 7, 10, 4]","[747, 747, 2003, 4784, 747]","[1128, 1975, 1975, 2821, 1128]","[856, 1098, 1995, 4223, 856]"
+27140,9030,"['      Copiah County, MS', '      Hinds County, MS', '      Madison County, MS', '      Rankin County, MS', '      Simpson County, MS']","[25, 25, 67, 160, 25]","[4, 7, 7, 10, 4]","[747, 747, 2003, 4784, 747]","[1128, 1975, 1975, 2821, 1128]","[1019, 1624, 1983, 3382, 1019]"
 27180,1970,"['      Chester County, TN', '      Madison County, TN']",[40],[0],[1970],[0],[1970]
-27260,14800,"['      Baker County, FL', '      Clay County, FL', '      Duval County, FL', '      Nassau County, FL', '      St. Johns County, FL']","[21, 273, 92, 54, 335]","[4, 28, 16, 9, 47]","[401, 5213, 1756, 1031, 6397]","[569, 3984, 2276, 1280, 6688]","[449, 4862, 1905, 1102, 6480]"
+27260,14800,"['      Baker County, FL', '      Clay County, FL', '      Duval County, FL', '      Nassau County, FL', '      St. Johns County, FL']","[21, 273, 92, 54, 335]","[4, 28, 16, 9, 47]","[401, 5213, 1756, 1031, 6397]","[569, 3984, 2276, 1280, 6688]","[521, 4335, 2128, 1209, 6605]"
 27340,730,"['      Onslow County, NC']",[162],[14],[730],[730],[730]
 27500,1670,"['      Rock County, WI']",[18],[3],[1670],[1670],[1670]
-27620,1440,"['      Callaway County, MO', '      Cole County, MO', '      Moniteau County, MO', '      Osage County, MO']","[38, 100]","[0, 12]","[396, 1043]","[0, 1440]","[283, 1156]"
-27740,2800,"['      Carter County, TN', '      Unicoi County, TN', '      Washington County, TN']","[109, 10, 36]","[8, 3, 0]","[1969, 180, 650]","[2036, 763, 0]","[1988, 347, 464]"
+27620,1440,"['      Callaway County, MO', '      Cole County, MO', '      Moniteau County, MO', '      Osage County, MO']","[38, 100]","[0, 12]","[396, 1043]","[0, 1440]","[113, 1326]"
+27740,2800,"['      Carter County, TN', '      Unicoi County, TN', '      Washington County, TN']","[109, 10, 36]","[8, 3, 0]","[1969, 180, 650]","[2036, 763, 0]","[2017, 597, 185]"
 27780,1500,"['      Cambria County, PA']",[39],[7],[1500],[1500],[1500]
 27860,1570,"['      Craighead County, AR', '      Poinsett County, AR']",[44],[8],[1570],[1570],[1570]
-27900,2390,"['      Jasper County, MO', '      Newton County, MO']","[25, 339]","[4, 39]","[164, 2225]","[222, 2167]","[180, 2209]"
+27900,2390,"['      Jasper County, MO', '      Newton County, MO']","[25, 339]","[4, 39]","[164, 2225]","[222, 2167]","[205, 2184]"
 28100,1400,"['      Kankakee County, IL']",[169],[9],[1400],[1400],[1400]
-28140,26420,"['      Franklin County, KS', '      Johnson County, KS', '      Leavenworth County, KS', '      Linn County, KS', '      Miami County, KS', '      Wyandotte County, KS', '      Bates County, MO', '      Caldwell County, MO', '      Cass County, MO', '      Clay County, MO', '      Clinton County, MO', '      Jackson County, MO', '      Lafayette County, MO', '      Platte County, MO', '      Ray County, MO']","[44, 4, 0, 18, 0, 44, 25, 72, 34, 0, 25, 118, 25]","[5, 1, 0, 3, 32, 8, 4, 0, 5, 0, 2, 12, 4]","[2842, 258, 0, 1162, 0, 2842, 1614, 4650, 2196, 0, 1614, 7622, 1614]","[1738, 347, 0, 1042, 11124, 2781, 1390, 0, 1738, 0, 695, 4171, 1390]","[2526, 283, 0, 1128, 3178, 2824, 1550, 3322, 2065, 0, 1352, 6636, 1550]"
-28420,2080,"['      Benton County, WA', '      Franklin County, WA']","[111, 25]","[14, 4]","[1697, 382]","[1617, 462]","[1674, 405]"
-28660,3390,"['      Bell County, TX', '      Coryell County, TX', '      Lampasas County, TX']","[36, 25, 25]","[0, 4, 4]","[1419, 985, 985]","[0, 1695, 1695]","[1013, 1188, 1188]"
-28700,2610,"['      Hawkins County, TN', '      Sullivan County, TN', '      Scott County, VA', '      Washington County, VA', '      Bristol city, VA']","[32, 72, 115, 25]","[6, 0, 14, 0]","[342, 770, 1230, 267]","[783, 0, 1827, 0]","[468, 550, 1400, 191]"
+28140,26420,"['      Franklin County, KS', '      Johnson County, KS', '      Leavenworth County, KS', '      Linn County, KS', '      Miami County, KS', '      Wyandotte County, KS', '      Bates County, MO', '      Caldwell County, MO', '      Cass County, MO', '      Clay County, MO', '      Clinton County, MO', '      Jackson County, MO', '      Lafayette County, MO', '      Platte County, MO', '      Ray County, MO']","[44, 4, 0, 18, 0, 44, 25, 72, 34, 0, 25, 118, 25]","[5, 1, 0, 3, 32, 8, 4, 0, 5, 0, 2, 12, 4]","[2842, 258, 0, 1162, 0, 2842, 1614, 4650, 2196, 0, 1614, 7622, 1614]","[1738, 347, 0, 1042, 11124, 2781, 1390, 0, 1738, 0, 695, 4171, 1390]","[2053, 322, 0, 1077, 7945, 2798, 1454, 1328, 1869, 0, 958, 5157, 1454]"
+28420,2080,"['      Benton County, WA', '      Franklin County, WA']","[111, 25]","[14, 4]","[1697, 382]","[1617, 462]","[1640, 439]"
+28660,3390,"['      Bell County, TX', '      Coryell County, TX', '      Lampasas County, TX']","[36, 25, 25]","[0, 4, 4]","[1419, 985, 985]","[0, 1695, 1695]","[405, 1492, 1492]"
+28700,2610,"['      Hawkins County, TN', '      Sullivan County, TN', '      Scott County, VA', '      Washington County, VA', '      Bristol city, VA']","[32, 72, 115, 25]","[6, 0, 14, 0]","[342, 770, 1230, 267]","[783, 0, 1827, 0]","[657, 220, 1656, 76]"
 28740,1140,"['      Ulster County, NY']",[45],[5],[1140],[1140],[1140]
-28940,7890,"['      Anderson County, TN', '      Blount County, TN', '      Knox County, TN', '      Loudon County, TN', '      Union County, TN']","[0, 155, 35, 30]","[0, 0, 5, 5]","[0, 5558, 1255, 1075]","[0, 0, 3945, 3945]","[0, 3970, 2023, 1895]"
-29020,860,"['      Howard County, IN', '      Tipton County, IN']","[111, 25]","[13, 4]","[701, 158]","[657, 202]","[689, 170]"
+28940,7890,"['      Anderson County, TN', '      Blount County, TN', '      Knox County, TN', '      Loudon County, TN', '      Union County, TN']","[0, 155, 35, 30]","[0, 0, 5, 5]","[0, 5558, 1255, 1075]","[0, 0, 3945, 3945]","[0, 1588, 3176, 3125]"
+29020,860,"['      Howard County, IN', '      Tipton County, IN']","[111, 25]","[13, 4]","[701, 158]","[657, 202]","[670, 189]"
 29100,2990,"['      Houston County, MN', '      La Crosse County, WI']",[142],[28],[2990],[2990],[2990]
-29180,3510,"['      Lafayette Parish, LA', '      St. Martin Parish, LA']","[161, 25]","[64, 4]","[3038, 471]","[3303, 206]","[3114, 395]"
-29340,1770,"['      Calcasieu Parish, LA', '      Cameron Parish, LA']","[42, 49]","[7, 9]","[816, 953]","[774, 995]","[804, 965]"
+29180,3510,"['      Lafayette Parish, LA', '      St. Martin Parish, LA']","[161, 25]","[64, 4]","[3038, 471]","[3303, 206]","[3227, 282]"
+29340,1770,"['      Calcasieu Parish, LA', '      Cameron Parish, LA']","[42, 49]","[7, 9]","[816, 953]","[774, 995]","[786, 983]"
 29460,3860,"['      Polk County, FL']",[93],[8],[3860],[3860],[3860]
 29540,5050,"['      Lancaster County, PA']",[126],[0],[5050],[0],[5050]
-29620,3910,"['      Clinton County, MI', '      Eaton County, MI', '      Ingham County, MI']","[34, 25, 533]","[0, 4, 99]","[224, 165, 3520]","[0, 151, 3758]","[160, 161, 3588]"
+29620,3910,"['      Clinton County, MI', '      Eaton County, MI', '      Ingham County, MI']","[34, 25, 533]","[0, 4, 99]","[224, 165, 3520]","[0, 151, 3758]","[64, 155, 3690]"
 29700,1290,"['      Webb County, TX']",[20],[2],[1290],[1290],[1290]
 29740,1270,"['      Dona Ana County, NM']",[119],[0],[1270],[0],[1270]
 29820,17210,"['      Clark County, NV']",[152],[0],[17210],[0],[17210]
 29940,760,"['      Douglas County, KS']",[110],[10],[760],[760],[760]
 30020,900,"['      Comanche County, OK']",[14],[0],[900],[0],[900]
 30140,1340,"['      Lebanon County, PA']",[103],[0],[1340],[0],[1340]
-30300,860,"['      Nez Perce County, ID', '      Asotin County, WA']","[110, 25]","[9, 4]","[700, 159]","[595, 264]","[670, 189]"
-30460,7400,"['      Bourbon County, KY', '      Clark County, KY', '      Fayette County, KY', '      Jessamine County, KY', '      Scott County, KY', '      Woodford County, KY']","[34, 54, 0, 75, 25]","[4, 8, 32, 6, 4]","[1338, 2125, 0, 2952, 984]","[548, 1096, 4385, 822, 548]","[1112, 1831, 1252, 2343, 859]"
+30300,860,"['      Nez Perce County, ID', '      Asotin County, WA']","[110, 25]","[9, 4]","[700, 159]","[595, 264]","[625, 234]"
+30460,7400,"['      Bourbon County, KY', '      Clark County, KY', '      Fayette County, KY', '      Jessamine County, KY', '      Scott County, KY', '      Woodford County, KY']","[34, 54, 0, 75, 25]","[4, 8, 32, 6, 4]","[1338, 2125, 0, 2952, 984]","[548, 1096, 4385, 822, 548]","[773, 1390, 3132, 1430, 672]"
 30620,1830,"['      Allen County, OH']",[25],[4],[1830],[1830],[1830]
-30700,4130,"['      Lancaster County, NE', '      Seward County, NE']","[24, 24]","[6, 4]","[2065, 2065]","[2478, 1652]","[2183, 1947]"
-30780,9380,"['      Faulkner County, AR', '      Grant County, AR', '      Lonoke County, AR', '      Perry County, AR', '      Pulaski County, AR', '      Saline County, AR']","[110, 0, 130]","[8, 0, 16]","[4299, 0, 5080]","[3126, 0, 6253]","[3964, 0, 5415]"
-30860,810,"['      Franklin County, ID', '      Cache County, UT']","[20, 130]","[3, 14]","[108, 702]","[142, 667]","[117, 692]"
-30980,2330,"['      Gregg County, TX', '      Rusk County, TX', '      Upshur County, TX']","[36, 41]","[0, 7]","[1089, 1240]","[0, 2330]","[778, 1551]"
+30700,4130,"['      Lancaster County, NE', '      Seward County, NE']","[24, 24]","[6, 4]","[2065, 2065]","[2478, 1652]","[2360, 1770]"
+30780,9380,"['      Faulkner County, AR', '      Grant County, AR', '      Lonoke County, AR', '      Perry County, AR', '      Pulaski County, AR', '      Saline County, AR']","[110, 0, 130]","[8, 0, 16]","[4299, 0, 5080]","[3126, 0, 6253]","[3461, 0, 5918]"
+30860,810,"['      Franklin County, ID', '      Cache County, UT']","[20, 130]","[3, 14]","[108, 702]","[142, 667]","[132, 677]"
+30980,2330,"['      Gregg County, TX', '      Rusk County, TX', '      Upshur County, TX']","[36, 41]","[0, 7]","[1089, 1240]","[0, 2330]","[311, 2018]"
 31020,0,"['      Cowlitz County, WA']",[166],[18],[0],[0],[0]
-31140,14750,"['      Clark County, IN', '      Floyd County, IN', '      Harrison County, IN', '      Washington County, IN', '      Bullitt County, KY', '      Henry County, KY', '      Jefferson County, KY', '      Meade County, KY', '      Nelson County, KY', '      Oldham County, KY', '      Shelby County, KY', '      Spencer County, KY', '      Trimble County, KY']","[100, 225, 25, 25, 0, 40, 90, 30]","[0, 16, 4, 4, 32, 4, 8, 4]","[2757, 6203, 689, 689, 0, 1102, 2481, 827]","[0, 3277, 819, 819, 6555, 819, 1638, 819]","[1969, 5367, 726, 726, 1873, 1021, 2240, 824]"
-31180,3730,"['      Crosby County, TX', '      Lubbock County, TX']","[25, 550]","[4, 96]","[162, 3567]","[149, 3580]","[158, 3571]"
-31340,2300,"['      Amherst County, VA', '      Appomattox County, VA', '      Bedford County, VA', '      Campbell County, VA', '      Bedford city, VA', '      Lynchburg city, VA']","[34, 36]","[6, 6]","[1117, 1182]","[1150, 1150]","[1126, 1173]"
-31420,2790,"['      Bibb County, GA', '      Crawford County, GA', '      Jones County, GA', '      Monroe County, GA', '      Twiggs County, GA']","[179, 25]","[28, 5]","[2448, 341]","[2367, 422]","[2424, 365]"
-31540,8650,"['      Columbia County, WI', '      Dane County, WI', '      Iowa County, WI']","[25, 56, 25]","[4, 10, 4]","[2040, 4569, 2040]","[1922, 4805, 1922]","[2006, 4637, 2006]"
+31140,14750,"['      Clark County, IN', '      Floyd County, IN', '      Harrison County, IN', '      Washington County, IN', '      Bullitt County, KY', '      Henry County, KY', '      Jefferson County, KY', '      Meade County, KY', '      Nelson County, KY', '      Oldham County, KY', '      Shelby County, KY', '      Spencer County, KY', '      Trimble County, KY']","[100, 225, 25, 25, 0, 40, 90, 30]","[0, 16, 4, 4, 32, 4, 8, 4]","[2757, 6203, 689, 689, 0, 1102, 2481, 827]","[0, 3277, 819, 819, 6555, 819, 1638, 819]","[787, 4113, 782, 782, 4682, 900, 1879, 821]"
+31180,3730,"['      Crosby County, TX', '      Lubbock County, TX']","[25, 550]","[4, 96]","[162, 3567]","[149, 3580]","[152, 3577]"
+31340,2300,"['      Amherst County, VA', '      Appomattox County, VA', '      Bedford County, VA', '      Campbell County, VA', '      Bedford city, VA', '      Lynchburg city, VA']","[34, 36]","[6, 6]","[1117, 1182]","[1150, 1150]","[1140, 1159]"
+31420,2790,"['      Bibb County, GA', '      Crawford County, GA', '      Jones County, GA', '      Monroe County, GA', '      Twiggs County, GA']","[179, 25]","[28, 5]","[2448, 341]","[2367, 422]","[2390, 399]"
+31540,8650,"['      Columbia County, WI', '      Dane County, WI', '      Iowa County, WI']","[25, 56, 25]","[4, 10, 4]","[2040, 4569, 2040]","[1922, 4805, 1922]","[1955, 4738, 1955]"
 31900,1100,"['      Richland County, OH']",[26],[7],[1100],[1100],[1100]
 32420,1090,"['      Hormigueros Municipio, PR', '      Mayagez Municipio, PR']",[],[],[],[],[]
 32580,5120,"['      Hidalgo County, TX']",[0],[32],[0],[5120],[5120]
 32780,2170,"['      Jackson County, OR']",[0],[0],[0],[0],[0]
-32820,13180,"['      Crittenden County, AR', '      DeSoto County, MS', '      Marshall County, MS', '      Tate County, MS', '      Tunica County, MS', '      Fayette County, TN', '      Shelby County, TN', '      Tipton County, TN']","[52, 309, 27, 30, 47]","[0, 54, 5, 5, 8]","[1473, 8758, 765, 850, 1332]","[0, 9885, 915, 915, 1464]","[1052, 9080, 808, 868, 1369]"
+32820,13180,"['      Crittenden County, AR', '      DeSoto County, MS', '      Marshall County, MS', '      Tate County, MS', '      Tunica County, MS', '      Fayette County, TN', '      Shelby County, TN', '      Tipton County, TN']","[52, 309, 27, 30, 47]","[0, 54, 5, 5, 8]","[1473, 8758, 765, 850, 1332]","[0, 9885, 915, 915, 1464]","[421, 9563, 872, 896, 1426]"
 32900,860,"['      Merced County, CA']",[186],[20],[860],[860],[860]
 33100,54020,"['      Palm Beach County, FL']",[356],[52],[54020],[54020],[54020]
 33140,860,"['      LaPorte County, IN']",[129],[20],[860],[860],[860]
 33260,1230,"['      Midland County, TX']",[80],[0],[1230],[0],[1230]
-33340,21010,"['      Milwaukee County, WI', '      Ozaukee County, WI', '      Washington County, WI', '      Waukesha County, WI']","[581, 120, 70, 240]","[107, 32, 6, 24]","[12073, 2493, 1454, 4987]","[13302, 3978, 745, 2983]","[12424, 2917, 1252, 4415]"
-33460,41640,"['      Anoka County, MN', '      Carver County, MN', '      Chisago County, MN', '      Dakota County, MN', '      Hennepin County, MN', '      Isanti County, MN', '      Ramsey County, MN', '      Scott County, MN', '      Sherburne County, MN', '      Washington County, MN', '      Wright County, MN', '      Pierce County, WI', '      St. Croix County, WI']","[200, 109, 55, 37, 50, 70, 60, 89, 33, 86, 16, 25]","[0, 18, 10, 6, 9, 12, 10, 16, 4, 18, 0, 4]","[10033, 5468, 2759, 1856, 2508, 3511, 3010, 4465, 1655, 4314, 802, 1254]","[0, 7004, 3891, 2334, 3502, 4669, 3891, 6226, 1556, 7004, 0, 1556]","[7166, 5907, 3082, 1993, 2792, 3842, 3261, 4968, 1627, 5083, 573, 1340]"
+33340,21010,"['      Milwaukee County, WI', '      Ozaukee County, WI', '      Washington County, WI', '      Waukesha County, WI']","[581, 120, 70, 240]","[107, 32, 6, 24]","[12073, 2493, 1454, 4987]","[13302, 3978, 745, 2983]","[12951, 3554, 948, 3556]"
+33460,41640,"['      Anoka County, MN', '      Carver County, MN', '      Chisago County, MN', '      Dakota County, MN', '      Hennepin County, MN', '      Isanti County, MN', '      Ramsey County, MN', '      Scott County, MN', '      Sherburne County, MN', '      Washington County, MN', '      Wright County, MN', '      Pierce County, WI', '      St. Croix County, WI']","[200, 109, 55, 37, 50, 70, 60, 89, 33, 86, 16, 25]","[0, 18, 10, 6, 9, 12, 10, 16, 4, 18, 0, 4]","[10033, 5468, 2759, 1856, 2508, 3511, 3010, 4465, 1655, 4314, 802, 1254]","[0, 7004, 3891, 2334, 3502, 4669, 3891, 6226, 1556, 7004, 0, 1556]","[2866, 6565, 3568, 2198, 3218, 4339, 3639, 5723, 1584, 6236, 229, 1470]"
 33540,1360,"['      Missoula County, MT']",[158],[24],[1360],[1360],[1360]
 33660,5320,"['      Mobile County, AL']",[149],[32],[5320],[5320],[5320]
 33700,4880,"['      Stanislaus County, CA']",[96],[15],[4880],[4880],[4880]
 33740,1700,"['      Ouachita Parish, LA', '      Union Parish, LA']","[0, 15]","[0, 3]","[0, 1700]","[0, 1700]","[0, 1700]"
 33780,590,"['      Monroe County, MI']",[153],[14],[590],[590],[590]
-33860,3760,"['      Autauga County, AL', '      Elmore County, AL', '      Lowndes County, AL', '      Montgomery County, AL']","[55, 37, 150]","[6, 5, 12]","[854, 574, 2330]","[980, 817, 1961]","[890, 644, 2225]"
-34060,3210,"['      Monongalia County, WV', '      Preston County, WV']","[0, 25]","[32, 4]","[0, 3210]","[2853, 356]","[815, 2394]"
-34100,630,"['      Grainger County, TN', '      Hamblen County, TN', '      Jefferson County, TN']","[116, 58]","[20, 6]","[420, 210]","[484, 145]","[438, 191]"
+33860,3760,"['      Autauga County, AL', '      Elmore County, AL', '      Lowndes County, AL', '      Montgomery County, AL']","[55, 37, 150]","[6, 5, 12]","[854, 574, 2330]","[980, 817, 1961]","[944, 748, 2067]"
+34060,3210,"['      Monongalia County, WV', '      Preston County, WV']","[0, 25]","[32, 4]","[0, 3210]","[2853, 356]","[2038, 1171]"
+34100,630,"['      Grainger County, TN', '      Hamblen County, TN', '      Jefferson County, TN']","[116, 58]","[20, 6]","[420, 210]","[484, 145]","[466, 163]"
 34580,1060,"['      Skagit County, WA']",[43],[6],[1060],[1060],[1060]
 34620,1080,"['      Delaware County, IN']",[32],[8],[1080],[1080],[1080]
 34740,0,"['      Muskegon County, MI']",[331],[44],[0],[0],[0]
 34820,2600,"['      Horry County, SC']",[0],[0],[0],[0],[0]
 34900,1890,"['      Napa County, CA']",[152],[36],[1890],[1890],[1890]
 34940,2950,"['      Collier County, FL']",[50],[8],[2950],[2950],[2950]
-34980,21600,"['      Cannon County, TN', '      Cheatham County, TN', '      Davidson County, TN', '      Dickson County, TN', '      Hickman County, TN', '      Macon County, TN', '      Robertson County, TN', '      Rutherford County, TN', '      Smith County, TN', '      Sumner County, TN', '      Trousdale County, TN', '      Williamson County, TN', '      Wilson County, TN']","[30, 12, 207, 91, 25, 25, 109, 347, 25, 126, 25, 80, 170]","[5, 2, 46, 6, 4, 4, 8, 1, 2, 18, 4, 0, 12]","[509, 203, 3515, 1545, 424, 424, 1850, 5892, 424, 2139, 424, 1358, 2886]","[964, 385, 8871, 1157, 771, 771, 1542, 192, 385, 3471, 771, 0, 2314]","[639, 255, 5045, 1434, 523, 523, 1762, 4263, 413, 2520, 523, 970, 2723]"
-35380,14050,"['      Jefferson Parish, LA', '      Orleans Parish, LA', '      Plaquemines Parish, LA', '      St. Bernard Parish, LA', '      St. Charles Parish, LA', '      St. John the Baptist Parish, LA', '      St. Tammany Parish, LA']","[36, 0, 40, 39, 82, 24]","[0, 72, 8, 8, 0, 2]","[2288, 0, 2542, 2479, 5213, 1525]","[0, 11240, 1248, 1248, 0, 312]","[1634, 3211, 2173, 2127, 3723, 1179]"
-35620,174210,"['      Essex County, NJ', '      Hunterdon County, NJ', '      Morris County, NJ', '      Sussex County, NJ', '      Union County, NJ', '      Pike County, PA']","[152, 170, 0, 130, 44]","[0, 12, 0, 10, 0]","[53386, 59709, 0, 45659, 15454]","[0, 95023, 0, 79186, 0]","[38133, 69798, 0, 55238, 11038]"
+34980,21600,"['      Cannon County, TN', '      Cheatham County, TN', '      Davidson County, TN', '      Dickson County, TN', '      Hickman County, TN', '      Macon County, TN', '      Robertson County, TN', '      Rutherford County, TN', '      Smith County, TN', '      Sumner County, TN', '      Trousdale County, TN', '      Williamson County, TN', '      Wilson County, TN']","[30, 12, 207, 91, 25, 25, 109, 347, 25, 126, 25, 80, 170]","[5, 2, 46, 6, 4, 4, 8, 1, 2, 18, 4, 0, 12]","[509, 203, 3515, 1545, 424, 424, 1850, 5892, 424, 2139, 424, 1358, 2886]","[964, 385, 8871, 1157, 771, 771, 1542, 192, 385, 3471, 771, 0, 2314]","[834, 333, 7341, 1268, 672, 672, 1630, 1821, 396, 3090, 672, 388, 2477]"
+35380,14050,"['      Jefferson Parish, LA', '      Orleans Parish, LA', '      Plaquemines Parish, LA', '      St. Bernard Parish, LA', '      St. Charles Parish, LA', '      St. John the Baptist Parish, LA', '      St. Tammany Parish, LA']","[36, 0, 40, 39, 82, 24]","[0, 72, 8, 8, 0, 2]","[2288, 0, 2542, 2479, 5213, 1525]","[0, 11240, 1248, 1248, 0, 312]","[653, 8028, 1618, 1600, 1489, 658]"
+35620,174210,"['      Essex County, NJ', '      Hunterdon County, NJ', '      Morris County, NJ', '      Sussex County, NJ', '      Union County, NJ', '      Pike County, PA']","[152, 170, 0, 130, 44]","[0, 12, 0, 10, 0]","[53386, 59709, 0, 45659, 15454]","[0, 95023, 0, 79186, 0]","[15253, 84933, 0, 69607, 4415]"
 35660,1060,"['      Berrien County, MI']",[196],[20],[1060],[1060],[1060]
 36100,2020,"['      Marion County, FL']",[60],[0],[2020],[0],[2020]
 36140,710,"['      Cape May County, NJ']",[149],[16],[710],[710],[710]
 36220,1210,"['      Ector County, TX']",[25],[4],[1210],[1210],[1210]
-36260,3380,"['      Davis County, UT', '      Morgan County, UT', '      Weber County, UT']","[43, 40]","[8, 5]","[1751, 1628]","[2080, 1300]","[1845, 1534]"
-36420,13470,"['      Canadian County, OK', '      Cleveland County, OK', '      Grady County, OK', '      Lincoln County, OK', '      Logan County, OK', '      McClain County, OK', '      Oklahoma County, OK']","[74, 0, 49, 25, 25, 39, 160]","[8, 0, 9, 4, 4, 7, 61]","[2679, 0, 1774, 905, 905, 1412, 5793]","[1158, 0, 1303, 579, 579, 1013, 8835]","[2245, 0, 1639, 812, 812, 1298, 6662]"
+36260,3380,"['      Davis County, UT', '      Morgan County, UT', '      Weber County, UT']","[43, 40]","[8, 5]","[1751, 1628]","[2080, 1300]","[1986, 1393]"
+36420,13470,"['      Canadian County, OK', '      Cleveland County, OK', '      Grady County, OK', '      Lincoln County, OK', '      Logan County, OK', '      McClain County, OK', '      Oklahoma County, OK']","[74, 0, 49, 25, 25, 39, 160]","[8, 0, 9, 4, 4, 7, 61]","[2679, 0, 1774, 905, 905, 1412, 5793]","[1158, 0, 1303, 579, 579, 1013, 8835]","[1593, 0, 1438, 672, 672, 1127, 7966]"
 36500,1840,"['      Thurston County, WA']",[0],[0],[0],[0],[0]
-36540,13130,"['      Harrison County, IA', '      Mills County, IA', '      Pottawattamie County, IA', '      Cass County, NE', '      Douglas County, NE', '      Sarpy County, NE', '      Saunders County, NE', '      Washington County, NE']","[25, 110, 64, 28, 16, 21]","[4, 13, 1, 5, 3, 4]","[1243, 5470, 3183, 1392, 795, 1044]","[1750, 5689, 437, 2188, 1313, 1750]","[1388, 5533, 2398, 1619, 943, 1246]"
-36740,21280,"['      Lake County, FL', '      Orange County, FL', '      Osceola County, FL', '      Seminole County, FL']","[308, 96, 64, 60]","[46, 0, 0, 1]","[12413, 3869, 2579, 2418]","[20827, 0, 0, 452]","[14817, 2763, 1842, 1856]"
+36540,13130,"['      Harrison County, IA', '      Mills County, IA', '      Pottawattamie County, IA', '      Cass County, NE', '      Douglas County, NE', '      Sarpy County, NE', '      Saunders County, NE', '      Washington County, NE']","[25, 110, 64, 28, 16, 21]","[4, 13, 1, 5, 3, 4]","[1243, 5470, 3183, 1392, 795, 1044]","[1750, 5689, 437, 2188, 1313, 1750]","[1605, 5627, 1222, 1960, 1165, 1548]"
+36740,21280,"['      Lake County, FL', '      Orange County, FL', '      Osceola County, FL', '      Seminole County, FL']","[308, 96, 64, 60]","[46, 0, 0, 1]","[12413, 3869, 2579, 2418]","[20827, 0, 0, 452]","[18423, 1105, 736, 1014]"
 36780,1650,"['      Winnebago County, WI']",[72],[12],[1650],[1650],[1650]
 36980,1630,"['      Daviess County, KY', '      Hancock County, KY', '      McLean County, KY']",[80],[0],[1630],[0],[1630]
 37100,4730,"['      Ventura County, CA']",[144],[24],[4730],[4730],[4730]
 37340,4970,"['      Brevard County, FL']",[80],[0],[4970],[0],[4970]
 37460,1330,"['      Bay County, FL']",[222],[20],[1330],[1330],[1330]
-37620,860,"['      Washington County, OH', '      Pleasants County, WV', '      Wirt County, WV', '      Wood County, WV']","[188, 230]","[11, 18]","[386, 473]","[326, 533]","[369, 490]"
-37860,3990,"['      Escambia County, FL', '      Santa Rosa County, FL']","[561, 65]","[34, 8]","[3575, 414]","[3230, 760]","[3476, 513]"
-37900,5740,"['      Marshall County, IL', '      Peoria County, IL', '      Stark County, IL', '      Tazewell County, IL', '      Woodford County, IL']","[198, 107, 25]","[24, 8, 4]","[3444, 1861, 434]","[3826, 1275, 637]","[3553, 1693, 492]"
-37980,71120,"['      New Castle County, DE', '      Cecil County, MD', '      Salem County, NJ']","[37, 82, 126]","[1, 5, 12]","[10740, 23803, 36576]","[3951, 19755, 47413]","[8800, 22646, 39672]"
-38060,38370,"['      Maricopa County, AZ', '      Pinal County, AZ']","[18, 141]","[3, 22]","[4343, 34026]","[4604, 33765]","[4418, 33951]"
+37620,860,"['      Washington County, OH', '      Pleasants County, WV', '      Wirt County, WV', '      Wood County, WV']","[188, 230]","[11, 18]","[386, 473]","[326, 533]","[343, 516]"
+37860,3990,"['      Escambia County, FL', '      Santa Rosa County, FL']","[561, 65]","[34, 8]","[3575, 414]","[3230, 760]","[3328, 661]"
+37900,5740,"['      Marshall County, IL', '      Peoria County, IL', '      Stark County, IL', '      Tazewell County, IL', '      Woodford County, IL']","[198, 107, 25]","[24, 8, 4]","[3444, 1861, 434]","[3826, 1275, 637]","[3717, 1442, 579]"
+37980,71120,"['      New Castle County, DE', '      Cecil County, MD', '      Salem County, NJ']","[37, 82, 126]","[1, 5, 12]","[10740, 23803, 36576]","[3951, 19755, 47413]","[5890, 20912, 44316]"
+38060,38370,"['      Maricopa County, AZ', '      Pinal County, AZ']","[18, 141]","[3, 22]","[4343, 34026]","[4604, 33765]","[4529, 33840]"
 38220,640,"['      Cleveland County, AR', '      Jefferson County, AR', '      Lincoln County, AR']",[271],[34],[640],[640],[640]
-38300,33600,"['      Allegheny County, PA', '      Armstrong County, PA', '      Beaver County, PA', '      Butler County, PA', '      Fayette County, PA', '      Washington County, PA', '      Westmoreland County, PA']","[41, 131, 35, 0, 149, 14, 0]","[6, 12, 5, 0, 15, 2, 32]","[3723, 11896, 3178, 0, 13530, 1271, 0]","[2800, 5600, 2333, 0, 7000, 933, 14933]","[3459, 10097, 2936, 0, 11664, 1174, 4266]"
-38540,920,"['      Bannock County, ID', '      Power County, ID']","[137, 10]","[20, 2]","[857, 62]","[836, 83]","[851, 68]"
+38300,33600,"['      Allegheny County, PA', '      Armstrong County, PA', '      Beaver County, PA', '      Butler County, PA', '      Fayette County, PA', '      Washington County, PA', '      Westmoreland County, PA']","[41, 131, 35, 0, 149, 14, 0]","[6, 12, 5, 0, 15, 2, 32]","[3723, 11896, 3178, 0, 13530, 1271, 0]","[2800, 5600, 2333, 0, 7000, 933, 14933]","[3063, 7398, 2574, 0, 8865, 1029, 10666]"
+38540,920,"['      Bannock County, ID', '      Power County, ID']","[137, 10]","[20, 2]","[857, 62]","[836, 83]","[842, 77]"
 38660,1610,"['      Juana Daz Municipio, PR', '      Ponce Municipio, PR', '      Villalba Municipio, PR']",[],[],[],[],[]
-38900,22100,"['      Clackamas County, OR', '      Columbia County, OR', '      Multnomah County, OR', '      Washington County, OR', '      Yamhill County, OR', '      Clark County, WA', '      Skamania County, WA']","[111, 85, 94, 50, 72]","[8, 0, 0, 7, 3]","[5954, 4559, 5042, 2682, 3862]","[9822, 0, 0, 8594, 3683]","[7059, 3256, 3601, 4371, 3811]"
-38940,4430,"['      Martin County, FL', '      St. Lucie County, FL']","[54, 312]","[0, 36]","[653, 3776]","[0, 4430]","[466, 3963]"
+38900,22100,"['      Clackamas County, OR', '      Columbia County, OR', '      Multnomah County, OR', '      Washington County, OR', '      Yamhill County, OR', '      Clark County, WA', '      Skamania County, WA']","[111, 85, 94, 50, 72]","[8, 0, 0, 7, 3]","[5954, 4559, 5042, 2682, 3862]","[9822, 0, 0, 8594, 3683]","[8717, 1302, 1440, 6905, 3734]"
+38940,4430,"['      Martin County, FL', '      St. Lucie County, FL']","[54, 312]","[0, 36]","[653, 3776]","[0, 4430]","[186, 4243]"
 39140,1380,"['      Yavapai County, AZ']",[21],[0],[1380],[0],[1380]
-39340,3430,"['      Juab County, UT', '      Utah County, UT']","[25, 58]","[4, 0]","[1033, 2396]","[3430, 0]","[1717, 1712]"
+39340,3430,"['      Juab County, UT', '      Utah County, UT']","[25, 58]","[4, 0]","[1033, 2396]","[3430, 0]","[2745, 684]"
 39380,2060,"['      Pueblo County, CO']",[0],[0],[0],[0],[0]
 39460,1510,"['      Charlotte County, FL']",[124],[10],[1510],[1510],[1510]
 39540,1270,"['      Racine County, WI']",[249],[23],[1270],[1270],[1270]
-39580,11460,"['      Franklin County, NC', '      Johnston County, NC', '      Wake County, NC']","[179, 216]","[24, 38]","[5193, 6266]","[4436, 7023]","[4976, 6483]"
-39660,2280,"['      Meade County, SD', '      Pennington County, SD']","[25, 0]","[3, 32]","[2280, 0]","[195, 2084]","[1684, 595]"
+39580,11460,"['      Franklin County, NC', '      Johnston County, NC', '      Wake County, NC']","[179, 216]","[24, 38]","[5193, 6266]","[4436, 7023]","[4652, 6807]"
+39660,2280,"['      Meade County, SD', '      Pennington County, SD']","[25, 0]","[3, 32]","[2280, 0]","[195, 2084]","[791, 1488]"
 39740,3840,"['      Berks County, PA']",[52],[0],[3840],[0],[3840]
 39820,1500,"['      Shasta County, CA']",[16],[0],[1500],[0],[1500]
 39900,4180,"['      Storey County, NV', '      Washoe County, NV']",[21],[3],[4180],[4180],[4180]
-40060,13000,"['      Amelia County, VA', '      Caroline County, VA', '      Charles City County, VA', '      Chesterfield County, VA', '      Cumberland County, VA', '      Dinwiddie County, VA', '      Goochland County, VA', '      Hanover County, VA', '      Henrico County, VA', '      King and Queen County, VA', '      King William County, VA', '      Louisa County, VA', '      New Kent County, VA', '      Powhatan County, VA', '      Prince George County, VA', '      Sussex County, VA', '      Colonial Heights city, VA', '      Hopewell city, VA', '      Petersburg city, VA', '      Richmond city, VA']","[28, 4, 40, 60, 94, 107, 64, 168]","[2, 1, 3, 10, 36, 17, 1, 64]","[644, 92, 920, 1380, 2162, 2461, 1472, 3865]","[194, 97, 291, 970, 3492, 1649, 97, 6208]","[515, 93, 740, 1263, 2542, 2229, 1079, 4535]"
+40060,13000,"['      Amelia County, VA', '      Caroline County, VA', '      Charles City County, VA', '      Chesterfield County, VA', '      Cumberland County, VA', '      Dinwiddie County, VA', '      Goochland County, VA', '      Hanover County, VA', '      Henrico County, VA', '      King and Queen County, VA', '      King William County, VA', '      Louisa County, VA', '      New Kent County, VA', '      Powhatan County, VA', '      Prince George County, VA', '      Sussex County, VA', '      Colonial Heights city, VA', '      Hopewell city, VA', '      Petersburg city, VA', '      Richmond city, VA']","[28, 4, 40, 60, 94, 107, 64, 168]","[2, 1, 3, 10, 36, 17, 1, 64]","[644, 92, 920, 1380, 2162, 2461, 1472, 3865]","[194, 97, 291, 970, 3492, 1649, 97, 6208]","[322, 95, 470, 1087, 3112, 1881, 490, 5539]"
 40140,29780,"['      Riverside County, CA', '      San Bernardino County, CA']","[50, 25]","[0, 0]","[19853, 9926]","[0, 0]","[19853, 9926]"
-40220,4390,"['      Botetourt County, VA', '      Craig County, VA', '      Franklin County, VA', '      Roanoke County, VA', '      Roanoke city, VA', '      Salem city, VA']","[37, 270, 621, 330]","[4, 0, 47, 24]","[129, 942, 2167, 1151]","[234, 0, 2751, 1404]","[159, 673, 2333, 1223]"
+40220,4390,"['      Botetourt County, VA', '      Craig County, VA', '      Franklin County, VA', '      Roanoke County, VA', '      Roanoke city, VA', '      Salem city, VA']","[37, 270, 621, 330]","[4, 0, 47, 24]","[129, 942, 2167, 1151]","[234, 0, 2751, 1404]","[204, 269, 2584, 1332]"
 40340,0,"['      Dodge County, MN', '      Olmsted County, MN', '      Wabasha County, MN']","[0, 14]","[32, 2]","[0, 0]","[0, 0]","[0, 0]"
-40380,12400,"['      Livingston County, NY', '      Monroe County, NY', '      Ontario County, NY', '      Orleans County, NY', '      Wayne County, NY']","[67, 174, 77, 25, 101]","[12, 0, 6, 4, 8]","[1871, 4859, 2150, 698, 2820]","[4960, 0, 2480, 1653, 3306]","[2753, 3471, 2244, 971, 2959]"
+40380,12400,"['      Livingston County, NY', '      Monroe County, NY', '      Ontario County, NY', '      Orleans County, NY', '      Wayne County, NY']","[67, 174, 77, 25, 101]","[12, 0, 6, 4, 8]","[1871, 4859, 2150, 698, 2820]","[4960, 0, 2480, 1653, 3306]","[4077, 1388, 2385, 1380, 3167]"
 40420,3740,"['      Boone County, IL', '      Winnebago County, IL']",[52],[9],[3740],[3740],[3740]
-40580,1130,"['      Edgecombe County, NC', '      Nash County, NC']","[101, 50]","[15, 8]","[755, 374]","[736, 393]","[750, 379]"
+40580,1130,"['      Edgecombe County, NC', '      Nash County, NC']","[101, 50]","[15, 8]","[755, 374]","[736, 393]","[742, 387]"
 40660,1420,"['      Floyd County, GA']",[208],[16],[1420],[1420],[1420]
-40900,19860,"['      El Dorado County, CA', '      Placer County, CA', '      Sacramento County, CA', '      Yolo County, CA']","[110, 64, 53, 48]","[20, 8, 0, 6]","[7944, 4621, 3827, 3466]","[11682, 4672, 0, 3504]","[9012, 4636, 2733, 3477]"
+40900,19860,"['      El Dorado County, CA', '      Placer County, CA', '      Sacramento County, CA', '      Yolo County, CA']","[110, 64, 53, 48]","[20, 8, 0, 6]","[7944, 4621, 3827, 3466]","[11682, 4672, 0, 3504]","[10614, 4658, 1093, 3493]"
 40980,2790,"['      Saginaw County, MI']",[204],[22],[2790],[2790],[2790]
 41060,2960,"['      Benton County, MN', '      Stearns County, MN']",[457],[42],[2960],[2960],[2960]
 41100,1360,"['      Washington County, UT']",[164],[32],[1360],[1360],[1360]
 41140,1200,"['      Doniphan County, KS', '      Andrew County, MO', '      Buchanan County, MO', '      DeKalb County, MO']",[108],[0],[1200],[0],[1200]
-41180,33100,"['      Bond County, IL', '      Calhoun County, IL', '      Clinton County, IL', '      Jersey County, IL', '      Macoupin County, IL', '      Madison County, IL', '      Monroe County, IL', '      St. Clair County, IL', '      Crawford County, MO (pt.)*', '      Franklin County, MO', '      Jefferson County, MO', '      Lincoln County, MO', '      St. Charles County, MO', '      St. Louis County, MO', '      Warren County, MO', '      Washington County, MO', '      St. Louis city, MO']","[32, 46, 46, 25, 25, 94, 25, 148, 279, 25, 63, 38, 25, 50]","[6, 8, 4, 4, 4, 6, 4, 13, 28, 4, 11, 6, 4, 0]","[1150, 1653, 1653, 898, 898, 3378, 898, 5319, 10027, 898, 2264, 1365, 898, 1796]","[1947, 2596, 1298, 1298, 1298, 1947, 1298, 4218, 9086, 1298, 3569, 1947, 1298, 0]","[1377, 1922, 1551, 1012, 1012, 2969, 1012, 5004, 9758, 1012, 2637, 1531, 1012, 1283]"
+41180,33100,"['      Bond County, IL', '      Calhoun County, IL', '      Clinton County, IL', '      Jersey County, IL', '      Macoupin County, IL', '      Madison County, IL', '      Monroe County, IL', '      St. Clair County, IL', '      Crawford County, MO (pt.)*', '      Franklin County, MO', '      Jefferson County, MO', '      Lincoln County, MO', '      St. Charles County, MO', '      St. Louis County, MO', '      Warren County, MO', '      Washington County, MO', '      St. Louis city, MO']","[32, 46, 46, 25, 25, 94, 25, 148, 279, 25, 63, 38, 25, 50]","[6, 8, 4, 4, 4, 6, 4, 13, 28, 4, 11, 6, 4, 0]","[1150, 1653, 1653, 898, 898, 3378, 898, 5319, 10027, 898, 2264, 1365, 898, 1796]","[1947, 2596, 1298, 1298, 1298, 1947, 1298, 4218, 9086, 1298, 3569, 1947, 1298, 0]","[1719, 2326, 1399, 1183, 1183, 2355, 1183, 4533, 9355, 1183, 3196, 1780, 1183, 513]"
 41420,3780,"['      Marion County, OR', '      Polk County, OR']","[0, 15]","[0, 3]","[0, 3780]","[0, 3780]","[0, 3780]"
 41500,2740,"['      Monterey County, CA']",[240],[13],[2740],[2740],[2740]
 41540,3810,"['      Somerset County, MD', '      Wicomico County, MD']",[0],[0],[0],[0],[0]
-41620,11220,"['      Salt Lake County, UT', '      Summit County, UT', '      Tooele County, UT']","[94, 37, 36]","[0, 4, 4]","[6315, 2485, 2418]","[0, 5610, 5610]","[4511, 3378, 3330]"
+41620,11220,"['      Salt Lake County, UT', '      Summit County, UT', '      Tooele County, UT']","[94, 37, 36]","[0, 4, 4]","[6315, 2485, 2418]","[0, 5610, 5610]","[1804, 4717, 4698]"
 41660,1240,"['      Irion County, TX', '      Tom Green County, TX']",[80],[0],[1240],[0],[1240]
-41700,21140,"['      Atascosa County, TX', '      Bandera County, TX', '      Bexar County, TX', '      Comal County, TX', '      Guadalupe County, TX', '      Kendall County, TX', '      Medina County, TX', '      Wilson County, TX']","[67, 66, 112, 117, 25, 44]","[6, 0, 16, 9, 4, 4]","[3286, 3237, 5493, 5738, 1226, 2158]","[3252, 0, 8672, 4878, 2168, 2168]","[3276, 2312, 6401, 5492, 1495, 2161]"
+41700,21140,"['      Atascosa County, TX', '      Bandera County, TX', '      Bexar County, TX', '      Comal County, TX', '      Guadalupe County, TX', '      Kendall County, TX', '      Medina County, TX', '      Wilson County, TX']","[67, 66, 112, 117, 25, 44]","[6, 0, 16, 9, 4, 4]","[3286, 3237, 5493, 5738, 1226, 2158]","[3252, 0, 8672, 4878, 2168, 2168]","[3262, 924, 7764, 5124, 1899, 2165]"
 41740,25260,"['      San Diego County, CA']",[321],[56],[25260],[25260],[25260]
-41860,38580,"['      Marin County, CA', '      San Francisco County, CA', '      San Mateo County, CA']","[116, 289, 241]","[12, 51, 24]","[6927, 17259, 14392]","[5321, 22615, 10642]","[6468, 18789, 13321]"
+41860,38580,"['      Marin County, CA', '      San Francisco County, CA', '      San Mateo County, CA']","[116, 289, 241]","[12, 51, 24]","[6927, 17259, 14392]","[5321, 22615, 10642]","[5780, 21085, 11714]"
 41900,570,"['      Cabo Rojo Municipio, PR', '      Lajas Municipio, PR', '      Sabana Grande Municipio, PR', '      San Germn Municipio, PR']",[],[],[],[],[]
-41940,16650,"['      San Benito County, CA', '      Santa Clara County, CA']","[49, 80]","[8, 0]","[6324, 10325]","[16650, 0]","[9274, 7375]"
+41940,16650,"['      San Benito County, CA', '      Santa Clara County, CA']","[49, 80]","[8, 0]","[6324, 10325]","[16650, 0]","[13699, 2950]"
 41980,14360,"['      Aguas Buenas Municipio, PR', '      Aibonito Municipio, PR', '      Arecibo Municipio, PR', '      Barceloneta Municipio, PR', '      Barranquitas Municipio, PR', '      Bayamn Municipio, PR', '      Caguas Municipio, PR', '      Camuy Municipio, PR', '      Canvanas Municipio, PR', '      Carolina Municipio, PR', '      Catao Municipio, PR', '      Cayey Municipio, PR', '      Ciales Municipio, PR', '      Cidra Municipio, PR', '      Comero Municipio, PR', '      Corozal Municipio, PR', '      Dorado Municipio, PR', '      Florida Municipio, PR', '      Guaynabo Municipio, PR', '      Gurabo Municipio, PR', '      Hatillo Municipio, PR', '      Humacao Municipio, PR', '      Juncos Municipio, PR', '      Las Piedras Municipio, PR', '      Loza Municipio, PR', '      Manat Municipio, PR', '      Maunabo Municipio, PR', '      Morovis Municipio, PR', '      Naguabo Municipio, PR', '      Naranjito Municipio, PR', '      Orocovis Municipio, PR', '      Quebradillas Municipio, PR', '      Ro Grande Municipio, PR', '      San Juan Municipio, PR', '      San Lorenzo Municipio, PR', '      Toa Alta Municipio, PR', '      Toa Baja Municipio, PR', '      Trujillo Alto Municipio, PR', '      Vega Alta Municipio, PR', '      Vega Baja Municipio, PR', '      Yabucoa Municipio, PR']",[],[],[],[],[]
 42020,1810,"['      San Luis Obispo County, CA']",[50],[9],[1810],[1810],[1810]
 42100,1410,"['      Santa Cruz County, CA']",[16],[0],[1410],[0],[1410]
 42140,950,"['      Santa Fe County, NM']",[36],[6],[950],[950],[950]
 42220,3230,"['      Sonoma County, CA']",[37],[5],[3230],[3230],[3230]
-42340,3570,"['      Bryan County, GA', '      Chatham County, GA', '      Effingham County, GA']","[50, 25]","[0, 4]","[2380, 1190]","[0, 3570]","[1700, 1870]"
-42540,5840,"['      Lackawanna County, PA', '      Luzerne County, PA', '      Wyoming County, PA']","[203, 36, 44]","[0, 6, 6]","[4189, 742, 907]","[0, 2920, 2920]","[2992, 1364, 1482]"
+42340,3570,"['      Bryan County, GA', '      Chatham County, GA', '      Effingham County, GA']","[50, 25]","[0, 4]","[2380, 1190]","[0, 3570]","[680, 2890]"
+42540,5840,"['      Lackawanna County, PA', '      Luzerne County, PA', '      Wyoming County, PA']","[203, 36, 44]","[0, 6, 6]","[4189, 742, 907]","[0, 2920, 2920]","[1196, 2297, 2345]"
 42660,33180,"['      Pierce County, WA']",[47],[0],[33180],[0],[33180]
 43100,690,"['      Sheboygan County, WI']",[53],[7],[690],[690],[690]
 43300,1710,"['      Grayson County, TX']",[60],[0],[1710],[0],[1710]
-43340,5350,"['      Bossier Parish, LA', '      Caddo Parish, LA', '      De Soto Parish, LA']","[6, 0, 34]","[1, 1, 6]","[802, 0, 4547]","[668, 668, 4012]","[764, 191, 4394]"
-43580,1860,"['      Woodbury County, IA', '      Dakota County, NE', '      Dixon County, NE', '      Union County, SD']","[157, 38]","[19, 7]","[1497, 362]","[1359, 500]","[1458, 401]"
-43620,6310,"['      Lincoln County, SD', '      McCook County, SD', '      Minnehaha County, SD', '      Turner County, SD']","[11, 0, 12]","[2, 32, 2]","[3017, 0, 3292]","[350, 5608, 350]","[2255, 1602, 2451]"
-43780,2460,"['      St. Joseph County, IN', '      Cass County, MI']","[0, 25]","[32, 4]","[0, 2460]","[2186, 273]","[624, 1835]"
+43340,5350,"['      Bossier Parish, LA', '      Caddo Parish, LA', '      De Soto Parish, LA']","[6, 0, 34]","[1, 1, 6]","[802, 0, 4547]","[668, 668, 4012]","[706, 477, 4165]"
+43580,1860,"['      Woodbury County, IA', '      Dakota County, NE', '      Dixon County, NE', '      Union County, SD']","[157, 38]","[19, 7]","[1497, 362]","[1359, 500]","[1398, 461]"
+43620,6310,"['      Lincoln County, SD', '      McCook County, SD', '      Minnehaha County, SD', '      Turner County, SD']","[11, 0, 12]","[2, 32, 2]","[3017, 0, 3292]","[350, 5608, 350]","[1112, 4006, 1191]"
+43780,2460,"['      St. Joseph County, IN', '      Cass County, MI']","[0, 25]","[32, 4]","[0, 2460]","[2186, 273]","[1561, 898]"
 43900,2990,"['      Spartanburg County, SC']",[40],[4],[2990],[2990],[2990]
 44060,5090,"['      Spokane County, WA']",[100],[0],[5090],[0],[5090]
-44100,3790,"['      Menard County, IL', '      Sangamon County, IL']",[369],[45],[3790],[3790],[3789]
-44180,5360,"['      Christian County, MO', '      Dallas County, MO', '      Greene County, MO', '      Polk County, MO', '      Webster County, MO']","[0, 52]","[32, 8]","[0, 5360]","[4288, 1072]","[1225, 4134]"
+44100,3790,"['      Menard County, IL', '      Sangamon County, IL']",[369],[45],[3790],[3790],[3790]
+44180,5360,"['      Christian County, MO', '      Dallas County, MO', '      Greene County, MO', '      Polk County, MO', '      Webster County, MO']","[0, 52]","[32, 8]","[0, 5360]","[4288, 1072]","[3062, 2297]"
 44220,1010,"['      Clark County, OH']",[230],[38],[1010],[1010],[1010]
 44300,1440,"['      Centre County, PA']",[73],[0],[1440],[0],[1440]
 44700,4470,"['      San Joaquin County, CA']",[0],[0],[0],[0],[0]
 44940,760,"['      Sumter County, SC']",[173],[17],[760],[760],[760]
-45060,6120,"['      Madison County, NY', '      Onondaga County, NY', '      Oswego County, NY']","[25, 435, 132]","[4, 44, 8]","[258, 4496, 1364]","[437, 4808, 874]","[309, 4585, 1224]"
-45220,3200,"['      Gadsden County, FL', '      Jefferson County, FL', '      Leon County, FL', '      Wakulla County, FL']","[24, 266]","[4, 20]","[264, 2935]","[533, 2666]","[341, 2858]"
-45300,30390,"['      Hernando County, FL', '      Hillsborough County, FL', '      Pasco County, FL', '      Pinellas County, FL']","[280, 60, 126, 311]","[24, 0, 0, 26]","[10951, 2346, 4928, 12163]","[14587, 0, 0, 15802]","[11990, 1676, 3520, 13203]"
-45460,1650,"['      Clay County, IN', '      Sullivan County, IN', '      Vermillion County, IN', '      Vigo County, IN']","[25, 25, 25, 16]","[4, 4, 6, 0]","[453, 453, 453, 290]","[471, 471, 707, 0]","[458, 458, 525, 207]"
-45780,6400,"['      Fulton County, OH', '      Lucas County, OH', '      Ottawa County, OH', '      Wood County, OH']","[25, 40, 25, 46]","[7, 4, 4, 8]","[1176, 1882, 1176, 2164]","[1947, 1113, 1113, 2226]","[1396, 1662, 1158, 2182]"
-45820,3090,"['      Jackson County, KS', '      Jefferson County, KS', '      Osage County, KS', '      Shawnee County, KS', '      Wabaunsee County, KS']","[12, 25, 24]","[2, 4, 0]","[607, 1266, 1215]","[1030, 2060, 0]","[728, 1493, 868]"
+45060,6120,"['      Madison County, NY', '      Onondaga County, NY', '      Oswego County, NY']","[25, 435, 132]","[4, 44, 8]","[258, 4496, 1364]","[437, 4808, 874]","[386, 4719, 1014]"
+45220,3200,"['      Gadsden County, FL', '      Jefferson County, FL', '      Leon County, FL', '      Wakulla County, FL']","[24, 266]","[4, 20]","[264, 2935]","[533, 2666]","[456, 2743]"
+45300,30390,"['      Hernando County, FL', '      Hillsborough County, FL', '      Pasco County, FL', '      Pinellas County, FL']","[280, 60, 126, 311]","[24, 0, 0, 26]","[10951, 2346, 4928, 12163]","[14587, 0, 0, 15802]","[13548, 670, 1408, 14763]"
+45460,1650,"['      Clay County, IN', '      Sullivan County, IN', '      Vermillion County, IN', '      Vigo County, IN']","[25, 25, 25, 16]","[4, 4, 6, 0]","[453, 453, 453, 290]","[471, 471, 707, 0]","[466, 466, 634, 82]"
+45780,6400,"['      Fulton County, OH', '      Lucas County, OH', '      Ottawa County, OH', '      Wood County, OH']","[25, 40, 25, 46]","[7, 4, 4, 8]","[1176, 1882, 1176, 2164]","[1947, 1113, 1113, 2226]","[1727, 1332, 1131, 2208]"
+45820,3090,"['      Jackson County, KS', '      Jefferson County, KS', '      Osage County, KS', '      Shawnee County, KS', '      Wabaunsee County, KS']","[12, 25, 24]","[2, 4, 0]","[607, 1266, 1215]","[1030, 2060, 0]","[909, 1833, 347]"
 45940,4450,"['      Mercer County, NJ']",[18],[3],[4450],[4450],[4450]
 46060,8590,"['      Pima County, AZ']",[74],[0],[8590],[0],[8590]
-46140,9000,"['      Creek County, OK', '      Okmulgee County, OK', '      Osage County, OK', '      Pawnee County, OK', '      Rogers County, OK', '      Tulsa County, OK', '      Wagoner County, OK']","[55, 4, 15, 14, 54, 40, 100]","[10, 1, 3, 2, 6, 4, 6]","[1755, 127, 478, 446, 1723, 1276, 3191]","[2812, 281, 843, 562, 1687, 1125, 1687]","[2057, 171, 583, 479, 1713, 1233, 2761]"
-46220,2840,"['      Greene County, AL', '      Hale County, AL', '      Tuscaloosa County, AL']","[20, 28, 497]","[4, 5, 52]","[104, 145, 2589]","[186, 232, 2420]","[127, 170, 2541]"
+46140,9000,"['      Creek County, OK', '      Okmulgee County, OK', '      Osage County, OK', '      Pawnee County, OK', '      Rogers County, OK', '      Tulsa County, OK', '      Wagoner County, OK']","[55, 4, 15, 14, 54, 40, 100]","[10, 1, 3, 2, 6, 4, 6]","[1755, 127, 478, 446, 1723, 1276, 3191]","[2812, 281, 843, 562, 1687, 1125, 1687]","[2510, 237, 739, 529, 1697, 1168, 2117]"
+46220,2840,"['      Greene County, AL', '      Hale County, AL', '      Tuscaloosa County, AL']","[20, 28, 497]","[4, 5, 52]","[104, 145, 2589]","[186, 232, 2420]","[162, 207, 2469]"
 46340,3710,"['      Smith County, TX']",[402],[70],[3710],[3710],[3710]
 46540,2720,"['      Herkimer County, NY', '      Oneida County, NY']","[25, 0]","[4, 0]","[2720, 0]","[2720, 0]","[2720, 0]"
-46660,1400,"['      Brooks County, GA', '      Echols County, GA', '      Lanier County, GA', '      Lowndes County, GA']","[25, 25, 103]","[4, 4, 0]","[228, 228, 942]","[700, 700, 0]","[363, 363, 673]"
+46660,1400,"['      Brooks County, GA', '      Echols County, GA', '      Lanier County, GA', '      Lowndes County, GA']","[25, 25, 103]","[4, 4, 0]","[228, 228, 942]","[700, 700, 0]","[565, 565, 269]"
 46700,3720,"['      Solano County, CA']",[64],[11],[3720],[3720],[3720]
-47020,1240,"['      Calhoun County, TX', '      Goliad County, TX', '      Victoria County, TX']","[25, 26]","[6, 0]","[607, 632]","[1240, 0]","[788, 451]"
+47020,1240,"['      Calhoun County, TX', '      Goliad County, TX', '      Victoria County, TX']","[25, 26]","[6, 0]","[607, 632]","[1240, 0]","[1059, 180]"
 47220,1240,"['      Cumberland County, NJ']",[280],[24],[1240],[1240],[1240]
-47260,13900,"['      Currituck County, NC', '      Gloucester County, VA', '      Isle of Wight County, VA', '      James City County, VA', '      Mathews County, VA', '      Surry County, VA', '      York County, VA', '      Chesapeake city, VA', '      Hampton city, VA', '      Newport News city, VA', '      Norfolk city, VA', '      Poquoson city, VA', '      Portsmouth city, VA', '      Suffolk city, VA', '      Virginia Beach city, VA', '      Williamsburg city, VA']","[67, 57, 50, 310, 79, 108, 82, 202, 155, 100, 40]","[7, 0, 0, 28, 0, 0, 0, 1, 12, 1, 10]","[745, 633, 556, 3447, 878, 1200, 911, 2246, 1723, 1112, 444]","[1649, 0, 0, 6596, 0, 0, 0, 235, 2827, 235, 2355]","[1003, 452, 397, 4347, 627, 857, 651, 1671, 2038, 861, 990]"
+47260,13900,"['      Currituck County, NC', '      Gloucester County, VA', '      Isle of Wight County, VA', '      James City County, VA', '      Mathews County, VA', '      Surry County, VA', '      York County, VA', '      Chesapeake city, VA', '      Hampton city, VA', '      Newport News city, VA', '      Norfolk city, VA', '      Poquoson city, VA', '      Portsmouth city, VA', '      Suffolk city, VA', '      Virginia Beach city, VA', '      Williamsburg city, VA']","[67, 57, 50, 310, 79, 108, 82, 202, 155, 100, 40]","[7, 0, 0, 28, 0, 0, 0, 1, 12, 1, 10]","[745, 633, 556, 3447, 878, 1200, 911, 2246, 1723, 1112, 444]","[1649, 0, 0, 6596, 0, 0, 0, 235, 2827, 235, 2355]","[1390, 181, 158, 5696, 250, 343, 260, 810, 2511, 485, 1809]"
 47300,2050,"['      Tulare County, CA']",[403],[41],[2050],[2050],[2050]
 47380,2160,"['      McLennan County, TX']",[0],[0],[0],[0],[0]
 47580,1040,"['      Houston County, GA']",[237],[32],[1040],[1040],[1040]
-47900,43450,"['      District of Columbia, DC', '      Calvert County, MD', '      Charles County, MD', ""      Prince George's County, MD"", '      Arlington County, VA', '      Clarke County, VA', '      Fairfax County, VA', '      Fauquier County, VA', '      Loudoun County, VA', '      Prince William County, VA', '      Spotsylvania County, VA', '      Stafford County, VA', '      Warren County, VA', '      Alexandria city, VA', '      Fairfax city, VA', '      Falls Church city, VA', '      Fredericksburg city, VA', '      Manassas city, VA', '      Manassas Park city, VA', '      Jefferson County, WV']","[0, 41, 98, 190, 305, 923, 97, 100, 60, 105, 90, 46, 5, 58, 94, 25]","[1, 4, 10, 22, 32, 162, 8, 0, 8, 12, 4, 8, 0, 0, 11, 5]","[0, 796, 1903, 3690, 5924, 17927, 1884, 1942, 1165, 2039, 1748, 893, 97, 1126, 1825, 485]","[151, 605, 1513, 3330, 4844, 24525, 1211, 0, 1211, 1816, 605, 1211, 0, 0, 1665, 756]","[43, 741, 1792, 3587, 5615, 19812, 1691, 1387, 1178, 1975, 1421, 984, 69, 804, 1779, 563]"
-47940,2220,"['      Black Hawk County, IA', '      Bremer County, IA', '      Grundy County, IA']","[187, 16, 25]","[12, 3, 4]","[1820, 155, 243]","[1402, 350, 467]","[1701, 211, 307]"
+47900,43450,"['      District of Columbia, DC', '      Calvert County, MD', '      Charles County, MD', ""      Prince George's County, MD"", '      Arlington County, VA', '      Clarke County, VA', '      Fairfax County, VA', '      Fauquier County, VA', '      Loudoun County, VA', '      Prince William County, VA', '      Spotsylvania County, VA', '      Stafford County, VA', '      Warren County, VA', '      Alexandria city, VA', '      Fairfax city, VA', '      Falls Church city, VA', '      Fredericksburg city, VA', '      Manassas city, VA', '      Manassas Park city, VA', '      Jefferson County, WV']","[0, 41, 98, 190, 305, 923, 97, 100, 60, 105, 90, 46, 5, 58, 94, 25]","[1, 4, 10, 22, 32, 162, 8, 0, 8, 12, 4, 8, 0, 0, 11, 5]","[0, 796, 1903, 3690, 5924, 17927, 1884, 1942, 1165, 2039, 1748, 893, 97, 1126, 1825, 485]","[151, 605, 1513, 3330, 4844, 24525, 1211, 0, 1211, 1816, 605, 1211, 0, 0, 1665, 756]","[108, 660, 1625, 3433, 5153, 22640, 1403, 554, 1198, 1880, 932, 1120, 27, 321, 1711, 679]"
+47940,2220,"['      Black Hawk County, IA', '      Bremer County, IA', '      Grundy County, IA']","[187, 16, 25]","[12, 3, 4]","[1820, 155, 243]","[1402, 350, 467]","[1521, 294, 403]"
 48140,1650,"['      Marathon County, WI']",[223],[28],[1650],[1650],[1650]
-48260,920,"['      Jefferson County, OH', '      Brooke County, WV', '      Hancock County, WV']","[171, 72]","[20, 11]","[647, 272]","[593, 326]","[632, 287]"
+48260,920,"['      Jefferson County, OH', '      Brooke County, WV', '      Hancock County, WV']","[171, 72]","[20, 11]","[647, 272]","[593, 326]","[608, 311]"
 48300,1330,"['      Chelan County, WA', '      Douglas County, WA']",[176],[20],[1330],[1330],[1330]
-48540,1810,"['      Belmont County, OH', '      Marshall County, WV', '      Ohio County, WV']","[100, 59, 72]","[0, 9, 13]","[783, 462, 564]","[0, 740, 1069]","[559, 541, 708]"
-48620,6010,"['      Butler County, KS', '      Harvey County, KS', '      Sedgwick County, KS', '      Sumner County, KS']","[55, 74, 46, 25]","[10, 6, 18, 4]","[1652, 2223, 1382, 751]","[1581, 948, 2846, 632]","[1632, 1859, 1800, 717]"
-48660,1380,"['      Archer County, TX', '      Clay County, TX', '      Wichita County, TX']","[25, 31]","[4, 6]","[616, 763]","[552, 828]","[597, 782]"
+48540,1810,"['      Belmont County, OH', '      Marshall County, WV', '      Ohio County, WV']","[100, 59, 72]","[0, 9, 13]","[783, 462, 564]","[0, 740, 1069]","[223, 660, 925]"
+48620,6010,"['      Butler County, KS', '      Harvey County, KS', '      Sedgwick County, KS', '      Sumner County, KS']","[55, 74, 46, 25]","[10, 6, 18, 4]","[1652, 2223, 1382, 751]","[1581, 948, 2846, 632]","[1601, 1313, 2428, 666]"
+48660,1380,"['      Archer County, TX', '      Clay County, TX', '      Wichita County, TX']","[25, 31]","[4, 6]","[616, 763]","[552, 828]","[570, 809]"
 48700,1190,"['      Lycoming County, PA']",[31],[0],[1190],[0],[1190]
-48900,3470,"['      Brunswick County, NC', '      New Hanover County, NC', '      Pender County, NC']","[40, 92, 25]","[0, 16, 4]","[884, 2033, 552]","[0, 2776, 694]","[631, 2245, 592]"
-49020,1540,"['      Frederick County, VA', '      Winchester city, VA', '      Hampshire County, WV']","[389, 14]","[48, 2]","[1486, 53]","[1478, 61]","[1484, 55]"
-49180,8890,"['      Davie County, NC', '      Forsyth County, NC', '      Stokes County, NC', '      Yadkin County, NC']","[50, 68, 25]","[9, 0, 4]","[3108, 4227, 1554]","[6154, 0, 2735]","[3978, 3019, 1891]"
+48900,3470,"['      Brunswick County, NC', '      New Hanover County, NC', '      Pender County, NC']","[40, 92, 25]","[0, 16, 4]","[884, 2033, 552]","[0, 2776, 694]","[252, 2563, 653]"
+49020,1540,"['      Frederick County, VA', '      Winchester city, VA', '      Hampshire County, WV']","[389, 14]","[48, 2]","[1486, 53]","[1478, 61]","[1480, 59]"
+49180,8890,"['      Davie County, NC', '      Forsyth County, NC', '      Stokes County, NC', '      Yadkin County, NC']","[50, 68, 25]","[9, 0, 4]","[3108, 4227, 1554]","[6154, 0, 2735]","[5284, 1207, 2397]"
 49420,1800,"['      Yakima County, WA']",[25],[7],[1800],[1800],[1800]
 49620,3050,"['      York County, PA']",[90],[0],[3050],[0],[3050]
-49660,4290,"['      Mahoning County, OH', '      Trumbull County, OH', '      Mercer County, PA']","[24, 76, 122]","[4, 0, 6]","[463, 1468, 2357]","[1716, 0, 2574]","[821, 1049, 2419]"
-49700,920,"['      Sutter County, CA', '      Yuba County, CA']","[14, 149]","[2, 24]","[79, 840]","[70, 849]","[76, 843]"
+49660,4290,"['      Mahoning County, OH', '      Trumbull County, OH', '      Mercer County, PA']","[24, 76, 122]","[4, 0, 6]","[463, 1468, 2357]","[1716, 0, 2574]","[1358, 419, 2512]"
+49700,920,"['      Sutter County, CA', '      Yuba County, CA']","[14, 149]","[2, 24]","[79, 840]","[70, 849]","[73, 846]"
 49740,1090,"['      Yuma County, AZ']",[406],[42],[1090],[1090],[1090]
