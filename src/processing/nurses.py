@@ -8,51 +8,41 @@ from collections import defaultdict
 DATADIR = '../../data'
 
 def get_cbsa_df():
-    # def get_field(line):
-    #     field = line[:5].strip()
-    #     if len(field) == 0:
-    #         field = None
-    #     return field, line[8:]
-
     datadir = os.path.join(DATADIR, 'geography')
-
-    # with open(os.path.join(datadir, '0312msa.txt'), 'rb') as f:
-    #     lines = f.readlines()
-    # lines = lines[11:-21] # skip headers and footers
-
-    # conversion = defaultdict(list)
-    # for line in lines:
-    #     line = line.decode('utf-8',errors='ignore').strip()
-    #     print(line)
-    #     if len(line) == 0: continue
-    #     cbsa, line = get_field(line)
-    #     div, line = get_field(line)
-    #     county, components = get_field(line)
-    #     if not county:
-    #         key = cbsa
-    #         conversion[key] = {'div': [], 'county': [], 'components': []}
-    #         continue
-    #     conversion[key]['div'].append(div)
-    #     conversion[key]['county'].append(county)
-    #     conversion[key]['components'].append(components)
-    df = pd.read_csv('../../data/geography/cbsa-est2019-alldata.csv', encoding='latin-1').astype({'CBSA': str})
+    df = pd.read_csv(os.path.join(datadir, 'cbsa-est2019-alldata.csv'), encoding='latin-1').astype({'CBSA': str})
     df = df.loc[:, ['CBSA', 'STCOU', 'NAME']].rename(columns={'CBSA': 'cbsa', 'STCOU': 'code', 'NAME': 'county_name'})
     df = df[df['code'].notna()].astype({'code': int}).astype({'code': str})
     df.code = df.apply(lambda x: '0' + x.code if len(x.code) < 5 else x.code, axis=1)
 
-
-    # df = pd.DataFrame(columns=['code', 'county_code', 'div_code', 'county_name'])
-    # for i, (k, v) in enumerate(conversion.items()):
-    #     df.loc[i] = [k, v['county'], v['div'], v['components']]
-
     cbsa_df = pd.read_csv(os.path.join(datadir, 'cbsa_codes.csv')).astype({'code': str})
     cbsa_df = cbsa_df.loc[:, ['code', 'title', 'category']].rename(columns={'code': 'cbsa'})
-    # import pdb; pdb.set_trace()
 
     df = pd.merge(cbsa_df, df, on='cbsa', how='inner')
-    # df = df[df.category == 'Metropolitan']
-    df.columns = ['cbsa', 'title', 'category', 'code', 'county_name']
+    df['county'] = df.apply(lambda x: x.county_name.split(', ')[0], axis=1)
+    df['state'] = df.apply(lambda x: x.county_name.split(', ')[1], axis=1)
+    df = df.loc[:, ['code', 'county', 'state', 'cbsa', 'title', 'category']]
 
+    def process_necta_county(entry):
+        if len(entry) == 1:
+            return '00' + entry
+        if len(entry) == 2:
+            return '0' + entry
+        return entry
+
+    def replace_necta(cbsa, necta):
+        if isinstance(necta, np.ndarray):
+            if len(necta) == 0:
+                return cbsa
+            return str(necta[0])
+        return cbsa
+
+    NE_STATES = ['CT', 'HI', 'MA', 'ME', 'NH', 'RI', 'VT']
+    necta_df = pd.read_excel(os.path.join(datadir, 'list3_2020.xls'), skiprows=2, skipfooter=4).astype({'FIPS State Code': str, 'FIPS County Code': str})
+    necta_df['FIPS County Code'] = necta_df.apply(lambda x: process_necta_county(x['FIPS County Code']), axis=1)
+    necta_df['county'] = necta_df.apply(lambda x: x['FIPS State Code'] + x['FIPS County Code'], axis=1)
+    df['necta'] = df.apply(lambda x: necta_df[necta_df.county == x.code]['NECTA Code'] if x.state in NE_STATES else np.nan, axis=1)
+    df.cbsa = df.apply(lambda x: replace_necta(x.cbsa, x.necta), axis=1)
+    df = df.loc[:, ['code', 'county', 'state', 'cbsa', 'title', 'category']]
     return df
 
 
@@ -71,20 +61,11 @@ def get_metarea_df():
     return df
 
 
-def disaggregate_to_county(county_df):
+def disaggregate_to_county():
     cbsa_df = get_cbsa_df()
     metarea_df = get_metarea_df().rename(columns={'area': 'cbsa'})
     df = pd.merge(metarea_df, cbsa_df, on='cbsa', how='inner').rename(columns={'county_code': 'code'})
-    df['county'] = df.apply(lambda x: x.county_name.split(', ')[0], axis=1)
-    df['state'] = df.apply(lambda x: x.county_name.split(', ')[1], axis=1)
-    df.drop('county_name', axis=1, inplace=True)
     df = df.loc[:, ['code', 'county', 'state', 'cbsa', 'title', 'category', 'occ_code', 'occ_title', 'tot_emp']]
-    # df = pd.DataFrame({
-    #       col:np.repeat(df[col].values, df['code'].str.len())
-    #       for col in df.columns.drop('code')}
-    #     ).assign(**{'code':np.concatenate(df['code'].values)})[df.columns]
-    # df = pd.merge(df, county_df, on='code', how='inner')
-    # df = df.loc[:, ['code', 'county', 'abbrev', 'state', 'cbsa', 'title', 'category', 'occ_code', 'occ_title', 'tot_emp']].rename(columns={'area': 'cbsa'})
     return df
 
 
@@ -108,13 +89,10 @@ def get_population_df(county_df):
 
 
 def get_hospital_beds(county_df):
-    def _clean_fips(entry):
-        entry = entry.split('.0')[0]
-        return '0' + entry if len(entry) < 5 else entry
-
-    hospital_bed_df = pd.read_csv(os.path.join(DATADIR, 'hospitals/Definitive_Healthcare__USA_Hospital_Beds.csv')).astype({'FIPS': str})
+    hospital_bed_df = pd.read_csv(os.path.join(DATADIR, 'hospitals/Definitive_Healthcare__USA_Hospital_Beds.csv'))
+    hospital_bed_df = hospital_bed_df[hospital_bed_df.FIPS.notna()].astype({'FIPS': int}).astype({'FIPS': str})
+    hospital_bed_df.FIPS = hospital_bed_df.apply(lambda x: '0' + x.FIPS if len(x.FIPS) < 5 else x.FIPS, axis=1)
     hospital_bed_df.rename(columns={'FIPS': 'code', 'NUM_STAFFED_BEDS': 'staffed_beds', 'NUM_ICU_BEDS': 'icu_beds'}, inplace=True)
-    hospital_bed_df.code = hospital_bed_df.apply(lambda x: _clean_fips(x.code), axis=1)
     hospital_bed_df.staffed_beds = hospital_bed_df.staffed_beds.apply(pd.to_numeric, errors='coerce').fillna(0, downcast='infer')
     hospital_bed_df.icu_beds = hospital_bed_df.icu_beds.apply(pd.to_numeric, errors='coerce').fillna(0, downcast='infer')
     df = pd.merge(hospital_bed_df, county_df, on='code', how='inner')
@@ -122,16 +100,14 @@ def get_hospital_beds(county_df):
 
 
 def disaggregate_df(df, feature_df, feature):
-    def process_entry(code, df, feature):
+    def process_entry(code, state, df, feature):
         if isinstance(code, str):
             if feature == 'population':
                 return df[df.code == str(code)][2019].iat[0].astype(int) if code in df.code.tolist() else 0
-                # return [df[df.code == str(code)][2019].iat[0].astype(int) for code in entry if str(code) in df.code.tolist()]
             elif 'beds' in feature:
                 return df[df.code == str(code)][feature].iat[0].astype(int) if code in df.code.tolist() else 0
-                # return [df[df.code == str(code)][feature].iat[0].astype(int) for code in entry if str(code) in df.code.tolist()]
         return np.nan
-    df[feature] = df.apply(lambda x: process_entry(x.code, feature_df, feature), axis=1)
+    df[feature] = df.apply(lambda x: process_entry(x.code, x.state, feature_df, feature), axis=1)
     return df
 
 
@@ -172,16 +148,14 @@ def weighted_distribution(df):
 
 def main():
     features = ['staffed_beds', 'icu_beds']
-    county_df = get_county_df()
-    df = disaggregate_to_county(county_df)
-    population_df = get_population_df(county_df)
-    hospital_bed_df = get_hospital_beds(county_df)
+    df = disaggregate_to_county()
+    population_df = get_population_df(df)
+    hospital_bed_df = get_hospital_beds(df)
     for feature in features:
         df = disaggregate_df(df, hospital_bed_df, feature)
         df = distribute_resources(df, feature)
     df = weighted_distribution(df)
 
-    # df = df.loc[:, ['area', 'tot_emp', 'county_name', 'staffed_beds', 'icu_beds', 'emp_distributed_by_staffed_beds', 'emp_distributed_by_icu_beds', 'weighted_emp_distribution']]
     df.to_csv(os.path.join(DATADIR, 'nurses/deaggregated_by_hospital_beds.csv'), index=False)
 
 if __name__ == '__main__':

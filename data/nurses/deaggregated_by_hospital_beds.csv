@@ -302,15 +302,15 @@ code,county,state,cbsa,title,category,occ_code,occ_title,tot_emp,staffed_beds,em
 17115,Macon County,IL,19500,"Decatur, IL",Metropolitan Area,29-1141,Registered Nurses,1160,202,1160,22,1160,1160
 12035,Flagler County,FL,19660,"Deltona-Daytona Beach-Ormond Beach, FL",Metropolitan Area,29-1141,Registered Nurses,5120,99,3811,18,3544,3620
 12127,Volusia County,FL,19660,"Deltona-Daytona Beach-Ormond Beach, FL",Metropolitan Area,29-1141,Registered Nurses,5120,34,1308,8,1575,1499
-08001,Adams County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,0,0,1,2700,1929
-08005,Arapahoe County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,40,11537,0,0,3296
-08014,Broomfield County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,0,0,0,0,0
+08001,Adams County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,0,0,1,1980,1414
+08005,Arapahoe County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,40,9507,0,0,2716
+08014,Broomfield County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,22,5228,4,7922,7153
 08019,Clear Creek County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,0,0,0,0,0
 08031,Denver County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,0,0,0,0,0
-08035,Douglas County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,53,15287,8,21607,19801
+08035,Douglas County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,53,12597,8,15845,14917
 08039,Elbert County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,0,0,0,0,0
 08047,Gilpin County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,0,0,0,0,0
-08059,Jefferson County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,10,2884,2,5401,4682
+08059,Jefferson County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,10,2376,2,3961,3508
 08093,Park County,CO,19740,"Denver-Aurora-Broomfield, CO",Metropolitan Area,29-1141,Registered Nurses,29710,0,0,0,0,0
 19049,Dallas County,IA,19780,"Des Moines-West Des Moines, IA",Metropolitan Area,29-1141,Registered Nurses,7280,25,1189,4,1078,1110
 19077,Guthrie County,IA,19780,"Des Moines-West Des Moines, IA",Metropolitan Area,29-1141,Registered Nurses,7280,25,1189,4,1078,1110
@@ -1098,3 +1098,26 @@ code,county,state,cbsa,title,category,occ_code,occ_title,tot_emp,staffed_beds,em
 06101,Sutter County,CA,49700,"Yuba City, CA",Metropolitan Area,29-1141,Registered Nurses,920,14,79,2,70,73
 06115,Yuba County,CA,49700,"Yuba City, CA",Metropolitan Area,29-1141,Registered Nurses,920,149,840,24,849,846
 04027,Yuma County,AZ,49740,"Yuma, AZ",Metropolitan Area,29-1141,Registered Nurses,1090,406,1090,42,1090,1090
+23019,Penobscot County,ME,70750,"Bangor, ME",Metropolitan Area,29-1141,Registered Nurses,2240,68,2240,1,2240,2240
+25001,Barnstable County,MA,70900,"Barnstable Town, MA",Metropolitan Area,29-1141,Registered Nurses,2490,60,2490,1,2490,2490
+25023,Plymouth County,MA,70900,"Boston-Cambridge-Quincy, MA-NH",Metropolitan Area,29-1141,Registered Nurses,2490,0,0,0,0,0
+25021,Norfolk County,MA,71650,"Boston-Cambridge-Quincy, MA-NH",Metropolitan Area,29-1141,Registered Nurses,58690,0,0,0,0,0
+25025,Suffolk County,MA,71650,"Boston-Cambridge-Quincy, MA-NH",Metropolitan Area,29-1141,Registered Nurses,58690,0,0,72,45931,32808
+25009,Essex County,MA,71650,"Boston-Cambridge-Quincy, MA-NH",Metropolitan Area,29-1141,Registered Nurses,58690,189,31783,19,12120,17738
+25017,Middlesex County,MA,71650,"Boston-Cambridge-Quincy, MA-NH",Metropolitan Area,29-1141,Registered Nurses,58690,0,0,1,637,455
+33015,Rockingham County,NH,71650,"Boston-Cambridge-Quincy, MA-NH",Metropolitan Area,29-1141,Registered Nurses,58690,20,3363,0,0,960
+33011,Hillsborough County,NH,71650,"Manchester-Nashua, NH",Metropolitan Area,29-1141,Registered Nurses,58690,20,3363,0,0,960
+25005,Bristol County,MA,71650,"Providence-New Bedford-Fall River, RI-MA",Metropolitan Area,29-1141,Registered Nurses,58690,120,20179,0,0,5765
+50007,Chittenden County,VT,72400,"Burlington-South Burlington, VT",Metropolitan Area,29-1141,Registered Nurses,2900,0,0,0,0,0
+50011,Franklin County,VT,72400,"Burlington-South Burlington, VT",Metropolitan Area,29-1141,Registered Nurses,2900,53,2900,9,2900,2900
+50013,Grand Isle County,VT,72400,"Burlington-South Burlington, VT",Metropolitan Area,29-1141,Registered Nurses,2900,0,0,0,0,0
+33017,Strafford County,NH,73050,"Boston-Cambridge-Quincy, MA-NH",Metropolitan Area,29-1141,Registered Nurses,1270,118,580,11,698,664
+23031,York County,ME,73050,"Portland-South Portland-Biddeford, ME",Metropolitan Area,29-1141,Registered Nurses,1270,140,689,9,571,605
+23001,Androscoggin County,ME,74650,"Lewiston-Auburn, ME",Metropolitan Area,29-1141,Registered Nurses,1240,221,1240,20,1240,1240
+44009,Washington County,RI,76450,"Providence-New Bedford-Fall River, RI-MA",Metropolitan Area,29-1141,Registered Nurses,2440,75,2440,9,2440,2440
+44001,Bristol County,RI,77200,"Providence-New Bedford-Fall River, RI-MA",Metropolitan Area,29-1141,Registered Nurses,15070,0,0,0,0,0
+44003,Kent County,RI,77200,"Providence-New Bedford-Fall River, RI-MA",Metropolitan Area,29-1141,Registered Nurses,15070,323,9774,15,8372,8772
+44005,Newport County,RI,77200,"Providence-New Bedford-Fall River, RI-MA",Metropolitan Area,29-1141,Registered Nurses,15070,102,3086,10,5581,4868
+44007,Providence County,RI,77200,"Providence-New Bedford-Fall River, RI-MA",Metropolitan Area,29-1141,Registered Nurses,15070,73,2209,2,1116,1428
+25013,Hampden County,MA,78100,"Springfield, MA",Metropolitan Area,29-1141,Registered Nurses,7280,53,7280,0,0,7280
+25015,Hampshire County,MA,78100,"Springfield, MA",Metropolitan Area,29-1141,Registered Nurses,7280,0,0,0,0,0
