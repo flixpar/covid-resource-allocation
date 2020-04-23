@@ -36,8 +36,9 @@ def get_cbsa_df():
             return str(necta[0])
         return cbsa
 
-    NE_STATES = ['CT', 'HI', 'MA', 'ME', 'NH', 'RI', 'VT']
+    NE_STATES = ['CT', 'MA', 'ME', 'NH', 'RI', 'VT']
     necta_df = pd.read_excel(os.path.join(datadir, 'list3_2020.xls'), skiprows=2, skipfooter=4).astype({'FIPS State Code': str, 'FIPS County Code': str})
+    necta_df['FIPS State Code'] = necta_df.apply(lambda x: '0' + x['FIPS State Code'] if len(x['FIPS State Code']) < 2 else x['FIPS State Code'], axis=1)
     necta_df['FIPS County Code'] = necta_df.apply(lambda x: process_necta_county(x['FIPS County Code']), axis=1)
     necta_df['county'] = necta_df.apply(lambda x: x['FIPS State Code'] + x['FIPS County Code'], axis=1)
     df['necta'] = df.apply(lambda x: necta_df[necta_df.county == x.code]['NECTA Code'] if x.state in NE_STATES else np.nan, axis=1)

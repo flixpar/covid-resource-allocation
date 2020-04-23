@@ -1108,11 +1108,19 @@ code,county,state,cbsa,title,category,occ_code,occ_title,tot_emp,staffed_beds,em
 33015,Rockingham County,NH,71650,"Boston-Cambridge-Quincy, MA-NH",Metropolitan Area,29-1141,Registered Nurses,58690,20,3363,0,0,960
 33011,Hillsborough County,NH,71650,"Manchester-Nashua, NH",Metropolitan Area,29-1141,Registered Nurses,58690,20,3363,0,0,960
 25005,Bristol County,MA,71650,"Providence-New Bedford-Fall River, RI-MA",Metropolitan Area,29-1141,Registered Nurses,58690,120,20179,0,0,5765
+09001,Fairfield County,CT,71950,"Bridgeport-Stamford-Norwalk, CT",Metropolitan Area,29-1141,Registered Nurses,7450,288,7450,36,7450,7450
+09009,New Haven County,CT,71950,"New Haven-Milford, CT",Metropolitan Area,29-1141,Registered Nurses,7450,0,0,0,0,0
 50007,Chittenden County,VT,72400,"Burlington-South Burlington, VT",Metropolitan Area,29-1141,Registered Nurses,2900,0,0,0,0,0
 50011,Franklin County,VT,72400,"Burlington-South Burlington, VT",Metropolitan Area,29-1141,Registered Nurses,2900,53,2900,9,2900,2900
 50013,Grand Isle County,VT,72400,"Burlington-South Burlington, VT",Metropolitan Area,29-1141,Registered Nurses,2900,0,0,0,0,0
+09005,Litchfield County,CT,72850,"Torrington, CT",Micropolitan Area,29-1141,Registered Nurses,1510,66,1510,11,1510,1510
 33017,Strafford County,NH,73050,"Boston-Cambridge-Quincy, MA-NH",Metropolitan Area,29-1141,Registered Nurses,1270,118,580,11,698,664
 23031,York County,ME,73050,"Portland-South Portland-Biddeford, ME",Metropolitan Area,29-1141,Registered Nurses,1270,140,689,9,571,605
+09003,Hartford County,CT,73450,"Hartford-West Hartford-East Hartford, CT",Metropolitan Area,29-1141,Registered Nurses,12140,16,669,3,1734,1430
+09007,Middlesex County,CT,73450,"Hartford-West Hartford-East Hartford, CT",Metropolitan Area,29-1141,Registered Nurses,12140,50,2093,0,0,598
+09013,Tolland County,CT,73450,"Hartford-West Hartford-East Hartford, CT",Metropolitan Area,29-1141,Registered Nurses,12140,102,4269,9,5202,4936
+09011,New London County,CT,73450,"Norwich-New London, CT",Metropolitan Area,29-1141,Registered Nurses,12140,18,753,3,1734,1454
+09015,Windham County,CT,73450,"Worcester, MA",Metropolitan Area,29-1141,Registered Nurses,12140,104,4353,6,3468,3721
 23001,Androscoggin County,ME,74650,"Lewiston-Auburn, ME",Metropolitan Area,29-1141,Registered Nurses,1240,221,1240,20,1240,1240
 44009,Washington County,RI,76450,"Providence-New Bedford-Fall River, RI-MA",Metropolitan Area,29-1141,Registered Nurses,2440,75,2440,9,2440,2440
 44001,Bristol County,RI,77200,"Providence-New Bedford-Fall River, RI-MA",Metropolitan Area,29-1141,Registered Nurses,15070,0,0,0,0,0
