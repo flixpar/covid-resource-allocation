@@ -4,7 +4,7 @@ using CSV
 using Dates
 using DataFrames
 
-export compute_ihme_forecast_net
+export compute_ihme_forecast, compute_ihme_forecast_net
 
 basepath = normpath(@__DIR__, "../../")
 
@@ -52,8 +52,21 @@ function compute_ihme_forecast_net(start_date, end_date, states)
     filter!(row -> start_date <= row.date <= end_date, forecast_local)
     forecast_by_state = groupby(forecast_local, :state, sort=true)
     patients_net = vcat([f.allbed_mean_net' for f in forecast_by_state]...)
+    patients_net = Float32.(patients_net)
 
     return patients_start, patients_net
+end
+
+function compute_ihme_forecast(start_date, end_date, states)
+    @assert states == sort(states)
+
+    forecast_local = filter(row -> row.state in states, ihme_forecast)
+    filter!(row -> start_date <= row.date <= end_date, forecast_local)
+
+    forecast_by_state = groupby(forecast_local, :state, sort=true)
+    patients = vcat([f.allbed_mean' for f in forecast_by_state]...)
+
+    return Float32.(patients)
 end
 
 end;
