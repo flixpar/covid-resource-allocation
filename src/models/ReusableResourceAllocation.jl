@@ -1,8 +1,13 @@
+module ReusableResourceAllocation
+
 using JuMP
 using Gurobi
 
 using LinearAlgebra
 using MathOptInterface
+
+export patient_allocation, reusable_resource_allocation
+
 
 function patient_allocation(
         beds::Array{Float32,1},
@@ -25,7 +30,7 @@ function patient_allocation(
 		m=m,
 		verbose=verbose,
 	)
-end;
+end
 
 function reusable_resource_allocation(
         initial_supply::Array{Float32,1},
@@ -97,7 +102,7 @@ function reusable_resource_allocation(
 
     optimize!(model)
     return model
-end;
+end
 
 
 if abspath(PROGRAM_FILE) == @__FILE__
@@ -128,4 +133,6 @@ if abspath(PROGRAM_FILE) == @__FILE__
 	)
 	println("total sent: ", sum(sent))
 	println("total shortage: ", total_shortage)
+end
+
 end;

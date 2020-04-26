@@ -1,8 +1,12 @@
+module DisposableResourceAllocation
+
 using JuMP
 using Gurobi
 
 using LinearAlgebra
 using MathOptInterface
+
+export disposable_resource_allocation
 
 
 function disposable_resource_allocation(
@@ -69,7 +73,7 @@ function disposable_resource_allocation(
 
     optimize!(model)
     return model
-end;
+end
 
 
 if abspath(PROGRAM_FILE) == @__FILE__
@@ -103,4 +107,6 @@ if abspath(PROGRAM_FILE) == @__FILE__
 	println("total sent: ", sum(sent))
 	println("total used: ", sum(used))
 	println("total shortage: ", total_shortage)
+end
+
 end;
