@@ -4,12 +4,12 @@ using CSV
 using Dates
 using DataFrames
 
-export compute_beds
+export compute_beds, compute_beds_by_type
 
 basepath = normpath(@__DIR__, "../../")
 
 ########################
-######## Beds ##########
+###### Gov Data ########
 ########################
 
 let
@@ -40,6 +40,39 @@ function compute_beds(states; pct_beds_available::Real=0.25)
     beds_df = filter(row -> row.STATE in states, beds_data)
     beds = beds_df.BEDS_sum * pct_beds_available
     return Float32.(beds)
+end
+
+###########################
+## Definitive Healthcare ##
+###########################
+
+let
+	global beds_data_defininitive
+
+	beds_data_defininitive = CSV.read(joinpath(basepath, "data/hospitals/Definitive_Healthcare__USA_Hospital_Beds.csv"), copycols=true)
+	filter!(row -> !(row.HOSPITAL_TYPE in ["Psychiatric Hospital", "Rehabilitation Hospital"]), beds_data_defininitive)
+	filter!(row -> !ismissing(row.HQ_STATE), beds_data_defininitive)
+end
+
+function compute_beds_by_type(states::Array{String,1}; bed_type::Symbol=:staffed)
+    @assert states == sort(states)
+
+	bed_type_cvt = Dict(
+		:staffed => :NUM_STAFFED_BEDS,
+		:licensed => :NUM_LICENSED_BEDS,
+		:icu => :NUM_ICU_BEDS,
+		:adult_icu => :ADULT_ICU_BEDS,
+	)
+	col = bed_type_cvt[bed_type]
+
+	beds_df = filter(row -> row.HQ_STATE in states, beds_data_defininitive)
+	filter!(row -> !ismissing(row[col]), beds_df)
+	filter!(row -> row[col] > 0, beds_df)
+
+	beds_df = by(beds_df, :HQ_STATE, beds_selected = (col => sum))
+	sort!(beds_df, :HQ_STATE)
+
+    return Float32.(beds_df.beds_selected)
 end
 
 end;
