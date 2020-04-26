@@ -18,3 +18,5 @@ __pycache__/
 ### Other ###
 backup/
 rawdata/
+results/
+*.pkl
