@@ -62,7 +62,7 @@ function disposable_resource_allocation(
 
     if send_wait_period > 0
         @constraint(model, [i=1:N,t=1:T-1],
-			[sum(sent[:,i,t]), sum(sent[i,:,t+1:min(t+send_wait_period,T)])] in MOI.SOS1([1.0, 1.0])
+			[sum(sent[:,i,t]), sum(sent[i,:,t:min(t+send_wait_period,T)])] in MOI.SOS1([1.0, 1.0])
 		)
     end
 
