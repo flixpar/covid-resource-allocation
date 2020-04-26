@@ -15,8 +15,11 @@ function patient_allocation(
         net_patients::Array{Float32,2},
         adj_matrix::BitArray{2};
         send_new_only::Bool=true,
-        send_wait_period::Int=10,
-		m::Real=1e-5,
+        send_wait_period::Int=0,
+		min_send_amt::Real=0,
+		smoothness_penalty::Real=0,
+		setup_cost::Real=0,
+		sent_penalty::Real=0,
 		verbose::Bool=false,
 )
 	return reusable_resource_allocation(
@@ -27,7 +30,10 @@ function patient_allocation(
 		objective=:overflow,
 		send_new_only=send_new_only,
 		send_wait_period=send_wait_period,
-		m=m,
+		min_send_amt=min_send_amt,
+		smoothness_penalty=smoothness_penalty,
+		setup_cost=setup_cost,
+		sent_penalty=sent_penalty,
 		verbose=verbose,
 	)
 end
@@ -38,9 +44,12 @@ function reusable_resource_allocation(
 		demand::Array{Float32,2},
         adj_matrix::BitArray{2};
 		objective::Symbol=:shortage,
-		send_new_only::Bool=true,
-        send_wait_period::Int=10,
-		m::Real=1e-5,
+		send_new_only::Bool=false,
+        send_wait_period::Int=0,
+		min_send_amt::Real=0,
+		smoothness_penalty::Real=0,
+		setup_cost::Real=0,
+		sent_penalty::Real=0,
 		verbose::Bool=false,
 )
     N, T = size(supply)
@@ -54,10 +63,33 @@ function reusable_resource_allocation(
     model = Model(Gurobi.Optimizer)
     if !verbose set_silent(model) end
 
-    @variable(model, sent[1:N,1:N,1:T] >= 0)
+	@variable(model, sent[1:N,1:N,1:T])
     @variable(model, obj_dummy[1:N,1:T] >= 0)
 
-    @objective(model, Min, sum(obj_dummy) + m*sum(sent))
+	if min_send_amt <= 0
+		@constraint(model, sent .>= 0)
+	else
+		@constraint(model, [i=1:N,j=1:N,t=1:T], sent[i,j,t] in MOI.Semicontinuous(Float64(min_send_amt), Inf))
+	end
+
+	objective = @expression(model, sum(obj_dummy))
+	if sent_penalty > 0
+		add_to_expression!(objective, sent_penalty*sum(sent))
+	end
+	if smoothness_penalty > 0
+		@variable(model, smoothness_dummy[i=1:N,j=1:N,t=1:T-1] >= 0)
+		@constraint(model, [t=1:T-1],  (sent[:,:,t] - sent[:,:,t+1]) .<= smoothness_dummy[:,:,t])
+		@constraint(model, [t=1:T-1], -(sent[:,:,t] - sent[:,:,t+1]) .<= smoothness_dummy[:,:,t])
+
+		add_to_expression!(objective, smoothness_penalty * sum(smoothness_dummy))
+		add_to_expression!(objective, smoothness_penalty * sum(sent[:,:,1]))
+	end
+	if setup_cost > 0
+		@variable(model, setup_dummy[i=1:N,j=i+1:N], Bin)
+		@constraint(model, [i=1:N,j=i+1:N], [1-setup_dummy[i,j], sum(sent[i,j,:])+sum(sent[j,i,:])] in MOI.SOS1([1.0, 1.0]))
+		add_to_expression!(objective, setup_cost*sum(setup_dummy))
+	end
+	@objective(model, Min, objective)
 
 	if send_new_only
         @constraint(model, [t=1:T],
