@@ -15,7 +15,7 @@ function patient_allocation(
         net_patients::Array{Float32,2},
         adj_matrix::BitArray{2};
         send_new_only::Bool=true,
-        send_wait_period::Int=0,
+        sendrecieve_switch_time::Int=0,
 		min_send_amt::Real=0,
 		smoothness_penalty::Real=0,
 		setup_cost::Real=0,
@@ -29,7 +29,7 @@ function patient_allocation(
 		adj_matrix,
 		objective=:overflow,
 		send_new_only=send_new_only,
-		send_wait_period=send_wait_period,
+		sendrecieve_switch_time=sendrecieve_switch_time,
 		min_send_amt=min_send_amt,
 		smoothness_penalty=smoothness_penalty,
 		setup_cost=setup_cost,
@@ -45,7 +45,7 @@ function reusable_resource_allocation(
         adj_matrix::BitArray{2};
 		objective::Symbol=:shortage,
 		send_new_only::Bool=false,
-        send_wait_period::Int=0,
+        sendrecieve_switch_time::Int=0,
 		min_send_amt::Real=0,
 		smoothness_penalty::Real=0,
 		setup_cost::Real=0,
@@ -113,10 +113,13 @@ function reusable_resource_allocation(
         end
     end
 
-    if send_wait_period > 0
+    if sendrecieve_switch_time > 0
         @constraint(model, [i=1:N,t=1:T-1],
-			[sum(sent[:,i,t]), sum(sent[i,:,t:min(t+send_wait_period,T)])] in MOI.SOS1([1.0, 1.0])
+			[sum(sent[:,i,t]), sum(sent[i,:,t:min(t+sendrecieve_switch_time,T)])] in MOI.SOS1([1.0, 1.0])
 		)
+		@constraint(model, [i=1:N,t=1:T-1],
+            [sum(sent[:,i,t:min(t+sendrecieve_switch_time,T)]), sum(sent[i,:,t])] in MOI.SOS1([1.0, 1.0])
+        )
     end
 
 	flip_sign = (objective == :shortage) ? 1 : -1
