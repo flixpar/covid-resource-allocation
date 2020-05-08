@@ -6,37 +6,8 @@ using Gurobi
 using LinearAlgebra
 using MathOptInterface
 
-export patient_allocation, reusable_resource_allocation
+export reusable_resource_allocation, patient_allocation_net
 
-
-function patient_allocation(
-        beds::Array{Float32,1},
-        initial_patients::Array{Float32,1},
-        net_patients::Array{Float32,2},
-        adj_matrix::BitArray{2};
-        send_new_only::Bool=true,
-        sendrecieve_switch_time::Int=0,
-		min_send_amt::Real=0,
-		smoothness_penalty::Real=0,
-		setup_cost::Real=0,
-		sent_penalty::Real=0,
-		verbose::Bool=false,
-)
-	return reusable_resource_allocation(
-		initial_patients,
-		net_patients,
-		repeat(beds, 1, size(net_patients, 2)),
-		adj_matrix,
-		objective=:overflow,
-		send_new_only=send_new_only,
-		sendrecieve_switch_time=sendrecieve_switch_time,
-		min_send_amt=min_send_amt,
-		smoothness_penalty=smoothness_penalty,
-		setup_cost=setup_cost,
-		sent_penalty=sent_penalty,
-		verbose=verbose,
-	)
-end
 
 function reusable_resource_allocation(
         initial_supply::Array{Float32,1},
@@ -137,6 +108,36 @@ function reusable_resource_allocation(
 
     optimize!(model)
     return model
+end
+
+
+function patient_allocation_net(
+        beds::Array{Float32,1},
+        initial_patients::Array{Float32,1},
+        net_patients::Array{Float32,2},
+        adj_matrix::BitArray{2};
+        send_new_only::Bool=true,
+        sendrecieve_switch_time::Int=0,
+		min_send_amt::Real=0,
+		smoothness_penalty::Real=0,
+		setup_cost::Real=0,
+		sent_penalty::Real=0,
+		verbose::Bool=false,
+)
+	return reusable_resource_allocation(
+		initial_patients,
+		net_patients,
+		repeat(beds, 1, size(net_patients, 2)),
+		adj_matrix,
+		objective=:overflow,
+		send_new_only=send_new_only,
+		sendrecieve_switch_time=sendrecieve_switch_time,
+		min_send_amt=min_send_amt,
+		smoothness_penalty=smoothness_penalty,
+		setup_cost=setup_cost,
+		sent_penalty=sent_penalty,
+		verbose=verbose,
+	)
 end
 
 
