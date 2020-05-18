@@ -5,48 +5,92 @@ using Dates
 using DataFrames
 using LinearAlgebra: diagm
 
-export compute_adjacencies, fully_connected
-export haversine_distance_matrix
+export adjacencies
 
 basepath = normpath(@__DIR__, "../../")
+
+########################
+######### Data #########
+########################
+
+function load_states_google(;states::Array{String,1}=String[], method::Symbol=:cities)::Tuple{Array{Int,2},Array{String,1}}
+    @assert method in [:states, :cities]
+    if (method == :states) fn = "state_dist_google"
+    else fn = "state_cities_dist_google"
+    end
+
+    dist_df = CSV.read(joinpath(basepath, "data/geography/$(fn).csv"), copycols=true)
+
+    if (method == :cities) state_abbrev_list = map(s -> String(s)[end-1:end], names(dist_df))
+    else state_abbrev_list = names(dist_df)[:]
+    end
+
+    if !isempty(states)
+        @assert states == sort(states)
+        ind = [findfirst(x -> x == s, state_abbrev_list) for s in states]
+    else
+        ind = sortperm(state_abbrev_list)
+    end
+
+    state_abbrev_list = state_abbrev_list[ind]
+    dist_matrix = Matrix(dist_df)[ind, ind]
+
+    return dist_matrix, state_abbrev_list
+end
+
+function load_states_latlong(;states::Array{String,1}=String[])::Tuple{Array{Float64,2},Array{String,1}}
+    state_data = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
+    if !isempty(states) filter!(row -> row.abbrev in states, state_data) end
+    sort!(state_data, :abbrev)
+    latlong = hcat(state_data.lat[:], state_data.long[:])
+    state_abbrev = state_data.abbrev[:]
+    return latlong, state_abbrev
+end
+
+function load_counties_latlong(;counties::Array{Int,1}=Int[])::Tuple{Array{Float64,2},Array{Int,1}}
+    county_data = CSV.read(joinpath(basepath, "data/geography/counties.csv"), copycols=true)
+    if !isempty(counties) filter!(row -> row.fips in counties, county_data) end
+    latlong = hcat(county_data.lat[:], county_data.long[:])
+    county_fips = county_data.fips[:]
+    return latlong, county_fips
+end
 
 ########################
 ###### Adjacency #######
 ########################
 
-let
-    global dist_matrix, state_abbrev_list
-
-    dist_df = CSV.read(joinpath(basepath, "data/geography/state_cities_dist_google.csv"), copycols=true)
-    dist_data = Matrix(dist_df)
-
-    state_abbrev_list = map(s -> String(s)[end-1:end], names(dist_df))
-    order = sortperm(state_abbrev_list)
-    state_abbrev_list = state_abbrev_list[order]
-
-    dist_matrix = dist_data[order, order]
-end
-
-function compute_adjacencies(states; hrs::Real=4, self_edges::Bool=false)
-    @assert states == sort(states)
-    ind = [findfirst(x -> x == s, state_abbrev_list) for s in states]
-    dist = dist_matrix[ind, ind]
-
-    dist_threshold = 3600 * hrs
-    adj_matrix = 0 .< dist .<= dist_threshold
+function adjacencies(locations::Array; level::Symbol=:state, source::Symbol=:google, threshold::Real=4, self_edges::Bool=false)::BitArray{2}
+    if source == :fullyconnected
+        return fully_connected(length(locations), self_edges)
+    elseif level == :state && source == :google
+        dist_matrix, all_states = load_states_google(states=locations)
+        @assert all_states == locations
+    elseif level == :state && source == :original
+        error("Not yet implemented.")
+    elseif level == :state && source == :latlong
+        latlong, all_states = load_states_latlong(states=locations)
+        @assert all_states == locations
+        dist_matrix = haversine_distance_matrix(latlong)
+    elseif level == :county
+        latlong, all_fips = load_counties_latlong(counties=locations)
+        @assert all_fips == locations
+        dist_matrix = haversine_distance_matrix(latlong)
+    else
+        error("Invalid parameters to compute_adjacencies.")
+    end
 
     if self_edges
-        adj = BitArray(adj + diagm(ones(Bool, length(states))))
+        adj_matrix = 0 .<= dist_matrix .<= 3600 * threshold
+    else
+        adj_matrix = 0 .<  dist_matrix .<= 3600 * threshold
     end
 
     return adj_matrix
 end
 
-function fully_connected(n::Int; self_edges::Bool=false)
-    if (self_edges) return BitArray(ones(Bool, n, n)) end
-    adj = BitArray(ones(Bool, n, n) - diagm(ones(Bool, n)))
-    return adj
-end
+########################
+###### Haversine #######
+########################
 
 function haversine_distance(lat1, lon1, lat2, lon2; dist_type=:time, speed_kph=100)
     R = 6371e3
@@ -73,12 +117,22 @@ function haversine_distance_matrix(locations::Array{Float64,2})
     distancematrix = zeros(Float32, N, N)
     for i in 1:N
         for j in i+1:N
-            dist = haversine_time(locations[i,:]..., locations[j,:]...)
+            dist = haversine_distance(locations[i,:]..., locations[j,:]...)
             distancematrix[i,j] = dist
             distancematrix[j,i] = dist
         end
     end
     return distancematrix
+end
+
+########################
+######## Other #########
+########################
+
+function fully_connected(n::Int; self_edges::Bool=false)
+    if (self_edges) return BitArray(ones(Bool, n, n)) end
+    adj = BitArray(ones(Bool, n, n) - diagm(ones(Bool, n)))
+    return adj
 end
 
 end;
