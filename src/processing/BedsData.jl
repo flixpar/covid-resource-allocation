@@ -4,75 +4,108 @@ using CSV
 using Dates
 using DataFrames
 
-export compute_beds, compute_beds_by_type
+export n_beds
 
 basepath = normpath(@__DIR__, "../../")
 
-########################
-###### Gov Data ########
-########################
+function n_beds(locations::Array; level::Symbol=:state, source::Symbol=:definitivehc, bed_type::Symbol=:all, pct_beds_available::Real=0.25)
+	if     level == :state    && source == :definitivehc
+		beds_data = load_definitivehc()
+		beds_data = definitivehc_filter!(beds_data, locations, level=level)
+		beds_data = definitivehc_select_type!(beds_data, bed_type=bed_type)
+		beds = definitivehc_aggregate(beds_data)
+	elseif level == :state    && source == :gov
+		@assert bed_type == :all
+		beds_data = load_gov()
+		beds = compute_beds_gov(beds_data, locations)
+	elseif level == :county   && source == :definitivehc
+		beds_data = load_definitivehc()
+		beds_data = definitivehc_filter!(beds_data, locations, level=level)
+		beds_data = definitivehc_select_type!(beds_data, bed_type=bed_type)
+		beds = definitivehc_aggregate(beds_data)
+	elseif level == :hospital && source == :definitivehc
+		beds_data = load_definitivehc()
+		beds_data = definitivehc_filter!(beds_data, locations, level=level)
+		beds_data = definitivehc_select_type!(beds_data, bed_type=bed_type)
+		sort!(beds_data, :selected_location)
+		beds = beds_data.selected_beds
+	else
+		error("Invalid parameters to compute_beds.")
+	end
 
-let
-    global beds_data
-
-    # load the beds data
-    beds_data = CSV.read(joinpath(basepath, "data/hospitals/hospital_locations.csv"), copycols=true)
-
-    # load state info
-    state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
-    state_abbrev_list = sort(state_list.abbrev)
-
-    # filter
-    filter!(row -> row.BEDS > 0, beds_data)
-    filter!(row -> row.STATE in state_abbrev_list, beds_data)
-    filter!(row -> row.TYPE == "GENERAL ACUTE CARE", beds_data)
-
-    # aggregate by state
-    beds_data = by(beds_data, :STATE, :BEDS => sum)
-
-    # reorder states
-    sort!(beds_data, :STATE)
-
+	return beds * Float32(pct_beds_available)
 end
 
-function compute_beds(states; pct_beds_available::Real=0.25)
+########################
+###### data.gov ########
+########################
+
+function load_gov()
+    beds_data = CSV.read(joinpath(basepath, "data/hospitals/gov.csv"), copycols=true)
+
+    filter!(row -> row.BEDS > 0, beds_data)
+    filter!(row -> row.TYPE == "GENERAL ACUTE CARE", beds_data)
+
+    beds_data = by(beds_data, :STATE, :BEDS => sum)
+    sort!(beds_data, :STATE)
+
+	return beds_data
+end
+
+function compute_beds_gov(beds_data::DataFrame, states::Array{String,1})
     @assert states == sort(states)
     beds_df = filter(row -> row.STATE in states, beds_data)
-    beds = beds_df.BEDS_sum * pct_beds_available
-    return Float32.(beds)
+    return Float32.(beds_df.BEDS_sum)
 end
 
 ###########################
 ## Definitive Healthcare ##
 ###########################
 
-let
-	global beds_data_defininitive
-
-	beds_data_defininitive = CSV.read(joinpath(basepath, "data/hospitals/Definitive_Healthcare__USA_Hospital_Beds.csv"), copycols=true)
-	filter!(row -> !(row.HOSPITAL_TYPE in ["Psychiatric Hospital", "Rehabilitation Hospital"]), beds_data_defininitive)
-	filter!(row -> !ismissing(row.HQ_STATE), beds_data_defininitive)
+function load_definitivehc()
+	beds_data = CSV.read(joinpath(basepath, "data/hospitals/definitivehc.csv"), copycols=true)
+	filter!(row -> !(row.HOSPITAL_TYPE in ["Psychiatric Hospital", "Rehabilitation Hospital"]), beds_data)
+	return beds_data
 end
 
-function compute_beds_by_type(states::Array{String,1}; bed_type::Symbol=:staffed)
-    @assert states == sort(states)
+function definitivehc_filter!(beds_data::DataFrame, locations::Array; level::Symbol=:state)
+	if level == :state
+		filter!(row -> !ismissing(row.HQ_STATE), beds_data)
+		beds_data.selected_location = beds_data.HQ_STATE
+	elseif level == :county
+		filter!(row -> !ismissing(row.FIPS), beds_data)
+		beds_data.selected_location = Int.(beds_data.FIPS)
+	elseif level == :hospital
+		filter!(row -> !ismissing(row.FIPS), beds_data)
+		beds_data.selected_location = Int.(beds_data.FIPS)
+		return beds_data
+	else
+		error("Invalid parameters.")
+	end
+	filter!(row -> row.selected_location in locations, beds_data)
+	return beds_data
+end
 
+function definitivehc_select_type!(beds_data::DataFrame; bed_type::Symbol=:all)
 	bed_type_cvt = Dict(
-		:staffed => :NUM_STAFFED_BEDS,
-		:licensed => :NUM_LICENSED_BEDS,
-		:icu => :NUM_ICU_BEDS,
+		:all       => :NUM_STAFFED_BEDS,
+		:staffed   => :NUM_STAFFED_BEDS,
+		:licensed  => :NUM_LICENSED_BEDS,
+		:icu       => :NUM_ICU_BEDS,
 		:adult_icu => :ADULT_ICU_BEDS,
 	)
 	col = bed_type_cvt[bed_type]
 
-	beds_df = filter(row -> row.HQ_STATE in states, beds_data_defininitive)
-	filter!(row -> !ismissing(row[col]), beds_df)
-	filter!(row -> row[col] > 0, beds_df)
+	filter!(row -> !ismissing(row[col]), beds_data)
+	filter!(row -> row[col] > 0, beds_data)
+	beds_data.selected_beds = beds_data[:,col]
+	return beds_data
+end
 
-	beds_df = by(beds_df, :HQ_STATE, beds_selected = (col => sum))
-	sort!(beds_df, :HQ_STATE)
-
-    return Float32.(beds_df.beds_selected)
+function definitivehc_aggregate(beds_data::DataFrame)
+	beds_data_agg = by(beds_data, :selected_location, selected_beds_agg = (:selected_beds => sum))
+	sort!(beds_data_agg, :selected_location)
+    return Float32.(beds_data_agg.selected_beds_agg)
 end
 
 end;
