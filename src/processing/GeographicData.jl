@@ -6,6 +6,7 @@ using DataFrames
 using LinearAlgebra: diagm
 
 export adjacencies
+export get_counties
 
 basepath = normpath(@__DIR__, "../../")
 
@@ -133,6 +134,12 @@ function fully_connected(n::Int; self_edges::Bool=false)
     if (self_edges) return BitArray(ones(Bool, n, n)) end
     adj = BitArray(ones(Bool, n, n) - diagm(ones(Bool, n)))
     return adj
+end
+
+function get_counties(states::Array{String,1})
+    county_data = CSV.read(joinpath(basepath, "data/geography/counties.csv"), copycols=true)
+    filter!(row -> row.state_abbrev in states, county_data)
+    return county_data.fips[:]
 end
 
 end;
