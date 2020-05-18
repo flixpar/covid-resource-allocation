@@ -82,7 +82,7 @@ function definitivehc_filter!(beds_data::DataFrame, locations::Array; level::Sym
 	else
 		error("Invalid parameters.")
 	end
-	filter!(row -> row.selected_location in locations, beds_data)
+	beds_data = filter(row -> row.selected_location in locations, beds_data)
 	return beds_data
 end
 
