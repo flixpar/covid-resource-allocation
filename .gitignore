@@ -5,6 +5,7 @@ __pycache__/
 
 ### Jupyter ###
 .ipynb_checkpoints
+.virtual_documents
 
 ### Editors ###
 .vscode/
