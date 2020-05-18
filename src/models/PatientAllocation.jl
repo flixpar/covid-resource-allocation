@@ -22,9 +22,9 @@ function patient_allocation(
         smoothness_penalty::Real=0,
         setup_cost::Real=0,
         sent_penalty::Real=0,
+        balancing_thresh::Real=1.0,
+        balancing_penalty::Real=0,
         verbose::Bool=false,
-        balancing_thresh::Int=100
-        balancing_penalty::Real=0
 )
     N, T = size(admitted_patients)
     @assert(size(initial_patients, 1) == N)
@@ -51,7 +51,7 @@ function patient_allocation(
     if sent_penalty > 0
         add_to_expression!(objective, sent_penalty*sum(sent))
     end
-    
+
     # Penalize for un-smoothness in transfer ammount if enabled
     if smoothness_penalty > 0
         @variable(model, smoothness_dummy[i=1:N,j=1:N,t=1:T-1] >= 0)
@@ -61,14 +61,13 @@ function patient_allocation(
         add_to_expression!(objective, smoothness_penalty * sum(smoothness_dummy))
         add_to_expression!(objective, smoothness_penalty * sum(sent[:,:,1]))
     end
-    
+
     # Penalize for setup if enabled
     if setup_cost > 0
         @variable(model, setup_dummy[i=1:N,j=i+1:N], Bin)
         @constraint(model, [i=1:N,j=i+1:N], [1-setup_dummy[i,j], sum(sent[i,j,:])+sum(sent[j,i,:])] in MOI.SOS1([1.0, 1.0]))
         add_to_expression!(objective, setup_cost*sum(setup_dummy))
     end
-    @objective(model, Min, objective)
 
     # Contrain transfers to only new patients if enabled
     if send_new_only
@@ -90,7 +89,7 @@ function patient_allocation(
     for i = 1:N
         for j = 1:N
             if ~adj_matrix[i,j]
-                @constraint(model, sum(sent[i,j,:]) .== 0)
+                @constraint(model, sum(sent[i,j,:]) == 0)
             end
         end
     end
@@ -118,20 +117,22 @@ function patient_allocation(
             )
         )
     )
-    
+
     # Set balancing dummy variables
     if balancing_penalty > 0
+        @variable(model, balancing_dummy[1:N,1:T] >= 0)
         @constraint(model, [i=1:N,t=1:T],
-        balancing_dummy[i,t] >= flip_sign * (
-            balacing_threshold * beds[i] - (
-                initial_patients[i] - sum(discharged_patients[i,1:min(t,hospitalized_days)])
-                + sum(admitted_patients[i,max(1,t-hospitalized_days):t])
-                - sum(sent[i,:,1:t+z1])
-                + sum(sent[:,i,max(1,t-hospitalized_days):t+z2])
-            )
-        )
+            balancing_dummy[i,t] >= (flip_sign * (
+                beds[i] - (
+                    initial_patients[i] - sum(discharged_patients[i,1:min(t,hospitalized_days)])
+                    + sum(admitted_patients[i,max(1,t-hospitalized_days):t])
+                    - sum(sent[i,:,1:t+z1])
+                    + sum(sent[:,i,max(1,t-hospitalized_days):t+z2])
+                )
+        ) / beds[i]) - balancing_thresh)
         add_to_expression!(objective, balancing_penalty * sum(balancing_dummy))
     end
+    @objective(model, Min, objective)
 
     optimize!(model)
     return model
