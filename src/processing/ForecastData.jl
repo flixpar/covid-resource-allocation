@@ -16,19 +16,20 @@ let
     global ihme_forecast
 
     # load the forecast data
-    forecast_data = CSV.read(joinpath(basepath, "data/forecasts/ihme_2020_04_12/forecast.csv"), copycols=true)
+    # forecast_data = CSV.read(joinpath(basepath, "data/forecasts/ihme_2020_04_12/forecast.csv"), copycols=true)
+    forecast_data = CSV.read(joinpath(basepath, "data/forecasts/ihme_2020_04_29/forecast.csv"), copycols=true)
 
     # load state info
-    state_list = CSV.read(joinpath(basepath, "data/geography/state_names.csv"), copycols=true)
-    sort!(state_list, :Abbreviation)
-    state_name_list = state_list.State
-    state_abbrev_list = state_list.Abbreviation
+    state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
+    sort!(state_list, :abbrev)
+    state_name_list = state_list.state
+    state_abbrev_list = state_list.abbrev
 
     # filter to US states
     filter!(row -> row.location_name in state_name_list, forecast_data)
 
     # add state abbreviations
-    state_cvt = Dict(state.State => state.Abbreviation for state in eachrow(state_list))
+    state_cvt = Dict(state.state => state.abbrev for state in eachrow(state_list))
     forecast_data.state = [state_cvt[row.location_name] for row in eachrow(forecast_data)]
 
     # sort

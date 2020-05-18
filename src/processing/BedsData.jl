@@ -19,8 +19,8 @@ let
     beds_data = CSV.read(joinpath(basepath, "data/hospitals/hospital_locations.csv"), copycols=true)
 
     # load state info
-    state_list = CSV.read(joinpath(basepath, "data/geography/state_names.csv"), copycols=true)
-    state_abbrev_list = sort(state_list.Abbreviation)
+    state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
+    state_abbrev_list = sort(state_list.abbrev)
 
     # filter
     filter!(row -> row.BEDS > 0, beds_data)

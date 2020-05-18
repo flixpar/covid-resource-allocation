@@ -1,0 +1,2798 @@
+CBSA,FIPS,NAME,LSAD
+10180,,"Abilene, TX",Metropolitan Statistical Area
+10180,48059,"Callahan County, TX",County or equivalent
+10180,48253,"Jones County, TX",County or equivalent
+10180,48441,"Taylor County, TX",County or equivalent
+10420,,"Akron, OH",Metropolitan Statistical Area
+10420,39133,"Portage County, OH",County or equivalent
+10420,39153,"Summit County, OH",County or equivalent
+10500,,"Albany, GA",Metropolitan Statistical Area
+10500,13095,"Dougherty County, GA",County or equivalent
+10500,13177,"Lee County, GA",County or equivalent
+10500,13273,"Terrell County, GA",County or equivalent
+10500,13321,"Worth County, GA",County or equivalent
+10540,,"Albany-Lebanon, OR",Metropolitan Statistical Area
+10540,41043,"Linn County, OR",County or equivalent
+10580,,"Albany-Schenectady-Troy, NY",Metropolitan Statistical Area
+10580,36001,"Albany County, NY",County or equivalent
+10580,36083,"Rensselaer County, NY",County or equivalent
+10580,36091,"Saratoga County, NY",County or equivalent
+10580,36093,"Schenectady County, NY",County or equivalent
+10580,36095,"Schoharie County, NY",County or equivalent
+10740,,"Albuquerque, NM",Metropolitan Statistical Area
+10740,35001,"Bernalillo County, NM",County or equivalent
+10740,35043,"Sandoval County, NM",County or equivalent
+10740,35057,"Torrance County, NM",County or equivalent
+10740,35061,"Valencia County, NM",County or equivalent
+10780,,"Alexandria, LA",Metropolitan Statistical Area
+10780,22043,"Grant Parish, LA",County or equivalent
+10780,22079,"Rapides Parish, LA",County or equivalent
+10900,,"Allentown-Bethlehem-Easton, PA-NJ",Metropolitan Statistical Area
+10900,34041,"Warren County, NJ",County or equivalent
+10900,42025,"Carbon County, PA",County or equivalent
+10900,42077,"Lehigh County, PA",County or equivalent
+10900,42095,"Northampton County, PA",County or equivalent
+11020,,"Altoona, PA",Metropolitan Statistical Area
+11020,42013,"Blair County, PA",County or equivalent
+11100,,"Amarillo, TX",Metropolitan Statistical Area
+11100,48011,"Armstrong County, TX",County or equivalent
+11100,48065,"Carson County, TX",County or equivalent
+11100,48359,"Oldham County, TX",County or equivalent
+11100,48375,"Potter County, TX",County or equivalent
+11100,48381,"Randall County, TX",County or equivalent
+11180,,"Ames, IA",Metropolitan Statistical Area
+11180,19015,"Boone County, IA",County or equivalent
+11180,19169,"Story County, IA",County or equivalent
+11260,,"Anchorage, AK",Metropolitan Statistical Area
+11260,2020,"Anchorage Municipality, AK",County or equivalent
+11260,2170,"Matanuska-Susitna Borough, AK",County or equivalent
+11460,,"Ann Arbor, MI",Metropolitan Statistical Area
+11460,26161,"Washtenaw County, MI",County or equivalent
+11500,,"Anniston-Oxford, AL",Metropolitan Statistical Area
+11500,1015,"Calhoun County, AL",County or equivalent
+11540,,"Appleton, WI",Metropolitan Statistical Area
+11540,55015,"Calumet County, WI",County or equivalent
+11540,55087,"Outagamie County, WI",County or equivalent
+11700,,"Asheville, NC",Metropolitan Statistical Area
+11700,37021,"Buncombe County, NC",County or equivalent
+11700,37087,"Haywood County, NC",County or equivalent
+11700,37089,"Henderson County, NC",County or equivalent
+11700,37115,"Madison County, NC",County or equivalent
+12020,,"Athens-Clarke County, GA",Metropolitan Statistical Area
+12020,13059,"Clarke County, GA",County or equivalent
+12020,13195,"Madison County, GA",County or equivalent
+12020,13219,"Oconee County, GA",County or equivalent
+12020,13221,"Oglethorpe County, GA",County or equivalent
+12060,,"Atlanta-Sandy Springs-Alpharetta, GA",Metropolitan Statistical Area
+12060,13013,"Barrow County, GA",County or equivalent
+12060,13015,"Bartow County, GA",County or equivalent
+12060,13035,"Butts County, GA",County or equivalent
+12060,13045,"Carroll County, GA",County or equivalent
+12060,13057,"Cherokee County, GA",County or equivalent
+12060,13063,"Clayton County, GA",County or equivalent
+12060,13067,"Cobb County, GA",County or equivalent
+12060,13077,"Coweta County, GA",County or equivalent
+12060,13085,"Dawson County, GA",County or equivalent
+12060,13089,"DeKalb County, GA",County or equivalent
+12060,13097,"Douglas County, GA",County or equivalent
+12060,13113,"Fayette County, GA",County or equivalent
+12060,13117,"Forsyth County, GA",County or equivalent
+12060,13121,"Fulton County, GA",County or equivalent
+12060,13135,"Gwinnett County, GA",County or equivalent
+12060,13143,"Haralson County, GA",County or equivalent
+12060,13149,"Heard County, GA",County or equivalent
+12060,13151,"Henry County, GA",County or equivalent
+12060,13159,"Jasper County, GA",County or equivalent
+12060,13171,"Lamar County, GA",County or equivalent
+12060,13199,"Meriwether County, GA",County or equivalent
+12060,13211,"Morgan County, GA",County or equivalent
+12060,13217,"Newton County, GA",County or equivalent
+12060,13223,"Paulding County, GA",County or equivalent
+12060,13227,"Pickens County, GA",County or equivalent
+12060,13231,"Pike County, GA",County or equivalent
+12060,13247,"Rockdale County, GA",County or equivalent
+12060,13255,"Spalding County, GA",County or equivalent
+12060,13297,"Walton County, GA",County or equivalent
+12100,,"Atlantic City-Hammonton, NJ",Metropolitan Statistical Area
+12100,34001,"Atlantic County, NJ",County or equivalent
+12220,,"Auburn-Opelika, AL",Metropolitan Statistical Area
+12220,1081,"Lee County, AL",County or equivalent
+12260,,"Augusta-Richmond County, GA-SC",Metropolitan Statistical Area
+12260,13033,"Burke County, GA",County or equivalent
+12260,13073,"Columbia County, GA",County or equivalent
+12260,13181,"Lincoln County, GA",County or equivalent
+12260,13189,"McDuffie County, GA",County or equivalent
+12260,13245,"Richmond County, GA",County or equivalent
+12260,45003,"Aiken County, SC",County or equivalent
+12260,45037,"Edgefield County, SC",County or equivalent
+12420,,"Austin-Round Rock-Georgetown, TX",Metropolitan Statistical Area
+12420,48021,"Bastrop County, TX",County or equivalent
+12420,48055,"Caldwell County, TX",County or equivalent
+12420,48209,"Hays County, TX",County or equivalent
+12420,48453,"Travis County, TX",County or equivalent
+12420,48491,"Williamson County, TX",County or equivalent
+12540,,"Bakersfield, CA",Metropolitan Statistical Area
+12540,6029,"Kern County, CA",County or equivalent
+12580,,"Baltimore-Columbia-Towson, MD",Metropolitan Statistical Area
+12580,24003,"Anne Arundel County, MD",County or equivalent
+12580,24005,"Baltimore County, MD",County or equivalent
+12580,24013,"Carroll County, MD",County or equivalent
+12580,24025,"Harford County, MD",County or equivalent
+12580,24027,"Howard County, MD",County or equivalent
+12580,24035,"Queen Anne's County, MD",County or equivalent
+12580,24510,"Baltimore city, MD",County or equivalent
+12620,,"Bangor, ME",Metropolitan Statistical Area
+12620,23019,"Penobscot County, ME",County or equivalent
+12700,,"Barnstable Town, MA",Metropolitan Statistical Area
+12700,25001,"Barnstable County, MA",County or equivalent
+12940,,"Baton Rouge, LA",Metropolitan Statistical Area
+12940,22005,"Ascension Parish, LA",County or equivalent
+12940,22007,"Assumption Parish, LA",County or equivalent
+12940,22033,"East Baton Rouge Parish, LA",County or equivalent
+12940,22037,"East Feliciana Parish, LA",County or equivalent
+12940,22047,"Iberville Parish, LA",County or equivalent
+12940,22063,"Livingston Parish, LA",County or equivalent
+12940,22077,"Pointe Coupee Parish, LA",County or equivalent
+12940,22091,"St. Helena Parish, LA",County or equivalent
+12940,22121,"West Baton Rouge Parish, LA",County or equivalent
+12940,22125,"West Feliciana Parish, LA",County or equivalent
+12980,,"Battle Creek, MI",Metropolitan Statistical Area
+12980,26025,"Calhoun County, MI",County or equivalent
+13020,,"Bay City, MI",Metropolitan Statistical Area
+13020,26017,"Bay County, MI",County or equivalent
+13140,,"Beaumont-Port Arthur, TX",Metropolitan Statistical Area
+13140,48199,"Hardin County, TX",County or equivalent
+13140,48245,"Jefferson County, TX",County or equivalent
+13140,48361,"Orange County, TX",County or equivalent
+13220,,"Beckley, WV",Metropolitan Statistical Area
+13220,54019,"Fayette County, WV",County or equivalent
+13220,54081,"Raleigh County, WV",County or equivalent
+13380,,"Bellingham, WA",Metropolitan Statistical Area
+13380,53073,"Whatcom County, WA",County or equivalent
+13460,,"Bend, OR",Metropolitan Statistical Area
+13460,41017,"Deschutes County, OR",County or equivalent
+13740,,"Billings, MT",Metropolitan Statistical Area
+13740,30009,"Carbon County, MT",County or equivalent
+13740,30095,"Stillwater County, MT",County or equivalent
+13740,30111,"Yellowstone County, MT",County or equivalent
+13780,,"Binghamton, NY",Metropolitan Statistical Area
+13780,36007,"Broome County, NY",County or equivalent
+13780,36107,"Tioga County, NY",County or equivalent
+13820,,"Birmingham-Hoover, AL",Metropolitan Statistical Area
+13820,1007,"Bibb County, AL",County or equivalent
+13820,1009,"Blount County, AL",County or equivalent
+13820,1021,"Chilton County, AL",County or equivalent
+13820,1073,"Jefferson County, AL",County or equivalent
+13820,1115,"St. Clair County, AL",County or equivalent
+13820,1117,"Shelby County, AL",County or equivalent
+13900,,"Bismarck, ND",Metropolitan Statistical Area
+13900,38015,"Burleigh County, ND",County or equivalent
+13900,38059,"Morton County, ND",County or equivalent
+13900,38065,"Oliver County, ND",County or equivalent
+13980,,"Blacksburg-Christiansburg, VA",Metropolitan Statistical Area
+13980,51071,"Giles County, VA",County or equivalent
+13980,51121,"Montgomery County, VA",County or equivalent
+13980,51155,"Pulaski County, VA",County or equivalent
+13980,51750,"Radford city, VA",County or equivalent
+14010,,"Bloomington, IL",Metropolitan Statistical Area
+14010,17113,"McLean County, IL",County or equivalent
+14020,,"Bloomington, IN",Metropolitan Statistical Area
+14020,18105,"Monroe County, IN",County or equivalent
+14020,18119,"Owen County, IN",County or equivalent
+14100,,"Bloomsburg-Berwick, PA",Metropolitan Statistical Area
+14100,42037,"Columbia County, PA",County or equivalent
+14100,42093,"Montour County, PA",County or equivalent
+14260,,"Boise City, ID",Metropolitan Statistical Area
+14260,16001,"Ada County, ID",County or equivalent
+14260,16015,"Boise County, ID",County or equivalent
+14260,16027,"Canyon County, ID",County or equivalent
+14260,16045,"Gem County, ID",County or equivalent
+14260,16073,"Owyhee County, ID",County or equivalent
+14460,,"Boston-Cambridge-Newton, MA-NH",Metropolitan Statistical Area
+14460,,"Boston, MA",Metropolitan Division
+14460,25021,"Norfolk County, MA",County or equivalent
+14460,25023,"Plymouth County, MA",County or equivalent
+14460,25025,"Suffolk County, MA",County or equivalent
+14460,,"Cambridge-Newton-Framingham, MA",Metropolitan Division
+14460,25009,"Essex County, MA",County or equivalent
+14460,25017,"Middlesex County, MA",County or equivalent
+14460,,"Rockingham County-Strafford County, NH",Metropolitan Division
+14460,33015,"Rockingham County, NH",County or equivalent
+14460,33017,"Strafford County, NH",County or equivalent
+14500,,"Boulder, CO",Metropolitan Statistical Area
+14500,8013,"Boulder County, CO",County or equivalent
+14540,,"Bowling Green, KY",Metropolitan Statistical Area
+14540,21003,"Allen County, KY",County or equivalent
+14540,21031,"Butler County, KY",County or equivalent
+14540,21061,"Edmonson County, KY",County or equivalent
+14540,21227,"Warren County, KY",County or equivalent
+14740,,"Bremerton-Silverdale-Port Orchard, WA",Metropolitan Statistical Area
+14740,53035,"Kitsap County, WA",County or equivalent
+14860,,"Bridgeport-Stamford-Norwalk, CT",Metropolitan Statistical Area
+14860,9001,"Fairfield County, CT",County or equivalent
+15180,,"Brownsville-Harlingen, TX",Metropolitan Statistical Area
+15180,48061,"Cameron County, TX",County or equivalent
+15260,,"Brunswick, GA",Metropolitan Statistical Area
+15260,13025,"Brantley County, GA",County or equivalent
+15260,13127,"Glynn County, GA",County or equivalent
+15260,13191,"McIntosh County, GA",County or equivalent
+15380,,"Buffalo-Cheektowaga, NY",Metropolitan Statistical Area
+15380,36029,"Erie County, NY",County or equivalent
+15380,36063,"Niagara County, NY",County or equivalent
+15500,,"Burlington, NC",Metropolitan Statistical Area
+15500,37001,"Alamance County, NC",County or equivalent
+15540,,"Burlington-South Burlington, VT",Metropolitan Statistical Area
+15540,50007,"Chittenden County, VT",County or equivalent
+15540,50011,"Franklin County, VT",County or equivalent
+15540,50013,"Grand Isle County, VT",County or equivalent
+15680,,"California-Lexington Park, MD",Metropolitan Statistical Area
+15680,24037,"St. Mary's County, MD",County or equivalent
+15940,,"Canton-Massillon, OH",Metropolitan Statistical Area
+15940,39019,"Carroll County, OH",County or equivalent
+15940,39151,"Stark County, OH",County or equivalent
+15980,,"Cape Coral-Fort Myers, FL",Metropolitan Statistical Area
+15980,12071,"Lee County, FL",County or equivalent
+16020,,"Cape Girardeau, MO-IL",Metropolitan Statistical Area
+16020,17003,"Alexander County, IL",County or equivalent
+16020,29017,"Bollinger County, MO",County or equivalent
+16020,29031,"Cape Girardeau County, MO",County or equivalent
+16060,,"Carbondale-Marion, IL",Metropolitan Statistical Area
+16060,17077,"Jackson County, IL",County or equivalent
+16060,17087,"Johnson County, IL",County or equivalent
+16060,17199,"Williamson County, IL",County or equivalent
+16180,,"Carson City, NV",Metropolitan Statistical Area
+16180,32510,"Carson City, NV",County or equivalent
+16220,,"Casper, WY",Metropolitan Statistical Area
+16220,56025,"Natrona County, WY",County or equivalent
+16300,,"Cedar Rapids, IA",Metropolitan Statistical Area
+16300,19011,"Benton County, IA",County or equivalent
+16300,19105,"Jones County, IA",County or equivalent
+16300,19113,"Linn County, IA",County or equivalent
+16540,,"Chambersburg-Waynesboro, PA",Metropolitan Statistical Area
+16540,42055,"Franklin County, PA",County or equivalent
+16580,,"Champaign-Urbana, IL",Metropolitan Statistical Area
+16580,17019,"Champaign County, IL",County or equivalent
+16580,17147,"Piatt County, IL",County or equivalent
+16620,,"Charleston, WV",Metropolitan Statistical Area
+16620,54005,"Boone County, WV",County or equivalent
+16620,54015,"Clay County, WV",County or equivalent
+16620,54035,"Jackson County, WV",County or equivalent
+16620,54039,"Kanawha County, WV",County or equivalent
+16620,54043,"Lincoln County, WV",County or equivalent
+16700,,"Charleston-North Charleston, SC",Metropolitan Statistical Area
+16700,45015,"Berkeley County, SC",County or equivalent
+16700,45019,"Charleston County, SC",County or equivalent
+16700,45035,"Dorchester County, SC",County or equivalent
+16740,,"Charlotte-Concord-Gastonia, NC-SC",Metropolitan Statistical Area
+16740,37007,"Anson County, NC",County or equivalent
+16740,37025,"Cabarrus County, NC",County or equivalent
+16740,37071,"Gaston County, NC",County or equivalent
+16740,37097,"Iredell County, NC",County or equivalent
+16740,37109,"Lincoln County, NC",County or equivalent
+16740,37119,"Mecklenburg County, NC",County or equivalent
+16740,37159,"Rowan County, NC",County or equivalent
+16740,37179,"Union County, NC",County or equivalent
+16740,45023,"Chester County, SC",County or equivalent
+16740,45057,"Lancaster County, SC",County or equivalent
+16740,45091,"York County, SC",County or equivalent
+16820,,"Charlottesville, VA",Metropolitan Statistical Area
+16820,51003,"Albemarle County, VA",County or equivalent
+16820,51065,"Fluvanna County, VA",County or equivalent
+16820,51079,"Greene County, VA",County or equivalent
+16820,51125,"Nelson County, VA",County or equivalent
+16820,51540,"Charlottesville city, VA",County or equivalent
+16860,,"Chattanooga, TN-GA",Metropolitan Statistical Area
+16860,13047,"Catoosa County, GA",County or equivalent
+16860,13083,"Dade County, GA",County or equivalent
+16860,13295,"Walker County, GA",County or equivalent
+16860,47065,"Hamilton County, TN",County or equivalent
+16860,47115,"Marion County, TN",County or equivalent
+16860,47153,"Sequatchie County, TN",County or equivalent
+16940,,"Cheyenne, WY",Metropolitan Statistical Area
+16940,56021,"Laramie County, WY",County or equivalent
+16980,,"Chicago-Naperville-Elgin, IL-IN-WI",Metropolitan Statistical Area
+16980,,"Chicago-Naperville-Evanston, IL",Metropolitan Division
+16980,17031,"Cook County, IL",County or equivalent
+16980,17043,"DuPage County, IL",County or equivalent
+16980,17063,"Grundy County, IL",County or equivalent
+16980,17111,"McHenry County, IL",County or equivalent
+16980,17197,"Will County, IL",County or equivalent
+16980,,"Elgin, IL",Metropolitan Division
+16980,17037,"DeKalb County, IL",County or equivalent
+16980,17089,"Kane County, IL",County or equivalent
+16980,17093,"Kendall County, IL",County or equivalent
+16980,,"Gary, IN",Metropolitan Division
+16980,18073,"Jasper County, IN",County or equivalent
+16980,18089,"Lake County, IN",County or equivalent
+16980,18111,"Newton County, IN",County or equivalent
+16980,18127,"Porter County, IN",County or equivalent
+16980,,"Lake County-Kenosha County, IL-WI",Metropolitan Division
+16980,17097,"Lake County, IL",County or equivalent
+16980,55059,"Kenosha County, WI",County or equivalent
+17020,,"Chico, CA",Metropolitan Statistical Area
+17020,6007,"Butte County, CA",County or equivalent
+17140,,"Cincinnati, OH-KY-IN",Metropolitan Statistical Area
+17140,18029,"Dearborn County, IN",County or equivalent
+17140,18047,"Franklin County, IN",County or equivalent
+17140,18115,"Ohio County, IN",County or equivalent
+17140,18161,"Union County, IN",County or equivalent
+17140,21015,"Boone County, KY",County or equivalent
+17140,21023,"Bracken County, KY",County or equivalent
+17140,21037,"Campbell County, KY",County or equivalent
+17140,21077,"Gallatin County, KY",County or equivalent
+17140,21081,"Grant County, KY",County or equivalent
+17140,21117,"Kenton County, KY",County or equivalent
+17140,21191,"Pendleton County, KY",County or equivalent
+17140,39015,"Brown County, OH",County or equivalent
+17140,39017,"Butler County, OH",County or equivalent
+17140,39025,"Clermont County, OH",County or equivalent
+17140,39061,"Hamilton County, OH",County or equivalent
+17140,39165,"Warren County, OH",County or equivalent
+17300,,"Clarksville, TN-KY",Metropolitan Statistical Area
+17300,21047,"Christian County, KY",County or equivalent
+17300,21221,"Trigg County, KY",County or equivalent
+17300,47125,"Montgomery County, TN",County or equivalent
+17300,47161,"Stewart County, TN",County or equivalent
+17420,,"Cleveland, TN",Metropolitan Statistical Area
+17420,47011,"Bradley County, TN",County or equivalent
+17420,47139,"Polk County, TN",County or equivalent
+17460,,"Cleveland-Elyria, OH",Metropolitan Statistical Area
+17460,39035,"Cuyahoga County, OH",County or equivalent
+17460,39055,"Geauga County, OH",County or equivalent
+17460,39085,"Lake County, OH",County or equivalent
+17460,39093,"Lorain County, OH",County or equivalent
+17460,39103,"Medina County, OH",County or equivalent
+17660,,"Coeur d'Alene, ID",Metropolitan Statistical Area
+17660,16055,"Kootenai County, ID",County or equivalent
+17780,,"College Station-Bryan, TX",Metropolitan Statistical Area
+17780,48041,"Brazos County, TX",County or equivalent
+17780,48051,"Burleson County, TX",County or equivalent
+17780,48395,"Robertson County, TX",County or equivalent
+17820,,"Colorado Springs, CO",Metropolitan Statistical Area
+17820,8041,"El Paso County, CO",County or equivalent
+17820,8119,"Teller County, CO",County or equivalent
+17860,,"Columbia, MO",Metropolitan Statistical Area
+17860,29019,"Boone County, MO",County or equivalent
+17860,29053,"Cooper County, MO",County or equivalent
+17860,29089,"Howard County, MO",County or equivalent
+17900,,"Columbia, SC",Metropolitan Statistical Area
+17900,45017,"Calhoun County, SC",County or equivalent
+17900,45039,"Fairfield County, SC",County or equivalent
+17900,45055,"Kershaw County, SC",County or equivalent
+17900,45063,"Lexington County, SC",County or equivalent
+17900,45079,"Richland County, SC",County or equivalent
+17900,45081,"Saluda County, SC",County or equivalent
+17980,,"Columbus, GA-AL",Metropolitan Statistical Area
+17980,1113,"Russell County, AL",County or equivalent
+17980,13053,"Chattahoochee County, GA",County or equivalent
+17980,13145,"Harris County, GA",County or equivalent
+17980,13197,"Marion County, GA",County or equivalent
+17980,13215,"Muscogee County, GA",County or equivalent
+17980,13259,"Stewart County, GA",County or equivalent
+17980,13263,"Talbot County, GA",County or equivalent
+18020,,"Columbus, IN",Metropolitan Statistical Area
+18020,18005,"Bartholomew County, IN",County or equivalent
+18140,,"Columbus, OH",Metropolitan Statistical Area
+18140,39041,"Delaware County, OH",County or equivalent
+18140,39045,"Fairfield County, OH",County or equivalent
+18140,39049,"Franklin County, OH",County or equivalent
+18140,39073,"Hocking County, OH",County or equivalent
+18140,39089,"Licking County, OH",County or equivalent
+18140,39097,"Madison County, OH",County or equivalent
+18140,39117,"Morrow County, OH",County or equivalent
+18140,39127,"Perry County, OH",County or equivalent
+18140,39129,"Pickaway County, OH",County or equivalent
+18140,39159,"Union County, OH",County or equivalent
+18580,,"Corpus Christi, TX",Metropolitan Statistical Area
+18580,48355,"Nueces County, TX",County or equivalent
+18580,48409,"San Patricio County, TX",County or equivalent
+18700,,"Corvallis, OR",Metropolitan Statistical Area
+18700,41003,"Benton County, OR",County or equivalent
+18880,,"Crestview-Fort Walton Beach-Destin, FL",Metropolitan Statistical Area
+18880,12091,"Okaloosa County, FL",County or equivalent
+18880,12131,"Walton County, FL",County or equivalent
+19060,,"Cumberland, MD-WV",Metropolitan Statistical Area
+19060,24001,"Allegany County, MD",County or equivalent
+19060,54057,"Mineral County, WV",County or equivalent
+19100,,"Dallas-Fort Worth-Arlington, TX",Metropolitan Statistical Area
+19100,,"Dallas-Plano-Irving, TX",Metropolitan Division
+19100,48085,"Collin County, TX",County or equivalent
+19100,48113,"Dallas County, TX",County or equivalent
+19100,48121,"Denton County, TX",County or equivalent
+19100,48139,"Ellis County, TX",County or equivalent
+19100,48231,"Hunt County, TX",County or equivalent
+19100,48257,"Kaufman County, TX",County or equivalent
+19100,48397,"Rockwall County, TX",County or equivalent
+19100,,"Fort Worth-Arlington-Grapevine, TX",Metropolitan Division
+19100,48251,"Johnson County, TX",County or equivalent
+19100,48367,"Parker County, TX",County or equivalent
+19100,48439,"Tarrant County, TX",County or equivalent
+19100,48497,"Wise County, TX",County or equivalent
+19140,,"Dalton, GA",Metropolitan Statistical Area
+19140,13213,"Murray County, GA",County or equivalent
+19140,13313,"Whitfield County, GA",County or equivalent
+19180,,"Danville, IL",Metropolitan Statistical Area
+19180,17183,"Vermilion County, IL",County or equivalent
+19300,,"Daphne-Fairhope-Foley, AL",Metropolitan Statistical Area
+19300,1003,"Baldwin County, AL",County or equivalent
+19340,,"Davenport-Moline-Rock Island, IA-IL",Metropolitan Statistical Area
+19340,17073,"Henry County, IL",County or equivalent
+19340,17131,"Mercer County, IL",County or equivalent
+19340,17161,"Rock Island County, IL",County or equivalent
+19340,19163,"Scott County, IA",County or equivalent
+19430,,"Dayton-Kettering, OH",Metropolitan Statistical Area
+19430,39057,"Greene County, OH",County or equivalent
+19430,39109,"Miami County, OH",County or equivalent
+19430,39113,"Montgomery County, OH",County or equivalent
+19460,,"Decatur, AL",Metropolitan Statistical Area
+19460,1079,"Lawrence County, AL",County or equivalent
+19460,1103,"Morgan County, AL",County or equivalent
+19500,,"Decatur, IL",Metropolitan Statistical Area
+19500,17115,"Macon County, IL",County or equivalent
+19660,,"Deltona-Daytona Beach-Ormond Beach, FL",Metropolitan Statistical Area
+19660,12035,"Flagler County, FL",County or equivalent
+19660,12127,"Volusia County, FL",County or equivalent
+19740,,"Denver-Aurora-Lakewood, CO",Metropolitan Statistical Area
+19740,8001,"Adams County, CO",County or equivalent
+19740,8005,"Arapahoe County, CO",County or equivalent
+19740,8014,"Broomfield County, CO",County or equivalent
+19740,8019,"Clear Creek County, CO",County or equivalent
+19740,8031,"Denver County, CO",County or equivalent
+19740,8035,"Douglas County, CO",County or equivalent
+19740,8039,"Elbert County, CO",County or equivalent
+19740,8047,"Gilpin County, CO",County or equivalent
+19740,8059,"Jefferson County, CO",County or equivalent
+19740,8093,"Park County, CO",County or equivalent
+19780,,"Des Moines-West Des Moines, IA",Metropolitan Statistical Area
+19780,19049,"Dallas County, IA",County or equivalent
+19780,19077,"Guthrie County, IA",County or equivalent
+19780,19099,"Jasper County, IA",County or equivalent
+19780,19121,"Madison County, IA",County or equivalent
+19780,19153,"Polk County, IA",County or equivalent
+19780,19181,"Warren County, IA",County or equivalent
+19820,,"Detroit-Warren-Dearborn, MI",Metropolitan Statistical Area
+19820,,"Detroit-Dearborn-Livonia, MI",Metropolitan Division
+19820,26163,"Wayne County, MI",County or equivalent
+19820,,"Warren-Troy-Farmington Hills, MI",Metropolitan Division
+19820,26087,"Lapeer County, MI",County or equivalent
+19820,26093,"Livingston County, MI",County or equivalent
+19820,26099,"Macomb County, MI",County or equivalent
+19820,26125,"Oakland County, MI",County or equivalent
+19820,26147,"St. Clair County, MI",County or equivalent
+20020,,"Dothan, AL",Metropolitan Statistical Area
+20020,1061,"Geneva County, AL",County or equivalent
+20020,1067,"Henry County, AL",County or equivalent
+20020,1069,"Houston County, AL",County or equivalent
+20100,,"Dover, DE",Metropolitan Statistical Area
+20100,10001,"Kent County, DE",County or equivalent
+20220,,"Dubuque, IA",Metropolitan Statistical Area
+20220,19061,"Dubuque County, IA",County or equivalent
+20260,,"Duluth, MN-WI",Metropolitan Statistical Area
+20260,27017,"Carlton County, MN",County or equivalent
+20260,27075,"Lake County, MN",County or equivalent
+20260,27137,"St. Louis County, MN",County or equivalent
+20260,55031,"Douglas County, WI",County or equivalent
+20500,,"Durham-Chapel Hill, NC",Metropolitan Statistical Area
+20500,37037,"Chatham County, NC",County or equivalent
+20500,37063,"Durham County, NC",County or equivalent
+20500,37077,"Granville County, NC",County or equivalent
+20500,37135,"Orange County, NC",County or equivalent
+20500,37145,"Person County, NC",County or equivalent
+20700,,"East Stroudsburg, PA",Metropolitan Statistical Area
+20700,42089,"Monroe County, PA",County or equivalent
+20740,,"Eau Claire, WI",Metropolitan Statistical Area
+20740,55017,"Chippewa County, WI",County or equivalent
+20740,55035,"Eau Claire County, WI",County or equivalent
+20940,,"El Centro, CA",Metropolitan Statistical Area
+20940,6025,"Imperial County, CA",County or equivalent
+21060,,"Elizabethtown-Fort Knox, KY",Metropolitan Statistical Area
+21060,21093,"Hardin County, KY",County or equivalent
+21060,21123,"Larue County, KY",County or equivalent
+21060,21163,"Meade County, KY",County or equivalent
+21140,,"Elkhart-Goshen, IN",Metropolitan Statistical Area
+21140,18039,"Elkhart County, IN",County or equivalent
+21300,,"Elmira, NY",Metropolitan Statistical Area
+21300,36015,"Chemung County, NY",County or equivalent
+21340,,"El Paso, TX",Metropolitan Statistical Area
+21340,48141,"El Paso County, TX",County or equivalent
+21340,48229,"Hudspeth County, TX",County or equivalent
+21420,,"Enid, OK",Metropolitan Statistical Area
+21420,40047,"Garfield County, OK",County or equivalent
+21500,,"Erie, PA",Metropolitan Statistical Area
+21500,42049,"Erie County, PA",County or equivalent
+21660,,"Eugene-Springfield, OR",Metropolitan Statistical Area
+21660,41039,"Lane County, OR",County or equivalent
+21780,,"Evansville, IN-KY",Metropolitan Statistical Area
+21780,18129,"Posey County, IN",County or equivalent
+21780,18163,"Vanderburgh County, IN",County or equivalent
+21780,18173,"Warrick County, IN",County or equivalent
+21780,21101,"Henderson County, KY",County or equivalent
+21820,,"Fairbanks, AK",Metropolitan Statistical Area
+21820,2090,"Fairbanks North Star Borough, AK",County or equivalent
+22020,,"Fargo, ND-MN",Metropolitan Statistical Area
+22020,27027,"Clay County, MN",County or equivalent
+22020,38017,"Cass County, ND",County or equivalent
+22140,,"Farmington, NM",Metropolitan Statistical Area
+22140,35045,"San Juan County, NM",County or equivalent
+22180,,"Fayetteville, NC",Metropolitan Statistical Area
+22180,37051,"Cumberland County, NC",County or equivalent
+22180,37085,"Harnett County, NC",County or equivalent
+22180,37093,"Hoke County, NC",County or equivalent
+22220,,"Fayetteville-Springdale-Rogers, AR",Metropolitan Statistical Area
+22220,5007,"Benton County, AR",County or equivalent
+22220,5087,"Madison County, AR",County or equivalent
+22220,5143,"Washington County, AR",County or equivalent
+22380,,"Flagstaff, AZ",Metropolitan Statistical Area
+22380,4005,"Coconino County, AZ",County or equivalent
+22420,,"Flint, MI",Metropolitan Statistical Area
+22420,26049,"Genesee County, MI",County or equivalent
+22500,,"Florence, SC",Metropolitan Statistical Area
+22500,45031,"Darlington County, SC",County or equivalent
+22500,45041,"Florence County, SC",County or equivalent
+22520,,"Florence-Muscle Shoals, AL",Metropolitan Statistical Area
+22520,1033,"Colbert County, AL",County or equivalent
+22520,1077,"Lauderdale County, AL",County or equivalent
+22540,,"Fond du Lac, WI",Metropolitan Statistical Area
+22540,55039,"Fond du Lac County, WI",County or equivalent
+22660,,"Fort Collins, CO",Metropolitan Statistical Area
+22660,8069,"Larimer County, CO",County or equivalent
+22900,,"Fort Smith, AR-OK",Metropolitan Statistical Area
+22900,5033,"Crawford County, AR",County or equivalent
+22900,5047,"Franklin County, AR",County or equivalent
+22900,5131,"Sebastian County, AR",County or equivalent
+22900,40135,"Sequoyah County, OK",County or equivalent
+23060,,"Fort Wayne, IN",Metropolitan Statistical Area
+23060,18003,"Allen County, IN",County or equivalent
+23060,18183,"Whitley County, IN",County or equivalent
+23420,,"Fresno, CA",Metropolitan Statistical Area
+23420,6019,"Fresno County, CA",County or equivalent
+23460,,"Gadsden, AL",Metropolitan Statistical Area
+23460,1055,"Etowah County, AL",County or equivalent
+23540,,"Gainesville, FL",Metropolitan Statistical Area
+23540,12001,"Alachua County, FL",County or equivalent
+23540,12041,"Gilchrist County, FL",County or equivalent
+23540,12075,"Levy County, FL",County or equivalent
+23580,,"Gainesville, GA",Metropolitan Statistical Area
+23580,13139,"Hall County, GA",County or equivalent
+23900,,"Gettysburg, PA",Metropolitan Statistical Area
+23900,42001,"Adams County, PA",County or equivalent
+24020,,"Glens Falls, NY",Metropolitan Statistical Area
+24020,36113,"Warren County, NY",County or equivalent
+24020,36115,"Washington County, NY",County or equivalent
+24140,,"Goldsboro, NC",Metropolitan Statistical Area
+24140,37191,"Wayne County, NC",County or equivalent
+24220,,"Grand Forks, ND-MN",Metropolitan Statistical Area
+24220,27119,"Polk County, MN",County or equivalent
+24220,38035,"Grand Forks County, ND",County or equivalent
+24260,,"Grand Island, NE",Metropolitan Statistical Area
+24260,31079,"Hall County, NE",County or equivalent
+24260,31093,"Howard County, NE",County or equivalent
+24260,31121,"Merrick County, NE",County or equivalent
+24300,,"Grand Junction, CO",Metropolitan Statistical Area
+24300,8077,"Mesa County, CO",County or equivalent
+24340,,"Grand Rapids-Kentwood, MI",Metropolitan Statistical Area
+24340,26067,"Ionia County, MI",County or equivalent
+24340,26081,"Kent County, MI",County or equivalent
+24340,26117,"Montcalm County, MI",County or equivalent
+24340,26139,"Ottawa County, MI",County or equivalent
+24420,,"Grants Pass, OR",Metropolitan Statistical Area
+24420,41033,"Josephine County, OR",County or equivalent
+24500,,"Great Falls, MT",Metropolitan Statistical Area
+24500,30013,"Cascade County, MT",County or equivalent
+24540,,"Greeley, CO",Metropolitan Statistical Area
+24540,8123,"Weld County, CO",County or equivalent
+24580,,"Green Bay, WI",Metropolitan Statistical Area
+24580,55009,"Brown County, WI",County or equivalent
+24580,55061,"Kewaunee County, WI",County or equivalent
+24580,55083,"Oconto County, WI",County or equivalent
+24660,,"Greensboro-High Point, NC",Metropolitan Statistical Area
+24660,37081,"Guilford County, NC",County or equivalent
+24660,37151,"Randolph County, NC",County or equivalent
+24660,37157,"Rockingham County, NC",County or equivalent
+24780,,"Greenville, NC",Metropolitan Statistical Area
+24780,37147,"Pitt County, NC",County or equivalent
+24860,,"Greenville-Anderson, SC",Metropolitan Statistical Area
+24860,45007,"Anderson County, SC",County or equivalent
+24860,45045,"Greenville County, SC",County or equivalent
+24860,45059,"Laurens County, SC",County or equivalent
+24860,45077,"Pickens County, SC",County or equivalent
+25060,,"Gulfport-Biloxi, MS",Metropolitan Statistical Area
+25060,28045,"Hancock County, MS",County or equivalent
+25060,28047,"Harrison County, MS",County or equivalent
+25060,28059,"Jackson County, MS",County or equivalent
+25060,28131,"Stone County, MS",County or equivalent
+25180,,"Hagerstown-Martinsburg, MD-WV",Metropolitan Statistical Area
+25180,24043,"Washington County, MD",County or equivalent
+25180,54003,"Berkeley County, WV",County or equivalent
+25180,54065,"Morgan County, WV",County or equivalent
+25220,,"Hammond, LA",Metropolitan Statistical Area
+25220,22105,"Tangipahoa Parish, LA",County or equivalent
+25260,,"Hanford-Corcoran, CA",Metropolitan Statistical Area
+25260,6031,"Kings County, CA",County or equivalent
+25420,,"Harrisburg-Carlisle, PA",Metropolitan Statistical Area
+25420,42041,"Cumberland County, PA",County or equivalent
+25420,42043,"Dauphin County, PA",County or equivalent
+25420,42099,"Perry County, PA",County or equivalent
+25500,,"Harrisonburg, VA",Metropolitan Statistical Area
+25500,51165,"Rockingham County, VA",County or equivalent
+25500,51660,"Harrisonburg city, VA",County or equivalent
+25540,,"Hartford-East Hartford-Middletown, CT",Metropolitan Statistical Area
+25540,9003,"Hartford County, CT",County or equivalent
+25540,9007,"Middlesex County, CT",County or equivalent
+25540,9013,"Tolland County, CT",County or equivalent
+25620,,"Hattiesburg, MS",Metropolitan Statistical Area
+25620,28031,"Covington County, MS",County or equivalent
+25620,28035,"Forrest County, MS",County or equivalent
+25620,28073,"Lamar County, MS",County or equivalent
+25620,28111,"Perry County, MS",County or equivalent
+25860,,"Hickory-Lenoir-Morganton, NC",Metropolitan Statistical Area
+25860,37003,"Alexander County, NC",County or equivalent
+25860,37023,"Burke County, NC",County or equivalent
+25860,37027,"Caldwell County, NC",County or equivalent
+25860,37035,"Catawba County, NC",County or equivalent
+25940,,"Hilton Head Island-Bluffton, SC",Metropolitan Statistical Area
+25940,45013,"Beaufort County, SC",County or equivalent
+25940,45053,"Jasper County, SC",County or equivalent
+25980,,"Hinesville, GA",Metropolitan Statistical Area
+25980,13179,"Liberty County, GA",County or equivalent
+25980,13183,"Long County, GA",County or equivalent
+26140,,"Homosassa Springs, FL",Metropolitan Statistical Area
+26140,12017,"Citrus County, FL",County or equivalent
+26300,,"Hot Springs, AR",Metropolitan Statistical Area
+26300,5051,"Garland County, AR",County or equivalent
+26380,,"Houma-Thibodaux, LA",Metropolitan Statistical Area
+26380,22057,"Lafourche Parish, LA",County or equivalent
+26380,22109,"Terrebonne Parish, LA",County or equivalent
+26420,,"Houston-The Woodlands-Sugar Land, TX",Metropolitan Statistical Area
+26420,48015,"Austin County, TX",County or equivalent
+26420,48039,"Brazoria County, TX",County or equivalent
+26420,48071,"Chambers County, TX",County or equivalent
+26420,48157,"Fort Bend County, TX",County or equivalent
+26420,48167,"Galveston County, TX",County or equivalent
+26420,48201,"Harris County, TX",County or equivalent
+26420,48291,"Liberty County, TX",County or equivalent
+26420,48339,"Montgomery County, TX",County or equivalent
+26420,48473,"Waller County, TX",County or equivalent
+26580,,"Huntington-Ashland, WV-KY-OH",Metropolitan Statistical Area
+26580,21019,"Boyd County, KY",County or equivalent
+26580,21043,"Carter County, KY",County or equivalent
+26580,21089,"Greenup County, KY",County or equivalent
+26580,39087,"Lawrence County, OH",County or equivalent
+26580,54011,"Cabell County, WV",County or equivalent
+26580,54079,"Putnam County, WV",County or equivalent
+26580,54099,"Wayne County, WV",County or equivalent
+26620,,"Huntsville, AL",Metropolitan Statistical Area
+26620,1083,"Limestone County, AL",County or equivalent
+26620,1089,"Madison County, AL",County or equivalent
+26820,,"Idaho Falls, ID",Metropolitan Statistical Area
+26820,16019,"Bonneville County, ID",County or equivalent
+26820,16023,"Butte County, ID",County or equivalent
+26820,16051,"Jefferson County, ID",County or equivalent
+26900,,"Indianapolis-Carmel-Anderson, IN",Metropolitan Statistical Area
+26900,18011,"Boone County, IN",County or equivalent
+26900,18013,"Brown County, IN",County or equivalent
+26900,18057,"Hamilton County, IN",County or equivalent
+26900,18059,"Hancock County, IN",County or equivalent
+26900,18063,"Hendricks County, IN",County or equivalent
+26900,18081,"Johnson County, IN",County or equivalent
+26900,18095,"Madison County, IN",County or equivalent
+26900,18097,"Marion County, IN",County or equivalent
+26900,18109,"Morgan County, IN",County or equivalent
+26900,18133,"Putnam County, IN",County or equivalent
+26900,18145,"Shelby County, IN",County or equivalent
+26980,,"Iowa City, IA",Metropolitan Statistical Area
+26980,19103,"Johnson County, IA",County or equivalent
+26980,19183,"Washington County, IA",County or equivalent
+27060,,"Ithaca, NY",Metropolitan Statistical Area
+27060,36109,"Tompkins County, NY",County or equivalent
+27100,,"Jackson, MI",Metropolitan Statistical Area
+27100,26075,"Jackson County, MI",County or equivalent
+27140,,"Jackson, MS",Metropolitan Statistical Area
+27140,28029,"Copiah County, MS",County or equivalent
+27140,28049,"Hinds County, MS",County or equivalent
+27140,28051,"Holmes County, MS",County or equivalent
+27140,28089,"Madison County, MS",County or equivalent
+27140,28121,"Rankin County, MS",County or equivalent
+27140,28127,"Simpson County, MS",County or equivalent
+27140,28163,"Yazoo County, MS",County or equivalent
+27180,,"Jackson, TN",Metropolitan Statistical Area
+27180,47023,"Chester County, TN",County or equivalent
+27180,47033,"Crockett County, TN",County or equivalent
+27180,47053,"Gibson County, TN",County or equivalent
+27180,47113,"Madison County, TN",County or equivalent
+27260,,"Jacksonville, FL",Metropolitan Statistical Area
+27260,12003,"Baker County, FL",County or equivalent
+27260,12019,"Clay County, FL",County or equivalent
+27260,12031,"Duval County, FL",County or equivalent
+27260,12089,"Nassau County, FL",County or equivalent
+27260,12109,"St. Johns County, FL",County or equivalent
+27340,,"Jacksonville, NC",Metropolitan Statistical Area
+27340,37133,"Onslow County, NC",County or equivalent
+27500,,"Janesville-Beloit, WI",Metropolitan Statistical Area
+27500,55105,"Rock County, WI",County or equivalent
+27620,,"Jefferson City, MO",Metropolitan Statistical Area
+27620,29027,"Callaway County, MO",County or equivalent
+27620,29051,"Cole County, MO",County or equivalent
+27620,29135,"Moniteau County, MO",County or equivalent
+27620,29151,"Osage County, MO",County or equivalent
+27740,,"Johnson City, TN",Metropolitan Statistical Area
+27740,47019,"Carter County, TN",County or equivalent
+27740,47171,"Unicoi County, TN",County or equivalent
+27740,47179,"Washington County, TN",County or equivalent
+27780,,"Johnstown, PA",Metropolitan Statistical Area
+27780,42021,"Cambria County, PA",County or equivalent
+27860,,"Jonesboro, AR",Metropolitan Statistical Area
+27860,5031,"Craighead County, AR",County or equivalent
+27860,5111,"Poinsett County, AR",County or equivalent
+27900,,"Joplin, MO",Metropolitan Statistical Area
+27900,29097,"Jasper County, MO",County or equivalent
+27900,29145,"Newton County, MO",County or equivalent
+27980,,"Kahului-Wailuku-Lahaina, HI",Metropolitan Statistical Area
+27980,15009,"Maui County, HI",County or equivalent
+28020,,"Kalamazoo-Portage, MI",Metropolitan Statistical Area
+28020,26077,"Kalamazoo County, MI",County or equivalent
+28100,,"Kankakee, IL",Metropolitan Statistical Area
+28100,17091,"Kankakee County, IL",County or equivalent
+28140,,"Kansas City, MO-KS",Metropolitan Statistical Area
+28140,20091,"Johnson County, KS",County or equivalent
+28140,20103,"Leavenworth County, KS",County or equivalent
+28140,20107,"Linn County, KS",County or equivalent
+28140,20121,"Miami County, KS",County or equivalent
+28140,20209,"Wyandotte County, KS",County or equivalent
+28140,29013,"Bates County, MO",County or equivalent
+28140,29025,"Caldwell County, MO",County or equivalent
+28140,29037,"Cass County, MO",County or equivalent
+28140,29047,"Clay County, MO",County or equivalent
+28140,29049,"Clinton County, MO",County or equivalent
+28140,29095,"Jackson County, MO",County or equivalent
+28140,29107,"Lafayette County, MO",County or equivalent
+28140,29165,"Platte County, MO",County or equivalent
+28140,29177,"Ray County, MO",County or equivalent
+28420,,"Kennewick-Richland, WA",Metropolitan Statistical Area
+28420,53005,"Benton County, WA",County or equivalent
+28420,53021,"Franklin County, WA",County or equivalent
+28660,,"Killeen-Temple, TX",Metropolitan Statistical Area
+28660,48027,"Bell County, TX",County or equivalent
+28660,48099,"Coryell County, TX",County or equivalent
+28660,48281,"Lampasas County, TX",County or equivalent
+28700,,"Kingsport-Bristol, TN-VA",Metropolitan Statistical Area
+28700,47073,"Hawkins County, TN",County or equivalent
+28700,47163,"Sullivan County, TN",County or equivalent
+28700,51169,"Scott County, VA",County or equivalent
+28700,51191,"Washington County, VA",County or equivalent
+28700,51520,"Bristol city, VA",County or equivalent
+28740,,"Kingston, NY",Metropolitan Statistical Area
+28740,36111,"Ulster County, NY",County or equivalent
+28940,,"Knoxville, TN",Metropolitan Statistical Area
+28940,47001,"Anderson County, TN",County or equivalent
+28940,47009,"Blount County, TN",County or equivalent
+28940,47013,"Campbell County, TN",County or equivalent
+28940,47093,"Knox County, TN",County or equivalent
+28940,47105,"Loudon County, TN",County or equivalent
+28940,47129,"Morgan County, TN",County or equivalent
+28940,47145,"Roane County, TN",County or equivalent
+28940,47173,"Union County, TN",County or equivalent
+29020,,"Kokomo, IN",Metropolitan Statistical Area
+29020,18067,"Howard County, IN",County or equivalent
+29100,,"La Crosse-Onalaska, WI-MN",Metropolitan Statistical Area
+29100,27055,"Houston County, MN",County or equivalent
+29100,55063,"La Crosse County, WI",County or equivalent
+29180,,"Lafayette, LA",Metropolitan Statistical Area
+29180,22001,"Acadia Parish, LA",County or equivalent
+29180,22045,"Iberia Parish, LA",County or equivalent
+29180,22055,"Lafayette Parish, LA",County or equivalent
+29180,22099,"St. Martin Parish, LA",County or equivalent
+29180,22113,"Vermilion Parish, LA",County or equivalent
+29200,,"Lafayette-West Lafayette, IN",Metropolitan Statistical Area
+29200,18007,"Benton County, IN",County or equivalent
+29200,18015,"Carroll County, IN",County or equivalent
+29200,18157,"Tippecanoe County, IN",County or equivalent
+29200,18171,"Warren County, IN",County or equivalent
+29340,,"Lake Charles, LA",Metropolitan Statistical Area
+29340,22019,"Calcasieu Parish, LA",County or equivalent
+29340,22023,"Cameron Parish, LA",County or equivalent
+29420,,"Lake Havasu City-Kingman, AZ",Metropolitan Statistical Area
+29420,4015,"Mohave County, AZ",County or equivalent
+29460,,"Lakeland-Winter Haven, FL",Metropolitan Statistical Area
+29460,12105,"Polk County, FL",County or equivalent
+29540,,"Lancaster, PA",Metropolitan Statistical Area
+29540,42071,"Lancaster County, PA",County or equivalent
+29620,,"Lansing-East Lansing, MI",Metropolitan Statistical Area
+29620,26037,"Clinton County, MI",County or equivalent
+29620,26045,"Eaton County, MI",County or equivalent
+29620,26065,"Ingham County, MI",County or equivalent
+29620,26155,"Shiawassee County, MI",County or equivalent
+29700,,"Laredo, TX",Metropolitan Statistical Area
+29700,48479,"Webb County, TX",County or equivalent
+29740,,"Las Cruces, NM",Metropolitan Statistical Area
+29740,35013,"Doña Ana County, NM",County or equivalent
+29820,,"Las Vegas-Henderson-Paradise, NV",Metropolitan Statistical Area
+29820,32003,"Clark County, NV",County or equivalent
+29940,,"Lawrence, KS",Metropolitan Statistical Area
+29940,20045,"Douglas County, KS",County or equivalent
+30020,,"Lawton, OK",Metropolitan Statistical Area
+30020,40031,"Comanche County, OK",County or equivalent
+30020,40033,"Cotton County, OK",County or equivalent
+30140,,"Lebanon, PA",Metropolitan Statistical Area
+30140,42075,"Lebanon County, PA",County or equivalent
+30300,,"Lewiston, ID-WA",Metropolitan Statistical Area
+30300,16069,"Nez Perce County, ID",County or equivalent
+30300,53003,"Asotin County, WA",County or equivalent
+30340,,"Lewiston-Auburn, ME",Metropolitan Statistical Area
+30340,23001,"Androscoggin County, ME",County or equivalent
+30460,,"Lexington-Fayette, KY",Metropolitan Statistical Area
+30460,21017,"Bourbon County, KY",County or equivalent
+30460,21049,"Clark County, KY",County or equivalent
+30460,21067,"Fayette County, KY",County or equivalent
+30460,21113,"Jessamine County, KY",County or equivalent
+30460,21209,"Scott County, KY",County or equivalent
+30460,21239,"Woodford County, KY",County or equivalent
+30620,,"Lima, OH",Metropolitan Statistical Area
+30620,39003,"Allen County, OH",County or equivalent
+30700,,"Lincoln, NE",Metropolitan Statistical Area
+30700,31109,"Lancaster County, NE",County or equivalent
+30700,31159,"Seward County, NE",County or equivalent
+30780,,"Little Rock-North Little Rock-Conway, AR",Metropolitan Statistical Area
+30780,5045,"Faulkner County, AR",County or equivalent
+30780,5053,"Grant County, AR",County or equivalent
+30780,5085,"Lonoke County, AR",County or equivalent
+30780,5105,"Perry County, AR",County or equivalent
+30780,5119,"Pulaski County, AR",County or equivalent
+30780,5125,"Saline County, AR",County or equivalent
+30860,,"Logan, UT-ID",Metropolitan Statistical Area
+30860,16041,"Franklin County, ID",County or equivalent
+30860,49005,"Cache County, UT",County or equivalent
+30980,,"Longview, TX",Metropolitan Statistical Area
+30980,48183,"Gregg County, TX",County or equivalent
+30980,48203,"Harrison County, TX",County or equivalent
+30980,48401,"Rusk County, TX",County or equivalent
+30980,48459,"Upshur County, TX",County or equivalent
+31020,,"Longview, WA",Metropolitan Statistical Area
+31020,53015,"Cowlitz County, WA",County or equivalent
+31080,,"Los Angeles-Long Beach-Anaheim, CA",Metropolitan Statistical Area
+31080,,"Anaheim-Santa Ana-Irvine, CA",Metropolitan Division
+31080,6059,"Orange County, CA",County or equivalent
+31080,,"Los Angeles-Long Beach-Glendale, CA",Metropolitan Division
+31080,6037,"Los Angeles County, CA",County or equivalent
+31140,,"Louisville/Jefferson County, KY-IN",Metropolitan Statistical Area
+31140,18019,"Clark County, IN",County or equivalent
+31140,18043,"Floyd County, IN",County or equivalent
+31140,18061,"Harrison County, IN",County or equivalent
+31140,18175,"Washington County, IN",County or equivalent
+31140,21029,"Bullitt County, KY",County or equivalent
+31140,21103,"Henry County, KY",County or equivalent
+31140,21111,"Jefferson County, KY",County or equivalent
+31140,21185,"Oldham County, KY",County or equivalent
+31140,21211,"Shelby County, KY",County or equivalent
+31140,21215,"Spencer County, KY",County or equivalent
+31180,,"Lubbock, TX",Metropolitan Statistical Area
+31180,48107,"Crosby County, TX",County or equivalent
+31180,48303,"Lubbock County, TX",County or equivalent
+31180,48305,"Lynn County, TX",County or equivalent
+31340,,"Lynchburg, VA",Metropolitan Statistical Area
+31340,51009,"Amherst County, VA",County or equivalent
+31340,51011,"Appomattox County, VA",County or equivalent
+31340,51019,"Bedford County, VA",County or equivalent
+31340,51031,"Campbell County, VA",County or equivalent
+31340,51680,"Lynchburg city, VA",County or equivalent
+31420,,"Macon-Bibb County, GA",Metropolitan Statistical Area
+31420,13021,"Bibb County, GA",County or equivalent
+31420,13079,"Crawford County, GA",County or equivalent
+31420,13169,"Jones County, GA",County or equivalent
+31420,13207,"Monroe County, GA",County or equivalent
+31420,13289,"Twiggs County, GA",County or equivalent
+31460,,"Madera, CA",Metropolitan Statistical Area
+31460,6039,"Madera County, CA",County or equivalent
+31540,,"Madison, WI",Metropolitan Statistical Area
+31540,55021,"Columbia County, WI",County or equivalent
+31540,55025,"Dane County, WI",County or equivalent
+31540,55045,"Green County, WI",County or equivalent
+31540,55049,"Iowa County, WI",County or equivalent
+31700,,"Manchester-Nashua, NH",Metropolitan Statistical Area
+31700,33011,"Hillsborough County, NH",County or equivalent
+31740,,"Manhattan, KS",Metropolitan Statistical Area
+31740,20061,"Geary County, KS",County or equivalent
+31740,20149,"Pottawatomie County, KS",County or equivalent
+31740,20161,"Riley County, KS",County or equivalent
+31860,,"Mankato, MN",Metropolitan Statistical Area
+31860,27013,"Blue Earth County, MN",County or equivalent
+31860,27103,"Nicollet County, MN",County or equivalent
+31900,,"Mansfield, OH",Metropolitan Statistical Area
+31900,39139,"Richland County, OH",County or equivalent
+32580,,"McAllen-Edinburg-Mission, TX",Metropolitan Statistical Area
+32580,48215,"Hidalgo County, TX",County or equivalent
+32780,,"Medford, OR",Metropolitan Statistical Area
+32780,41029,"Jackson County, OR",County or equivalent
+32820,,"Memphis, TN-MS-AR",Metropolitan Statistical Area
+32820,5035,"Crittenden County, AR",County or equivalent
+32820,28033,"DeSoto County, MS",County or equivalent
+32820,28093,"Marshall County, MS",County or equivalent
+32820,28137,"Tate County, MS",County or equivalent
+32820,28143,"Tunica County, MS",County or equivalent
+32820,47047,"Fayette County, TN",County or equivalent
+32820,47157,"Shelby County, TN",County or equivalent
+32820,47167,"Tipton County, TN",County or equivalent
+32900,,"Merced, CA",Metropolitan Statistical Area
+32900,6047,"Merced County, CA",County or equivalent
+33100,,"Miami-Fort Lauderdale-Pompano Beach, FL",Metropolitan Statistical Area
+33100,,"Fort Lauderdale-Pompano Beach-Sunrise, FL",Metropolitan Division
+33100,12011,"Broward County, FL",County or equivalent
+33100,,"Miami-Miami Beach-Kendall, FL",Metropolitan Division
+33100,12086,"Miami-Dade County, FL",County or equivalent
+33100,,"West Palm Beach-Boca Raton-Boynton Beach, FL",Metropolitan Division
+33100,12099,"Palm Beach County, FL",County or equivalent
+33140,,"Michigan City-La Porte, IN",Metropolitan Statistical Area
+33140,18091,"LaPorte County, IN",County or equivalent
+33220,,"Midland, MI",Metropolitan Statistical Area
+33220,26111,"Midland County, MI",County or equivalent
+33260,,"Midland, TX",Metropolitan Statistical Area
+33260,48317,"Martin County, TX",County or equivalent
+33260,48329,"Midland County, TX",County or equivalent
+33340,,"Milwaukee-Waukesha, WI",Metropolitan Statistical Area
+33340,55079,"Milwaukee County, WI",County or equivalent
+33340,55089,"Ozaukee County, WI",County or equivalent
+33340,55131,"Washington County, WI",County or equivalent
+33340,55133,"Waukesha County, WI",County or equivalent
+33460,,"Minneapolis-St. Paul-Bloomington, MN-WI",Metropolitan Statistical Area
+33460,27003,"Anoka County, MN",County or equivalent
+33460,27019,"Carver County, MN",County or equivalent
+33460,27025,"Chisago County, MN",County or equivalent
+33460,27037,"Dakota County, MN",County or equivalent
+33460,27053,"Hennepin County, MN",County or equivalent
+33460,27059,"Isanti County, MN",County or equivalent
+33460,27079,"Le Sueur County, MN",County or equivalent
+33460,27095,"Mille Lacs County, MN",County or equivalent
+33460,27123,"Ramsey County, MN",County or equivalent
+33460,27139,"Scott County, MN",County or equivalent
+33460,27141,"Sherburne County, MN",County or equivalent
+33460,27163,"Washington County, MN",County or equivalent
+33460,27171,"Wright County, MN",County or equivalent
+33460,55093,"Pierce County, WI",County or equivalent
+33460,55109,"St. Croix County, WI",County or equivalent
+33540,,"Missoula, MT",Metropolitan Statistical Area
+33540,30063,"Missoula County, MT",County or equivalent
+33660,,"Mobile, AL",Metropolitan Statistical Area
+33660,1097,"Mobile County, AL",County or equivalent
+33660,1129,"Washington County, AL",County or equivalent
+33700,,"Modesto, CA",Metropolitan Statistical Area
+33700,6099,"Stanislaus County, CA",County or equivalent
+33740,,"Monroe, LA",Metropolitan Statistical Area
+33740,22067,"Morehouse Parish, LA",County or equivalent
+33740,22073,"Ouachita Parish, LA",County or equivalent
+33740,22111,"Union Parish, LA",County or equivalent
+33780,,"Monroe, MI",Metropolitan Statistical Area
+33780,26115,"Monroe County, MI",County or equivalent
+33860,,"Montgomery, AL",Metropolitan Statistical Area
+33860,1001,"Autauga County, AL",County or equivalent
+33860,1051,"Elmore County, AL",County or equivalent
+33860,1085,"Lowndes County, AL",County or equivalent
+33860,1101,"Montgomery County, AL",County or equivalent
+34060,,"Morgantown, WV",Metropolitan Statistical Area
+34060,54061,"Monongalia County, WV",County or equivalent
+34060,54077,"Preston County, WV",County or equivalent
+34100,,"Morristown, TN",Metropolitan Statistical Area
+34100,47057,"Grainger County, TN",County or equivalent
+34100,47063,"Hamblen County, TN",County or equivalent
+34100,47089,"Jefferson County, TN",County or equivalent
+34580,,"Mount Vernon-Anacortes, WA",Metropolitan Statistical Area
+34580,53057,"Skagit County, WA",County or equivalent
+34620,,"Muncie, IN",Metropolitan Statistical Area
+34620,18035,"Delaware County, IN",County or equivalent
+34740,,"Muskegon, MI",Metropolitan Statistical Area
+34740,26121,"Muskegon County, MI",County or equivalent
+34820,,"Myrtle Beach-Conway-North Myrtle Beach, SC-NC",Metropolitan Statistical Area
+34820,37019,"Brunswick County, NC",County or equivalent
+34820,45051,"Horry County, SC",County or equivalent
+34900,,"Napa, CA",Metropolitan Statistical Area
+34900,6055,"Napa County, CA",County or equivalent
+34940,,"Naples-Marco Island, FL",Metropolitan Statistical Area
+34940,12021,"Collier County, FL",County or equivalent
+34980,,"Nashville-Davidson--Murfreesboro--Franklin, TN",Metropolitan Statistical Area
+34980,47015,"Cannon County, TN",County or equivalent
+34980,47021,"Cheatham County, TN",County or equivalent
+34980,47037,"Davidson County, TN",County or equivalent
+34980,47043,"Dickson County, TN",County or equivalent
+34980,47111,"Macon County, TN",County or equivalent
+34980,47119,"Maury County, TN",County or equivalent
+34980,47147,"Robertson County, TN",County or equivalent
+34980,47149,"Rutherford County, TN",County or equivalent
+34980,47159,"Smith County, TN",County or equivalent
+34980,47165,"Sumner County, TN",County or equivalent
+34980,47169,"Trousdale County, TN",County or equivalent
+34980,47187,"Williamson County, TN",County or equivalent
+34980,47189,"Wilson County, TN",County or equivalent
+35100,,"New Bern, NC",Metropolitan Statistical Area
+35100,37049,"Craven County, NC",County or equivalent
+35100,37103,"Jones County, NC",County or equivalent
+35100,37137,"Pamlico County, NC",County or equivalent
+35300,,"New Haven-Milford, CT",Metropolitan Statistical Area
+35300,9009,"New Haven County, CT",County or equivalent
+35380,,"New Orleans-Metairie, LA",Metropolitan Statistical Area
+35380,22051,"Jefferson Parish, LA",County or equivalent
+35380,22071,"Orleans Parish, LA",County or equivalent
+35380,22075,"Plaquemines Parish, LA",County or equivalent
+35380,22087,"St. Bernard Parish, LA",County or equivalent
+35380,22089,"St. Charles Parish, LA",County or equivalent
+35380,22093,"St. James Parish, LA",County or equivalent
+35380,22095,"St. John the Baptist Parish, LA",County or equivalent
+35380,22103,"St. Tammany Parish, LA",County or equivalent
+35620,,"New York-Newark-Jersey City, NY-NJ-PA",Metropolitan Statistical Area
+35620,,"Nassau County-Suffolk County, NY",Metropolitan Division
+35620,36059,"Nassau County, NY",County or equivalent
+35620,36103,"Suffolk County, NY",County or equivalent
+35620,,"Newark, NJ-PA",Metropolitan Division
+35620,34013,"Essex County, NJ",County or equivalent
+35620,34019,"Hunterdon County, NJ",County or equivalent
+35620,34027,"Morris County, NJ",County or equivalent
+35620,34037,"Sussex County, NJ",County or equivalent
+35620,34039,"Union County, NJ",County or equivalent
+35620,42103,"Pike County, PA",County or equivalent
+35620,,"New Brunswick-Lakewood, NJ",Metropolitan Division
+35620,34023,"Middlesex County, NJ",County or equivalent
+35620,34025,"Monmouth County, NJ",County or equivalent
+35620,34029,"Ocean County, NJ",County or equivalent
+35620,34035,"Somerset County, NJ",County or equivalent
+35620,,"New York-Jersey City-White Plains, NY-NJ",Metropolitan Division
+35620,34003,"Bergen County, NJ",County or equivalent
+35620,34017,"Hudson County, NJ",County or equivalent
+35620,34031,"Passaic County, NJ",County or equivalent
+35620,36005,"Bronx County, NY",County or equivalent
+35620,36047,"Kings County, NY",County or equivalent
+35620,36061,"New York County, NY",County or equivalent
+35620,36079,"Putnam County, NY",County or equivalent
+35620,36081,"Queens County, NY",County or equivalent
+35620,36085,"Richmond County, NY",County or equivalent
+35620,36087,"Rockland County, NY",County or equivalent
+35620,36119,"Westchester County, NY",County or equivalent
+35660,,"Niles, MI",Metropolitan Statistical Area
+35660,26021,"Berrien County, MI",County or equivalent
+35840,,"North Port-Sarasota-Bradenton, FL",Metropolitan Statistical Area
+35840,12081,"Manatee County, FL",County or equivalent
+35840,12115,"Sarasota County, FL",County or equivalent
+35980,,"Norwich-New London, CT",Metropolitan Statistical Area
+35980,9011,"New London County, CT",County or equivalent
+36100,,"Ocala, FL",Metropolitan Statistical Area
+36100,12083,"Marion County, FL",County or equivalent
+36140,,"Ocean City, NJ",Metropolitan Statistical Area
+36140,34009,"Cape May County, NJ",County or equivalent
+36220,,"Odessa, TX",Metropolitan Statistical Area
+36220,48135,"Ector County, TX",County or equivalent
+36260,,"Ogden-Clearfield, UT",Metropolitan Statistical Area
+36260,49003,"Box Elder County, UT",County or equivalent
+36260,49011,"Davis County, UT",County or equivalent
+36260,49029,"Morgan County, UT",County or equivalent
+36260,49057,"Weber County, UT",County or equivalent
+36420,,"Oklahoma City, OK",Metropolitan Statistical Area
+36420,40017,"Canadian County, OK",County or equivalent
+36420,40027,"Cleveland County, OK",County or equivalent
+36420,40051,"Grady County, OK",County or equivalent
+36420,40081,"Lincoln County, OK",County or equivalent
+36420,40083,"Logan County, OK",County or equivalent
+36420,40087,"McClain County, OK",County or equivalent
+36420,40109,"Oklahoma County, OK",County or equivalent
+36500,,"Olympia-Lacey-Tumwater, WA",Metropolitan Statistical Area
+36500,53067,"Thurston County, WA",County or equivalent
+36540,,"Omaha-Council Bluffs, NE-IA",Metropolitan Statistical Area
+36540,19085,"Harrison County, IA",County or equivalent
+36540,19129,"Mills County, IA",County or equivalent
+36540,19155,"Pottawattamie County, IA",County or equivalent
+36540,31025,"Cass County, NE",County or equivalent
+36540,31055,"Douglas County, NE",County or equivalent
+36540,31153,"Sarpy County, NE",County or equivalent
+36540,31155,"Saunders County, NE",County or equivalent
+36540,31177,"Washington County, NE",County or equivalent
+36740,,"Orlando-Kissimmee-Sanford, FL",Metropolitan Statistical Area
+36740,12069,"Lake County, FL",County or equivalent
+36740,12095,"Orange County, FL",County or equivalent
+36740,12097,"Osceola County, FL",County or equivalent
+36740,12117,"Seminole County, FL",County or equivalent
+36780,,"Oshkosh-Neenah, WI",Metropolitan Statistical Area
+36780,55139,"Winnebago County, WI",County or equivalent
+36980,,"Owensboro, KY",Metropolitan Statistical Area
+36980,21059,"Daviess County, KY",County or equivalent
+36980,21091,"Hancock County, KY",County or equivalent
+36980,21149,"McLean County, KY",County or equivalent
+37100,,"Oxnard-Thousand Oaks-Ventura, CA",Metropolitan Statistical Area
+37100,6111,"Ventura County, CA",County or equivalent
+37340,,"Palm Bay-Melbourne-Titusville, FL",Metropolitan Statistical Area
+37340,12009,"Brevard County, FL",County or equivalent
+37460,,"Panama City, FL",Metropolitan Statistical Area
+37460,12005,"Bay County, FL",County or equivalent
+37620,,"Parkersburg-Vienna, WV",Metropolitan Statistical Area
+37620,54105,"Wirt County, WV",County or equivalent
+37620,54107,"Wood County, WV",County or equivalent
+37860,,"Pensacola-Ferry Pass-Brent, FL",Metropolitan Statistical Area
+37860,12033,"Escambia County, FL",County or equivalent
+37860,12113,"Santa Rosa County, FL",County or equivalent
+37900,,"Peoria, IL",Metropolitan Statistical Area
+37900,17057,"Fulton County, IL",County or equivalent
+37900,17123,"Marshall County, IL",County or equivalent
+37900,17143,"Peoria County, IL",County or equivalent
+37900,17175,"Stark County, IL",County or equivalent
+37900,17179,"Tazewell County, IL",County or equivalent
+37900,17203,"Woodford County, IL",County or equivalent
+37980,,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",Metropolitan Statistical Area
+37980,,"Camden, NJ",Metropolitan Division
+37980,34005,"Burlington County, NJ",County or equivalent
+37980,34007,"Camden County, NJ",County or equivalent
+37980,34015,"Gloucester County, NJ",County or equivalent
+37980,,"Montgomery County-Bucks County-Chester County, PA",Metropolitan Division
+37980,42017,"Bucks County, PA",County or equivalent
+37980,42029,"Chester County, PA",County or equivalent
+37980,42091,"Montgomery County, PA",County or equivalent
+37980,,"Philadelphia, PA",Metropolitan Division
+37980,42045,"Delaware County, PA",County or equivalent
+37980,42101,"Philadelphia County, PA",County or equivalent
+37980,,"Wilmington, DE-MD-NJ",Metropolitan Division
+37980,10003,"New Castle County, DE",County or equivalent
+37980,24015,"Cecil County, MD",County or equivalent
+37980,34033,"Salem County, NJ",County or equivalent
+38060,,"Phoenix-Mesa-Chandler, AZ",Metropolitan Statistical Area
+38060,4013,"Maricopa County, AZ",County or equivalent
+38060,4021,"Pinal County, AZ",County or equivalent
+38220,,"Pine Bluff, AR",Metropolitan Statistical Area
+38220,5025,"Cleveland County, AR",County or equivalent
+38220,5069,"Jefferson County, AR",County or equivalent
+38220,5079,"Lincoln County, AR",County or equivalent
+38300,,"Pittsburgh, PA",Metropolitan Statistical Area
+38300,42003,"Allegheny County, PA",County or equivalent
+38300,42005,"Armstrong County, PA",County or equivalent
+38300,42007,"Beaver County, PA",County or equivalent
+38300,42019,"Butler County, PA",County or equivalent
+38300,42051,"Fayette County, PA",County or equivalent
+38300,42125,"Washington County, PA",County or equivalent
+38300,42129,"Westmoreland County, PA",County or equivalent
+38340,,"Pittsfield, MA",Metropolitan Statistical Area
+38340,25003,"Berkshire County, MA",County or equivalent
+38540,,"Pocatello, ID",Metropolitan Statistical Area
+38540,16005,"Bannock County, ID",County or equivalent
+38540,16077,"Power County, ID",County or equivalent
+38860,,"Portland-South Portland, ME",Metropolitan Statistical Area
+38860,23005,"Cumberland County, ME",County or equivalent
+38860,23023,"Sagadahoc County, ME",County or equivalent
+38860,23031,"York County, ME",County or equivalent
+38900,,"Portland-Vancouver-Hillsboro, OR-WA",Metropolitan Statistical Area
+38900,41005,"Clackamas County, OR",County or equivalent
+38900,41009,"Columbia County, OR",County or equivalent
+38900,41051,"Multnomah County, OR",County or equivalent
+38900,41067,"Washington County, OR",County or equivalent
+38900,41071,"Yamhill County, OR",County or equivalent
+38900,53011,"Clark County, WA",County or equivalent
+38900,53059,"Skamania County, WA",County or equivalent
+38940,,"Port St. Lucie, FL",Metropolitan Statistical Area
+38940,12085,"Martin County, FL",County or equivalent
+38940,12111,"St. Lucie County, FL",County or equivalent
+39100,,"Poughkeepsie-Newburgh-Middletown, NY",Metropolitan Statistical Area
+39100,36027,"Dutchess County, NY",County or equivalent
+39100,36071,"Orange County, NY",County or equivalent
+39150,,"Prescott Valley-Prescott, AZ",Metropolitan Statistical Area
+39150,4025,"Yavapai County, AZ",County or equivalent
+39300,,"Providence-Warwick, RI-MA",Metropolitan Statistical Area
+39300,25005,"Bristol County, MA",County or equivalent
+39300,44001,"Bristol County, RI",County or equivalent
+39300,44003,"Kent County, RI",County or equivalent
+39300,44005,"Newport County, RI",County or equivalent
+39300,44007,"Providence County, RI",County or equivalent
+39300,44009,"Washington County, RI",County or equivalent
+39340,,"Provo-Orem, UT",Metropolitan Statistical Area
+39340,49023,"Juab County, UT",County or equivalent
+39340,49049,"Utah County, UT",County or equivalent
+39380,,"Pueblo, CO",Metropolitan Statistical Area
+39380,8101,"Pueblo County, CO",County or equivalent
+39460,,"Punta Gorda, FL",Metropolitan Statistical Area
+39460,12015,"Charlotte County, FL",County or equivalent
+39540,,"Racine, WI",Metropolitan Statistical Area
+39540,55101,"Racine County, WI",County or equivalent
+39580,,"Raleigh-Cary, NC",Metropolitan Statistical Area
+39580,37069,"Franklin County, NC",County or equivalent
+39580,37101,"Johnston County, NC",County or equivalent
+39580,37183,"Wake County, NC",County or equivalent
+39660,,"Rapid City, SD",Metropolitan Statistical Area
+39660,46093,"Meade County, SD",County or equivalent
+39660,46103,"Pennington County, SD",County or equivalent
+39740,,"Reading, PA",Metropolitan Statistical Area
+39740,42011,"Berks County, PA",County or equivalent
+39820,,"Redding, CA",Metropolitan Statistical Area
+39820,6089,"Shasta County, CA",County or equivalent
+39900,,"Reno, NV",Metropolitan Statistical Area
+39900,32029,"Storey County, NV",County or equivalent
+39900,32031,"Washoe County, NV",County or equivalent
+40060,,"Richmond, VA",Metropolitan Statistical Area
+40060,51007,"Amelia County, VA",County or equivalent
+40060,51036,"Charles City County, VA",County or equivalent
+40060,51041,"Chesterfield County, VA",County or equivalent
+40060,51053,"Dinwiddie County, VA",County or equivalent
+40060,51075,"Goochland County, VA",County or equivalent
+40060,51085,"Hanover County, VA",County or equivalent
+40060,51087,"Henrico County, VA",County or equivalent
+40060,51097,"King and Queen County, VA",County or equivalent
+40060,51101,"King William County, VA",County or equivalent
+40060,51127,"New Kent County, VA",County or equivalent
+40060,51145,"Powhatan County, VA",County or equivalent
+40060,51149,"Prince George County, VA",County or equivalent
+40060,51183,"Sussex County, VA",County or equivalent
+40060,51570,"Colonial Heights city, VA",County or equivalent
+40060,51670,"Hopewell city, VA",County or equivalent
+40060,51730,"Petersburg city, VA",County or equivalent
+40060,51760,"Richmond city, VA",County or equivalent
+40140,,"Riverside-San Bernardino-Ontario, CA",Metropolitan Statistical Area
+40140,6065,"Riverside County, CA",County or equivalent
+40140,6071,"San Bernardino County, CA",County or equivalent
+40220,,"Roanoke, VA",Metropolitan Statistical Area
+40220,51023,"Botetourt County, VA",County or equivalent
+40220,51045,"Craig County, VA",County or equivalent
+40220,51067,"Franklin County, VA",County or equivalent
+40220,51161,"Roanoke County, VA",County or equivalent
+40220,51770,"Roanoke city, VA",County or equivalent
+40220,51775,"Salem city, VA",County or equivalent
+40340,,"Rochester, MN",Metropolitan Statistical Area
+40340,27039,"Dodge County, MN",County or equivalent
+40340,27045,"Fillmore County, MN",County or equivalent
+40340,27109,"Olmsted County, MN",County or equivalent
+40340,27157,"Wabasha County, MN",County or equivalent
+40380,,"Rochester, NY",Metropolitan Statistical Area
+40380,36051,"Livingston County, NY",County or equivalent
+40380,36055,"Monroe County, NY",County or equivalent
+40380,36069,"Ontario County, NY",County or equivalent
+40380,36073,"Orleans County, NY",County or equivalent
+40380,36117,"Wayne County, NY",County or equivalent
+40380,36123,"Yates County, NY",County or equivalent
+40420,,"Rockford, IL",Metropolitan Statistical Area
+40420,17007,"Boone County, IL",County or equivalent
+40420,17201,"Winnebago County, IL",County or equivalent
+40580,,"Rocky Mount, NC",Metropolitan Statistical Area
+40580,37065,"Edgecombe County, NC",County or equivalent
+40580,37127,"Nash County, NC",County or equivalent
+40660,,"Rome, GA",Metropolitan Statistical Area
+40660,13115,"Floyd County, GA",County or equivalent
+40900,,"Sacramento-Roseville-Folsom, CA",Metropolitan Statistical Area
+40900,6017,"El Dorado County, CA",County or equivalent
+40900,6061,"Placer County, CA",County or equivalent
+40900,6067,"Sacramento County, CA",County or equivalent
+40900,6113,"Yolo County, CA",County or equivalent
+40980,,"Saginaw, MI",Metropolitan Statistical Area
+40980,26145,"Saginaw County, MI",County or equivalent
+41060,,"St. Cloud, MN",Metropolitan Statistical Area
+41060,27009,"Benton County, MN",County or equivalent
+41060,27145,"Stearns County, MN",County or equivalent
+41100,,"St. George, UT",Metropolitan Statistical Area
+41100,49053,"Washington County, UT",County or equivalent
+41140,,"St. Joseph, MO-KS",Metropolitan Statistical Area
+41140,20043,"Doniphan County, KS",County or equivalent
+41140,29003,"Andrew County, MO",County or equivalent
+41140,29021,"Buchanan County, MO",County or equivalent
+41140,29063,"DeKalb County, MO",County or equivalent
+41180,,"St. Louis, MO-IL",Metropolitan Statistical Area
+41180,17005,"Bond County, IL",County or equivalent
+41180,17013,"Calhoun County, IL",County or equivalent
+41180,17027,"Clinton County, IL",County or equivalent
+41180,17083,"Jersey County, IL",County or equivalent
+41180,17117,"Macoupin County, IL",County or equivalent
+41180,17119,"Madison County, IL",County or equivalent
+41180,17133,"Monroe County, IL",County or equivalent
+41180,17163,"St. Clair County, IL",County or equivalent
+41180,29071,"Franklin County, MO",County or equivalent
+41180,29099,"Jefferson County, MO",County or equivalent
+41180,29113,"Lincoln County, MO",County or equivalent
+41180,29183,"St. Charles County, MO",County or equivalent
+41180,29189,"St. Louis County, MO",County or equivalent
+41180,29219,"Warren County, MO",County or equivalent
+41180,29510,"St. Louis city, MO",County or equivalent
+41420,,"Salem, OR",Metropolitan Statistical Area
+41420,41047,"Marion County, OR",County or equivalent
+41420,41053,"Polk County, OR",County or equivalent
+41500,,"Salinas, CA",Metropolitan Statistical Area
+41500,6053,"Monterey County, CA",County or equivalent
+41540,,"Salisbury, MD-DE",Metropolitan Statistical Area
+41540,10005,"Sussex County, DE",County or equivalent
+41540,24039,"Somerset County, MD",County or equivalent
+41540,24045,"Wicomico County, MD",County or equivalent
+41540,24047,"Worcester County, MD",County or equivalent
+41620,,"Salt Lake City, UT",Metropolitan Statistical Area
+41620,49035,"Salt Lake County, UT",County or equivalent
+41620,49045,"Tooele County, UT",County or equivalent
+41660,,"San Angelo, TX",Metropolitan Statistical Area
+41660,48235,"Irion County, TX",County or equivalent
+41660,48431,"Sterling County, TX",County or equivalent
+41660,48451,"Tom Green County, TX",County or equivalent
+41700,,"San Antonio-New Braunfels, TX",Metropolitan Statistical Area
+41700,48013,"Atascosa County, TX",County or equivalent
+41700,48019,"Bandera County, TX",County or equivalent
+41700,48029,"Bexar County, TX",County or equivalent
+41700,48091,"Comal County, TX",County or equivalent
+41700,48187,"Guadalupe County, TX",County or equivalent
+41700,48259,"Kendall County, TX",County or equivalent
+41700,48325,"Medina County, TX",County or equivalent
+41700,48493,"Wilson County, TX",County or equivalent
+41740,,"San Diego-Chula Vista-Carlsbad, CA",Metropolitan Statistical Area
+41740,6073,"San Diego County, CA",County or equivalent
+41860,,"San Francisco-Oakland-Berkeley, CA",Metropolitan Statistical Area
+41860,,"Oakland-Berkeley-Livermore, CA",Metropolitan Division
+41860,6001,"Alameda County, CA",County or equivalent
+41860,6013,"Contra Costa County, CA",County or equivalent
+41860,,"San Francisco-San Mateo-Redwood City, CA",Metropolitan Division
+41860,6075,"San Francisco County, CA",County or equivalent
+41860,6081,"San Mateo County, CA",County or equivalent
+41860,,"San Rafael, CA",Metropolitan Division
+41860,6041,"Marin County, CA",County or equivalent
+41940,,"San Jose-Sunnyvale-Santa Clara, CA",Metropolitan Statistical Area
+41940,6069,"San Benito County, CA",County or equivalent
+41940,6085,"Santa Clara County, CA",County or equivalent
+42020,,"San Luis Obispo-Paso Robles, CA",Metropolitan Statistical Area
+42020,6079,"San Luis Obispo County, CA",County or equivalent
+42100,,"Santa Cruz-Watsonville, CA",Metropolitan Statistical Area
+42100,6087,"Santa Cruz County, CA",County or equivalent
+42140,,"Santa Fe, NM",Metropolitan Statistical Area
+42140,35049,"Santa Fe County, NM",County or equivalent
+42200,,"Santa Maria-Santa Barbara, CA",Metropolitan Statistical Area
+42200,6083,"Santa Barbara County, CA",County or equivalent
+42220,,"Santa Rosa-Petaluma, CA",Metropolitan Statistical Area
+42220,6097,"Sonoma County, CA",County or equivalent
+42340,,"Savannah, GA",Metropolitan Statistical Area
+42340,13029,"Bryan County, GA",County or equivalent
+42340,13051,"Chatham County, GA",County or equivalent
+42340,13103,"Effingham County, GA",County or equivalent
+42540,,"Scranton--Wilkes-Barre, PA",Metropolitan Statistical Area
+42540,42069,"Lackawanna County, PA",County or equivalent
+42540,42079,"Luzerne County, PA",County or equivalent
+42540,42131,"Wyoming County, PA",County or equivalent
+42660,,"Seattle-Tacoma-Bellevue, WA",Metropolitan Statistical Area
+42660,,"Seattle-Bellevue-Kent, WA",Metropolitan Division
+42660,53033,"King County, WA",County or equivalent
+42660,53061,"Snohomish County, WA",County or equivalent
+42660,,"Tacoma-Lakewood, WA",Metropolitan Division
+42660,53053,"Pierce County, WA",County or equivalent
+42680,,"Sebastian-Vero Beach, FL",Metropolitan Statistical Area
+42680,12061,"Indian River County, FL",County or equivalent
+42700,,"Sebring-Avon Park, FL",Metropolitan Statistical Area
+42700,12055,"Highlands County, FL",County or equivalent
+43100,,"Sheboygan, WI",Metropolitan Statistical Area
+43100,55117,"Sheboygan County, WI",County or equivalent
+43300,,"Sherman-Denison, TX",Metropolitan Statistical Area
+43300,48181,"Grayson County, TX",County or equivalent
+43340,,"Shreveport-Bossier City, LA",Metropolitan Statistical Area
+43340,22015,"Bossier Parish, LA",County or equivalent
+43340,22017,"Caddo Parish, LA",County or equivalent
+43340,22031,"De Soto Parish, LA",County or equivalent
+43420,,"Sierra Vista-Douglas, AZ",Metropolitan Statistical Area
+43420,4003,"Cochise County, AZ",County or equivalent
+43580,,"Sioux City, IA-NE-SD",Metropolitan Statistical Area
+43580,19193,"Woodbury County, IA",County or equivalent
+43580,31043,"Dakota County, NE",County or equivalent
+43580,31051,"Dixon County, NE",County or equivalent
+43580,46127,"Union County, SD",County or equivalent
+43620,,"Sioux Falls, SD",Metropolitan Statistical Area
+43620,46083,"Lincoln County, SD",County or equivalent
+43620,46087,"McCook County, SD",County or equivalent
+43620,46099,"Minnehaha County, SD",County or equivalent
+43620,46125,"Turner County, SD",County or equivalent
+43780,,"South Bend-Mishawaka, IN-MI",Metropolitan Statistical Area
+43780,18141,"St. Joseph County, IN",County or equivalent
+43780,26027,"Cass County, MI",County or equivalent
+43900,,"Spartanburg, SC",Metropolitan Statistical Area
+43900,45083,"Spartanburg County, SC",County or equivalent
+44060,,"Spokane-Spokane Valley, WA",Metropolitan Statistical Area
+44060,53063,"Spokane County, WA",County or equivalent
+44060,53065,"Stevens County, WA",County or equivalent
+44100,,"Springfield, IL",Metropolitan Statistical Area
+44100,17129,"Menard County, IL",County or equivalent
+44100,17167,"Sangamon County, IL",County or equivalent
+44140,,"Springfield, MA",Metropolitan Statistical Area
+44140,25011,"Franklin County, MA",County or equivalent
+44140,25013,"Hampden County, MA",County or equivalent
+44140,25015,"Hampshire County, MA",County or equivalent
+44180,,"Springfield, MO",Metropolitan Statistical Area
+44180,29043,"Christian County, MO",County or equivalent
+44180,29059,"Dallas County, MO",County or equivalent
+44180,29077,"Greene County, MO",County or equivalent
+44180,29167,"Polk County, MO",County or equivalent
+44180,29225,"Webster County, MO",County or equivalent
+44220,,"Springfield, OH",Metropolitan Statistical Area
+44220,39023,"Clark County, OH",County or equivalent
+44300,,"State College, PA",Metropolitan Statistical Area
+44300,42027,"Centre County, PA",County or equivalent
+44420,,"Staunton, VA",Metropolitan Statistical Area
+44420,51015,"Augusta County, VA",County or equivalent
+44420,51790,"Staunton city, VA",County or equivalent
+44420,51820,"Waynesboro city, VA",County or equivalent
+44700,,"Stockton, CA",Metropolitan Statistical Area
+44700,6077,"San Joaquin County, CA",County or equivalent
+44940,,"Sumter, SC",Metropolitan Statistical Area
+44940,45027,"Clarendon County, SC",County or equivalent
+44940,45085,"Sumter County, SC",County or equivalent
+45060,,"Syracuse, NY",Metropolitan Statistical Area
+45060,36053,"Madison County, NY",County or equivalent
+45060,36067,"Onondaga County, NY",County or equivalent
+45060,36075,"Oswego County, NY",County or equivalent
+45220,,"Tallahassee, FL",Metropolitan Statistical Area
+45220,12039,"Gadsden County, FL",County or equivalent
+45220,12065,"Jefferson County, FL",County or equivalent
+45220,12073,"Leon County, FL",County or equivalent
+45220,12129,"Wakulla County, FL",County or equivalent
+45300,,"Tampa-St. Petersburg-Clearwater, FL",Metropolitan Statistical Area
+45300,12053,"Hernando County, FL",County or equivalent
+45300,12057,"Hillsborough County, FL",County or equivalent
+45300,12101,"Pasco County, FL",County or equivalent
+45300,12103,"Pinellas County, FL",County or equivalent
+45460,,"Terre Haute, IN",Metropolitan Statistical Area
+45460,18021,"Clay County, IN",County or equivalent
+45460,18121,"Parke County, IN",County or equivalent
+45460,18153,"Sullivan County, IN",County or equivalent
+45460,18165,"Vermillion County, IN",County or equivalent
+45460,18167,"Vigo County, IN",County or equivalent
+45500,,"Texarkana, TX-AR",Metropolitan Statistical Area
+45500,5081,"Little River County, AR",County or equivalent
+45500,5091,"Miller County, AR",County or equivalent
+45500,48037,"Bowie County, TX",County or equivalent
+45540,,"The Villages, FL",Metropolitan Statistical Area
+45540,12119,"Sumter County, FL",County or equivalent
+45780,,"Toledo, OH",Metropolitan Statistical Area
+45780,39051,"Fulton County, OH",County or equivalent
+45780,39095,"Lucas County, OH",County or equivalent
+45780,39123,"Ottawa County, OH",County or equivalent
+45780,39173,"Wood County, OH",County or equivalent
+45820,,"Topeka, KS",Metropolitan Statistical Area
+45820,20085,"Jackson County, KS",County or equivalent
+45820,20087,"Jefferson County, KS",County or equivalent
+45820,20139,"Osage County, KS",County or equivalent
+45820,20177,"Shawnee County, KS",County or equivalent
+45820,20197,"Wabaunsee County, KS",County or equivalent
+45940,,"Trenton-Princeton, NJ",Metropolitan Statistical Area
+45940,34021,"Mercer County, NJ",County or equivalent
+46060,,"Tucson, AZ",Metropolitan Statistical Area
+46060,4019,"Pima County, AZ",County or equivalent
+46140,,"Tulsa, OK",Metropolitan Statistical Area
+46140,40037,"Creek County, OK",County or equivalent
+46140,40111,"Okmulgee County, OK",County or equivalent
+46140,40113,"Osage County, OK",County or equivalent
+46140,40117,"Pawnee County, OK",County or equivalent
+46140,40131,"Rogers County, OK",County or equivalent
+46140,40143,"Tulsa County, OK",County or equivalent
+46140,40145,"Wagoner County, OK",County or equivalent
+46220,,"Tuscaloosa, AL",Metropolitan Statistical Area
+46220,1063,"Greene County, AL",County or equivalent
+46220,1065,"Hale County, AL",County or equivalent
+46220,1107,"Pickens County, AL",County or equivalent
+46220,1125,"Tuscaloosa County, AL",County or equivalent
+46300,,"Twin Falls, ID",Metropolitan Statistical Area
+46300,16053,"Jerome County, ID",County or equivalent
+46300,16083,"Twin Falls County, ID",County or equivalent
+46340,,"Tyler, TX",Metropolitan Statistical Area
+46340,48423,"Smith County, TX",County or equivalent
+46520,,"Urban Honolulu, HI",Metropolitan Statistical Area
+46520,15003,"Honolulu County, HI",County or equivalent
+46540,,"Utica-Rome, NY",Metropolitan Statistical Area
+46540,36043,"Herkimer County, NY",County or equivalent
+46540,36065,"Oneida County, NY",County or equivalent
+46660,,"Valdosta, GA",Metropolitan Statistical Area
+46660,13027,"Brooks County, GA",County or equivalent
+46660,13101,"Echols County, GA",County or equivalent
+46660,13173,"Lanier County, GA",County or equivalent
+46660,13185,"Lowndes County, GA",County or equivalent
+46700,,"Vallejo, CA",Metropolitan Statistical Area
+46700,6095,"Solano County, CA",County or equivalent
+47020,,"Victoria, TX",Metropolitan Statistical Area
+47020,48175,"Goliad County, TX",County or equivalent
+47020,48469,"Victoria County, TX",County or equivalent
+47220,,"Vineland-Bridgeton, NJ",Metropolitan Statistical Area
+47220,34011,"Cumberland County, NJ",County or equivalent
+47260,,"Virginia Beach-Norfolk-Newport News, VA-NC",Metropolitan Statistical Area
+47260,37029,"Camden County, NC",County or equivalent
+47260,37053,"Currituck County, NC",County or equivalent
+47260,37073,"Gates County, NC",County or equivalent
+47260,51073,"Gloucester County, VA",County or equivalent
+47260,51093,"Isle of Wight County, VA",County or equivalent
+47260,51095,"James City County, VA",County or equivalent
+47260,51115,"Mathews County, VA",County or equivalent
+47260,51175,"Southampton County, VA",County or equivalent
+47260,51199,"York County, VA",County or equivalent
+47260,51550,"Chesapeake city, VA",County or equivalent
+47260,51620,"Franklin city, VA",County or equivalent
+47260,51650,"Hampton city, VA",County or equivalent
+47260,51700,"Newport News city, VA",County or equivalent
+47260,51710,"Norfolk city, VA",County or equivalent
+47260,51735,"Poquoson city, VA",County or equivalent
+47260,51740,"Portsmouth city, VA",County or equivalent
+47260,51800,"Suffolk city, VA",County or equivalent
+47260,51810,"Virginia Beach city, VA",County or equivalent
+47260,51830,"Williamsburg city, VA",County or equivalent
+47300,,"Visalia, CA",Metropolitan Statistical Area
+47300,6107,"Tulare County, CA",County or equivalent
+47380,,"Waco, TX",Metropolitan Statistical Area
+47380,48145,"Falls County, TX",County or equivalent
+47380,48309,"McLennan County, TX",County or equivalent
+47460,,"Walla Walla, WA",Metropolitan Statistical Area
+47460,53071,"Walla Walla County, WA",County or equivalent
+47580,,"Warner Robins, GA",Metropolitan Statistical Area
+47580,13153,"Houston County, GA",County or equivalent
+47580,13225,"Peach County, GA",County or equivalent
+47900,,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan Statistical Area
+47900,,"Frederick-Gaithersburg-Rockville, MD",Metropolitan Division
+47900,24021,"Frederick County, MD",County or equivalent
+47900,24031,"Montgomery County, MD",County or equivalent
+47900,,"Washington-Arlington-Alexandria, DC-VA-MD-WV",Metropolitan Division
+47900,11001,"District of Columbia, DC",County or equivalent
+47900,24009,"Calvert County, MD",County or equivalent
+47900,24017,"Charles County, MD",County or equivalent
+47900,24033,"Prince George's County, MD",County or equivalent
+47900,51013,"Arlington County, VA",County or equivalent
+47900,51043,"Clarke County, VA",County or equivalent
+47900,51047,"Culpeper County, VA",County or equivalent
+47900,51059,"Fairfax County, VA",County or equivalent
+47900,51061,"Fauquier County, VA",County or equivalent
+47900,51107,"Loudoun County, VA",County or equivalent
+47900,51113,"Madison County, VA",County or equivalent
+47900,51153,"Prince William County, VA",County or equivalent
+47900,51157,"Rappahannock County, VA",County or equivalent
+47900,51177,"Spotsylvania County, VA",County or equivalent
+47900,51179,"Stafford County, VA",County or equivalent
+47900,51187,"Warren County, VA",County or equivalent
+47900,51510,"Alexandria city, VA",County or equivalent
+47900,51600,"Fairfax city, VA",County or equivalent
+47900,51610,"Falls Church city, VA",County or equivalent
+47900,51630,"Fredericksburg city, VA",County or equivalent
+47900,51683,"Manassas city, VA",County or equivalent
+47900,51685,"Manassas Park city, VA",County or equivalent
+47900,54037,"Jefferson County, WV",County or equivalent
+47940,,"Waterloo-Cedar Falls, IA",Metropolitan Statistical Area
+47940,19013,"Black Hawk County, IA",County or equivalent
+47940,19017,"Bremer County, IA",County or equivalent
+47940,19075,"Grundy County, IA",County or equivalent
+48060,,"Watertown-Fort Drum, NY",Metropolitan Statistical Area
+48060,36045,"Jefferson County, NY",County or equivalent
+48140,,"Wausau-Weston, WI",Metropolitan Statistical Area
+48140,55069,"Lincoln County, WI",County or equivalent
+48140,55073,"Marathon County, WI",County or equivalent
+48260,,"Weirton-Steubenville, WV-OH",Metropolitan Statistical Area
+48260,39081,"Jefferson County, OH",County or equivalent
+48260,54009,"Brooke County, WV",County or equivalent
+48260,54029,"Hancock County, WV",County or equivalent
+48300,,"Wenatchee, WA",Metropolitan Statistical Area
+48300,53007,"Chelan County, WA",County or equivalent
+48300,53017,"Douglas County, WA",County or equivalent
+48540,,"Wheeling, WV-OH",Metropolitan Statistical Area
+48540,39013,"Belmont County, OH",County or equivalent
+48540,54051,"Marshall County, WV",County or equivalent
+48540,54069,"Ohio County, WV",County or equivalent
+48620,,"Wichita, KS",Metropolitan Statistical Area
+48620,20015,"Butler County, KS",County or equivalent
+48620,20079,"Harvey County, KS",County or equivalent
+48620,20173,"Sedgwick County, KS",County or equivalent
+48620,20191,"Sumner County, KS",County or equivalent
+48660,,"Wichita Falls, TX",Metropolitan Statistical Area
+48660,48009,"Archer County, TX",County or equivalent
+48660,48077,"Clay County, TX",County or equivalent
+48660,48485,"Wichita County, TX",County or equivalent
+48700,,"Williamsport, PA",Metropolitan Statistical Area
+48700,42081,"Lycoming County, PA",County or equivalent
+48900,,"Wilmington, NC",Metropolitan Statistical Area
+48900,37129,"New Hanover County, NC",County or equivalent
+48900,37141,"Pender County, NC",County or equivalent
+49020,,"Winchester, VA-WV",Metropolitan Statistical Area
+49020,51069,"Frederick County, VA",County or equivalent
+49020,51840,"Winchester city, VA",County or equivalent
+49020,54027,"Hampshire County, WV",County or equivalent
+49180,,"Winston-Salem, NC",Metropolitan Statistical Area
+49180,37057,"Davidson County, NC",County or equivalent
+49180,37059,"Davie County, NC",County or equivalent
+49180,37067,"Forsyth County, NC",County or equivalent
+49180,37169,"Stokes County, NC",County or equivalent
+49180,37197,"Yadkin County, NC",County or equivalent
+49340,,"Worcester, MA-CT",Metropolitan Statistical Area
+49340,9015,"Windham County, CT",County or equivalent
+49340,25027,"Worcester County, MA",County or equivalent
+49420,,"Yakima, WA",Metropolitan Statistical Area
+49420,53077,"Yakima County, WA",County or equivalent
+49620,,"York-Hanover, PA",Metropolitan Statistical Area
+49620,42133,"York County, PA",County or equivalent
+49660,,"Youngstown-Warren-Boardman, OH-PA",Metropolitan Statistical Area
+49660,39099,"Mahoning County, OH",County or equivalent
+49660,39155,"Trumbull County, OH",County or equivalent
+49660,42085,"Mercer County, PA",County or equivalent
+49700,,"Yuba City, CA",Metropolitan Statistical Area
+49700,6101,"Sutter County, CA",County or equivalent
+49700,6115,"Yuba County, CA",County or equivalent
+49740,,"Yuma, AZ",Metropolitan Statistical Area
+49740,4027,"Yuma County, AZ",County or equivalent
+10100,,"Aberdeen, SD",Micropolitan Statistical Area
+10100,46013,"Brown County, SD",County or equivalent
+10100,46045,"Edmunds County, SD",County or equivalent
+10140,,"Aberdeen, WA",Micropolitan Statistical Area
+10140,53027,"Grays Harbor County, WA",County or equivalent
+10220,,"Ada, OK",Micropolitan Statistical Area
+10220,40123,"Pontotoc County, OK",County or equivalent
+10300,,"Adrian, MI",Micropolitan Statistical Area
+10300,26091,"Lenawee County, MI",County or equivalent
+10460,,"Alamogordo, NM",Micropolitan Statistical Area
+10460,35035,"Otero County, NM",County or equivalent
+10620,,"Albemarle, NC",Micropolitan Statistical Area
+10620,37167,"Stanly County, NC",County or equivalent
+10660,,"Albert Lea, MN",Micropolitan Statistical Area
+10660,27047,"Freeborn County, MN",County or equivalent
+10700,,"Albertville, AL",Micropolitan Statistical Area
+10700,1095,"Marshall County, AL",County or equivalent
+10760,,"Alexander City, AL",Micropolitan Statistical Area
+10760,1037,"Coosa County, AL",County or equivalent
+10760,1123,"Tallapoosa County, AL",County or equivalent
+10820,,"Alexandria, MN",Micropolitan Statistical Area
+10820,27041,"Douglas County, MN",County or equivalent
+10860,,"Alice, TX",Micropolitan Statistical Area
+10860,48131,"Duval County, TX",County or equivalent
+10860,48249,"Jim Wells County, TX",County or equivalent
+10940,,"Alma, MI",Micropolitan Statistical Area
+10940,26057,"Gratiot County, MI",County or equivalent
+10980,,"Alpena, MI",Micropolitan Statistical Area
+10980,26007,"Alpena County, MI",County or equivalent
+11060,,"Altus, OK",Micropolitan Statistical Area
+11060,40065,"Jackson County, OK",County or equivalent
+11140,,"Americus, GA",Micropolitan Statistical Area
+11140,13249,"Schley County, GA",County or equivalent
+11140,13261,"Sumter County, GA",County or equivalent
+11220,,"Amsterdam, NY",Micropolitan Statistical Area
+11220,36057,"Montgomery County, NY",County or equivalent
+11380,,"Andrews, TX",Micropolitan Statistical Area
+11380,48003,"Andrews County, TX",County or equivalent
+11420,,"Angola, IN",Micropolitan Statistical Area
+11420,18151,"Steuben County, IN",County or equivalent
+11580,,"Arcadia, FL",Micropolitan Statistical Area
+11580,12027,"DeSoto County, FL",County or equivalent
+11620,,"Ardmore, OK",Micropolitan Statistical Area
+11620,40019,"Carter County, OK",County or equivalent
+11620,40085,"Love County, OK",County or equivalent
+11660,,"Arkadelphia, AR",Micropolitan Statistical Area
+11660,5019,"Clark County, AR",County or equivalent
+11740,,"Ashland, OH",Micropolitan Statistical Area
+11740,39005,"Ashland County, OH",County or equivalent
+11780,,"Ashtabula, OH",Micropolitan Statistical Area
+11780,39007,"Ashtabula County, OH",County or equivalent
+11820,,"Astoria, OR",Micropolitan Statistical Area
+11820,41007,"Clatsop County, OR",County or equivalent
+11860,,"Atchison, KS",Micropolitan Statistical Area
+11860,20005,"Atchison County, KS",County or equivalent
+11900,,"Athens, OH",Micropolitan Statistical Area
+11900,39009,"Athens County, OH",County or equivalent
+11940,,"Athens, TN",Micropolitan Statistical Area
+11940,47107,"McMinn County, TN",County or equivalent
+11980,,"Athens, TX",Micropolitan Statistical Area
+11980,48213,"Henderson County, TX",County or equivalent
+12120,,"Atmore, AL",Micropolitan Statistical Area
+12120,1053,"Escambia County, AL",County or equivalent
+12140,,"Auburn, IN",Micropolitan Statistical Area
+12140,18033,"DeKalb County, IN",County or equivalent
+12180,,"Auburn, NY",Micropolitan Statistical Area
+12180,36011,"Cayuga County, NY",County or equivalent
+12300,,"Augusta-Waterville, ME",Micropolitan Statistical Area
+12300,23011,"Kennebec County, ME",County or equivalent
+12380,,"Austin, MN",Micropolitan Statistical Area
+12380,27099,"Mower County, MN",County or equivalent
+12460,,"Bainbridge, GA",Micropolitan Statistical Area
+12460,13087,"Decatur County, GA",County or equivalent
+12660,,"Baraboo, WI",Micropolitan Statistical Area
+12660,55111,"Sauk County, WI",County or equivalent
+12680,,"Bardstown, KY",Micropolitan Statistical Area
+12680,21179,"Nelson County, KY",County or equivalent
+12740,,"Barre, VT",Micropolitan Statistical Area
+12740,50023,"Washington County, VT",County or equivalent
+12780,,"Bartlesville, OK",Micropolitan Statistical Area
+12780,40147,"Washington County, OK",County or equivalent
+12860,,"Batavia, NY",Micropolitan Statistical Area
+12860,36037,"Genesee County, NY",County or equivalent
+12900,,"Batesville, AR",Micropolitan Statistical Area
+12900,5063,"Independence County, AR",County or equivalent
+12900,5135,"Sharp County, AR",County or equivalent
+13060,,"Bay City, TX",Micropolitan Statistical Area
+13060,48321,"Matagorda County, TX",County or equivalent
+13100,,"Beatrice, NE",Micropolitan Statistical Area
+13100,31067,"Gage County, NE",County or equivalent
+13180,,"Beaver Dam, WI",Micropolitan Statistical Area
+13180,55027,"Dodge County, WI",County or equivalent
+13260,,"Bedford, IN",Micropolitan Statistical Area
+13260,18093,"Lawrence County, IN",County or equivalent
+13300,,"Beeville, TX",Micropolitan Statistical Area
+13300,48025,"Bee County, TX",County or equivalent
+13340,,"Bellefontaine, OH",Micropolitan Statistical Area
+13340,39091,"Logan County, OH",County or equivalent
+13420,,"Bemidji, MN",Micropolitan Statistical Area
+13420,27007,"Beltrami County, MN",County or equivalent
+13500,,"Bennettsville, SC",Micropolitan Statistical Area
+13500,45069,"Marlboro County, SC",County or equivalent
+13540,,"Bennington, VT",Micropolitan Statistical Area
+13540,50003,"Bennington County, VT",County or equivalent
+13620,,"Berlin, NH",Micropolitan Statistical Area
+13620,33007,"Coos County, NH",County or equivalent
+13660,,"Big Rapids, MI",Micropolitan Statistical Area
+13660,26107,"Mecosta County, MI",County or equivalent
+13700,,"Big Spring, TX",Micropolitan Statistical Area
+13700,48227,"Howard County, TX",County or equivalent
+13720,,"Big Stone Gap, VA",Micropolitan Statistical Area
+13720,51195,"Wise County, VA",County or equivalent
+13720,51720,"Norton city, VA",County or equivalent
+13940,,"Blackfoot, ID",Micropolitan Statistical Area
+13940,16011,"Bingham County, ID",County or equivalent
+14140,,"Bluefield, WV-VA",Micropolitan Statistical Area
+14140,51021,"Bland County, VA",County or equivalent
+14140,51185,"Tazewell County, VA",County or equivalent
+14140,54055,"Mercer County, WV",County or equivalent
+14180,,"Blytheville, AR",Micropolitan Statistical Area
+14180,5093,"Mississippi County, AR",County or equivalent
+14220,,"Bogalusa, LA",Micropolitan Statistical Area
+14220,22117,"Washington Parish, LA",County or equivalent
+14300,,"Bonham, TX",Micropolitan Statistical Area
+14300,48147,"Fannin County, TX",County or equivalent
+14380,,"Boone, NC",Micropolitan Statistical Area
+14380,37189,"Watauga County, NC",County or equivalent
+14420,,"Borger, TX",Micropolitan Statistical Area
+14420,48233,"Hutchinson County, TX",County or equivalent
+14580,,"Bozeman, MT",Micropolitan Statistical Area
+14580,30031,"Gallatin County, MT",County or equivalent
+14620,,"Bradford, PA",Micropolitan Statistical Area
+14620,42083,"McKean County, PA",County or equivalent
+14660,,"Brainerd, MN",Micropolitan Statistical Area
+14660,27021,"Cass County, MN",County or equivalent
+14660,27035,"Crow Wing County, MN",County or equivalent
+14700,,"Branson, MO",Micropolitan Statistical Area
+14700,29213,"Taney County, MO",County or equivalent
+14720,,"Breckenridge, CO",Micropolitan Statistical Area
+14720,8117,"Summit County, CO",County or equivalent
+14780,,"Brenham, TX",Micropolitan Statistical Area
+14780,48477,"Washington County, TX",County or equivalent
+14820,,"Brevard, NC",Micropolitan Statistical Area
+14820,37175,"Transylvania County, NC",County or equivalent
+15020,,"Brookhaven, MS",Micropolitan Statistical Area
+15020,28085,"Lincoln County, MS",County or equivalent
+15060,,"Brookings, OR",Micropolitan Statistical Area
+15060,41015,"Curry County, OR",County or equivalent
+15100,,"Brookings, SD",Micropolitan Statistical Area
+15100,46011,"Brookings County, SD",County or equivalent
+15140,,"Brownsville, TN",Micropolitan Statistical Area
+15140,47075,"Haywood County, TN",County or equivalent
+15220,,"Brownwood, TX",Micropolitan Statistical Area
+15220,48049,"Brown County, TX",County or equivalent
+15340,,"Bucyrus-Galion, OH",Micropolitan Statistical Area
+15340,39033,"Crawford County, OH",County or equivalent
+15420,,"Burley, ID",Micropolitan Statistical Area
+15420,16031,"Cassia County, ID",County or equivalent
+15420,16067,"Minidoka County, ID",County or equivalent
+15460,,"Burlington, IA-IL",Micropolitan Statistical Area
+15460,17071,"Henderson County, IL",County or equivalent
+15460,19057,"Des Moines County, IA",County or equivalent
+15580,,"Butte-Silver Bow, MT",Micropolitan Statistical Area
+15580,30093,"Silver Bow County, MT",County or equivalent
+15620,,"Cadillac, MI",Micropolitan Statistical Area
+15620,26113,"Missaukee County, MI",County or equivalent
+15620,26165,"Wexford County, MI",County or equivalent
+15660,,"Calhoun, GA",Micropolitan Statistical Area
+15660,13129,"Gordon County, GA",County or equivalent
+15700,,"Cambridge, MD",Micropolitan Statistical Area
+15700,24019,"Dorchester County, MD",County or equivalent
+15740,,"Cambridge, OH",Micropolitan Statistical Area
+15740,39059,"Guernsey County, OH",County or equivalent
+15780,,"Camden, AR",Micropolitan Statistical Area
+15780,5013,"Calhoun County, AR",County or equivalent
+15780,5103,"Ouachita County, AR",County or equivalent
+15820,,"Campbellsville, KY",Micropolitan Statistical Area
+15820,21087,"Green County, KY",County or equivalent
+15820,21217,"Taylor County, KY",County or equivalent
+15860,,"Cañon City, CO",Micropolitan Statistical Area
+15860,8043,"Fremont County, CO",County or equivalent
+16100,,"Carlsbad-Artesia, NM",Micropolitan Statistical Area
+16100,35015,"Eddy County, NM",County or equivalent
+16140,,"Carroll, IA",Micropolitan Statistical Area
+16140,19027,"Carroll County, IA",County or equivalent
+16260,,"Cedar City, UT",Micropolitan Statistical Area
+16260,49021,"Iron County, UT",County or equivalent
+16340,,"Cedartown, GA",Micropolitan Statistical Area
+16340,13233,"Polk County, GA",County or equivalent
+16380,,"Celina, OH",Micropolitan Statistical Area
+16380,39107,"Mercer County, OH",County or equivalent
+16420,,"Central City, KY",Micropolitan Statistical Area
+16420,21177,"Muhlenberg County, KY",County or equivalent
+16460,,"Centralia, IL",Micropolitan Statistical Area
+16460,17121,"Marion County, IL",County or equivalent
+16500,,"Centralia, WA",Micropolitan Statistical Area
+16500,53041,"Lewis County, WA",County or equivalent
+16660,,"Charleston-Mattoon, IL",Micropolitan Statistical Area
+16660,17029,"Coles County, IL",County or equivalent
+16660,17035,"Cumberland County, IL",County or equivalent
+17060,,"Chillicothe, OH",Micropolitan Statistical Area
+17060,39141,"Ross County, OH",County or equivalent
+17220,,"Clarksburg, WV",Micropolitan Statistical Area
+17220,54017,"Doddridge County, WV",County or equivalent
+17220,54033,"Harrison County, WV",County or equivalent
+17220,54091,"Taylor County, WV",County or equivalent
+17260,,"Clarksdale, MS",Micropolitan Statistical Area
+17260,28027,"Coahoma County, MS",County or equivalent
+17340,,"Clearlake, CA",Micropolitan Statistical Area
+17340,6033,"Lake County, CA",County or equivalent
+17380,,"Cleveland, MS",Micropolitan Statistical Area
+17380,28011,"Bolivar County, MS",County or equivalent
+17500,,"Clewiston, FL",Micropolitan Statistical Area
+17500,12051,"Hendry County, FL",County or equivalent
+17540,,"Clinton, IA",Micropolitan Statistical Area
+17540,19045,"Clinton County, IA",County or equivalent
+17580,,"Clovis, NM",Micropolitan Statistical Area
+17580,35009,"Curry County, NM",County or equivalent
+17700,,"Coffeyville, KS",Micropolitan Statistical Area
+17700,20125,"Montgomery County, KS",County or equivalent
+17740,,"Coldwater, MI",Micropolitan Statistical Area
+17740,26023,"Branch County, MI",County or equivalent
+18060,,"Columbus, MS",Micropolitan Statistical Area
+18060,28087,"Lowndes County, MS",County or equivalent
+18100,,"Columbus, NE",Micropolitan Statistical Area
+18100,31141,"Platte County, NE",County or equivalent
+18180,,"Concord, NH",Micropolitan Statistical Area
+18180,33013,"Merrimack County, NH",County or equivalent
+18220,,"Connersville, IN",Micropolitan Statistical Area
+18220,18041,"Fayette County, IN",County or equivalent
+18260,,"Cookeville, TN",Micropolitan Statistical Area
+18260,47087,"Jackson County, TN",County or equivalent
+18260,47133,"Overton County, TN",County or equivalent
+18260,47141,"Putnam County, TN",County or equivalent
+18300,,"Coos Bay, OR",Micropolitan Statistical Area
+18300,41011,"Coos County, OR",County or equivalent
+18380,,"Cordele, GA",Micropolitan Statistical Area
+18380,13081,"Crisp County, GA",County or equivalent
+18420,,"Corinth, MS",Micropolitan Statistical Area
+18420,28003,"Alcorn County, MS",County or equivalent
+18460,,"Cornelia, GA",Micropolitan Statistical Area
+18460,13137,"Habersham County, GA",County or equivalent
+18500,,"Corning, NY",Micropolitan Statistical Area
+18500,36101,"Steuben County, NY",County or equivalent
+18620,,"Corsicana, TX",Micropolitan Statistical Area
+18620,48349,"Navarro County, TX",County or equivalent
+18660,,"Cortland, NY",Micropolitan Statistical Area
+18660,36023,"Cortland County, NY",County or equivalent
+18740,,"Coshocton, OH",Micropolitan Statistical Area
+18740,39031,"Coshocton County, OH",County or equivalent
+18780,,"Craig, CO",Micropolitan Statistical Area
+18780,8081,"Moffat County, CO",County or equivalent
+18820,,"Crawfordsville, IN",Micropolitan Statistical Area
+18820,18107,"Montgomery County, IN",County or equivalent
+18860,,"Crescent City, CA",Micropolitan Statistical Area
+18860,6015,"Del Norte County, CA",County or equivalent
+18900,,"Crossville, TN",Micropolitan Statistical Area
+18900,47035,"Cumberland County, TN",County or equivalent
+18980,,"Cullman, AL",Micropolitan Statistical Area
+18980,1043,"Cullman County, AL",County or equivalent
+19000,,"Cullowhee, NC",Micropolitan Statistical Area
+19000,37099,"Jackson County, NC",County or equivalent
+19000,37173,"Swain County, NC",County or equivalent
+19220,,"Danville, KY",Micropolitan Statistical Area
+19220,21021,"Boyle County, KY",County or equivalent
+19220,21137,"Lincoln County, KY",County or equivalent
+19260,,"Danville, VA",Micropolitan Statistical Area
+19260,51143,"Pittsylvania County, VA",County or equivalent
+19260,51590,"Danville city, VA",County or equivalent
+19420,,"Dayton, TN",Micropolitan Statistical Area
+19420,47143,"Rhea County, TN",County or equivalent
+19540,,"Decatur, IN",Micropolitan Statistical Area
+19540,18001,"Adams County, IN",County or equivalent
+19580,,"Defiance, OH",Micropolitan Statistical Area
+19580,39039,"Defiance County, OH",County or equivalent
+19620,,"Del Rio, TX",Micropolitan Statistical Area
+19620,48465,"Val Verde County, TX",County or equivalent
+19700,,"Deming, NM",Micropolitan Statistical Area
+19700,35029,"Luna County, NM",County or equivalent
+19760,,"DeRidder, LA",Micropolitan Statistical Area
+19760,22011,"Beauregard Parish, LA",County or equivalent
+19860,,"Dickinson, ND",Micropolitan Statistical Area
+19860,38007,"Billings County, ND",County or equivalent
+19860,38089,"Stark County, ND",County or equivalent
+19940,,"Dixon, IL",Micropolitan Statistical Area
+19940,17103,"Lee County, IL",County or equivalent
+19980,,"Dodge City, KS",Micropolitan Statistical Area
+19980,20057,"Ford County, KS",County or equivalent
+20060,,"Douglas, GA",Micropolitan Statistical Area
+20060,13003,"Atkinson County, GA",County or equivalent
+20060,13069,"Coffee County, GA",County or equivalent
+20140,,"Dublin, GA",Micropolitan Statistical Area
+20140,13167,"Johnson County, GA",County or equivalent
+20140,13175,"Laurens County, GA",County or equivalent
+20140,13283,"Treutlen County, GA",County or equivalent
+20180,,"DuBois, PA",Micropolitan Statistical Area
+20180,42033,"Clearfield County, PA",County or equivalent
+20300,,"Dumas, TX",Micropolitan Statistical Area
+20300,48341,"Moore County, TX",County or equivalent
+20340,,"Duncan, OK",Micropolitan Statistical Area
+20340,40137,"Stephens County, OK",County or equivalent
+20420,,"Durango, CO",Micropolitan Statistical Area
+20420,8067,"La Plata County, CO",County or equivalent
+20460,,"Durant, OK",Micropolitan Statistical Area
+20460,40013,"Bryan County, OK",County or equivalent
+20540,,"Dyersburg, TN",Micropolitan Statistical Area
+20540,47045,"Dyer County, TN",County or equivalent
+20580,,"Eagle Pass, TX",Micropolitan Statistical Area
+20580,48323,"Maverick County, TX",County or equivalent
+20660,,"Easton, MD",Micropolitan Statistical Area
+20660,24041,"Talbot County, MD",County or equivalent
+20780,,"Edwards, CO",Micropolitan Statistical Area
+20780,8037,"Eagle County, CO",County or equivalent
+20820,,"Effingham, IL",Micropolitan Statistical Area
+20820,17049,"Effingham County, IL",County or equivalent
+20900,,"El Campo, TX",Micropolitan Statistical Area
+20900,48481,"Wharton County, TX",County or equivalent
+20980,,"El Dorado, AR",Micropolitan Statistical Area
+20980,5139,"Union County, AR",County or equivalent
+21020,,"Elizabeth City, NC",Micropolitan Statistical Area
+21020,37139,"Pasquotank County, NC",County or equivalent
+21020,37143,"Perquimans County, NC",County or equivalent
+21120,,"Elk City, OK",Micropolitan Statistical Area
+21120,40009,"Beckham County, OK",County or equivalent
+21180,,"Elkins, WV",Micropolitan Statistical Area
+21180,54083,"Randolph County, WV",County or equivalent
+21220,,"Elko, NV",Micropolitan Statistical Area
+21220,32007,"Elko County, NV",County or equivalent
+21220,32011,"Eureka County, NV",County or equivalent
+21260,,"Ellensburg, WA",Micropolitan Statistical Area
+21260,53037,"Kittitas County, WA",County or equivalent
+21380,,"Emporia, KS",Micropolitan Statistical Area
+21380,20017,"Chase County, KS",County or equivalent
+21380,20111,"Lyon County, KS",County or equivalent
+21460,,"Enterprise, AL",Micropolitan Statistical Area
+21460,1031,"Coffee County, AL",County or equivalent
+21540,,"Escanaba, MI",Micropolitan Statistical Area
+21540,26041,"Delta County, MI",County or equivalent
+21580,,"Española, NM",Micropolitan Statistical Area
+21580,35039,"Rio Arriba County, NM",County or equivalent
+21640,,"Eufaula, AL-GA",Micropolitan Statistical Area
+21640,1005,"Barbour County, AL",County or equivalent
+21640,13239,"Quitman County, GA",County or equivalent
+21700,,"Eureka-Arcata, CA",Micropolitan Statistical Area
+21700,6023,"Humboldt County, CA",County or equivalent
+21740,,"Evanston, WY",Micropolitan Statistical Area
+21740,56041,"Uinta County, WY",County or equivalent
+21840,,"Fairfield, IA",Micropolitan Statistical Area
+21840,19101,"Jefferson County, IA",County or equivalent
+21860,,"Fairmont, MN",Micropolitan Statistical Area
+21860,27091,"Martin County, MN",County or equivalent
+21900,,"Fairmont, WV",Micropolitan Statistical Area
+21900,54049,"Marion County, WV",County or equivalent
+21980,,"Fallon, NV",Micropolitan Statistical Area
+21980,32001,"Churchill County, NV",County or equivalent
+22060,,"Faribault-Northfield, MN",Micropolitan Statistical Area
+22060,27131,"Rice County, MN",County or equivalent
+22100,,"Farmington, MO",Micropolitan Statistical Area
+22100,29187,"St. Francois County, MO",County or equivalent
+22260,,"Fergus Falls, MN",Micropolitan Statistical Area
+22260,27111,"Otter Tail County, MN",County or equivalent
+22280,,"Fernley, NV",Micropolitan Statistical Area
+22280,32019,"Lyon County, NV",County or equivalent
+22300,,"Findlay, OH",Micropolitan Statistical Area
+22300,39063,"Hancock County, OH",County or equivalent
+22340,,"Fitzgerald, GA",Micropolitan Statistical Area
+22340,13017,"Ben Hill County, GA",County or equivalent
+22580,,"Forest City, NC",Micropolitan Statistical Area
+22580,37161,"Rutherford County, NC",County or equivalent
+22620,,"Forrest City, AR",Micropolitan Statistical Area
+22620,5123,"St. Francis County, AR",County or equivalent
+22700,,"Fort Dodge, IA",Micropolitan Statistical Area
+22700,19187,"Webster County, IA",County or equivalent
+22780,,"Fort Leonard Wood, MO",Micropolitan Statistical Area
+22780,29169,"Pulaski County, MO",County or equivalent
+22800,,"Fort Madison-Keokuk, IA-IL-MO",Micropolitan Statistical Area
+22800,17067,"Hancock County, IL",County or equivalent
+22800,19111,"Lee County, IA",County or equivalent
+22800,29045,"Clark County, MO",County or equivalent
+22820,,"Fort Morgan, CO",Micropolitan Statistical Area
+22820,8087,"Morgan County, CO",County or equivalent
+22840,,"Fort Payne, AL",Micropolitan Statistical Area
+22840,1049,"DeKalb County, AL",County or equivalent
+22860,,"Fort Polk South, LA",Micropolitan Statistical Area
+22860,22115,"Vernon Parish, LA",County or equivalent
+23140,,"Frankfort, IN",Micropolitan Statistical Area
+23140,18023,"Clinton County, IN",County or equivalent
+23180,,"Frankfort, KY",Micropolitan Statistical Area
+23180,21005,"Anderson County, KY",County or equivalent
+23180,21073,"Franklin County, KY",County or equivalent
+23240,,"Fredericksburg, TX",Micropolitan Statistical Area
+23240,48171,"Gillespie County, TX",County or equivalent
+23300,,"Freeport, IL",Micropolitan Statistical Area
+23300,17177,"Stephenson County, IL",County or equivalent
+23340,,"Fremont, NE",Micropolitan Statistical Area
+23340,31053,"Dodge County, NE",County or equivalent
+23380,,"Fremont, OH",Micropolitan Statistical Area
+23380,39143,"Sandusky County, OH",County or equivalent
+23500,,"Gaffney, SC",Micropolitan Statistical Area
+23500,45021,"Cherokee County, SC",County or equivalent
+23620,,"Gainesville, TX",Micropolitan Statistical Area
+23620,48097,"Cooke County, TX",County or equivalent
+23660,,"Galesburg, IL",Micropolitan Statistical Area
+23660,17095,"Knox County, IL",County or equivalent
+23700,,"Gallup, NM",Micropolitan Statistical Area
+23700,35031,"McKinley County, NM",County or equivalent
+23780,,"Garden City, KS",Micropolitan Statistical Area
+23780,20055,"Finney County, KS",County or equivalent
+23780,20093,"Kearny County, KS",County or equivalent
+23820,,"Gardnerville Ranchos, NV",Micropolitan Statistical Area
+23820,32005,"Douglas County, NV",County or equivalent
+23860,,"Georgetown, SC",Micropolitan Statistical Area
+23860,45043,"Georgetown County, SC",County or equivalent
+23940,,"Gillette, WY",Micropolitan Statistical Area
+23940,56005,"Campbell County, WY",County or equivalent
+23940,56011,"Crook County, WY",County or equivalent
+23940,56045,"Weston County, WY",County or equivalent
+23980,,"Glasgow, KY",Micropolitan Statistical Area
+23980,21009,"Barren County, KY",County or equivalent
+23980,21169,"Metcalfe County, KY",County or equivalent
+24060,,"Glenwood Springs, CO",Micropolitan Statistical Area
+24060,8045,"Garfield County, CO",County or equivalent
+24060,8097,"Pitkin County, CO",County or equivalent
+24100,,"Gloversville, NY",Micropolitan Statistical Area
+24100,36035,"Fulton County, NY",County or equivalent
+24180,,"Granbury, TX",Micropolitan Statistical Area
+24180,48221,"Hood County, TX",County or equivalent
+24330,,"Grand Rapids, MN",Micropolitan Statistical Area
+24330,27061,"Itasca County, MN",County or equivalent
+24380,,"Grants, NM",Micropolitan Statistical Area
+24380,35006,"Cibola County, NM",County or equivalent
+24460,,"Great Bend, KS",Micropolitan Statistical Area
+24460,20009,"Barton County, KS",County or equivalent
+24620,,"Greeneville, TN",Micropolitan Statistical Area
+24620,47059,"Greene County, TN",County or equivalent
+24700,,"Greensburg, IN",Micropolitan Statistical Area
+24700,18031,"Decatur County, IN",County or equivalent
+24740,,"Greenville, MS",Micropolitan Statistical Area
+24740,28151,"Washington County, MS",County or equivalent
+24820,,"Greenville, OH",Micropolitan Statistical Area
+24820,39037,"Darke County, OH",County or equivalent
+24900,,"Greenwood, MS",Micropolitan Statistical Area
+24900,28015,"Carroll County, MS",County or equivalent
+24900,28083,"Leflore County, MS",County or equivalent
+24940,,"Greenwood, SC",Micropolitan Statistical Area
+24940,45047,"Greenwood County, SC",County or equivalent
+24980,,"Grenada, MS",Micropolitan Statistical Area
+24980,28043,"Grenada County, MS",County or equivalent
+25100,,"Guymon, OK",Micropolitan Statistical Area
+25100,40139,"Texas County, OK",County or equivalent
+25200,,"Hailey, ID",Micropolitan Statistical Area
+25200,16013,"Blaine County, ID",County or equivalent
+25200,16025,"Camas County, ID",County or equivalent
+25300,,"Hannibal, MO",Micropolitan Statistical Area
+25300,29127,"Marion County, MO",County or equivalent
+25300,29173,"Ralls County, MO",County or equivalent
+25460,,"Harrison, AR",Micropolitan Statistical Area
+25460,5009,"Boone County, AR",County or equivalent
+25460,5101,"Newton County, AR",County or equivalent
+25580,,"Hastings, NE",Micropolitan Statistical Area
+25580,31001,"Adams County, NE",County or equivalent
+25700,,"Hays, KS",Micropolitan Statistical Area
+25700,20051,"Ellis County, KS",County or equivalent
+25720,,"Heber, UT",Micropolitan Statistical Area
+25720,49043,"Summit County, UT",County or equivalent
+25720,49051,"Wasatch County, UT",County or equivalent
+25740,,"Helena, MT",Micropolitan Statistical Area
+25740,30043,"Jefferson County, MT",County or equivalent
+25740,30049,"Lewis and Clark County, MT",County or equivalent
+25760,,"Helena-West Helena, AR",Micropolitan Statistical Area
+25760,5107,"Phillips County, AR",County or equivalent
+25780,,"Henderson, NC",Micropolitan Statistical Area
+25780,37181,"Vance County, NC",County or equivalent
+25820,,"Hereford, TX",Micropolitan Statistical Area
+25820,48117,"Deaf Smith County, TX",County or equivalent
+25840,,"Hermiston-Pendleton, OR",Micropolitan Statistical Area
+25840,41049,"Morrow County, OR",County or equivalent
+25840,41059,"Umatilla County, OR",County or equivalent
+25880,,"Hillsdale, MI",Micropolitan Statistical Area
+25880,26059,"Hillsdale County, MI",County or equivalent
+25900,,"Hilo, HI",Micropolitan Statistical Area
+25900,15001,"Hawaii County, HI",County or equivalent
+26020,,"Hobbs, NM",Micropolitan Statistical Area
+26020,35025,"Lea County, NM",County or equivalent
+26090,,"Holland, MI",Micropolitan Statistical Area
+26090,26005,"Allegan County, MI",County or equivalent
+26220,,"Hood River, OR",Micropolitan Statistical Area
+26220,41027,"Hood River County, OR",County or equivalent
+26260,,"Hope, AR",Micropolitan Statistical Area
+26260,5057,"Hempstead County, AR",County or equivalent
+26260,5099,"Nevada County, AR",County or equivalent
+26340,,"Houghton, MI",Micropolitan Statistical Area
+26340,26061,"Houghton County, MI",County or equivalent
+26340,26083,"Keweenaw County, MI",County or equivalent
+26460,,"Hudson, NY",Micropolitan Statistical Area
+26460,36021,"Columbia County, NY",County or equivalent
+26500,,"Huntingdon, PA",Micropolitan Statistical Area
+26500,42061,"Huntingdon County, PA",County or equivalent
+26540,,"Huntington, IN",Micropolitan Statistical Area
+26540,18069,"Huntington County, IN",County or equivalent
+26660,,"Huntsville, TX",Micropolitan Statistical Area
+26660,48471,"Walker County, TX",County or equivalent
+26700,,"Huron, SD",Micropolitan Statistical Area
+26700,46005,"Beadle County, SD",County or equivalent
+26700,46073,"Jerauld County, SD",County or equivalent
+26740,,"Hutchinson, KS",Micropolitan Statistical Area
+26740,20155,"Reno County, KS",County or equivalent
+26780,,"Hutchinson, MN",Micropolitan Statistical Area
+26780,27085,"McLeod County, MN",County or equivalent
+26860,,"Indiana, PA",Micropolitan Statistical Area
+26860,42063,"Indiana County, PA",County or equivalent
+26940,,"Indianola, MS",Micropolitan Statistical Area
+26940,28133,"Sunflower County, MS",County or equivalent
+27020,,"Iron Mountain, MI-WI",Micropolitan Statistical Area
+27020,26043,"Dickinson County, MI",County or equivalent
+27020,55037,"Florence County, WI",County or equivalent
+27160,,"Jackson, OH",Micropolitan Statistical Area
+27160,39079,"Jackson County, OH",County or equivalent
+27220,,"Jackson, WY-ID",Micropolitan Statistical Area
+27220,16081,"Teton County, ID",County or equivalent
+27220,56039,"Teton County, WY",County or equivalent
+27300,,"Jacksonville, IL",Micropolitan Statistical Area
+27300,17137,"Morgan County, IL",County or equivalent
+27300,17171,"Scott County, IL",County or equivalent
+27380,,"Jacksonville, TX",Micropolitan Statistical Area
+27380,48073,"Cherokee County, TX",County or equivalent
+27420,,"Jamestown, ND",Micropolitan Statistical Area
+27420,38093,"Stutsman County, ND",County or equivalent
+27460,,"Jamestown-Dunkirk-Fredonia, NY",Micropolitan Statistical Area
+27460,36013,"Chautauqua County, NY",County or equivalent
+27530,,"Jasper, AL",Micropolitan Statistical Area
+27530,1127,"Walker County, AL",County or equivalent
+27540,,"Jasper, IN",Micropolitan Statistical Area
+27540,18037,"Dubois County, IN",County or equivalent
+27540,18125,"Pike County, IN",County or equivalent
+27600,,"Jefferson, GA",Micropolitan Statistical Area
+27600,13157,"Jackson County, GA",County or equivalent
+27660,,"Jennings, LA",Micropolitan Statistical Area
+27660,22053,"Jefferson Davis Parish, LA",County or equivalent
+27700,,"Jesup, GA",Micropolitan Statistical Area
+27700,13305,"Wayne County, GA",County or equivalent
+27940,,"Juneau, AK",Micropolitan Statistical Area
+27940,2110,"Juneau City and Borough, AK",County or equivalent
+28060,,"Kalispell, MT",Micropolitan Statistical Area
+28060,30029,"Flathead County, MT",County or equivalent
+28180,,"Kapaa, HI",Micropolitan Statistical Area
+28180,15007,"Kauai County, HI",County or equivalent
+28260,,"Kearney, NE",Micropolitan Statistical Area
+28260,31019,"Buffalo County, NE",County or equivalent
+28260,31099,"Kearney County, NE",County or equivalent
+28300,,"Keene, NH",Micropolitan Statistical Area
+28300,33005,"Cheshire County, NH",County or equivalent
+28340,,"Kendallville, IN",Micropolitan Statistical Area
+28340,18113,"Noble County, IN",County or equivalent
+28380,,"Kennett, MO",Micropolitan Statistical Area
+28380,29069,"Dunklin County, MO",County or equivalent
+28500,,"Kerrville, TX",Micropolitan Statistical Area
+28500,48265,"Kerr County, TX",County or equivalent
+28540,,"Ketchikan, AK",Micropolitan Statistical Area
+28540,2130,"Ketchikan Gateway Borough, AK",County or equivalent
+28580,,"Key West, FL",Micropolitan Statistical Area
+28580,12087,"Monroe County, FL",County or equivalent
+28620,,"Kill Devil Hills, NC",Micropolitan Statistical Area
+28620,37055,"Dare County, NC",County or equivalent
+28780,,"Kingsville, TX",Micropolitan Statistical Area
+28780,48261,"Kenedy County, TX",County or equivalent
+28780,48273,"Kleberg County, TX",County or equivalent
+28820,,"Kinston, NC",Micropolitan Statistical Area
+28820,37107,"Lenoir County, NC",County or equivalent
+28860,,"Kirksville, MO",Micropolitan Statistical Area
+28860,29001,"Adair County, MO",County or equivalent
+28860,29197,"Schuyler County, MO",County or equivalent
+28900,,"Klamath Falls, OR",Micropolitan Statistical Area
+28900,41035,"Klamath County, OR",County or equivalent
+29060,,"Laconia, NH",Micropolitan Statistical Area
+29060,33001,"Belknap County, NH",County or equivalent
+29260,,"La Grande, OR",Micropolitan Statistical Area
+29260,41061,"Union County, OR",County or equivalent
+29300,,"LaGrange, GA-AL",Micropolitan Statistical Area
+29300,1017,"Chambers County, AL",County or equivalent
+29300,13285,"Troup County, GA",County or equivalent
+29380,,"Lake City, FL",Micropolitan Statistical Area
+29380,12023,"Columbia County, FL",County or equivalent
+29500,,"Lamesa, TX",Micropolitan Statistical Area
+29500,48115,"Dawson County, TX",County or equivalent
+29660,,"Laramie, WY",Micropolitan Statistical Area
+29660,56001,"Albany County, WY",County or equivalent
+29780,,"Las Vegas, NM",Micropolitan Statistical Area
+29780,35033,"Mora County, NM",County or equivalent
+29780,35047,"San Miguel County, NM",County or equivalent
+29860,,"Laurel, MS",Micropolitan Statistical Area
+29860,28061,"Jasper County, MS",County or equivalent
+29860,28067,"Jones County, MS",County or equivalent
+29900,,"Laurinburg, NC",Micropolitan Statistical Area
+29900,37165,"Scotland County, NC",County or equivalent
+29980,,"Lawrenceburg, TN",Micropolitan Statistical Area
+29980,47099,"Lawrence County, TN",County or equivalent
+30060,,"Lebanon, MO",Micropolitan Statistical Area
+30060,29105,"Laclede County, MO",County or equivalent
+30100,,"Lebanon, NH-VT",Micropolitan Statistical Area
+30100,33009,"Grafton County, NH",County or equivalent
+30100,33019,"Sullivan County, NH",County or equivalent
+30100,50017,"Orange County, VT",County or equivalent
+30100,50027,"Windsor County, VT",County or equivalent
+30220,,"Levelland, TX",Micropolitan Statistical Area
+30220,48219,"Hockley County, TX",County or equivalent
+30260,,"Lewisburg, PA",Micropolitan Statistical Area
+30260,42119,"Union County, PA",County or equivalent
+30280,,"Lewisburg, TN",Micropolitan Statistical Area
+30280,47117,"Marshall County, TN",County or equivalent
+30380,,"Lewistown, PA",Micropolitan Statistical Area
+30380,42087,"Mifflin County, PA",County or equivalent
+30420,,"Lexington, NE",Micropolitan Statistical Area
+30420,31047,"Dawson County, NE",County or equivalent
+30420,31073,"Gosper County, NE",County or equivalent
+30580,,"Liberal, KS",Micropolitan Statistical Area
+30580,20175,"Seward County, KS",County or equivalent
+30660,,"Lincoln, IL",Micropolitan Statistical Area
+30660,17107,"Logan County, IL",County or equivalent
+30820,,"Lock Haven, PA",Micropolitan Statistical Area
+30820,42035,"Clinton County, PA",County or equivalent
+30900,,"Logansport, IN",Micropolitan Statistical Area
+30900,18017,"Cass County, IN",County or equivalent
+30940,,"London, KY",Micropolitan Statistical Area
+30940,21051,"Clay County, KY",County or equivalent
+30940,21121,"Knox County, KY",County or equivalent
+30940,21125,"Laurel County, KY",County or equivalent
+30940,21235,"Whitley County, KY",County or equivalent
+31060,,"Los Alamos, NM",Micropolitan Statistical Area
+31060,35028,"Los Alamos County, NM",County or equivalent
+31220,,"Ludington, MI",Micropolitan Statistical Area
+31220,26105,"Mason County, MI",County or equivalent
+31260,,"Lufkin, TX",Micropolitan Statistical Area
+31260,48005,"Angelina County, TX",County or equivalent
+31300,,"Lumberton, NC",Micropolitan Statistical Area
+31300,37155,"Robeson County, NC",County or equivalent
+31380,,"Macomb, IL",Micropolitan Statistical Area
+31380,17109,"McDonough County, IL",County or equivalent
+31500,,"Madison, IN",Micropolitan Statistical Area
+31500,18077,"Jefferson County, IN",County or equivalent
+31580,,"Madisonville, KY",Micropolitan Statistical Area
+31580,21107,"Hopkins County, KY",County or equivalent
+31620,,"Magnolia, AR",Micropolitan Statistical Area
+31620,5027,"Columbia County, AR",County or equivalent
+31660,,"Malone, NY",Micropolitan Statistical Area
+31660,36033,"Franklin County, NY",County or equivalent
+31680,,"Malvern, AR",Micropolitan Statistical Area
+31680,5059,"Hot Spring County, AR",County or equivalent
+31820,,"Manitowoc, WI",Micropolitan Statistical Area
+31820,55071,"Manitowoc County, WI",County or equivalent
+31930,,"Marietta, OH",Micropolitan Statistical Area
+31930,39167,"Washington County, OH",County or equivalent
+31940,,"Marinette, WI-MI",Micropolitan Statistical Area
+31940,26109,"Menominee County, MI",County or equivalent
+31940,55075,"Marinette County, WI",County or equivalent
+31980,,"Marion, IN",Micropolitan Statistical Area
+31980,18053,"Grant County, IN",County or equivalent
+32000,,"Marion, NC",Micropolitan Statistical Area
+32000,37111,"McDowell County, NC",County or equivalent
+32020,,"Marion, OH",Micropolitan Statistical Area
+32020,39101,"Marion County, OH",County or equivalent
+32100,,"Marquette, MI",Micropolitan Statistical Area
+32100,26103,"Marquette County, MI",County or equivalent
+32140,,"Marshall, MN",Micropolitan Statistical Area
+32140,27083,"Lyon County, MN",County or equivalent
+32180,,"Marshall, MO",Micropolitan Statistical Area
+32180,29195,"Saline County, MO",County or equivalent
+32260,,"Marshalltown, IA",Micropolitan Statistical Area
+32260,19127,"Marshall County, IA",County or equivalent
+32280,,"Martin, TN",Micropolitan Statistical Area
+32280,47183,"Weakley County, TN",County or equivalent
+32300,,"Martinsville, VA",Micropolitan Statistical Area
+32300,51089,"Henry County, VA",County or equivalent
+32300,51690,"Martinsville city, VA",County or equivalent
+32340,,"Maryville, MO",Micropolitan Statistical Area
+32340,29147,"Nodaway County, MO",County or equivalent
+32380,,"Mason City, IA",Micropolitan Statistical Area
+32380,19033,"Cerro Gordo County, IA",County or equivalent
+32380,19195,"Worth County, IA",County or equivalent
+32460,,"Mayfield, KY",Micropolitan Statistical Area
+32460,21083,"Graves County, KY",County or equivalent
+32500,,"Maysville, KY",Micropolitan Statistical Area
+32500,21161,"Mason County, KY",County or equivalent
+32540,,"McAlester, OK",Micropolitan Statistical Area
+32540,40121,"Pittsburg County, OK",County or equivalent
+32620,,"McComb, MS",Micropolitan Statistical Area
+32620,28113,"Pike County, MS",County or equivalent
+32660,,"McMinnville, TN",Micropolitan Statistical Area
+32660,47177,"Warren County, TN",County or equivalent
+32700,,"McPherson, KS",Micropolitan Statistical Area
+32700,20113,"McPherson County, KS",County or equivalent
+32740,,"Meadville, PA",Micropolitan Statistical Area
+32740,42039,"Crawford County, PA",County or equivalent
+32860,,"Menomonie, WI",Micropolitan Statistical Area
+32860,55033,"Dunn County, WI",County or equivalent
+32940,,"Meridian, MS",Micropolitan Statistical Area
+32940,28023,"Clarke County, MS",County or equivalent
+32940,28069,"Kemper County, MS",County or equivalent
+32940,28075,"Lauderdale County, MS",County or equivalent
+33020,,"Mexico, MO",Micropolitan Statistical Area
+33020,29007,"Audrain County, MO",County or equivalent
+33060,,"Miami, OK",Micropolitan Statistical Area
+33060,40115,"Ottawa County, OK",County or equivalent
+33180,,"Middlesborough, KY",Micropolitan Statistical Area
+33180,21013,"Bell County, KY",County or equivalent
+33300,,"Milledgeville, GA",Micropolitan Statistical Area
+33300,13009,"Baldwin County, GA",County or equivalent
+33300,13141,"Hancock County, GA",County or equivalent
+33380,,"Minden, LA",Micropolitan Statistical Area
+33380,22119,"Webster Parish, LA",County or equivalent
+33420,,"Mineral Wells, TX",Micropolitan Statistical Area
+33420,48363,"Palo Pinto County, TX",County or equivalent
+33500,,"Minot, ND",Micropolitan Statistical Area
+33500,38049,"McHenry County, ND",County or equivalent
+33500,38075,"Renville County, ND",County or equivalent
+33500,38101,"Ward County, ND",County or equivalent
+33580,,"Mitchell, SD",Micropolitan Statistical Area
+33580,46035,"Davison County, SD",County or equivalent
+33580,46061,"Hanson County, SD",County or equivalent
+33620,,"Moberly, MO",Micropolitan Statistical Area
+33620,29175,"Randolph County, MO",County or equivalent
+33940,,"Montrose, CO",Micropolitan Statistical Area
+33940,8085,"Montrose County, CO",County or equivalent
+33940,8091,"Ouray County, CO",County or equivalent
+33980,,"Morehead City, NC",Micropolitan Statistical Area
+33980,37031,"Carteret County, NC",County or equivalent
+34020,,"Morgan City, LA",Micropolitan Statistical Area
+34020,22101,"St. Mary Parish, LA",County or equivalent
+34140,,"Moscow, ID",Micropolitan Statistical Area
+34140,16057,"Latah County, ID",County or equivalent
+34180,,"Moses Lake, WA",Micropolitan Statistical Area
+34180,53025,"Grant County, WA",County or equivalent
+34220,,"Moultrie, GA",Micropolitan Statistical Area
+34220,13071,"Colquitt County, GA",County or equivalent
+34260,,"Mountain Home, AR",Micropolitan Statistical Area
+34260,5005,"Baxter County, AR",County or equivalent
+34300,,"Mountain Home, ID",Micropolitan Statistical Area
+34300,16039,"Elmore County, ID",County or equivalent
+34340,,"Mount Airy, NC",Micropolitan Statistical Area
+34340,37171,"Surry County, NC",County or equivalent
+34350,,"Mount Gay-Shamrock, WV",Micropolitan Statistical Area
+34350,54045,"Logan County, WV",County or equivalent
+34380,,"Mount Pleasant, MI",Micropolitan Statistical Area
+34380,26073,"Isabella County, MI",County or equivalent
+34420,,"Mount Pleasant, TX",Micropolitan Statistical Area
+34420,48063,"Camp County, TX",County or equivalent
+34420,48449,"Titus County, TX",County or equivalent
+34460,,"Mount Sterling, KY",Micropolitan Statistical Area
+34460,21011,"Bath County, KY",County or equivalent
+34460,21165,"Menifee County, KY",County or equivalent
+34460,21173,"Montgomery County, KY",County or equivalent
+34500,,"Mount Vernon, IL",Micropolitan Statistical Area
+34500,17081,"Jefferson County, IL",County or equivalent
+34540,,"Mount Vernon, OH",Micropolitan Statistical Area
+34540,39083,"Knox County, OH",County or equivalent
+34660,,"Murray, KY",Micropolitan Statistical Area
+34660,21035,"Calloway County, KY",County or equivalent
+34700,,"Muscatine, IA",Micropolitan Statistical Area
+34700,19139,"Muscatine County, IA",County or equivalent
+34780,,"Muskogee, OK",Micropolitan Statistical Area
+34780,40101,"Muskogee County, OK",County or equivalent
+34860,,"Nacogdoches, TX",Micropolitan Statistical Area
+34860,48347,"Nacogdoches County, TX",County or equivalent
+35020,,"Natchez, MS-LA",Micropolitan Statistical Area
+35020,22029,"Concordia Parish, LA",County or equivalent
+35020,28001,"Adams County, MS",County or equivalent
+35060,,"Natchitoches, LA",Micropolitan Statistical Area
+35060,22069,"Natchitoches Parish, LA",County or equivalent
+35140,,"Newberry, SC",Micropolitan Statistical Area
+35140,45071,"Newberry County, SC",County or equivalent
+35220,,"New Castle, IN",Micropolitan Statistical Area
+35220,18065,"Henry County, IN",County or equivalent
+35260,,"New Castle, PA",Micropolitan Statistical Area
+35260,42073,"Lawrence County, PA",County or equivalent
+35420,,"New Philadelphia-Dover, OH",Micropolitan Statistical Area
+35420,39157,"Tuscarawas County, OH",County or equivalent
+35440,,"Newport, OR",Micropolitan Statistical Area
+35440,41041,"Lincoln County, OR",County or equivalent
+35460,,"Newport, TN",Micropolitan Statistical Area
+35460,47029,"Cocke County, TN",County or equivalent
+35580,,"New Ulm, MN",Micropolitan Statistical Area
+35580,27015,"Brown County, MN",County or equivalent
+35700,,"Nogales, AZ",Micropolitan Statistical Area
+35700,4023,"Santa Cruz County, AZ",County or equivalent
+35740,,"Norfolk, NE",Micropolitan Statistical Area
+35740,31119,"Madison County, NE",County or equivalent
+35740,31139,"Pierce County, NE",County or equivalent
+35740,31167,"Stanton County, NE",County or equivalent
+35820,,"North Platte, NE",Micropolitan Statistical Area
+35820,31111,"Lincoln County, NE",County or equivalent
+35820,31113,"Logan County, NE",County or equivalent
+35820,31117,"McPherson County, NE",County or equivalent
+35860,,"North Vernon, IN",Micropolitan Statistical Area
+35860,18079,"Jennings County, IN",County or equivalent
+35900,,"North Wilkesboro, NC",Micropolitan Statistical Area
+35900,37193,"Wilkes County, NC",County or equivalent
+35940,,"Norwalk, OH",Micropolitan Statistical Area
+35940,39077,"Huron County, OH",County or equivalent
+36020,,"Oak Harbor, WA",Micropolitan Statistical Area
+36020,53029,"Island County, WA",County or equivalent
+36300,,"Ogdensburg-Massena, NY",Micropolitan Statistical Area
+36300,36089,"St. Lawrence County, NY",County or equivalent
+36340,,"Oil City, PA",Micropolitan Statistical Area
+36340,42121,"Venango County, PA",County or equivalent
+36380,,"Okeechobee, FL",Micropolitan Statistical Area
+36380,12093,"Okeechobee County, FL",County or equivalent
+36460,,"Olean, NY",Micropolitan Statistical Area
+36460,36009,"Cattaraugus County, NY",County or equivalent
+36580,,"Oneonta, NY",Micropolitan Statistical Area
+36580,36077,"Otsego County, NY",County or equivalent
+36620,,"Ontario, OR-ID",Micropolitan Statistical Area
+36620,16075,"Payette County, ID",County or equivalent
+36620,41045,"Malheur County, OR",County or equivalent
+36660,,"Opelousas, LA",Micropolitan Statistical Area
+36660,22097,"St. Landry Parish, LA",County or equivalent
+36700,,"Orangeburg, SC",Micropolitan Statistical Area
+36700,45075,"Orangeburg County, SC",County or equivalent
+36820,,"Oskaloosa, IA",Micropolitan Statistical Area
+36820,19123,"Mahaska County, IA",County or equivalent
+36830,,"Othello, WA",Micropolitan Statistical Area
+36830,53001,"Adams County, WA",County or equivalent
+36837,,"Ottawa, IL",Micropolitan Statistical Area
+36837,17011,"Bureau County, IL",County or equivalent
+36837,17099,"LaSalle County, IL",County or equivalent
+36837,17155,"Putnam County, IL",County or equivalent
+36840,,"Ottawa, KS",Micropolitan Statistical Area
+36840,20059,"Franklin County, KS",County or equivalent
+36900,,"Ottumwa, IA",Micropolitan Statistical Area
+36900,19179,"Wapello County, IA",County or equivalent
+36940,,"Owatonna, MN",Micropolitan Statistical Area
+36940,27147,"Steele County, MN",County or equivalent
+37060,,"Oxford, MS",Micropolitan Statistical Area
+37060,28071,"Lafayette County, MS",County or equivalent
+37120,,"Ozark, AL",Micropolitan Statistical Area
+37120,1045,"Dale County, AL",County or equivalent
+37140,,"Paducah, KY-IL",Micropolitan Statistical Area
+37140,17127,"Massac County, IL",County or equivalent
+37140,21007,"Ballard County, KY",County or equivalent
+37140,21139,"Livingston County, KY",County or equivalent
+37140,21145,"McCracken County, KY",County or equivalent
+37220,,"Pahrump, NV",Micropolitan Statistical Area
+37220,32023,"Nye County, NV",County or equivalent
+37260,,"Palatka, FL",Micropolitan Statistical Area
+37260,12107,"Putnam County, FL",County or equivalent
+37300,,"Palestine, TX",Micropolitan Statistical Area
+37300,48001,"Anderson County, TX",County or equivalent
+37420,,"Pampa, TX",Micropolitan Statistical Area
+37420,48179,"Gray County, TX",County or equivalent
+37420,48393,"Roberts County, TX",County or equivalent
+37500,,"Paragould, AR",Micropolitan Statistical Area
+37500,5055,"Greene County, AR",County or equivalent
+37540,,"Paris, TN",Micropolitan Statistical Area
+37540,47079,"Henry County, TN",County or equivalent
+37580,,"Paris, TX",Micropolitan Statistical Area
+37580,48277,"Lamar County, TX",County or equivalent
+37660,,"Parsons, KS",Micropolitan Statistical Area
+37660,20099,"Labette County, KS",County or equivalent
+37740,,"Payson, AZ",Micropolitan Statistical Area
+37740,4007,"Gila County, AZ",County or equivalent
+37770,,"Pearsall, TX",Micropolitan Statistical Area
+37770,48163,"Frio County, TX",County or equivalent
+37780,,"Pecos, TX",Micropolitan Statistical Area
+37780,48301,"Loving County, TX",County or equivalent
+37780,48389,"Reeves County, TX",County or equivalent
+37800,,"Pella, IA",Micropolitan Statistical Area
+37800,19125,"Marion County, IA",County or equivalent
+37940,,"Peru, IN",Micropolitan Statistical Area
+37940,18103,"Miami County, IN",County or equivalent
+38100,,"Picayune, MS",Micropolitan Statistical Area
+38100,28109,"Pearl River County, MS",County or equivalent
+38180,,"Pierre, SD",Micropolitan Statistical Area
+38180,46065,"Hughes County, SD",County or equivalent
+38180,46117,"Stanley County, SD",County or equivalent
+38240,,"Pinehurst-Southern Pines, NC",Micropolitan Statistical Area
+38240,37125,"Moore County, NC",County or equivalent
+38260,,"Pittsburg, KS",Micropolitan Statistical Area
+38260,20037,"Crawford County, KS",County or equivalent
+38380,,"Plainview, TX",Micropolitan Statistical Area
+38380,48189,"Hale County, TX",County or equivalent
+38420,,"Platteville, WI",Micropolitan Statistical Area
+38420,55043,"Grant County, WI",County or equivalent
+38460,,"Plattsburgh, NY",Micropolitan Statistical Area
+38460,36019,"Clinton County, NY",County or equivalent
+38500,,"Plymouth, IN",Micropolitan Statistical Area
+38500,18099,"Marshall County, IN",County or equivalent
+38580,,"Point Pleasant, WV-OH",Micropolitan Statistical Area
+38580,39053,"Gallia County, OH",County or equivalent
+38580,54053,"Mason County, WV",County or equivalent
+38620,,"Ponca City, OK",Micropolitan Statistical Area
+38620,40071,"Kay County, OK",County or equivalent
+38700,,"Pontiac, IL",Micropolitan Statistical Area
+38700,17105,"Livingston County, IL",County or equivalent
+38740,,"Poplar Bluff, MO",Micropolitan Statistical Area
+38740,29023,"Butler County, MO",County or equivalent
+38740,29181,"Ripley County, MO",County or equivalent
+38780,,"Portales, NM",Micropolitan Statistical Area
+38780,35041,"Roosevelt County, NM",County or equivalent
+38820,,"Port Angeles, WA",Micropolitan Statistical Area
+38820,53009,"Clallam County, WA",County or equivalent
+38920,,"Port Lavaca, TX",Micropolitan Statistical Area
+38920,48057,"Calhoun County, TX",County or equivalent
+39020,,"Portsmouth, OH",Micropolitan Statistical Area
+39020,39145,"Scioto County, OH",County or equivalent
+39060,,"Pottsville, PA",Micropolitan Statistical Area
+39060,42107,"Schuylkill County, PA",County or equivalent
+39220,,"Price, UT",Micropolitan Statistical Area
+39220,49007,"Carbon County, UT",County or equivalent
+39260,,"Prineville, OR",Micropolitan Statistical Area
+39260,41013,"Crook County, OR",County or equivalent
+39420,,"Pullman, WA",Micropolitan Statistical Area
+39420,53075,"Whitman County, WA",County or equivalent
+39500,,"Quincy, IL-MO",Micropolitan Statistical Area
+39500,17001,"Adams County, IL",County or equivalent
+39500,29111,"Lewis County, MO",County or equivalent
+39700,,"Raymondville, TX",Micropolitan Statistical Area
+39700,48489,"Willacy County, TX",County or equivalent
+39780,,"Red Bluff, CA",Micropolitan Statistical Area
+39780,6103,"Tehama County, CA",County or equivalent
+39860,,"Red Wing, MN",Micropolitan Statistical Area
+39860,27049,"Goodhue County, MN",County or equivalent
+39940,,"Rexburg, ID",Micropolitan Statistical Area
+39940,16043,"Fremont County, ID",County or equivalent
+39940,16065,"Madison County, ID",County or equivalent
+39980,,"Richmond, IN",Micropolitan Statistical Area
+39980,18177,"Wayne County, IN",County or equivalent
+40080,,"Richmond-Berea, KY",Micropolitan Statistical Area
+40080,21065,"Estill County, KY",County or equivalent
+40080,21151,"Madison County, KY",County or equivalent
+40100,,"Rio Grande City-Roma, TX",Micropolitan Statistical Area
+40100,48427,"Starr County, TX",County or equivalent
+40180,,"Riverton, WY",Micropolitan Statistical Area
+40180,56013,"Fremont County, WY",County or equivalent
+40260,,"Roanoke Rapids, NC",Micropolitan Statistical Area
+40260,37083,"Halifax County, NC",County or equivalent
+40260,37131,"Northampton County, NC",County or equivalent
+40300,,"Rochelle, IL",Micropolitan Statistical Area
+40300,17141,"Ogle County, IL",County or equivalent
+40460,,"Rockingham, NC",Micropolitan Statistical Area
+40460,37153,"Richmond County, NC",County or equivalent
+40530,,"Rockport, TX",Micropolitan Statistical Area
+40530,48007,"Aransas County, TX",County or equivalent
+40540,,"Rock Springs, WY",Micropolitan Statistical Area
+40540,56037,"Sweetwater County, WY",County or equivalent
+40620,,"Rolla, MO",Micropolitan Statistical Area
+40620,29161,"Phelps County, MO",County or equivalent
+40700,,"Roseburg, OR",Micropolitan Statistical Area
+40700,41019,"Douglas County, OR",County or equivalent
+40740,,"Roswell, NM",Micropolitan Statistical Area
+40740,35005,"Chaves County, NM",County or equivalent
+40760,,"Ruidoso, NM",Micropolitan Statistical Area
+40760,35027,"Lincoln County, NM",County or equivalent
+40780,,"Russellville, AR",Micropolitan Statistical Area
+40780,5115,"Pope County, AR",County or equivalent
+40780,5149,"Yell County, AR",County or equivalent
+40820,,"Ruston, LA",Micropolitan Statistical Area
+40820,22061,"Lincoln Parish, LA",County or equivalent
+40860,,"Rutland, VT",Micropolitan Statistical Area
+40860,50021,"Rutland County, VT",County or equivalent
+40940,,"Safford, AZ",Micropolitan Statistical Area
+40940,4009,"Graham County, AZ",County or equivalent
+41220,,"St. Marys, GA",Micropolitan Statistical Area
+41220,13039,"Camden County, GA",County or equivalent
+41260,,"St. Marys, PA",Micropolitan Statistical Area
+41260,42047,"Elk County, PA",County or equivalent
+41400,,"Salem, OH",Micropolitan Statistical Area
+41400,39029,"Columbiana County, OH",County or equivalent
+41460,,"Salina, KS",Micropolitan Statistical Area
+41460,20143,"Ottawa County, KS",County or equivalent
+41460,20169,"Saline County, KS",County or equivalent
+41760,,"Sandpoint, ID",Micropolitan Statistical Area
+41760,16017,"Bonner County, ID",County or equivalent
+41780,,"Sandusky, OH",Micropolitan Statistical Area
+41780,39043,"Erie County, OH",County or equivalent
+41820,,"Sanford, NC",Micropolitan Statistical Area
+41820,37105,"Lee County, NC",County or equivalent
+42300,,"Sault Ste. Marie, MI",Micropolitan Statistical Area
+42300,26033,"Chippewa County, MI",County or equivalent
+42380,,"Sayre, PA",Micropolitan Statistical Area
+42380,42015,"Bradford County, PA",County or equivalent
+42420,,"Scottsbluff, NE",Micropolitan Statistical Area
+42420,31007,"Banner County, NE",County or equivalent
+42420,31157,"Scotts Bluff County, NE",County or equivalent
+42420,31165,"Sioux County, NE",County or equivalent
+42460,,"Scottsboro, AL",Micropolitan Statistical Area
+42460,1071,"Jackson County, AL",County or equivalent
+42500,,"Scottsburg, IN",Micropolitan Statistical Area
+42500,18143,"Scott County, IN",County or equivalent
+42620,,"Searcy, AR",Micropolitan Statistical Area
+42620,5145,"White County, AR",County or equivalent
+42740,,"Sedalia, MO",Micropolitan Statistical Area
+42740,29159,"Pettis County, MO",County or equivalent
+42780,,"Selinsgrove, PA",Micropolitan Statistical Area
+42780,42109,"Snyder County, PA",County or equivalent
+42820,,"Selma, AL",Micropolitan Statistical Area
+42820,1047,"Dallas County, AL",County or equivalent
+42860,,"Seneca, SC",Micropolitan Statistical Area
+42860,45073,"Oconee County, SC",County or equivalent
+42900,,"Seneca Falls, NY",Micropolitan Statistical Area
+42900,36099,"Seneca County, NY",County or equivalent
+42940,,"Sevierville, TN",Micropolitan Statistical Area
+42940,47155,"Sevier County, TN",County or equivalent
+42980,,"Seymour, IN",Micropolitan Statistical Area
+42980,18071,"Jackson County, IN",County or equivalent
+43020,,"Shawano, WI",Micropolitan Statistical Area
+43020,55078,"Menominee County, WI",County or equivalent
+43020,55115,"Shawano County, WI",County or equivalent
+43060,,"Shawnee, OK",Micropolitan Statistical Area
+43060,40125,"Pottawatomie County, OK",County or equivalent
+43140,,"Shelby, NC",Micropolitan Statistical Area
+43140,37045,"Cleveland County, NC",County or equivalent
+43180,,"Shelbyville, TN",Micropolitan Statistical Area
+43180,47003,"Bedford County, TN",County or equivalent
+43220,,"Shelton, WA",Micropolitan Statistical Area
+43220,53045,"Mason County, WA",County or equivalent
+43260,,"Sheridan, WY",Micropolitan Statistical Area
+43260,56033,"Sheridan County, WY",County or equivalent
+43320,,"Show Low, AZ",Micropolitan Statistical Area
+43320,4017,"Navajo County, AZ",County or equivalent
+43380,,"Sidney, OH",Micropolitan Statistical Area
+43380,39149,"Shelby County, OH",County or equivalent
+43460,,"Sikeston, MO",Micropolitan Statistical Area
+43460,29201,"Scott County, MO",County or equivalent
+43500,,"Silver City, NM",Micropolitan Statistical Area
+43500,35017,"Grant County, NM",County or equivalent
+43660,,"Snyder, TX",Micropolitan Statistical Area
+43660,48415,"Scurry County, TX",County or equivalent
+43700,,"Somerset, KY",Micropolitan Statistical Area
+43700,21199,"Pulaski County, KY",County or equivalent
+43740,,"Somerset, PA",Micropolitan Statistical Area
+43740,42111,"Somerset County, PA",County or equivalent
+43760,,"Sonora, CA",Micropolitan Statistical Area
+43760,6109,"Tuolumne County, CA",County or equivalent
+43940,,"Spearfish, SD",Micropolitan Statistical Area
+43940,46081,"Lawrence County, SD",County or equivalent
+43980,,"Spencer, IA",Micropolitan Statistical Area
+43980,19041,"Clay County, IA",County or equivalent
+44020,,"Spirit Lake, IA",Micropolitan Statistical Area
+44020,19059,"Dickinson County, IA",County or equivalent
+44260,,"Starkville, MS",Micropolitan Statistical Area
+44260,28105,"Oktibbeha County, MS",County or equivalent
+44260,28155,"Webster County, MS",County or equivalent
+44340,,"Statesboro, GA",Micropolitan Statistical Area
+44340,13031,"Bulloch County, GA",County or equivalent
+44460,,"Steamboat Springs, CO",Micropolitan Statistical Area
+44460,8107,"Routt County, CO",County or equivalent
+44500,,"Stephenville, TX",Micropolitan Statistical Area
+44500,48143,"Erath County, TX",County or equivalent
+44540,,"Sterling, CO",Micropolitan Statistical Area
+44540,8075,"Logan County, CO",County or equivalent
+44580,,"Sterling, IL",Micropolitan Statistical Area
+44580,17195,"Whiteside County, IL",County or equivalent
+44620,,"Stevens Point, WI",Micropolitan Statistical Area
+44620,55097,"Portage County, WI",County or equivalent
+44660,,"Stillwater, OK",Micropolitan Statistical Area
+44660,40119,"Payne County, OK",County or equivalent
+44740,,"Storm Lake, IA",Micropolitan Statistical Area
+44740,19021,"Buena Vista County, IA",County or equivalent
+44780,,"Sturgis, MI",Micropolitan Statistical Area
+44780,26149,"St. Joseph County, MI",County or equivalent
+44860,,"Sulphur Springs, TX",Micropolitan Statistical Area
+44860,48223,"Hopkins County, TX",County or equivalent
+44900,,"Summerville, GA",Micropolitan Statistical Area
+44900,13055,"Chattooga County, GA",County or equivalent
+44980,,"Sunbury, PA",Micropolitan Statistical Area
+44980,42097,"Northumberland County, PA",County or equivalent
+45000,,"Susanville, CA",Micropolitan Statistical Area
+45000,6035,"Lassen County, CA",County or equivalent
+45020,,"Sweetwater, TX",Micropolitan Statistical Area
+45020,48353,"Nolan County, TX",County or equivalent
+45140,,"Tahlequah, OK",Micropolitan Statistical Area
+45140,40021,"Cherokee County, OK",County or equivalent
+45180,,"Talladega-Sylacauga, AL",Micropolitan Statistical Area
+45180,1121,"Talladega County, AL",County or equivalent
+45340,,"Taos, NM",Micropolitan Statistical Area
+45340,35055,"Taos County, NM",County or equivalent
+45380,,"Taylorville, IL",Micropolitan Statistical Area
+45380,17021,"Christian County, IL",County or equivalent
+45520,,"The Dalles, OR",Micropolitan Statistical Area
+45520,41065,"Wasco County, OR",County or equivalent
+45580,,"Thomaston, GA",Micropolitan Statistical Area
+45580,13293,"Upson County, GA",County or equivalent
+45620,,"Thomasville, GA",Micropolitan Statistical Area
+45620,13275,"Thomas County, GA",County or equivalent
+45660,,"Tiffin, OH",Micropolitan Statistical Area
+45660,39147,"Seneca County, OH",County or equivalent
+45700,,"Tifton, GA",Micropolitan Statistical Area
+45700,13277,"Tift County, GA",County or equivalent
+45740,,"Toccoa, GA",Micropolitan Statistical Area
+45740,13257,"Stephens County, GA",County or equivalent
+45860,,"Torrington, CT",Micropolitan Statistical Area
+45860,9005,"Litchfield County, CT",County or equivalent
+45900,,"Traverse City, MI",Micropolitan Statistical Area
+45900,26019,"Benzie County, MI",County or equivalent
+45900,26055,"Grand Traverse County, MI",County or equivalent
+45900,26079,"Kalkaska County, MI",County or equivalent
+45900,26089,"Leelanau County, MI",County or equivalent
+45980,,"Troy, AL",Micropolitan Statistical Area
+45980,1109,"Pike County, AL",County or equivalent
+46020,,"Truckee-Grass Valley, CA",Micropolitan Statistical Area
+46020,6057,"Nevada County, CA",County or equivalent
+46100,,"Tullahoma-Manchester, TN",Micropolitan Statistical Area
+46100,47031,"Coffee County, TN",County or equivalent
+46100,47051,"Franklin County, TN",County or equivalent
+46100,47127,"Moore County, TN",County or equivalent
+46180,,"Tupelo, MS",Micropolitan Statistical Area
+46180,28057,"Itawamba County, MS",County or equivalent
+46180,28081,"Lee County, MS",County or equivalent
+46180,28115,"Pontotoc County, MS",County or equivalent
+46180,28117,"Prentiss County, MS",County or equivalent
+46380,,"Ukiah, CA",Micropolitan Statistical Area
+46380,6045,"Mendocino County, CA",County or equivalent
+46420,,"Union, SC",Micropolitan Statistical Area
+46420,45087,"Union County, SC",County or equivalent
+46460,,"Union City, TN",Micropolitan Statistical Area
+46460,47131,"Obion County, TN",County or equivalent
+46500,,"Urbana, OH",Micropolitan Statistical Area
+46500,39021,"Champaign County, OH",County or equivalent
+46620,,"Uvalde, TX",Micropolitan Statistical Area
+46620,48463,"Uvalde County, TX",County or equivalent
+46780,,"Van Wert, OH",Micropolitan Statistical Area
+46780,39161,"Van Wert County, OH",County or equivalent
+46820,,"Vermillion, SD",Micropolitan Statistical Area
+46820,46027,"Clay County, SD",County or equivalent
+46860,,"Vernal, UT",Micropolitan Statistical Area
+46860,49047,"Uintah County, UT",County or equivalent
+46900,,"Vernon, TX",Micropolitan Statistical Area
+46900,48487,"Wilbarger County, TX",County or equivalent
+46980,,"Vicksburg, MS",Micropolitan Statistical Area
+46980,28149,"Warren County, MS",County or equivalent
+47080,,"Vidalia, GA",Micropolitan Statistical Area
+47080,13209,"Montgomery County, GA",County or equivalent
+47080,13279,"Toombs County, GA",County or equivalent
+47180,,"Vincennes, IN",Micropolitan Statistical Area
+47180,18083,"Knox County, IN",County or equivalent
+47240,,"Vineyard Haven, MA",Micropolitan Statistical Area
+47240,25007,"Dukes County, MA",County or equivalent
+47340,,"Wabash, IN",Micropolitan Statistical Area
+47340,18169,"Wabash County, IN",County or equivalent
+47420,,"Wahpeton, ND-MN",Micropolitan Statistical Area
+47420,27167,"Wilkin County, MN",County or equivalent
+47420,38077,"Richland County, ND",County or equivalent
+47540,,"Wapakoneta, OH",Micropolitan Statistical Area
+47540,39011,"Auglaize County, OH",County or equivalent
+47620,,"Warren, PA",Micropolitan Statistical Area
+47620,42123,"Warren County, PA",County or equivalent
+47660,,"Warrensburg, MO",Micropolitan Statistical Area
+47660,29101,"Johnson County, MO",County or equivalent
+47700,,"Warsaw, IN",Micropolitan Statistical Area
+47700,18085,"Kosciusko County, IN",County or equivalent
+47780,,"Washington, IN",Micropolitan Statistical Area
+47780,18027,"Daviess County, IN",County or equivalent
+47820,,"Washington, NC",Micropolitan Statistical Area
+47820,37013,"Beaufort County, NC",County or equivalent
+47920,,"Washington Court House, OH",Micropolitan Statistical Area
+47920,39047,"Fayette County, OH",County or equivalent
+47980,,"Watertown, SD",Micropolitan Statistical Area
+47980,46029,"Codington County, SD",County or equivalent
+47980,46057,"Hamlin County, SD",County or equivalent
+48020,,"Watertown-Fort Atkinson, WI",Micropolitan Statistical Area
+48020,55055,"Jefferson County, WI",County or equivalent
+48100,,"Wauchula, FL",Micropolitan Statistical Area
+48100,12049,"Hardee County, FL",County or equivalent
+48180,,"Waycross, GA",Micropolitan Statistical Area
+48180,13229,"Pierce County, GA",County or equivalent
+48180,13299,"Ware County, GA",County or equivalent
+48220,,"Weatherford, OK",Micropolitan Statistical Area
+48220,40039,"Custer County, OK",County or equivalent
+48460,,"West Plains, MO",Micropolitan Statistical Area
+48460,29091,"Howell County, MO",County or equivalent
+48500,,"West Point, MS",Micropolitan Statistical Area
+48500,28025,"Clay County, MS",County or equivalent
+48580,,"Whitewater, WI",Micropolitan Statistical Area
+48580,55127,"Walworth County, WI",County or equivalent
+48780,,"Williston, ND",Micropolitan Statistical Area
+48780,38105,"Williams County, ND",County or equivalent
+48820,,"Willmar, MN",Micropolitan Statistical Area
+48820,27067,"Kandiyohi County, MN",County or equivalent
+48940,,"Wilmington, OH",Micropolitan Statistical Area
+48940,39027,"Clinton County, OH",County or equivalent
+48980,,"Wilson, NC",Micropolitan Statistical Area
+48980,37195,"Wilson County, NC",County or equivalent
+49060,,"Winfield, KS",Micropolitan Statistical Area
+49060,20035,"Cowley County, KS",County or equivalent
+49080,,"Winnemucca, NV",Micropolitan Statistical Area
+49080,32013,"Humboldt County, NV",County or equivalent
+49100,,"Winona, MN",Micropolitan Statistical Area
+49100,27169,"Winona County, MN",County or equivalent
+49220,,"Wisconsin Rapids-Marshfield, WI",Micropolitan Statistical Area
+49220,55141,"Wood County, WI",County or equivalent
+49260,,"Woodward, OK",Micropolitan Statistical Area
+49260,40045,"Ellis County, OK",County or equivalent
+49260,40153,"Woodward County, OK",County or equivalent
+49300,,"Wooster, OH",Micropolitan Statistical Area
+49300,39169,"Wayne County, OH",County or equivalent
+49380,,"Worthington, MN",Micropolitan Statistical Area
+49380,27105,"Nobles County, MN",County or equivalent
+49460,,"Yankton, SD",Micropolitan Statistical Area
+49460,46135,"Yankton County, SD",County or equivalent
+49780,,"Zanesville, OH",Micropolitan Statistical Area
+49780,39119,"Muskingum County, OH",County or equivalent
+49820,,"Zapata, TX",Micropolitan Statistical Area
+49820,48505,"Zapata County, TX",County or equivalent
