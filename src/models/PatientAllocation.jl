@@ -130,14 +130,13 @@ function patient_allocation(
     if balancing_penalty > 0
         @variable(model, balancing_dummy[1:N,1:T] >= 0)
         @constraint(model, [i=1:N,t=1:T],
-            balancing_dummy[i,t] >= (flip_sign * (
-                beds[i] - (
-                    initial_patients[i] - sum(discharged_patients[i,1:min(t,hospitalized_days)])
-                    + sum(admitted_patients[i,max(1,t-hospitalized_days):t])
-                    - sum(sent[i,:,1:t+z1])
-                    + sum(sent[:,i,max(1,t-hospitalized_days):t+z2])
-                )
-        ) / beds[i]) - balancing_thresh)
+            balancing_dummy[i,t] >= ((
+                initial_patients[i] - sum(discharged_patients[i,1:min(t,hospitalized_days)])
+                + sum(admitted_patients[i,max(1,t-hospitalized_days):t])
+                - sum(sent[i,:,1:t])
+                + sum(sent[:,i,max(1,t-hospitalized_days):t])
+            ) / beds[i]) - balancing_thresh
+        )
         add_to_expression!(objective, balancing_penalty * sum(balancing_dummy))
     end
     @objective(model, Min, objective)
