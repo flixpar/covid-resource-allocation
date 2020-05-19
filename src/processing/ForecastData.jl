@@ -20,21 +20,23 @@ function forecast(locations::Array, start_date::Date, end_date::Date;
         return patients
     elseif level == :state && source == :columbia
         forecast = load_columbia(:state)
-        forecast = columbia_filter!(forecast, locations, start_date, end_date)
         if (forecast_type == :active)
             @assert hospitalized_days > 0
+            forecast = columbia_filter!(forecast, locations, Date(2020,4,26), Date(2020,6,6))
             columbia_estimate_active!(forecast, hospitalized_days)
         end
+        forecast = columbia_filter!(forecast, locations, start_date, end_date)
         @assert patient_type == :regular
         patients = columbia_forecast(forecast, forecast_type=forecast_type, bound_type=bound_type)
         return patients
     elseif level == :county && source == :columbia
         forecast = load_columbia(:county)
-        forecast = columbia_filter!(forecast, locations, start_date, end_date)
         if (forecast_type == :active)
             @assert hospitalized_days > 0
+            forecast = columbia_filter!(forecast, locations, Date(2020,4,26), Date(2020,6,6))
             columbia_estimate_active!(forecast, hospitalized_days)
         end
+        forecast = columbia_filter!(forecast, locations, start_date, end_date)
         @assert patient_type == :regular
         patients = columbia_forecast(forecast, forecast_type=forecast_type, bound_type=bound_type)
         return patients
