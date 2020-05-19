@@ -6,7 +6,7 @@ using Gurobi
 using LinearAlgebra
 using MathOptInterface
 
-export reusable_resource_allocation, patient_allocation_net
+export reusable_resource_allocation
 
 
 function reusable_resource_allocation(
@@ -111,44 +111,13 @@ function reusable_resource_allocation(
 end
 
 
-function patient_allocation_net(
-        beds::Array{Float32,1},
-        initial_patients::Array{Float32,1},
-        net_patients::Array{Float32,2},
-        adj_matrix::BitArray{2};
-        send_new_only::Bool=true,
-        sendrecieve_switch_time::Int=0,
-		min_send_amt::Real=0,
-		smoothness_penalty::Real=0,
-		setup_cost::Real=0,
-		sent_penalty::Real=0,
-		verbose::Bool=false,
-)
-	return reusable_resource_allocation(
-		initial_patients,
-		net_patients,
-		repeat(beds, 1, size(net_patients, 2)),
-		adj_matrix,
-		objective=:overflow,
-		send_new_only=send_new_only,
-		sendrecieve_switch_time=sendrecieve_switch_time,
-		min_send_amt=min_send_amt,
-		smoothness_penalty=smoothness_penalty,
-		setup_cost=setup_cost,
-		sent_penalty=sent_penalty,
-		verbose=verbose,
-	)
-end
-
-
 if abspath(PROGRAM_FILE) == @__FILE__
 	N, T = 10, 14
 	initial_supply = Float32.(rand(0:20, N))
 	supply = Float32.(rand(0:2, N, T))
 	demand = Float32.(rand(10:30, N, T))
 
-	adj = rand(Bool, N, N)
-	adj[tril(ones(Bool, N, N))] .= 0
+	adj = triu(rand(Bool, N, N), 1)
 	adj = BitArray(adj + adj')
 
 	model = reusable_resource_allocation(initial_supply, supply, demand, adj, verbose=true)
