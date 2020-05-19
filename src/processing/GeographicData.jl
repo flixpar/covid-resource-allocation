@@ -6,7 +6,7 @@ using DataFrames
 using LinearAlgebra: diagm
 
 export adjacencies
-export get_counties
+export get_counties, get_county_names
 
 basepath = normpath(@__DIR__, "../../")
 
@@ -50,7 +50,11 @@ end
 
 function load_counties_latlong(;counties::Array{Int,1}=Int[])::Tuple{Array{Float64,2},Array{Int,1}}
     county_data = CSV.read(joinpath(basepath, "data/geography/counties.csv"), copycols=true)
-    if !isempty(counties) filter!(row -> row.fips in counties, county_data) end
+    if !isempty(counties)
+        @assert counties == sort(counties)
+        filter!(row -> row.fips in counties, county_data)
+    end
+    sort!(county_data, :fips)
     latlong = hcat(county_data.lat[:], county_data.long[:])
     county_fips = county_data.fips[:]
     return latlong, county_fips
@@ -137,9 +141,20 @@ function fully_connected(n::Int; self_edges::Bool=false)
 end
 
 function get_counties(states::Array{String,1})
+    @assert states == sort(states)
     county_data = CSV.read(joinpath(basepath, "data/geography/counties.csv"), copycols=true)
     filter!(row -> row.state_abbrev in states, county_data)
+    sort!(county_data, :state_abbrev)
     return county_data.fips[:]
+end
+
+function get_county_names(counties::Array{Int,1})
+    @assert counties == sort(counties)
+    county_data = CSV.read(joinpath(basepath, "data/geography/counties.csv"), copycols=true)
+    filter!(row -> row.fips in counties, county_data)
+    sort!(county_data, :fips)
+    names = map(c -> c.county * " " * c.state_abbrev, eachrow(county_data))
+    return names
 end
 
 end;

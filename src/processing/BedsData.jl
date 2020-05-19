@@ -22,7 +22,7 @@ function n_beds(locations::Array; level::Symbol=:state, source::Symbol=:definiti
 		beds_data = load_definitivehc()
 		beds_data = definitivehc_filter!(beds_data, locations, level=level)
 		beds_data = definitivehc_select_type!(beds_data, bed_type=bed_type)
-		beds = definitivehc_aggregate(beds_data)
+		beds = definitivehc_aggregate(beds_data, locations=locations)
 	elseif level == :hospital && source == :definitivehc
 		beds_data = load_definitivehc()
 		beds_data = definitivehc_filter!(beds_data, locations, level=level)
@@ -102,8 +102,12 @@ function definitivehc_select_type!(beds_data::DataFrame; bed_type::Symbol=:all)
 	return beds_data
 end
 
-function definitivehc_aggregate(beds_data::DataFrame)
+function definitivehc_aggregate(beds_data::DataFrame; locations::Array=[])
 	beds_data_agg = by(beds_data, :selected_location, selected_beds_agg = (:selected_beds => sum))
+	if !isempty(locations)
+		missing_locs = setdiff(locations, beds_data_agg.selected_location)
+		for loc in missing_locs push!(beds_data_agg, Dict(:selected_location => loc, :selected_beds_agg => 0)) end
+	end
 	sort!(beds_data_agg, :selected_location)
     return Float32.(beds_data_agg.selected_beds_agg)
 end
