@@ -87,7 +87,7 @@ function patient_allocation(
     end
 
     # expression for the number of active patients
-    @expression(model, active_patients[i=1:N,t=0:T]
+    @expression(model, active_patients[i=1:N,t=0:T],
         initial_patients[i]
         - sum(discharged_patients[i,1:t])
         + sum(admitted_patients[i,max(1,t-hospitalized_days):t])
