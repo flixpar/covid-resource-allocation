@@ -4,7 +4,7 @@ using CSV
 using Dates
 using DataFrames
 
-export num_nurses, num_nurses_from_employment, num_nurses_from_beds
+export num_nurses, num_nurses_from_employment, num_nurses_from_beds, num_nurses_from_ahrf
 
 basepath = normpath(@__DIR__, "../../")
 
@@ -26,12 +26,11 @@ function num_nurses_from_employment(states::Array{String,1})
     nurse_data_local = filter(row -> row.state in states, nurse_data_employment)
     return Float32.(nurse_data_local.weighted_emp_distribution_sum .* (1_713_120 / 2_982_280))
 end
-num_nurses = num_nurses_from_employment
 
 let
 	global nurse_data_beds
 
-	nurse_data_beds = CSV.read(joinpath(basepath, "data/hospitals/Definitive_Healthcare__USA_Hospital_Beds.csv"), copycols=true)
+	nurse_data_beds = CSV.read(joinpath(basepath, "data/hospitals/definitivehc.csv"), copycols=true)
 	filter!(row -> !(row.HOSPITAL_TYPE in ["Psychiatric Hospital", "Rehabilitation Hospital"]), nurse_data_beds)
 	filter!(row -> !(ismissing(row.NUM_STAFFED_BEDS) || ismissing(row.NUM_ICU_BEDS) || ismissing(row.HQ_STATE)), nurse_data_beds)
 	filter!(row -> (row.NUM_STAFFED_BEDS > 0) && (row.NUM_ICU_BEDS > 0), nurse_data_beds)
@@ -54,5 +53,22 @@ function num_nurses_from_beds(
 		+ (nurses_per_bed_regular * nurse_data_local.non_icu_beds_sum)
     return Float32.(nurse_data_local.est_nurses * (24*7 / nurse_hrs_per_week))
 end
+
+let
+	global nurse_data_ahrf
+	nurse_data = CSV.read(joinpath(basepath, "data/nurses/nurses_per_county.csv"), copycols=true)
+	nurse_data_bystate = groupby(nurse_data, :state)
+	nurse_data_ahrf = combine(nurse_data_bystate, [:registered_nurses => sum, :nurse_practitioners => sum, :tot_nurses => sum])
+	sort!(nurse_data_ahrf, :state)
+end
+
+function num_nurses_from_ahrf(states::Array{String,1})
+	@assert states == sort(states)
+	nurses_local = filter(row -> row.state in states, nurse_data_ahrf)
+	nurses = nurses_local.registered_nurses_sum
+	return Float32.(nurses)
+end
+
+num_nurses = num_nurses_from_ahrf
 
 end;
