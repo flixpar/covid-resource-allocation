@@ -123,26 +123,49 @@ end
 ###### Columbia ########
 ########################
 
-function load_columbia(level::Symbol=:state; forecast_date::String="2020-04-26", intervention::String="60contact")
+function load_columbia(level::Symbol=:state; intervention::String="80contact", reopening::String="w5p")
     if level == :state
-        forecast_data = CSV.read(joinpath(basepath, "data/forecasts/columbia/$(forecast_date)/cdc_hosp/state_cdchosp_$(intervention).csv"), copycols=true, dateformat="mm/dd/yy")
+
+        folders = readdir(joinpath(basepath, "data/forecasts/columbia/"), join=true)
+        fns_a = [joinpath(p, "state_cdchosp_$(intervention).csv") for p in folders]
+        fns_b = [joinpath(p, "state_cdchosp_$(intervention)$(reopening).csv") for p in folders]
+        fns = vcat(fns_a, fns_b)
+        filter!(isfile, fns)
+
+        startdates = [Date(splitpath(p)[end-1]) for p in fns]
+        forecasts = []
+        for p in fns
+            d = Date(splitpath(p)[end-1])
+            future_dates = filter(x -> x > d, startdates)
+            fd = isempty(future_dates) ? Date(2100) : minimum(future_dates)
+
+            data = CSV.read(p, copycols=true, dateformat="mm/dd/yy")
+            data.Date = map(d -> d < Date(2000) ? d + Year(2000) : d, data.Date)
+            filter!(r -> r.Date < fd, data)
+
+            push!(forecasts, data)
+        end
+        forecast_data = vcat(forecasts...)
+
         state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
         filter!(row -> row.location in state_list.state, forecast_data)
         state_cvt = Dict(state.state => state.abbrev for state in eachrow(state_list))
         forecast_data.loc = [state_cvt[s] for s in forecast_data.location]
+
     else
-        forecast_data = CSV.read(joinpath(basepath, "data/forecasts/columbia/$(forecast_date)/cdc_hosp/cdchosp_$(intervention).csv"), copycols=true, dateformat="mm/dd/yy")
+        forecast_data = CSV.read(joinpath(basepath, "data/forecasts/columbia/2020-04-26/cdchosp_$(intervention).csv"), copycols=true, dateformat="mm/dd/yy")
         forecast_data.loc = forecast_data.fips
+        forecast_data.Date = map(d -> d + Year(2000), forecast_data.Date)
     end
+
     rename!(forecast_data, map(x -> strip(string(x)), names(forecast_data)))
-    forecast_data.Date = map(d -> d + Dates.Year(2000), forecast_data.Date)
     sort!(forecast_data, [:loc, :Date])
     return forecast_data
 end
 
 function columbia_filter!(forecast_data::DataFrame, locations::Array, start_date::Date, end_date::Date)
     @assert locations == sort(locations)
-    @assert Date(2020, 4, 26) <= start_date <= end_date <= Date(2020, 6, 6)
+    @assert Date(2020, 4, 12) <= start_date <= end_date <= Date(2020, 7, 3)
     forecast_data = filter(x -> x.loc in locations, forecast_data)
     forecast_data = filter(x -> start_date <= x.Date <= end_date, forecast_data)
     return forecast_data
