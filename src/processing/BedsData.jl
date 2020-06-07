@@ -93,8 +93,13 @@ function definitivehc_select_type!(beds_data::DataFrame; bed_type::Symbol=:all)
 		:licensed  => :NUM_LICENSED_BEDS,
 		:icu       => :NUM_ICU_BEDS,
 		:adult_icu => :ADULT_ICU_BEDS,
+		:regular   => :NUM_NON_ICU_BEDS,
 	)
 	col = bed_type_cvt[bed_type]
+
+	if bed_type == :regular
+		beds_data.NUM_NON_ICU_BEDS = beds_data.NUM_STAFFED_BEDS - beds_data.NUM_ICU_BEDS
+	end
 
 	filter!(row -> !ismissing(row[col]), beds_data)
 	filter!(row -> row[col] > 0, beds_data)
