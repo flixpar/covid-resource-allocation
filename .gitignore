@@ -16,6 +16,10 @@ __pycache__/
 ### MacOS ###
 .DS_Store
 
+### Images ###
+*.svg
+*.png
+
 ### Other ###
 backup/
 rawdata/
