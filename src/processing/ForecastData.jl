@@ -254,6 +254,59 @@ function covidtracking_history(gt::DataFrame; keepmissings::Bool=false)
 end
 
 ########################
+######## CDC GT ########
+########################
+
+function load_cdc_gt()
+    gt_raw = CSV.read("../../data/hospitalizations/cdc/2020-06-02.csv")
+
+    good_cols = Dict(
+        :state => :state,
+        :date  => :date,
+        :ICUBeds_Occ_AnyPat_Est  => :icu_active,
+        :ICUBeds_Occ_AnyPat_LoCI => :icu_active_lb,
+        :ICUBeds_Occ_AnyPat_UpCI => :icu_active_ub,
+        :InpatBeds_Occ_AnyPat_Est  => :all_active,
+        :InpatBeds_Occ_AnyPat_LoCI => :all_active_lb,
+        :InpatBeds_Occ_AnyPat_UpCI => :all_active_ub,
+        :InpatBeds_Occ_COVID_Est  => :all_covid_active,
+        :InpatBeds_Occ_COVID_LoCI => :all_covid_active_lb,
+        :InpatBeds_Occ_COVID_UpCI => :all_covid_active_ub,
+    )
+
+    gt = gt_raw[2:end,:]
+    gt.date = map(d -> Date(d, "dduuuyyyy"), gt.collectionDate)
+    gt = gt[:,sort(collect(keys(good_cols)),rev=true)]
+    rename!(gt, good_cols)
+
+    return gt
+end
+
+function cdc_gt_filter!(gt::DataFrame, locations::Array{String,1}, start_date::Date, end_date::Date)
+    @assert locations == sort(locations)
+    @assert Date(2020, 4, 1) <= start_date <= end_date <= Date(2020, 6, 2)
+
+    filter!(row -> row.state in locations, gt)
+    filter!(row -> start_date <= row.date <= end_date, gt)
+    sort!(gt, [:state, :date])
+    return gt
+end
+
+function cdc_gt_history(gt::DataFrame; bound_type::Symbol=:mean)
+    groups = groupby(gt, :state, sort=true)
+    if bound_type == :mean
+        patients = vcat([parse.(Int, g.all_covid_active)' for g in groups]...)
+    elseif bound_type == :lb
+        patients = vcat([parse.(Int, g.all_covid_active_lb)' for g in groups]...)
+    elseif bound_type == :ub
+        patients = vcat([parse.(Int, g.all_covid_active_ub)' for g in groups]...)
+    else
+        error("Invalid bound type for cdc gt")
+    end
+    return Float32.(patients)
+end
+
+########################
 ####### General ########
 ########################
 
