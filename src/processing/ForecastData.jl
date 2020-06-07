@@ -6,7 +6,7 @@ using DataFrames
 
 basepath = normpath(@__DIR__, "../../")
 
-export forecast, merge_forecast_gt
+export forecast
 
 function forecast(locations::Array, start_date::Date, end_date::Date;
         level::Symbol=:state, source::Symbol=:ihme,
@@ -65,7 +65,7 @@ end
 ######## IHME ##########
 ########################
 
-function load_ihme(;forecast_date::String="2020-05-10")
+function load_ihme(;forecast_date::String="2020-06-03")
     forecast_data = CSV.read(joinpath(basepath, "data/forecasts/ihme/$(forecast_date)/forecast.csv"), copycols=true)
 
     state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
@@ -108,16 +108,6 @@ function ihme_forecast(forecast::DataFrame; forecast_type::Symbol=:active, patie
     patients = vcat([f[:,col]' for f in forecast_by_state]...)
     return Float32.(patients)
 end
-
-# function ihme_compute_discharged!(ihme_forecast::DataFrame)
-#     ihme_forecast.allbed_mean_net = zeros(Float32, size(ihme_forecast,1))
-#     for (i, s) in enumerate(state_abbrev_list)
-#         rows = ihme_forecast[ihme_forecast.state .== s,:]
-#         ihme_forecast[ihme_forecast.state .== s, :allbed_mean_net] = rows.allbed_mean - [rows.allbed_mean[1]; rows.allbed_mean[1:end-1]]
-#     end
-#     ihme_forecast.discharged_mean = ihme_forecast.allbed_mean_net - ihme_forecast.admis_mean
-#     return ihme_forecast
-# end
 
 ########################
 ###### Columbia ########
@@ -267,7 +257,7 @@ end
 ####### General ########
 ########################
 
-function merge_forecast_gt(forecast::Array{Float32,2}, gt::Array{Union{Missing,Float32},2})
+function merge_forecast_covidtracking(forecast::Array{Float32,2}, gt::Array{Union{Missing,Float32},2})
     N, T = size(forecast)
     f = copy(forecast)
     g = hcat(gt, fill(missing, N, T-size(gt,2)))
