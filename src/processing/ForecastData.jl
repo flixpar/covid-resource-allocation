@@ -11,14 +11,15 @@ export forecast
 function forecast(locations::Array, start_date::Date, end_date::Date;
         level::Symbol=:state, source::Symbol=:ihme,
         forecast_type::Symbol=:active, patient_type::Symbol=:regular, bound_type::Symbol=:mean,
-        hospitalized_days::Int=-1,
+        hospitalized_days::Int=-1, active_from_admitted::Bool=false, merge_gt::Bool=false,
 )
-    if level == :state && source == :ihme
+    if source == :ihme
+        @assert level == :state
         forecast = load_ihme()
         forecast = ihme_filter!(forecast, locations, start_date, end_date)
         patients = ihme_forecast(forecast, forecast_type=forecast_type, patient_type=patient_type, bound_type=bound_type)
-        return patients
-    elseif level == :state && source == :columbia
+    elseif source == :columbia && level == :state
+        @assert patient_type == :regular
         forecast = load_columbia(:state)
         if (forecast_type == :active)
             @assert hospitalized_days > 0
@@ -26,10 +27,9 @@ function forecast(locations::Array, start_date::Date, end_date::Date;
             columbia_estimate_active!(forecast, hospitalized_days)
         end
         forecast = columbia_filter!(forecast, locations, start_date, end_date)
-        @assert patient_type == :regular
         patients = columbia_forecast(forecast, forecast_type=forecast_type, bound_type=bound_type)
-        return patients
-    elseif level == :county && source == :columbia
+    elseif source == :columbia && level == :county
+        @assert patient_type == :regular
         forecast = load_columbia(:county)
         if (forecast_type == :active)
             @assert hospitalized_days > 0
@@ -37,25 +37,29 @@ function forecast(locations::Array, start_date::Date, end_date::Date;
             columbia_estimate_active!(forecast, hospitalized_days)
         end
         forecast = columbia_filter!(forecast, locations, start_date, end_date)
-        @assert patient_type == :regular
         patients = columbia_forecast(forecast, forecast_type=forecast_type, bound_type=bound_type)
-        return patients
-    elseif level == :state && source == :mit
+    elseif source == :mit
+        @assert level == :state
         @assert forecast_type == :active
         @assert patient_type  == :regular
         @assert bound_type    == :mean
         forecast = load_mit()
         forecast = mit_filter!(forecast, locations, start_date, end_date)
         patients = mit_forecast(forecast)
-        return patients
-    elseif level == :state && (source == :covidtracking || source == :gt)
+    elseif source == :cdc_gt || (source == :gt && forecast_type == :active)
+        @assert level == :state
         @assert forecast_type == :active
+        @assert patient_type  == :regular
+        gt = load_cdc_gt()
+        gt = cdc_gt_filter!(gt, locations, start_date, end_date)
+        patients = cdc_gt_history(gt, bound_type=bound_type)
+    elseif source == :covidtracking || (source == :gt && forecast_type == :admitted)
+        @assert level == :state
         @assert patient_type  == :regular
         @assert bound_type    == :mean
         forecast = load_covidtracking()
         forecast = covidtracking_filter!(forecast, locations, start_date, end_date)
-        patients = covidtracking_history(forecast)
-        return patients
+        patients = covidtracking_history(forecast, forecast_type=forecast_type)
     else
         error("Invalid parameters to forecast.")
     end
@@ -229,24 +233,30 @@ end
 ########################
 
 function load_covidtracking()
-    gt = CSV.read(joinpath(basepath, "data/forecasts/covidtracking/2020-05-15/states_daily.csv"), copycols=true, silencewarnings=true)
+    gt = CSV.read(joinpath(basepath, "data/hospitalizations/covidtracking/2020-06-05/states_daily.csv"), copycols=true, silencewarnings=true)
     gt.date = map(d -> Date(string(d), "yyyymmdd"), gt.date)
     return gt
 end
 
 function covidtracking_filter!(gt::DataFrame, locations::Array{String,1}, start_date::Date, end_date::Date)
     @assert locations == sort(locations)
-    @assert start_date <= end_date
-    @assert end_date <= Date(2020, 5, 15)
+    @assert Date(2020, 1, 22) <= start_date <= end_date <= Date(2020, 6, 6)
 
     filter!(row -> start_date <= row.date <= end_date, gt)
     filter!(row -> row.state in locations, gt)
+    sort!(gt, [:state, :date])
     return gt
 end
 
-function covidtracking_history(gt::DataFrame; keepmissings::Bool=false)
+function covidtracking_history(gt::DataFrame; forecast_type::Symbol=:active, keepmissings::Bool=false)
     groups = groupby(gt, :state, sort=true)
-    patients = vcat([g.hospitalizedCurrently' for g in groups]...)
+    if forecast_type == :active
+        patients = vcat([g.hospitalizedCurrently' for g in groups]...)
+    elseif forecast_type == :admitted
+        patients = vcat([g.hospitalizedIncrease' for g in groups]...)
+    else
+        error("Invalid forecast type for covidtracking")
+    end
     if !keepmissings
         patients[ismissing.(patients)] .= 0
     end
