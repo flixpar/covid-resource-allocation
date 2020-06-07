@@ -94,7 +94,7 @@ function results_complete(
 		initial_patients[i]
 		- sum(discharged_patients[i,1:t])
 		+ sum(admitted_patients[i,max(1,t-hospitalized_days):t])
-		- sum(sent[i,:,1:t])
+		- sum(sent[i,:,max(1,t-hospitalized_days):t])
 		+ sum(sent[:,i,max(1,t-hospitalized_days):t])
 	)
 
