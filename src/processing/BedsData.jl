@@ -46,7 +46,7 @@ function load_gov()
     filter!(row -> row.BEDS > 0, beds_data)
     filter!(row -> row.TYPE == "GENERAL ACUTE CARE", beds_data)
 
-    beds_data = by(beds_data, :STATE, :BEDS => sum)
+    beds_data = combine(groupby(beds_data, :STATE), :BEDS => sum)
     sort!(beds_data, :STATE)
 
 	return beds_data
@@ -108,7 +108,7 @@ function definitivehc_select_type!(beds_data::DataFrame; bed_type::Symbol=:all)
 end
 
 function definitivehc_aggregate(beds_data::DataFrame; locations::Array=[])
-	beds_data_agg = by(beds_data, :selected_location, selected_beds_agg = (:selected_beds => sum))
+	beds_data_agg = combine(groupby(beds_data, :selected_location), selected_beds_agg = (:selected_beds => sum))
 	if !isempty(locations)
 		missing_locs = setdiff(locations, beds_data_agg.selected_location)
 		for loc in missing_locs push!(beds_data_agg, Dict(:selected_location => loc, :selected_beds_agg => 0)) end
