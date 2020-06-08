@@ -14,7 +14,7 @@ function reusable_resource_allocation(
         supply::Array{Float32,2},
 		demand::Array{Float32,2},
         adj_matrix::BitArray{2};
-		objective::Symbol=:shortage,
+		obj_dir::Symbol=:shortage,
 		send_new_only::Bool=false,
         sendrecieve_switch_time::Int=0,
 		min_send_amt::Real=0,
@@ -29,7 +29,7 @@ function reusable_resource_allocation(
 	@assert(size(demand, 2) == T)
 	@assert(size(adj_matrix, 1) == N)
 	@assert(size(adj_matrix, 2) == N)
-	@assert(objective in [:shortage, :overflow])
+	@assert(obj_dir in [:shortage, :overflow])
 
     model = Model(Gurobi.Optimizer)
     if !verbose set_silent(model) end
@@ -93,8 +93,8 @@ function reusable_resource_allocation(
         )
     end
 
-	flip_sign = (objective == :shortage) ? 1 : -1
-	z1, z2 = (objective == :shortage) ? (0, -1) : (-1, 0)
+	flip_sign = (obj_dir == :shortage) ? 1 : -1
+	z1, z2 = (obj_dir == :shortage) ? (0, -1) : (-1, 0)
     @constraint(model, [i=1:N,t=1:T],
         obj_dummy[i,t] >= flip_sign * (
 			demand[i,t] - (
