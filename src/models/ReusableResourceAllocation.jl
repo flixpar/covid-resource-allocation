@@ -67,12 +67,12 @@ function reusable_resource_allocation(
             sum(sent[:,:,t], dims=2) .<= max.(0, supply[:,t])
         )
     else
-	    @constraint(model, [t=1:T],
-	        sum(sent[:,:,t], dims=2) .<=
-	            initial_supply
-	            .+ sum(supply[:,1:t], dims=2)
-	            .- sum(sent[:,:,1:t-1], dims=[2,3])
-	            .+ sum(sent[:,:,1:t-1], dims=[1,3])
+	    @constraint(model, [i=1:N,t=1:T],
+	        sum(sent[i,:,t]) <=
+	            initial_supply[i]
+	            + sum(supply[i,1:t])
+	            - sum(sent[i,:,1:t-1])
+	            + sum(sent[:,i,1:t-1])
 	    )
 	end
 
@@ -108,36 +108,6 @@ function reusable_resource_allocation(
 
     optimize!(model)
     return model
-end
-
-
-if abspath(PROGRAM_FILE) == @__FILE__
-	N, T = 10, 14
-	initial_supply = Float32.(rand(0:20, N))
-	supply = Float32.(rand(0:2, N, T))
-	demand = Float32.(rand(10:30, N, T))
-
-	adj = triu(rand(Bool, N, N), 1)
-	adj = BitArray(adj + adj')
-
-	model = reusable_resource_allocation(initial_supply, supply, demand, adj, verbose=true)
-
-	println("termination status: ", termination_status(model))
-	println("solve time: ", round(solve_time(model), digits=3), "s")
-	println("objective function value: ", round(objective_value(model), digits=3))
-
-	sent = value.(model[:sent])
-	total_shortage = sum(
-		max(0,
-			demand[i,t]
-			- initial_supply[i]
-			- sum(supply[i,1:t])
-			+ sum(sent[i,:,1:t-1])
-			- sum(sent[:,i,1:t])
-		) for t in 1:T, i in 1:N
-	)
-	println("total sent: ", sum(sent))
-	println("total shortage: ", total_shortage)
 end
 
 end;

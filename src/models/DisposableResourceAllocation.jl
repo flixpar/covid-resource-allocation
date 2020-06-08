@@ -75,38 +75,4 @@ function disposable_resource_allocation(
     return model
 end
 
-
-if abspath(PROGRAM_FILE) == @__FILE__
-	N, T = 10, 14
-	initial_supply = Float32.(rand(100:150, N))
-	supply = Float32.(rand(0:10, N, T))
-	demand = Float32.(rand(10:30, N, T))
-
-	adj = rand(Bool, N, N)
-	adj[tril(ones(Bool, N, N))] .= 0
-	adj = BitArray(adj + adj')
-
-	model = disposable_resource_allocation(initial_supply, supply, demand, adj, verbose=true)
-
-	println("termination status: ", termination_status(model))
-	println("solve time: ", round(solve_time(model), digits=3), "s")
-	println("objective function value: ", round(objective_value(model), digits=3))
-
-	sent = value.(model[:sent])
-	used = value.(model[:used])
-	total_shortage = sum(
-		max(0,
-			demand[i,t]
-			- initial_supply[i]
-			- sum(supply[i,1:t])
-			+ sum(used[i,1:t-1])
-			+ sum(sent[i,:,1:t-1])
-			- sum(sent[:,i,1:t])
-		) for t in 1:T, i in 1:N
-	)
-	println("total sent: ", sum(sent))
-	println("total used: ", sum(used))
-	println("total shortage: ", total_shortage)
-end
-
 end;
