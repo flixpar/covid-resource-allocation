@@ -54,9 +54,9 @@ function results_summary(
 	active_patients(i,t) = max(0,
 		initial_patients[i]
 		- sum(discharged_patients[i,1:t])
-		+ sum(admitted_patients[i,max(1,t-hospitalized_days):t])
-		- sum(sent[i,:,max(1,t-hospitalized_days):t])
-		+ sum(sent[:,i,max(1,t-hospitalized_days):t])
+		+ sum(admitted_patients[i,max(1,t-hospitalized_days+1):t])
+		- sum(sent[i,:,max(1,t-hospitalized_days+1):t])
+		+ sum(sent[:,i,max(1,t-hospitalized_days+1):t])
 	)
 
 	overflow(i,t) = max(0, active_patients(i,t) + sum(sent[i,:,t]) - beds[i])
@@ -93,9 +93,9 @@ function results_complete(
 	active_patients(i,t) = max(0,
 		initial_patients[i]
 		- sum(discharged_patients[i,1:t])
-		+ sum(admitted_patients[i,max(1,t-hospitalized_days):t])
-		- sum(sent[i,:,max(1,t-hospitalized_days):t])
-		+ sum(sent[:,i,max(1,t-hospitalized_days):t])
+		+ sum(admitted_patients[i,max(1,t-hospitalized_days+1):t])
+		- sum(sent[i,:,max(1,t-hospitalized_days+1):t])
+		+ sum(sent[:,i,max(1,t-hospitalized_days+1):t])
 	)
 
 	overflow(i,t) = max(0, active_patients(i,t) + sum(sent[i,:,t]) - beds[i])
