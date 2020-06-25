@@ -10,10 +10,10 @@ export nurse_allocation
 
 
 function nurse_allocation(
-        initial_nurses::Array{Float32,1},
+		initial_nurses::Array{Float32,1},
 		demand::Array{Float32,2},
-        adj_matrix::BitArray{2};
-        sendreceive_switch_time::Int=0,
+		adj_matrix::BitArray{2};
+		sendreceive_switch_time::Int=0,
 		fully_connected::Bool=false,
 		min_send_amt::Real=0,
 		smoothness_penalty::Real=0,
@@ -25,15 +25,15 @@ function nurse_allocation(
 		disallow_artifical_shortage::Bool=false,
 		verbose::Bool=false,
 )
-    N, T = size(demand)
-    @assert(size(initial_nurses) == (N,))
+	N, T = size(demand)
+	@assert(size(initial_nurses) == (N,))
 	@assert(size(adj_matrix) == (N,N))
 
-    model = Model(Gurobi.Optimizer)
-    if !verbose set_silent(model) end
+	model = Model(Gurobi.Optimizer)
+	if !verbose set_silent(model) end
 
 	@variable(model, sent[1:N,1:N,1:T])
-    @variable(model, obj_dummy[1:N,1:T] >= 0)
+	@variable(model, obj_dummy[1:N,1:T] >= 0)
 
 	if min_send_amt <= 0
 		@constraint(model, sent .>= 0)
@@ -66,23 +66,23 @@ function nurse_allocation(
 			@constraint(model, sent[i,i,:] .== 0)
 		end
 	else
-	    for i = 1:N
-	        for j = 1:N
-	            if ~adj_matrix[i,j]
-	                @constraint(model, sent[i,j,:] .== 0)
-	            end
-	        end
-	    end
+		for i = 1:N
+			for j = 1:N
+				if ~adj_matrix[i,j]
+					@constraint(model, sent[i,j,:] .== 0)
+				end
+			end
+		end
 	end
 
-    if sendreceive_switch_time > 0
-        @constraint(model, [i=1:N,t=1:T-1],
+	if sendreceive_switch_time > 0
+		@constraint(model, [i=1:N,t=1:T-1],
 			[sum(sent[:,i,t]), sum(sent[i,:,t:min(t+sendreceive_switch_time,T)])] in MOI.SOS1([1.0, 1.0])
 		)
 		@constraint(model, [i=1:N,t=1:T-1],
-            [sum(sent[:,i,t:min(t+sendreceive_switch_time,T)]), sum(sent[i,:,t])] in MOI.SOS1([1.0, 1.0])
-        )
-    end
+			[sum(sent[:,i,t:min(t+sendreceive_switch_time,T)]), sum(sent[i,:,t])] in MOI.SOS1([1.0, 1.0])
+		)
+	end
 
 	# compute active nurses
 	@expression(model, active_nurses[i=1:N,t=0:T],
@@ -115,8 +115,8 @@ function nurse_allocation(
 		add_to_expression!(objective, load_penalty * sum(load_dummy))
 	end
 
-    optimize!(model)
-    return model
+	optimize!(model)
+	return model
 end
 
 end;

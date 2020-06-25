@@ -26,18 +26,18 @@ end
 
 function load_nurse_employment_data()
 	nurse_data_employment = CSV.read(joinpath(basepath, "data/nurses/deaggregated_by_hospital_beds.csv"), copycols=true)
-    nurse_data_employment = combine(groupby(nurse_data_employment, :state), :weighted_emp_distribution => sum)
+	nurse_data_employment = combine(groupby(nurse_data_employment, :state), :weighted_emp_distribution => sum)
 	sort!(nurse_data_employment, :state)
 	return nurse_data_employment
 end
 
 function num_nurses_from_employment(states::Array{String,1})
-    @assert states == sort(states)
-    @assert !("HI" in states)
+	@assert states == sort(states)
+	@assert !("HI" in states)
 
 	nurse_data_employment = load_nurse_employment_data()
-    nurse_data_local = filter(row -> row.state in states, nurse_data_employment)
-    return Float32.(nurse_data_local.weighted_emp_distribution_sum .* (1_713_120 / 2_982_280))
+	nurse_data_local = filter(row -> row.state in states, nurse_data_employment)
+	return Float32.(nurse_data_local.weighted_emp_distribution_sum .* (1_713_120 / 2_982_280))
 end
 
 ########################
@@ -63,7 +63,7 @@ function num_nurses_from_beds(
 		nurses_per_bed_regular::Real=0.2,
 		nurses_per_bed_icu::Real=0.5
 )
-    @assert states == sort(states)
+	@assert states == sort(states)
 	nurse_data_beds = load_nurse_beds_data()
 	nurse_data_local = filter(row -> row.HQ_STATE in states, nurse_data_beds)
 	nurse_data_local.est_nurses_per_shift =

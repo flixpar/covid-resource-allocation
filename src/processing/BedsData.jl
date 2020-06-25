@@ -41,21 +41,21 @@ end
 ########################
 
 function load_gov()
-    beds_data = CSV.read(joinpath(basepath, "data/hospitals/gov.csv"), copycols=true)
+	beds_data = CSV.read(joinpath(basepath, "data/hospitals/gov.csv"), copycols=true)
 
-    filter!(row -> row.BEDS > 0, beds_data)
-    filter!(row -> row.TYPE == "GENERAL ACUTE CARE", beds_data)
+	filter!(row -> row.BEDS > 0, beds_data)
+	filter!(row -> row.TYPE == "GENERAL ACUTE CARE", beds_data)
 
-    beds_data = combine(groupby(beds_data, :STATE), :BEDS => sum)
-    sort!(beds_data, :STATE)
+	beds_data = combine(groupby(beds_data, :STATE), :BEDS => sum)
+	sort!(beds_data, :STATE)
 
 	return beds_data
 end
 
 function compute_beds_gov(beds_data::DataFrame, states::Array{String,1})
-    @assert states == sort(states)
-    beds_df = filter(row -> row.STATE in states, beds_data)
-    return Float32.(beds_df.BEDS_sum)
+	@assert states == sort(states)
+	beds_df = filter(row -> row.STATE in states, beds_data)
+	return Float32.(beds_df.BEDS_sum)
 end
 
 ###########################
@@ -114,7 +114,7 @@ function definitivehc_aggregate(beds_data::DataFrame; locations::Array=[])
 		for loc in missing_locs push!(beds_data_agg, Dict(:selected_location => loc, :selected_beds_agg => 0)) end
 	end
 	sort!(beds_data_agg, :selected_location)
-    return Float32.(beds_data_agg.selected_beds_agg)
+	return Float32.(beds_data_agg.selected_beds_agg)
 end
 
 end;
