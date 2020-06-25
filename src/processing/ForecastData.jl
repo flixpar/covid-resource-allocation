@@ -268,7 +268,7 @@ end
 ########################
 
 function load_cdc_gt()
-    gt_raw = CSV.read("../../data/hospitalizations/cdc/2020-06-02.csv")
+    gt_raw = CSV.read(joinpath(basepath, "data/hospitalizations/cdc/2020-06-02.csv"), copycols=true)
 
     good_cols = Dict(
         :state => :state,
