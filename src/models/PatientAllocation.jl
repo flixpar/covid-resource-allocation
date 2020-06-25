@@ -6,7 +6,7 @@ using Gurobi
 using LinearAlgebra
 using MathOptInterface
 
-export patient_allocation
+export patient_allocation, patient_block_allocation
 
 
 ##############################################
@@ -167,6 +167,160 @@ function patient_allocation(
 	@objective(model, Min, objective)
 	optimize!(model)
 
+	return model
+end
+
+##############################################
+############### Block Model ##################
+##############################################
+
+function patient_block_allocation(
+		beds::Dict{Symbol,Array{Float32,1}},
+		patient_blocks::Array,
+		adj_matrix::BitArray{2};
+		send_new_only::Bool=true,
+		sendreceive_switch_time::Int=0,
+		min_send_amt::Real=0,
+		smoothness_penalty::Real=0,
+		setup_cost::Real=0,
+		sent_penalty::Real=0,
+		balancing_thresh::Real=1.0,
+		balancing_penalty::Real=0,
+		severity_weighting::Bool=false,
+		verbose::Bool=false,
+)
+	G = length(patient_blocks)
+	B = length(beds)
+	N, T = size(patient_blocks[1].admitted)
+
+	bed_types = collect(keys(beds))
+
+	model = Model(Gurobi.Optimizer)
+	if !verbose set_silent(model) end
+
+	@variable(model, sent[1:G,1:N,1:N,1:T])
+	@variable(model, obj_dummy[bed_types,1:N,1:T] >= 0)
+
+	# enforce minimum transfer amount if enabled
+	if min_send_amt <= 0
+		@constraint(model, sent .>= 0)
+	else
+		@constraint(model, [g=1:G,i=1:N,j=1:N,t=1:T], sent[g,i,j,t] in MOI.Semicontinuous(Float64(min_send_amt), Inf))
+	end
+
+	objective = @expression(model, 0 * sum(obj_dummy))
+
+	if severity_weighting
+		ts(t,g) = max(1,t-patient_blocks[g].hospitalized_days+1)
+		@expression(model, tfr[g1=1:G,g2=1:G,i=1:N,t=1:T],
+			((patient_blocks[g1].hospitalized_days < t) && (patient_blocks[g1].to == patient_blocks[g2].id)) ?
+				patient_blocks[g1].admitted[i,t-patient_blocks[g1].hospitalized_days] : 0
+		)
+		bd_gps = Dict(b => [i for (i,g) in enumerate(patient_blocks) if g.bed_type == b] for b in bed_types)
+		load_null = [(sum(
+				patient_blocks[g].initial[i]
+				- sum(patient_blocks[g].discharged[i,1:t])
+				+ sum(patient_blocks[g].admitted[i,ts(t,g):t])
+				+ sum(tfr[:,g,i,ts(t,g):t])
+			for g in bd_gps[b]) / beds[b][i])
+			for i in 1:N, t in 1:T, b in bed_types
+		]
+		max_load_null = maximum(load_null, dims=[1,2])
+		severity_weight = [max_load_null[i,b] > 1 ? 1.0 : 10.0 for i in 1:N, b in bed_types]
+
+		add_to_expression!(objective, sum(sum(obj_dummy, dims=3)' .* severity_weight))
+	else
+		add_to_expression!(objective, sum(obj_dummy))
+	end
+
+	# penalize total sent if enabled
+	if sent_penalty > 0
+		add_to_expression!(objective, sent_penalty*sum(sent))
+	end
+
+	# penalize non-smoothness in sent patients if enabled
+	if smoothness_penalty > 0
+		@variable(model, smoothness_dummy[i=1:N,j=1:N,t=1:T-1] >= 0)
+		@constraint(model, [t=1:T-1],  (sum(sent[:,:,:,t], dims=1) - sum(sent[:,:,:,t+1], dims=1))[1,:,:,:] .<= smoothness_dummy[:,:,t])
+		@constraint(model, [t=1:T-1], -(sum(sent[:,:,:,t], dims=1) - sum(sent[:,:,:,t+1], dims=1))[1,:,:,:] .<= smoothness_dummy[:,:,t])
+
+		add_to_expression!(objective, smoothness_penalty * sum(smoothness_dummy))
+		add_to_expression!(objective, smoothness_penalty * sum(sent[:,:,:,1]))
+	end
+
+	# add setup costs if enabled
+	if setup_cost > 0
+		@variable(model, setup_dummy[i=1:N,j=i+1:N], Bin)
+		@constraint(model, [i=1:N,j=i+1:N], [1-setup_dummy[i,j], sum(sent[:,i,j,:])+sum(sent[:,j,i,:])] in MOI.SOS1([1.0, 1.0]))
+		add_to_expression!(objective, setup_cost*sum(setup_dummy))
+	end
+
+	# only send patients between connected locations
+	for i = 1:N
+		for j = 1:N
+			if ~adj_matrix[i,j]
+				@constraint(model, sum(sent[:,i,j,:]) == 0)
+			end
+		end
+	end
+
+	# enforce a minimum time between sending and receiving
+	if sendreceive_switch_time > 0
+		@constraint(model, [i=1:N,t=1:T-1],
+			[sum(sent[:,:,i,t]), sum(sent[:,i,:,t:min(t+sendreceive_switch_time,T)])] in MOI.SOS1([1.0, 1.0])
+		)
+		@constraint(model, [i=1:N,t=1:T-1],
+			[sum(sent[:,:,i,t:min(t+sendreceive_switch_time,T)]), sum(sent[:,i,:,t])] in MOI.SOS1([1.0, 1.0])
+		)
+	end
+
+	@expression(model, transfer[g1=1:G,g2=1:G,i=1:N,t=1:T],
+		((patient_blocks[g1].hospitalized_days < t) && (patient_blocks[g1].to == patient_blocks[g2].id)) ?
+			patient_blocks[g1].admitted[i,t-patient_blocks[g1].hospitalized_days] : 0
+	)
+
+	# expression for the number of active patients
+	ts(t,g) = max(1,t-patient_blocks[g].hospitalized_days+1)
+	@expression(model, active_patients[g=1:G,i=1:N,t=0:T],
+		patient_blocks[g].initial[i]
+		- sum(patient_blocks[g].discharged[i,1:t])
+		+ sum(patient_blocks[g].admitted[i,ts(t,g):t])
+		- sum(sent[g,i,:,ts(t,g):t])
+		+ sum(sent[g,:,i,ts(t,g):t])
+		+ sum(transfer[:,g,i,ts(t,g):t])
+	)
+
+	# expression for the patient overflow
+	bed_groups = Dict(b => [i for (i,g) in enumerate(patient_blocks) if g.bed_type == b] for b in bed_types)
+	@expression(model, overflow[b in bed_types,i=1:N,t=1:T],
+		sum(active_patients[g,i,t] + sum(sent[g,i,:,t]) for g in bed_groups[b]) - beds[b][i]
+	)
+
+	# only send new patients if enabled
+	# otherwise only send less than active patients
+	if send_new_only
+		@constraint(model, [g=1:G,i=1:N,t=1:T], sum(sent[g,i,:,t]) <= patient_blocks[g].admitted[i,t])
+	else
+		@constraint(model, [g=1:G,t=1:T], sum(sent[g,:,:,t], dims=3) .<= active_patients[g,:,t-1] .+ sum(sent[g,:,:,t], dims=2) - patient_blocks[g].discharged[:,t])
+	end
+
+	# ensure the number of active patients is non-negative
+	@constraint(model, [g=1:G,i=1:N,t=1:T], active_patients[g,i,t] >= 0)
+
+	# load balancing
+	if balancing_penalty > 0
+		@variable(model, balancing_dummy[bed_types,1:N,1:T] >= 0)
+		@constraint(model, [b in bed_types,i=1:N,t=1:T],
+			balancing_dummy[b,i,t] >= (sum(active_patients[g,i,t] for g in bed_groups[b]) / beds[b][i]) - balancing_thresh)
+		add_to_expression!(objective, balancing_penalty * sum(balancing_dummy))
+	end
+
+	# objective
+	@constraint(model, [b in bed_types,i=1:N,t=1:T], obj_dummy[b,i,t] >= overflow[b,i,t])
+
+	@objective(model, Min, objective)
+
+	optimize!(model)
 	return model
 end
 
