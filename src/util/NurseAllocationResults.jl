@@ -6,9 +6,9 @@ using Dates
 
 
 function results_all(
-		sent::Array{Float64,3},
-		initial_nurses::Array{Float32,1},
-		demand::Array{Float32,2},
+		sent::Array{<:Real,3},
+		initial_nurses::Array{<:Real,1},
+		demand::Array{<:Real,2},
 		locations::Array{String,1},
 		start_date::Date,
 )
@@ -27,6 +27,14 @@ function results_all(
 	total_shortage = sum(complete.shortage)
 	total_sent = sum(complete.sent)
 
+	current_nurses(i,t) = initial_nurses[i] - sum(sent[i,:,1:t]) + sum(sent[:,i,1:t])
+	shortage(i,t) = max(0, demand[i,t] - current_nurses(i,t))
+	load(i,t) = demand[i,t] / max(1, current_nurses(i,t))
+
+	current_nurses_null(i,t) = initial_nurses[i]
+	shortage_null(i,t) = max(0, demand[i,t] - current_nurses_null(i,t))
+	load_null(i,t) = demand[i,t] / max(1, current_nurses_null(i,t))
+
 	return (
 		summary_table=summary,
 		complete_table=complete,
@@ -37,13 +45,19 @@ function results_all(
 		average_load=avgload,
 		total_shortage=total_shortage,
 		total_sent=total_sent,
+		current_nurses=current_nurses,
+		shortage=shortage,
+		load=load,
+		current_nurses_null=current_nurses_null,
+		shortage_null=shortage_null,
+		load_null=load_null,
 	)
 end
 
 function results_summary(
-		sent::Array{Float64,3},
-		initial_nurses::Array{Float32,1},
-		demand::Array{Float32,2},
+		sent::Array{<:Real,3},
+		initial_nurses::Array{<:Real,1},
+		demand::Array{<:Real,2},
 		locations::Array{String,1},
 		start_date::Date,
 )
@@ -75,9 +89,9 @@ function results_summary(
 end
 
 function results_complete(
-		sent::Array{Float64,3},
-		initial_nurses::Array{Float32,1},
-		demand::Array{Float32,2},
+		sent::Array{<:Real,3},
+		initial_nurses::Array{<:Real,1},
+		demand::Array{<:Real,2},
 		locations::Array{String,1},
 		start_date::Date,
 )
@@ -116,14 +130,14 @@ function results_complete(
 	return outcomes
 end
 
-function results_sentmatrix_table(sent::Array{Float64,3}, locations::Array{String,1})
+function results_sentmatrix_table(sent::Array{<:Real,3}, locations::Array{String,1})
 	sent_matrix = DataFrame(sum(sent, dims=3)[:,:,1])
 	rename!(sent_matrix, Symbol.(locations))
 	insertcols!(sent_matrix, 1, :state => locations)
 	return sent_matrix
 end
 
-function results_sentmatrix_vis(sent::Array{Float64,3}, initial_nurses::Array{Float32,1}, locations::Array{String,1})
+function results_sentmatrix_vis(sent::Array{<:Real,3}, initial_nurses::Array{<:Real,1}, locations::Array{String,1})
 	selfedges = initial_nurses - sum(sent, dims=[2,3])[:]
 	sent_vis_matrix = sum(sent, dims=3)[:,:,1] + diagm(selfedges)
 	sent_vis_matrix = DataFrame(sent_vis_matrix)
@@ -131,7 +145,7 @@ function results_sentmatrix_vis(sent::Array{Float64,3}, initial_nurses::Array{Fl
 	return sent_vis_matrix
 end
 
-function results_netsent(sent::Array{Float64,3}, start_date::Date)
+function results_netsent(sent::Array{<:Real,3}, start_date::Date)
 	N, _, T = size(sent)
 	net_sent = sum(sent, dims=2)[:,1,:] .- sum(sent, dims=1)[1,:,:]
 	net_sent = DataFrame(Matrix(net_sent))
