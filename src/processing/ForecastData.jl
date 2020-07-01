@@ -69,7 +69,7 @@ end
 ######## IHME ##########
 ########################
 
-function load_ihme(;forecast_date::String="2020-06-03")
+function load_ihme(;forecast_date::String="2020-06-13")
 	forecast_data = CSV.read(joinpath(basepath, "data/forecasts/ihme/$(forecast_date)/forecast.csv"), copycols=true)
 
 	state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
