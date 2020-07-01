@@ -90,6 +90,7 @@ function num_nurses_from_ahrf(states::Array{String,1})
 	nurse_data_ahrf = load_nurse_ahrf_data()
 	nurses_local = filter(row -> row.state in states, nurse_data_ahrf)
 	nurses = nurses_local.registered_nurses_sum
+	replace!(nurses, missing => 0)
 	return Float32.(nurses)
 end
 
