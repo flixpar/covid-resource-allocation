@@ -72,11 +72,16 @@ end
 function load_ihme(;forecast_date::String="2020-06-03")
 	forecast_data = CSV.read(joinpath(basepath, "data/forecasts/ihme/$(forecast_date)/forecast.csv"), copycols=true)
 
-    state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
-    filter!(row -> row.location_name in state_list.state, forecast_data)
+	state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
 
-    state_cvt = Dict(state.state => state.abbrev for state in eachrow(state_list))
-    forecast_data.state = [state_cvt[row.location_name] for row in eachrow(forecast_data)]
+	ga = state_list[(state_list.abbrev .== "GA"),:]
+	ga.state .= "Georgia_two"
+	append!(state_list, ga)
+
+	filter!(row -> row.location_name in state_list.state, forecast_data)
+
+	state_cvt = Dict(state.state => state.abbrev for state in eachrow(state_list))
+	forecast_data.state = [state_cvt[row.location_name] for row in eachrow(forecast_data)]
 
 	sort!(forecast_data, [:state, :date])
 	return forecast_data
@@ -91,26 +96,30 @@ function ihme_filter!(forecast::DataFrame, states::Array{String,1}, start_date::
 end
 
 function ihme_forecast(forecast::DataFrame; forecast_type::Symbol=:active, patient_type::Symbol=:regular, bound_type::Symbol=:mean)
-    forecast_by_state = groupby(forecast, :state, sort=true)
+	forecast[!,:admis_regular_mean] = 0.9 .* forecast.admis_mean
+	forecast[!,:allbed_regular_mean] = forecast.allbed_mean - forecast.ICUbed_mean
 
-    col_select = Dict(
-        (:admitted, :regular, :mean) => :admis_mean,
-        (:admitted, :regular, :lb)   => :admis_lower,
-        (:admitted, :regular, :ub)   => :admis_upper,
-        (:active, :regular, :mean) => :allbed_mean,
-        (:active, :regular, :lb)   => :allbed_lower,
-        (:active, :regular, :ub)   => :allbed_upper,
-        (:admitted, :icu, :mean) => :newICU_mean,
-        (:admitted, :icu, :lb)   => :newICU_lower,
-        (:admitted, :icu, :ub)   => :newICU_upper,
-        (:active, :icu, :mean) => :ICUbed_mean,
-        (:active, :icu, :lb)   => :ICUbed_lower,
-        (:active, :icu, :ub)   => :ICUbed_upper,
-    )
-    col = col_select[(forecast_type, patient_type, bound_type)]
+	col_select = Dict(
+		(:admitted, :all, :mean) => :admis_mean,
+		(:admitted, :all, :lb)   => :admis_lower,
+		(:admitted, :all, :ub)   => :admis_upper,
+		(:active, :all, :mean) => :allbed_mean,
+		(:active, :all, :lb)   => :allbed_lower,
+		(:active, :all, :ub)   => :allbed_upper,
+		(:admitted, :icu, :mean) => :newICU_mean,
+		(:admitted, :icu, :lb)   => :newICU_lower,
+		(:admitted, :icu, :ub)   => :newICU_upper,
+		(:active, :icu, :mean) => :ICUbed_mean,
+		(:active, :icu, :lb)   => :ICUbed_lower,
+		(:active, :icu, :ub)   => :ICUbed_upper,
+		(:admitted, :regular, :mean) => :admis_regular_mean,
+		(:active, :regular, :mean) => :allbed_regular_mean,
+	)
+	col = col_select[(forecast_type, patient_type, bound_type)]
 
-    patients = vcat([f[:,col]' for f in forecast_by_state]...)
-    return Float32.(patients)
+	forecast_by_state = groupby(forecast, :state, sort=true)
+	patients = vcat([f[:,col]' for f in forecast_by_state]...)
+	return Float32.(patients)
 end
 
 ########################
