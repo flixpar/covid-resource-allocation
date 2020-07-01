@@ -10,8 +10,8 @@ export nurse_allocation
 
 
 function nurse_allocation(
-		initial_nurses::Array{Float32,1},
-		demand::Array{Float32,2},
+		initial_nurses::Array{<:Real,1},
+		demand::Array{<:Real,2},
 		adj_matrix::BitArray{2};
 		sendreceive_switch_time::Int=0,
 		fully_connected::Bool=false,

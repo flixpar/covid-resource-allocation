@@ -10,9 +10,9 @@ export disposable_resource_allocation
 
 
 function disposable_resource_allocation(
-		initial_supply::Array{Float32,1},
-		supply::Array{Float32,2},
-		demand::Array{Float32,2},
+		initial_supply::Array{<:Real,1},
+		supply::Array{<:Real,2},
+		demand::Array{<:Real,2},
 		adj_matrix::BitArray{2};
 		objective::Symbol=:shortage,
 		send_new_only::Bool=true,

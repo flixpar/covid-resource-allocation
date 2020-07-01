@@ -175,7 +175,7 @@ end
 ##############################################
 
 function patient_block_allocation(
-		beds::Dict{Symbol,Array{Float32,1}},
+		beds::Dict{Symbol,Array{TYPE,1}},
 		patient_blocks::Array,
 		adj_matrix::BitArray{2};
 		send_new_only::Bool=true,
@@ -188,7 +188,7 @@ function patient_block_allocation(
 		balancing_penalty::Real=0,
 		severity_weighting::Bool=false,
 		verbose::Bool=false,
-)
+) where TYPE <: Real
 	G = length(patient_blocks)
 	B = length(beds)
 	N, T = size(patient_blocks[1].admitted)
@@ -210,6 +210,8 @@ function patient_block_allocation(
 
 	objective = @expression(model, 0 * sum(obj_dummy))
 
+	ts(t,g) = max(1,t-patient_blocks[g].hospitalized_days+1)
+
 	if severity_weighting
 		ts(t,g) = max(1,t-patient_blocks[g].hospitalized_days+1)
 		@expression(model, tfr[g1=1:G,g2=1:G,i=1:N,t=1:T],
@@ -225,10 +227,10 @@ function patient_block_allocation(
 			for g in bd_gps[b]) / beds[b][i])
 			for i in 1:N, t in 1:T, b in bed_types
 		]
-		max_load_null = maximum(load_null, dims=[1,2])
-		severity_weight = [max_load_null[i,b] > 1 ? 1.0 : 10.0 for i in 1:N, b in bed_types]
+		max_load_null = maximum(load_null, dims=2)[:,1,:]
+		severity_weight = [max_load_null[i,b] > 1 ? 1.0 : 10.0 for i in 1:N, b in 1:length(bed_types)]
 
-		add_to_expression!(objective, sum(sum(obj_dummy, dims=3)' .* severity_weight))
+		add_to_expression!(objective, sum([sum(obj_dummy[b,i,:]) for i in 1:N, b in bed_types] .* severity_weight))
 	else
 		add_to_expression!(objective, sum(obj_dummy))
 	end
