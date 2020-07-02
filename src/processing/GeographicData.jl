@@ -20,7 +20,7 @@ function load_states_google(;states::Array{String,1}=String[], method::Symbol=:c
 	else fn = "state_cities_dist_google"
 	end
 
-	dist_df = CSV.read(joinpath(basepath, "data/geography/$(fn).csv"), copycols=true)
+	dist_df = DataFrame(CSV.File(joinpath(basepath, "data/geography/$(fn).csv")), copycols=true)
 
 	if (method == :cities) state_abbrev_list = map(s -> String(s)[end-1:end], names(dist_df))
 	else state_abbrev_list = names(dist_df)[:]
@@ -40,7 +40,7 @@ function load_states_google(;states::Array{String,1}=String[], method::Symbol=:c
 end
 
 function load_states_latlong(;states::Array{String,1}=String[])::Tuple{Array{Float64,2},Array{String,1}}
-	state_data = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
+	state_data = DataFrame(CSV.File(joinpath(basepath, "data/geography/states.csv")), copycols=true)
 	if !isempty(states) filter!(row -> row.abbrev in states, state_data) end
 	sort!(state_data, :abbrev)
 	latlong = hcat(state_data.lat[:], state_data.long[:])
@@ -49,7 +49,7 @@ function load_states_latlong(;states::Array{String,1}=String[])::Tuple{Array{Flo
 end
 
 function load_counties_latlong(;counties::Array{Int,1}=Int[])::Tuple{Array{Float64,2},Array{Int,1}}
-	county_data = CSV.read(joinpath(basepath, "data/geography/counties.csv"), copycols=true)
+	county_data = DataFrame(CSV.File(joinpath(basepath, "data/geography/counties.csv")), copycols=true)
 	if !isempty(counties)
 		@assert counties == sort(counties)
 		filter!(row -> row.fips in counties, county_data)
@@ -142,7 +142,7 @@ end
 
 function get_counties(states::Array{String,1})
 	@assert states == sort(states)
-	county_data = CSV.read(joinpath(basepath, "data/geography/counties.csv"), copycols=true)
+	county_data = DataFrame(CSV.File(joinpath(basepath, "data/geography/counties.csv")), copycols=true)
 	filter!(row -> row.state_abbrev in states, county_data)
 	sort!(county_data, :state_abbrev)
 	return county_data.fips[:]
@@ -150,7 +150,7 @@ end
 
 function get_county_names(counties::Array{Int,1})
 	@assert counties == sort(counties)
-	county_data = CSV.read(joinpath(basepath, "data/geography/counties.csv"), copycols=true)
+	county_data = DataFrame(CSV.File(joinpath(basepath, "data/geography/counties.csv")), copycols=true)
 	filter!(row -> row.fips in counties, county_data)
 	sort!(county_data, :fips)
 	names = map(c -> c.county * " " * c.state_abbrev, eachrow(county_data))

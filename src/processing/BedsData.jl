@@ -41,7 +41,7 @@ end
 ########################
 
 function load_gov()
-	beds_data = CSV.read(joinpath(basepath, "data/hospitals/gov.csv"), copycols=true)
+	beds_data = DataFrame(CSV.File(joinpath(basepath, "data/hospitals/gov.csv")), copycols=true)
 
 	filter!(row -> row.BEDS > 0, beds_data)
 	filter!(row -> row.TYPE == "GENERAL ACUTE CARE", beds_data)
@@ -63,7 +63,7 @@ end
 ###########################
 
 function load_definitivehc()
-	beds_data = CSV.read(joinpath(basepath, "data/hospitals/definitivehc.csv"), copycols=true)
+	beds_data = DataFrame(CSV.File(joinpath(basepath, "data/hospitals/definitivehc.csv")), copycols=true)
 	filter!(row -> !(row.HOSPITAL_TYPE in ["Psychiatric Hospital", "Rehabilitation Hospital"]), beds_data)
 	return beds_data
 end

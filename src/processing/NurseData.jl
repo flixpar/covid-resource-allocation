@@ -25,7 +25,7 @@ end
 ########################
 
 function load_nurse_employment_data()
-	nurse_data_employment = CSV.read(joinpath(basepath, "data/nurses/deaggregated_by_hospital_beds.csv"), copycols=true)
+	nurse_data_employment = DataFrame(CSV.File(joinpath(basepath, "data/nurses/deaggregated_by_hospital_beds.csv")), copycols=true)
 	nurse_data_employment = combine(groupby(nurse_data_employment, :state), :weighted_emp_distribution => sum)
 	sort!(nurse_data_employment, :state)
 	return nurse_data_employment
@@ -45,7 +45,7 @@ end
 ########################
 
 function load_nurse_beds_data()
-	nurse_data_beds = CSV.read(joinpath(basepath, "data/hospitals/definitivehc.csv"), copycols=true)
+	nurse_data_beds = DataFrame(CSV.File(joinpath(basepath, "data/hospitals/definitivehc.csv")), copycols=true)
 	filter!(row -> !(row.HOSPITAL_TYPE in ["Psychiatric Hospital", "Rehabilitation Hospital"]), nurse_data_beds)
 	filter!(row -> !(ismissing(row.NUM_STAFFED_BEDS) || ismissing(row.NUM_ICU_BEDS) || ismissing(row.HQ_STATE)), nurse_data_beds)
 	filter!(row -> (row.NUM_STAFFED_BEDS > 0) && (row.NUM_ICU_BEDS > 0), nurse_data_beds)
@@ -78,7 +78,7 @@ end
 ########################
 
 function load_nurse_ahrf_data()
-	nurse_data = CSV.read(joinpath(basepath, "data/nurses/nurses_per_county.csv"), copycols=true)
+	nurse_data = DataFrame(CSV.File(joinpath(basepath, "data/nurses/nurses_per_county.csv")), copycols=true)
 	nurse_data_bystate = groupby(nurse_data, :state)
 	nurse_data_ahrf = combine(nurse_data_bystate, [:registered_nurses => sum, :nurse_practitioners => sum, :tot_nurses => sum])
 	sort!(nurse_data_ahrf, :state)

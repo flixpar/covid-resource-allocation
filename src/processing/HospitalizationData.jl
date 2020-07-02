@@ -38,7 +38,7 @@ end
 ########################
 
 function load_covidtracking()
-	gt = CSV.read(joinpath(basepath, "data/hospitalizations/covidtracking/2020-06-30/states_daily.csv"), copycols=true, silencewarnings=true)
+	gt = DataFrame(CSV.File(joinpath(basepath, "data/hospitalizations/covidtracking/2020-06-30/states_daily.csv"), silencewarnings=true), copycols=true)
 	gt.date = map(d -> Date(string(d), "yyyymmdd"), gt.date)
 	return gt
 end

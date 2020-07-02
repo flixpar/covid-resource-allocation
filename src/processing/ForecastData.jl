@@ -70,9 +70,9 @@ end
 ########################
 
 function load_ihme(;forecast_date::String="2020-06-13")
-	forecast_data = CSV.read(joinpath(basepath, "data/forecasts/ihme/$(forecast_date)/forecast.csv"), copycols=true)
+	forecast_data = DataFrame(CSV.File(joinpath(basepath, "data/forecasts/ihme/$(forecast_date)/forecast.csv")), copycols=true)
 
-	state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
+	state_list = DataFrame(CSV.File(joinpath(basepath, "data/geography/states.csv")), copycols=true)
 
 	ga = state_list[(state_list.abbrev .== "GA"),:]
 	ga.state .= "Georgia_two"
@@ -142,7 +142,7 @@ function load_columbia(level::Symbol=:state; intervention::String="80contact", r
 			future_dates = filter(x -> x > d, startdates)
 			fd = isempty(future_dates) ? Date(2100) : minimum(future_dates)
 
-			data = CSV.read(p, copycols=true, dateformat="mm/dd/yy")
+			data = DataFrame(CSV.File(p, dateformat="mm/dd/yy"), copycols=true)
 			data.Date = map(d -> d < Date(2000) ? d + Year(2000) : d, data.Date)
 			filter!(r -> r.Date < fd, data)
 
@@ -150,13 +150,13 @@ function load_columbia(level::Symbol=:state; intervention::String="80contact", r
 		end
 		forecast_data = vcat(forecasts...)
 
-		state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
+		state_list = DataFrame(CSV.File(joinpath(basepath, "data/geography/states.csv")), copycols=true)
 		filter!(row -> row.location in state_list.state, forecast_data)
 		state_cvt = Dict(state.state => state.abbrev for state in eachrow(state_list))
 		forecast_data.loc = [state_cvt[s] for s in forecast_data.location]
 
 	else
-		forecast_data = CSV.read(joinpath(basepath, "data/forecasts/columbia/2020-04-26/cdchosp_$(intervention).csv"), copycols=true, dateformat="mm/dd/yy")
+		forecast_data = DataFrame(CSV.File(joinpath(basepath, "data/forecasts/columbia/2020-04-26/cdchosp_$(intervention).csv"), dateformat="mm/dd/yy"), copycols=true)
 		forecast_data.loc = forecast_data.fips
 		forecast_data.Date = map(d -> d + Year(2000), forecast_data.Date)
 	end
@@ -211,10 +211,10 @@ end
 ########################
 
 function load_mit(;forecast_date::String="2020-05-15")
-	forecast_data = CSV.read(joinpath(basepath, "data/forecasts/mit/$(forecast_date)/forecast.csv"), copycols=true)
+	forecast_data = DataFrame(CSV.File(joinpath(basepath, "data/forecasts/mit/$(forecast_date)/forecast.csv")), copycols=true)
 	filter!(row -> row.Country == "US", forecast_data)
 
-	state_list = CSV.read(joinpath(basepath, "data/geography/states.csv"), copycols=true)
+	state_list = DataFrame(CSV.File(joinpath(basepath, "data/geography/states.csv")), copycols=true)
 	state_cvt = Dict(state.state => state.abbrev for state in eachrow(state_list))
 	forecast_data.state = map(s -> if haskey(state_cvt, s) state_cvt[s] else "" end, forecast_data.Province)
 
