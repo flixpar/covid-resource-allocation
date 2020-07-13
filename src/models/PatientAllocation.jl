@@ -28,6 +28,8 @@ function patient_allocation(
 		balancing_thresh::Real=1.0,
 		balancing_penalty::Real=0,
 		severity_weighting::Bool=false,
+		no_artificial_overflow::Bool=false,
+		bed_mult::Real=-1,
 		verbose::Bool=false,
 )
 	N, T = size(admitted_patients)
@@ -35,6 +37,10 @@ function patient_allocation(
 	@assert(size(beds, 1) == N)
 	@assert(size(adj_matrix) == (N,N))
 	@assert(size(discharged_patients) == (N, T))
+
+	if bed_mult > 0
+		beds = beds .* bed_mult
+	end
 
 	###############
 	#### Model ####
@@ -56,13 +62,19 @@ function patient_allocation(
 
 	# expression for the number of active patients
 	ts(t) = max(1, t - hospitalized_days + 1)
-	@expression(model, active_patients[i=1:N,t=0:T],
+	@expression(model, active_patients[i=1:N,t=1:T],
 		initial_patients[i]
 		- sum(discharged_patients[i,1:t])
 		+ sum(admitted_patients[i,ts(t):t])
 		- sum(sent[i,:,ts(t):t])
 		+ sum(sent[:,i,ts(t):t])
 	)
+	active_null = [(
+			initial_patients[i]
+			- sum(discharged_patients[i,1:t])
+			+ sum(admitted_patients[i,ts(t):t])
+		) for i in 1:N, t in 1:T
+	]
 
 	# expression for the patient overflow
 	@expression(model, overflow[i=1:N,t=1:T], active_patients[i,t] + sum(sent[i,:,t]) - beds[i])
@@ -109,16 +121,17 @@ function patient_allocation(
 
 	# weight objective per-location by max load
 	if severity_weighting
-		active_null = [(
-				initial_patients[i]
-				- sum(discharged_patients[i,1:t])
-				+ sum(admitted_patients[i,max(1,t-hospitalized_days+1):t])
-			) for i in 1:N, t in 1:T
-		]
 		max_load_null = [maximum(active_null[i,:] / beds[i]) for i in 1:N]
-		severity_weight = [max_load_null[i] > 1 ? 1.0 : 10.0 for i in 1:N]
+		severity_weight = [max_load_null[i] > 1.0 ? 0.0 : 9.0 for i in 1:N]
+		add_to_expression!(objective, dot(sum(obj_dummy, dims=2), severity_weight))
+	end
 
-		add_to_expression!(objective, dot(sum(obj_dummy, dims=2), (severity_weight .- 1.0)))
+	if no_artificial_overflow
+		for i in 1:N, t in 1:T
+			if active_null[i,t] < beds[i]
+				@constraint(model, active_patients[i,t] + sum(sent[i,:,t]) <= beds[i])
+			end
+		end
 	end
 
 	# penalize total sent if enabled
