@@ -45,10 +45,10 @@ function results_all(
 		sent_matrix_table=sent_matrix_table,
 		sent_matrix_vis=sent_matrix_vis,
 		sent_to=sent_to,
-		active_patients=active_patients,
+		active_patients=active,
 		overflow=overflow,
 		load=load,
-		active_patients_nosent=active_patients_null,
+		active_patients_nosent=active_null,
 		overflow_nosent=overflow_null,
 		load_nosent=load_null,
 	)
@@ -62,7 +62,7 @@ function results_summary(
 		admitted_patients::Array{<:Real,2},
 		locations::Array{String,1},
 		start_date::Date,
-		hospitalized_days::Int,
+		los,
 )
 	N, _, T = size(sent)
 
@@ -95,7 +95,7 @@ function results_complete(
 		admitted_patients::Array{<:Real,2},
 		locations::Array{String,1},
 		start_date::Date,
-		hospitalized_days::Int,
+		los,
 )
 	N, _, T = size(sent)
 
@@ -154,7 +154,7 @@ function results_active_patients(
 		admitted_patients::Array{<:Real,2},
 		los,
 )
-	N, _, T = size(T)
+	N, _, T = size(sent)
 
 	L = nothing
 	if isa(los, Int)
