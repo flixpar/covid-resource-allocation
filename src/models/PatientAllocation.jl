@@ -5,6 +5,7 @@ using Gurobi
 
 using LinearAlgebra
 using MathOptInterface
+using Distributions
 
 export patient_allocation, patient_block_allocation
 
@@ -19,7 +20,7 @@ function patient_allocation(
 		discharged_patients::Array{<:Real,2},
 		admitted_patients::Array{<:Real,2},
 		adj_matrix::BitArray{2};
-		hospitalized_days::Int=8,
+		los=11,
 		sendreceive_switch_time::Int=0,
 		min_send_amt::Real=0,
 		smoothness_penalty::Real=0,
@@ -37,6 +38,25 @@ function patient_allocation(
 	@assert(size(beds, 1) == N)
 	@assert(size(adj_matrix) == (N,N))
 	@assert(size(discharged_patients) == (N, T))
+
+	###############
+	#### Setup ####
+	###############
+
+	L = nothing
+	if isa(los, Int)
+		L = vcat(ones(Int, los), zeros(Int, T-los))
+	elseif isa(los, Array{<:Real,1})
+		if length(los) >= T
+			L = los
+		else
+			L = vcat(los, zeros(Float64, T-length(los)))
+		end
+	elseif isa(los, Distribution)
+		L = 1.0 .- cdf.(los, 0:T)
+	else
+		error("Invalid length of stay distribution")
+	end
 
 	if bed_mult > 0
 		beds = beds .* bed_mult
@@ -60,19 +80,20 @@ function patient_allocation(
 	## Expressions ##
 	#################
 
-	# expression for the number of active patients
-	ts(t) = max(1, t - hospitalized_days + 1)
+	# expressions for the number of active patients
 	@expression(model, active_patients[i=1:N,t=1:T],
 		initial_patients[i]
 		- sum(discharged_patients[i,1:t])
-		+ sum(admitted_patients[i,ts(t):t])
-		- sum(sent[i,:,ts(t):t])
-		+ sum(sent[:,i,ts(t):t])
+		+ sum(L[t-t₁+1] * (
+			admitted_patients[i,t₁]
+			- sum(sent[i,:,t₁])
+			+ sum(sent[:,i,t₁])
+		) for t₁ in 1:t)
 	)
 	active_null = [(
 			initial_patients[i]
 			- sum(discharged_patients[i,1:t])
-			+ sum(admitted_patients[i,ts(t):t])
+			+ sum(L[t-t₁+1] * admitted_patients[i,t₁] for t₁ in 1:t)
 		) for i in 1:N, t in 1:T
 	]
 

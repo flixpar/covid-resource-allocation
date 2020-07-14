@@ -3,6 +3,7 @@ module PatientAllocationResults
 using DataFrames
 using LinearAlgebra
 using Dates
+using Distributions
 
 
 function results_all(
@@ -13,39 +14,28 @@ function results_all(
 		admitted_patients::Array{<:Real,2},
 		locations::Array{String,1},
 		start_date::Date,
-		hospitalized_days::Int,
+		los,
 )
 	N, _, T = size(sent)
 
-	summary = results_summary(sent, beds, initial_patients, discharged_patients, admitted_patients, locations, start_date, hospitalized_days)
-	complete = results_complete(sent, beds, initial_patients, discharged_patients, admitted_patients, locations, start_date, hospitalized_days)
+	summary = results_summary(sent, beds, initial_patients, discharged_patients, admitted_patients, locations, start_date, los)
+	complete = results_complete(sent, beds, initial_patients, discharged_patients, admitted_patients, locations, start_date, los)
 
 	sent_matrix_table = results_sentmatrix_table(sent, locations)
 	sent_matrix_vis = results_sentmatrix_vis(sent, initial_patients, admitted_patients, locations)
 
-	total_overflow = sum(summary.overflow)
-	avgload = sum(summary.average_load)/N
-
 	sent_to = Dict(locations[i] => locations[row] for (i,row) in enumerate(eachrow(sum(sent, dims=3)[:,:,1] .> 0)))
 
-	ts(x) = max(1,x-hospitalized_days+1)
-	active_patients(i,t) = max(0,
-		initial_patients[i]
-		- sum(discharged_patients[i,1:t])
-		+ sum(admitted_patients[i,ts(t):t])
-		- sum(sent[i,:,ts(t):t])
-		+ sum(sent[:,i,ts(t):t])
-	)
-	overflow(i,t) = max(0, active_patients(i,t) + sum(sent[i,:,t]) - beds[i])
-	load(i,t) = active_patients(i,t) / beds[i]
+	active, active_null = results_active_patients(sent, initial_patients, discharged_patients, admitted_patients, los)
 
-	active_patients_null(i,t) = max(0,
-		initial_patients[i]
-		- sum(discharged_patients[i,1:t])
-		+ sum(admitted_patients[i,ts(t):t])
-	)
-	overflow_null(i,t) = max(0, active_patients_null(i,t) - beds[i])
-	load_null(i,t) = active_patients_null(i,t) / beds[i]
+	overflow = [max(0, active[i,t] + sum(sent[i,:,t]) - beds[i]) for i in 1:N, t in 1:T]
+	load = [active[i,t] / beds[i] for i in 1:N, t in 1:T]
+
+	overflow_null = [max(0, active_null[i,t] - beds[i]) for i in 1:N, t in 1:T]
+	load_null = [active_null[i,t] / beds[i] for i in 1:N, t in 1:T]
+
+	total_overflow = sum(overflow_null)
+	avgload = sum(active_null) / sum(beds)
 
 	return (
 		total_overflow=total_overflow,
@@ -58,9 +48,9 @@ function results_all(
 		active_patients=active_patients,
 		overflow=overflow,
 		load=load,
-		active_patients_null=active_patients_null,
-		overflow_null=overflow_null,
-		load_null=load_null,
+		active_patients_nosent=active_patients_null,
+		overflow_nosent=overflow_null,
+		load_nosent=load_null,
 	)
 end
 
@@ -76,28 +66,22 @@ function results_summary(
 )
 	N, _, T = size(sent)
 
-	active_patients(i,t) = max(0,
-		initial_patients[i]
-		- sum(discharged_patients[i,1:t])
-		+ sum(admitted_patients[i,max(1,t-hospitalized_days+1):t])
-		- sum(sent[i,:,max(1,t-hospitalized_days+1):t])
-		+ sum(sent[:,i,max(1,t-hospitalized_days+1):t])
-	)
+	active, active_null = results_active_patients(sent, initial_patients, discharged_patients, admitted_patients, los)
 
-	overflow(i,t) = max(0, active_patients(i,t) + sum(sent[i,:,t]) - beds[i])
-	overflow(i) = sum(overflow(i,t) for t in 1:T)
-	overflow() = sum(overflow(i) for i in 1:N)
+	overflow = [sum(max(0, active[i,t] + sum(sent[i,:,t]) - beds[i]) for t in 1:T) for i in 1:N]
+	load = [sum(active[i,t] / beds[i] for t in 1:T)/T for i in 1:N]
 
-	load(i,t) = active_patients(i,t) / beds[i]
-	avgload(i) = sum(load(i,t) for t in 1:T)/T
-	avgload() = sum(avgload(i) for i in 1:N)/N
+	overflow_null = [sum(max(0, active_null[i,t] - beds[i]) for t in 1:T) for i in 1:N]
+	load_null = [sum(active_null[i,t] / beds[i] for t in 1:T)/T for i in 1:N]
 
 	summary = DataFrame(
-		state=locations,
+		location=locations,
 		total_sent=sum(sent, dims=[2,3])[:],
 		total_received=sum(sent, dims=[1,3])[:],
-		overflow=overflow.(1:N),
-		average_load=avgload.(1:N),
+		overflow=overflow,
+		overall_load=load,
+		overflow_nosent=overflow_null,
+		overall_load_nosent=load_null,
 	)
 
 	return summary
@@ -115,19 +99,7 @@ function results_complete(
 )
 	N, _, T = size(sent)
 
-	ts(x) = max(1,x-hospitalized_days+1)
-	active_patients = [(
-		initial_patients[i]
-		- sum(discharged_patients[i,1:t])
-		+ sum(admitted_patients[i,ts(t):t])
-		- sum(sent[i,:,ts(t):t])
-		+ sum(sent[:,i,ts(t):t])
-	) for i in 1:N, t in 1:T]
-	active_patients_null = [(
-		initial_patients[i]
-		- sum(discharged_patients[i,1:t])
-		+ sum(admitted_patients[i,ts(t):t])
-	) for i in 1:N, t in 1:T]
+	active_patients, active_patients_null = results_active_patients(sent, initial_patients, discharged_patients, admitted_patients, los)
 
 	overflow = [max(0, active_patients[i,t] + sum(sent[i,:,t]) - beds[i]) for i in 1:N, t in 1:T]
 	load = [(active_patients[i,t] / beds[i]) for i in 1:N, t in 1:T]
@@ -173,6 +145,50 @@ function results_sentmatrix_vis(sent::Array{<:Real,3}, initial_patients::Array{<
 	sent_vis_matrix = DataFrame(sent_vis_matrix)
 	rename!(sent_vis_matrix, Symbol.(locations))
 	return sent_vis_matrix
+end
+
+function results_active_patients(
+		sent::Array{<:Real,3},
+		initial_patients::Array{<:Real,1},
+		discharged_patients::Array{<:Real,2},
+		admitted_patients::Array{<:Real,2},
+		los,
+)
+	N, _, T = size(T)
+
+	L = nothing
+	if isa(los, Int)
+		L = vcat(ones(Int, los), zeros(Int, T-los))
+	elseif isa(los, Array{<:Real,1})
+		if length(los) >= T
+			L = los
+		else
+			L = vcat(los, zeros(Float64, T-length(los)))
+		end
+	elseif isa(los, Distribution)
+		L = 1.0 .- cdf.(los, 0:T)
+	else
+		error("Invalid length of stay distribution")
+	end
+
+	active = [(
+			initial_patients[i]
+			- sum(discharged_patients[i,1:t])
+			+ sum(L[t-t₁+1] * (
+				admitted_patients[i,t₁]
+				- sum(sent[i,:,t₁])
+				+ sum(sent[:,i,t₁])
+			) for t₁ in 1:t)
+		) for i in 1:N, t in 1:T
+	]
+	active_null = [(
+			initial_patients[i]
+			- sum(discharged_patients[i,1:t])
+			+ sum(L[t-t₁+1] * admitted_patients[i,t₁] for t₁ in 1:t)
+		) for i in 1:N, t in 1:T
+	]
+
+	return active, active_null
 end
 
 end
