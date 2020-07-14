@@ -28,7 +28,7 @@ function results_all(
 
 	active, active_null = results_active_patients(sent, initial_patients, discharged_patients, admitted_patients, los)
 
-	overflow = [max(0, active[i,t] + sum(sent[i,:,t]) - beds[i]) for i in 1:N, t in 1:T]
+	overflow = [max(0, active[i,t] - beds[i]) for i in 1:N, t in 1:T]
 	load = [active[i,t] / beds[i] for i in 1:N, t in 1:T]
 
 	overflow_null = [max(0, active_null[i,t] - beds[i]) for i in 1:N, t in 1:T]
@@ -68,7 +68,7 @@ function results_summary(
 
 	active, active_null = results_active_patients(sent, initial_patients, discharged_patients, admitted_patients, los)
 
-	overflow = [sum(max(0, active[i,t] + sum(sent[i,:,t]) - beds[i]) for t in 1:T) for i in 1:N]
+	overflow = [sum(max(0, active[i,t] - beds[i]) for t in 1:T) for i in 1:N]
 	load = [sum(active[i,t] / beds[i] for t in 1:T)/T for i in 1:N]
 
 	overflow_null = [sum(max(0, active_null[i,t] - beds[i]) for t in 1:T) for i in 1:N]
@@ -101,7 +101,7 @@ function results_complete(
 
 	active_patients, active_patients_null = results_active_patients(sent, initial_patients, discharged_patients, admitted_patients, los)
 
-	overflow = [max(0, active_patients[i,t] + sum(sent[i,:,t]) - beds[i]) for i in 1:N, t in 1:T]
+	overflow = [max(0, active_patients[i,t] - beds[i]) for i in 1:N, t in 1:T]
 	load = [(active_patients[i,t] / beds[i]) for i in 1:N, t in 1:T]
 
 	overflow_null = [max(0, active_patients_null[i,t] - beds[i]) for i in 1:N, t in 1:T]
@@ -179,6 +179,7 @@ function results_active_patients(
 				- sum(sent[i,:,t₁])
 				+ sum(sent[:,i,t₁])
 			) for t₁ in 1:t)
+			+ sum(sent[i,:,t])
 		) for i in 1:N, t in 1:T
 	]
 	active_null = [(

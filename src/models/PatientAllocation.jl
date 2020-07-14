@@ -89,6 +89,7 @@ function patient_allocation(
 			- sum(sent[i,:,t₁])
 			+ sum(sent[:,i,t₁])
 		) for t₁ in 1:t)
+		+ sum(sent[i,:,t])
 	)
 	active_null = [(
 			initial_patients[i]
@@ -98,7 +99,7 @@ function patient_allocation(
 	]
 
 	# expression for the patient overflow
-	@expression(model, overflow[i=1:N,t=1:T], active_patients[i,t] + sum(sent[i,:,t]) - beds[i])
+	@expression(model, overflow[i=1:N,t=1:T], active_patients[i,t] - beds[i])
 
 	# objective function
 	objective = @expression(model, sum(obj_dummy))
@@ -150,7 +151,7 @@ function patient_allocation(
 	if no_artificial_overflow
 		for i in 1:N, t in 1:T
 			if active_null[i,t] < beds[i]
-				@constraint(model, active_patients[i,t] + sum(sent[i,:,t]) <= beds[i])
+				@constraint(model, active_patients[i,t] <= beds[i])
 			end
 		end
 	end
