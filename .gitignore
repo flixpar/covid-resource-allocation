@@ -26,3 +26,4 @@ rawdata/
 results/
 notebooks/dev/
 *.pkl
+.texpadtmp
