@@ -213,7 +213,6 @@ function patient_block_allocation(
 		beds::Dict{Symbol,Array{TYPE,1}},
 		patient_blocks::Array,
 		adj_matrix::BitArray{2};
-		send_new_only::Bool=true,
 		sendreceive_switch_time::Int=0,
 		min_send_amt::Real=0,
 		smoothness_penalty::Real=0,
@@ -222,52 +221,126 @@ function patient_block_allocation(
 		balancing_thresh::Real=1.0,
 		balancing_penalty::Real=0,
 		severity_weighting::Bool=false,
+		no_artificial_overflow::Bool=false,
+		capacity_cushion::Real=0.0,
 		verbose::Bool=false,
 ) where TYPE <: Real
+
+	###############
+	#### Setup ####
+	###############
+
 	G = length(patient_blocks)
 	B = length(beds)
 	N, T = size(patient_blocks[1].admitted)
 
-	bed_types = collect(keys(beds))
+	###############
+	#### Model ####
+	###############
 
 	model = Model(Gurobi.Optimizer)
 	if !verbose set_silent(model) end
 
-	@variable(model, sent[1:G,1:N,1:N,1:T])
-	@variable(model, obj_dummy[bed_types,1:N,1:T] >= 0)
+	###############
+	## Variables ##
+	###############
 
-	# enforce minimum transfer amount if enabled
-	if min_send_amt <= 0
-		@constraint(model, sent .>= 0)
-	else
-		@constraint(model, [g=1:G,i=1:N,j=1:N,t=1:T], sent[g,i,j,t] in MOI.Semicontinuous(Float64(min_send_amt), Inf))
+	@variable(model, sent[1:G,1:N,1:N,1:T] >= 0)
+	@variable(model, obj_dummy[1:B,1:N,1:T] >= 0)
+
+	#################
+	## Expressions ##
+	#################
+
+	bed_groups = Dict(b => [i for (i,g) in enumerate(patient_blocks) if g.bed_type == b] for b in bed_types)
+
+	bed_types = collect(keys(beds))
+
+	@expression(model, transfer[g1=1:G,g2=1:G,i=1:N,t=1:T],
+		((patient_blocks[g1].hospitalized_days < t) && (patient_blocks[g1].to == patient_blocks[g2].id)) ?
+			patient_blocks[g1].admitted[i,t-patient_blocks[g1].hospitalized_days] : 0
+	)
+
+	# expression for the number of active patients
+	ts(t,g) = max(1,t-patient_blocks[g].hospitalized_days+1)
+	@expression(model, active_patients[g=1:G,i=1:N,t=0:T],
+		patient_blocks[g].initial[i]
+		- sum(patient_blocks[g].discharged[i,1:t])
+		+ sum(patient_blocks[g].admitted[i,ts(t,g):t])
+		- sum(sent[g,i,:,ts(t,g):t])
+		+ sum(sent[g,:,i,ts(t,g):t])
+		+ sum(transfer[:,g,i,ts(t,g):t])
+	)
+	active_null = [(
+		patient_blocks[g].initial[i]
+		- sum(patient_blocks[g].discharged[i,1:t])
+		+ sum(patient_blocks[g].admitted[i,ts(t,g):t])
+		+ sum(transfer[:,g,i,ts(t,g):t])
+		) for g in 1:G, i in 1:N, t in 1:T
+	]
+
+	# expression for the patient overflow
+	@expression(model, overflow[b in bed_types,i=1:N,t=1:T],
+		sum(active_patients[g,i,t] + sum(sent[g,i,:,t]) for g in bed_groups[b]) - beds[b][i]
+	)
+
+	objective = @expression(model, sum(obj_dummy))
+
+	######################
+	## Hard Constraints ##
+	######################
+
+	# ensure the number of active patients is non-negative
+	@constraint(model, [g=1:G,i=1:N,t=1:T], active_patients[g,i,t] >= 0)
+
+	# only send new patients
+	@constraint(model, [g=1:G,i=1:N,t=1:T], sum(sent[g,i,:,t]) <= patient_blocks[g].admitted[i,t])
+
+	# only send patients between connected locations
+	for g in 1:G, i in 1:N, j in 1:N
+		if ~adj_matrix[i,j]
+			for t in 1:T
+				fix(sent[g,i,j,t], 0, force=true)
+			end
+		end
 	end
 
-	objective = @expression(model, 0 * sum(obj_dummy))
+	# objective constraint
+	@constraint(model, [b in bed_types,i=1:N,t=1:T], obj_dummy[b,i,t] >= overflow[b,i,t])
 
-	ts(t,g) = max(1,t-patient_blocks[g].hospitalized_days+1)
+	##########################
+	## Optional Constraints ##
+	##########################
 
+	# enforce minimum transfer amount if enabled
+	if min_send_amt > 0
+		semi_cont_set = MOI.Semicontinuous(Float64(min_send_amt), Inf)
+		for g in 1:G, i in 1:N, j in 1:N, t in 1:T
+			if !is_fixed(sent[g,i,j,t])
+				delete_lower_bound(sent[g,i,j,t])
+				@constraint(model, sent[g,i,j,t] in semi_cont_set)
+			end
+		end
+	end
+
+	# weight objective per-location by max load
 	if severity_weighting
-		ts(t,g) = max(1,t-patient_blocks[g].hospitalized_days+1)
-		@expression(model, tfr[g1=1:G,g2=1:G,i=1:N,t=1:T],
-			((patient_blocks[g1].hospitalized_days < t) && (patient_blocks[g1].to == patient_blocks[g2].id)) ?
-				patient_blocks[g1].admitted[i,t-patient_blocks[g1].hospitalized_days] : 0
-		)
-		bd_gps = Dict(b => [i for (i,g) in enumerate(patient_blocks) if g.bed_type == b] for b in bed_types)
-		load_null = [(sum(
-				patient_blocks[g].initial[i]
-				- sum(patient_blocks[g].discharged[i,1:t])
-				+ sum(patient_blocks[g].admitted[i,ts(t,g):t])
-				+ sum(tfr[:,g,i,ts(t,g):t])
-			for g in bd_gps[b]) / beds[b][i])
-			for i in 1:N, t in 1:T, b in bed_types
+		load_null = [(
+			sum(active_null[g,i,t] for g in bed_groups[b]) / beds[b][i]
+			) for b in bed_types, i in 1:N, t in 1:T
 		]
-		max_load_null = maximum(load_null, dims=2)[:,1,:]
-		severity_weight = [max_load_null[i,b] > 1 ? 1.0 : 10.0 for i in 1:N, b in 1:length(bed_types)]
+		max_load_null = maximum(load_null, dims=3)[:,:,1]
+		severity_weight = [max_load_null[b,i] > 1.0 ? 0.0 : 9.0 for b in 1:B, i in 1:N]
 
-		add_to_expression!(objective, sum([sum(obj_dummy[b,i,:]) for i in 1:N, b in bed_types] .* severity_weight))
-	else
-		add_to_expression!(objective, sum(obj_dummy))
+		add_to_expression!(objective, sum(sum(obj_dummy, dims=3) .* severity_weight))
+	end
+
+	if no_artificial_overflow
+		for b in bed_types, i in 1:N, t in 1:T
+			if (active_null[g,i,t] for g in bed_groups[b]) < beds[i]
+				@constraint(model, sum(active_patients[g,i,t] for g in bed_groups[b]) <= beds[b][i])
+			end
+		end
 	end
 
 	# penalize total sent if enabled
@@ -292,15 +365,6 @@ function patient_block_allocation(
 		add_to_expression!(objective, setup_cost*sum(setup_dummy))
 	end
 
-	# only send patients between connected locations
-	for i = 1:N
-		for j = 1:N
-			if ~adj_matrix[i,j]
-				@constraint(model, sum(sent[:,i,j,:]) == 0)
-			end
-		end
-	end
-
 	# enforce a minimum time between sending and receiving
 	if sendreceive_switch_time > 0
 		@constraint(model, [i=1:N,t=1:T-1],
@@ -311,39 +375,6 @@ function patient_block_allocation(
 		)
 	end
 
-	@expression(model, transfer[g1=1:G,g2=1:G,i=1:N,t=1:T],
-		((patient_blocks[g1].hospitalized_days < t) && (patient_blocks[g1].to == patient_blocks[g2].id)) ?
-			patient_blocks[g1].admitted[i,t-patient_blocks[g1].hospitalized_days] : 0
-	)
-
-	# expression for the number of active patients
-	ts(t,g) = max(1,t-patient_blocks[g].hospitalized_days+1)
-	@expression(model, active_patients[g=1:G,i=1:N,t=0:T],
-		patient_blocks[g].initial[i]
-		- sum(patient_blocks[g].discharged[i,1:t])
-		+ sum(patient_blocks[g].admitted[i,ts(t,g):t])
-		- sum(sent[g,i,:,ts(t,g):t])
-		+ sum(sent[g,:,i,ts(t,g):t])
-		+ sum(transfer[:,g,i,ts(t,g):t])
-	)
-
-	# expression for the patient overflow
-	bed_groups = Dict(b => [i for (i,g) in enumerate(patient_blocks) if g.bed_type == b] for b in bed_types)
-	@expression(model, overflow[b in bed_types,i=1:N,t=1:T],
-		sum(active_patients[g,i,t] + sum(sent[g,i,:,t]) for g in bed_groups[b]) - beds[b][i]
-	)
-
-	# only send new patients if enabled
-	# otherwise only send less than active patients
-	if send_new_only
-		@constraint(model, [g=1:G,i=1:N,t=1:T], sum(sent[g,i,:,t]) <= patient_blocks[g].admitted[i,t])
-	else
-		@constraint(model, [g=1:G,t=1:T], sum(sent[g,:,:,t], dims=3) .<= active_patients[g,:,t-1] .+ sum(sent[g,:,:,t], dims=2) - patient_blocks[g].discharged[:,t])
-	end
-
-	# ensure the number of active patients is non-negative
-	@constraint(model, [g=1:G,i=1:N,t=1:T], active_patients[g,i,t] >= 0)
-
 	# load balancing
 	if balancing_penalty > 0
 		@variable(model, balancing_dummy[bed_types,1:N,1:T] >= 0)
@@ -352,12 +383,13 @@ function patient_block_allocation(
 		add_to_expression!(objective, balancing_penalty * sum(balancing_dummy))
 	end
 
-	# objective
-	@constraint(model, [b in bed_types,i=1:N,t=1:T], obj_dummy[b,i,t] >= overflow[b,i,t])
+	###############
+	#### Solve ####
+	###############
 
 	@objective(model, Min, objective)
-
 	optimize!(model)
+
 	return model
 end
 
