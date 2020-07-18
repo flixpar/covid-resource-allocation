@@ -210,9 +210,14 @@ end
 ##############################################
 
 function patient_block_allocation(
-		beds::Dict{Symbol,Array{TYPE,1}},
-		patient_blocks::Array,
-		adj_matrix::BitArray{2};
+		beds::Array{:<Real,2},
+		initial::Array{:<Real,2},
+		discharged::Array{:<Real,3},
+		admitted::Array{:<Real,3},
+		los::Array{<:Any,1},
+		adj_matrix::BitArray{2},
+		transfer_graph::BitArray{2}
+		bed_types::Array{Int,1};
 		sendreceive_switch_time::Int=0,
 		min_send_amt::Real=0,
 		smoothness_penalty::Real=0,
@@ -224,15 +229,40 @@ function patient_block_allocation(
 		no_artificial_overflow::Bool=false,
 		capacity_cushion::Real=0.0,
 		verbose::Bool=false,
-) where TYPE <: Real
+)
+	B = size(beds,1)
+	G, N, T = size(admitted)
+
+	@assert size(beds) == (B,N)
+	@assert size(initial) == (G,N)
+	@assert size(discharged) == (G,N,T)
+	@assert size(adj_matrix) == (N,N)
+	@assert size(transfer_graph) == (G,G)
+	@assert size(los) == (G,)
+	@assert size(bed_types) == (G,)
 
 	###############
 	#### Setup ####
 	###############
 
-	G = length(patient_blocks)
-	B = length(beds)
-	N, T = size(patient_blocks[1].admitted)
+	F = zeros(Float64, G, T)
+	f = zeros(Float64, G, T)
+	for g in 1:G
+		if isa(los[g], Int)
+			F[g,:] = vcat(ones(Int, los[g]), zeros(Int, T-los[g]))
+			f[g,los[g]+1] = 1.0
+		elseif isa(los[g], Distribution)
+			F[g,:] = 1.0 .- cdf.(los[g], 0:T-1)
+			f[g,:] = pdf.(los[g], 0:T-1)
+		else
+			error("Invalid length of stay distribution")
+		end
+		f[g,:] = f[g,:] / sum(f[g,:])
+	end
+
+	if capacity_cushion > 0.0
+		beds = beds .* (1.0 - capacity_cushion)
+	end
 
 	###############
 	#### Model ####
@@ -252,36 +282,30 @@ function patient_block_allocation(
 	## Expressions ##
 	#################
 
-	bed_groups = Dict(b => [i for (i,g) in enumerate(patient_blocks) if g.bed_type == b] for b in bed_types)
-
-	bed_types = collect(keys(beds))
-
-	@expression(model, transfer[g1=1:G,g2=1:G,i=1:N,t=1:T],
-		((patient_blocks[g1].hospitalized_days < t) && (patient_blocks[g1].to == patient_blocks[g2].id)) ?
-			patient_blocks[g1].admitted[i,t-patient_blocks[g1].hospitalized_days] : 0
+	q(g,i,t) = @expression(model,
+		admitted[g,i,t] + sum(l(g₁,i,t) for g₁ in findall(transfer_graph[:,g])) + sum(sent[g,j,i,t] - sent[g,i,j,t] for j in 1:N)
+	)
+	l(g,i,t) = @expression(model,
+		discharged[g,i,t] + sum(f[g,t-t₁+1] * q(g,i,t₁) for t₁ in 1:t)
+	)
+	@expression(model, α[g=1:G,i=1:N,t=1:T],
+		initial[g,i] + sum(sent[g,i,:,t]) + sum((q(g,i,t₁) - l(g,i,t₁)) for t₁ in 1:t)
 	)
 
-	# expression for the number of active patients
-	ts(t,g) = max(1,t-patient_blocks[g].hospitalized_days+1)
-	@expression(model, active_patients[g=1:G,i=1:N,t=0:T],
-		patient_blocks[g].initial[i]
-		- sum(patient_blocks[g].discharged[i,1:t])
-		+ sum(patient_blocks[g].admitted[i,ts(t,g):t])
-		- sum(sent[g,i,:,ts(t,g):t])
-		+ sum(sent[g,:,i,ts(t,g):t])
-		+ sum(transfer[:,g,i,ts(t,g):t])
+	q_null(g,i,t) = @expression(model,
+		admitted[g,i,t] + sum(l_null(g₁,i,t) for g₁ in findall(transfer_graph[:,g]))
 	)
-	active_null = [(
-		patient_blocks[g].initial[i]
-		- sum(patient_blocks[g].discharged[i,1:t])
-		+ sum(patient_blocks[g].admitted[i,ts(t,g):t])
-		+ sum(transfer[:,g,i,ts(t,g):t])
+	l_null(g,i,t) = @expression(model,
+		discharged[g,i,t] + sum(f[g,t-t₁+1] * q_null(g,i,t₁) for t₁ in 1:t)
+	)
+	α_null = [(
+		initial[g,i] + sum((q_null(g,i,t₁) - l_null(g,i,t₁)) for t₁ in 1:t)
 		) for g in 1:G, i in 1:N, t in 1:T
 	]
 
 	# expression for the patient overflow
-	@expression(model, overflow[b in bed_types,i=1:N,t=1:T],
-		sum(active_patients[g,i,t] + sum(sent[g,i,:,t]) for g in bed_groups[b]) - beds[b][i]
+	@expression(model, overflow[b=1:B,i=1:N,t=1:T],
+		sum(α[g,i,t] for g in bed_groups[b]) - beds[b,i]
 	)
 
 	objective = @expression(model, sum(obj_dummy))
@@ -291,22 +315,22 @@ function patient_block_allocation(
 	######################
 
 	# ensure the number of active patients is non-negative
-	@constraint(model, [g=1:G,i=1:N,t=1:T], active_patients[g,i,t] >= 0)
+	@constraint(model, [g=1:G,i=1:N,t=1:T], α[g,i,t] >= 0)
 
 	# only send new patients
-	@constraint(model, [g=1:G,i=1:N,t=1:T], sum(sent[g,i,:,t]) <= patient_blocks[g].admitted[i,t])
+	@constraint(model, [g=1:G,i=1:N,t=1:T], sum(sent[g,i,:,t]) <= admitted[g,i,t])
 
 	# only send patients between connected locations
-	for g in 1:G, i in 1:N, j in 1:N
+	for i in 1:N, j in 1:N
 		if ~adj_matrix[i,j]
-			for t in 1:T
+			for g in 1:G, t in 1:T
 				fix(sent[g,i,j,t], 0, force=true)
 			end
 		end
 	end
 
 	# objective constraint
-	@constraint(model, [b in bed_types,i=1:N,t=1:T], obj_dummy[b,i,t] >= overflow[b,i,t])
+	@constraint(model, [b=1:B,i=1:N,t=1:T], obj_dummy[b,i,t] >= overflow[b,i,t])
 
 	##########################
 	## Optional Constraints ##
