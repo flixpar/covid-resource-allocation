@@ -30,7 +30,7 @@ function patient_allocation(
 		balancing_penalty::Real=0,
 		severity_weighting::Bool=false,
 		no_artificial_overflow::Bool=false,
-		bed_mult::Real=-1,
+		capacity_cushion::Real=-1,
 		verbose::Bool=false,
 )
 	N, T = size(admitted_patients)
@@ -58,8 +58,8 @@ function patient_allocation(
 		error("Invalid length of stay distribution")
 	end
 
-	if bed_mult > 0
-		beds = beds .* bed_mult
+	if 0 < capacity_cushion < 1
+		beds = beds .* (1.0 - capacity_cushion)
 	end
 
 	###############
