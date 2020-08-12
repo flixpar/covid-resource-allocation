@@ -30,6 +30,7 @@ function patient_allocation(
 		balancing_penalty::Real=0,
 		severity_weighting::Bool=false,
 		no_artificial_overflow::Bool=false,
+		no_worse_overflow::Bool=false,
 		capacity_cushion::Real=-1,
 		verbose::Bool=false,
 )
@@ -152,6 +153,14 @@ function patient_allocation(
 		for i in 1:N, t in 1:T
 			if active_null[i,t] < beds[i]
 				@constraint(model, active_patients[i,t] <= beds[i])
+			end
+		end
+	end
+
+	if no_worse_overflow
+		for i in 1:N, t in 1:T
+			if active_null[i,t] > beds[i]
+				@constraint(model, active_patients[i,t] <= active_null[i,t])
 			end
 		end
 	end
