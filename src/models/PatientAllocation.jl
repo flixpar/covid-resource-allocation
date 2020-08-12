@@ -6,6 +6,7 @@ using Gurobi
 using LinearAlgebra
 using MathOptInterface
 using Distributions
+using Memoize
 
 export patient_allocation, patient_block_allocation
 
@@ -219,13 +220,13 @@ end
 ##############################################
 
 function patient_block_allocation(
-		beds::Array{:<Real,2},
-		initial::Array{:<Real,2},
-		discharged::Array{:<Real,3},
-		admitted::Array{:<Real,3},
+		beds::Array{<:Real,2},
+		initial::Array{<:Real,2},
+		discharged::Array{<:Real,3},
+		admitted::Array{<:Real,3},
 		los::Array{<:Any,1},
 		adj_matrix::BitArray{2},
-		transfer_graph::BitArray{2}
+		transfer_graph::BitArray{2},
 		bed_types::Array{Int,1};
 		sendreceive_switch_time::Int=0,
 		min_send_amt::Real=0,
@@ -236,6 +237,7 @@ function patient_block_allocation(
 		balancing_penalty::Real=0,
 		severity_weighting::Bool=false,
 		no_artificial_overflow::Bool=false,
+		no_worse_overflow::Bool=false,
 		capacity_cushion::Real=0.0,
 		verbose::Bool=false,
 )
@@ -273,6 +275,8 @@ function patient_block_allocation(
 		beds = beds .* (1.0 - capacity_cushion)
 	end
 
+	bed_groups = [sort(findall(x -> x == b, bed_types)) for b in 1:B]
+
 	###############
 	#### Model ####
 	###############
@@ -291,21 +295,31 @@ function patient_block_allocation(
 	## Expressions ##
 	#################
 
-	q(g,i,t) = @expression(model,
-		admitted[g,i,t] + sum(l(g₁,i,t) for g₁ in findall(transfer_graph[:,g])) + sum(sent[g,j,i,t] - sent[g,i,j,t] for j in 1:N)
+	@memoize q(g,i,t) = @expression(model,
+		admitted[g,i,t] + tr(g,i,t) + sum(sent[g,j,i,t] - sent[g,i,j,t] for j in 1:N)
 	)
-	l(g,i,t) = @expression(model,
+	@memoize l(g,i,t) = @expression(model,
 		discharged[g,i,t] + sum(f[g,t-t₁+1] * q(g,i,t₁) for t₁ in 1:t)
+	)
+	@memoize tr(g,i,t) = @expression(model,
+		any(transfer_graph[:,g]) ?
+			sum(l(g₁,i,t) for g₁ in findall(transfer_graph[:,g]))
+			: 0
 	)
 	@expression(model, α[g=1:G,i=1:N,t=1:T],
 		initial[g,i] + sum(sent[g,i,:,t]) + sum((q(g,i,t₁) - l(g,i,t₁)) for t₁ in 1:t)
 	)
 
-	q_null(g,i,t) = @expression(model,
-		admitted[g,i,t] + sum(l_null(g₁,i,t) for g₁ in findall(transfer_graph[:,g]))
+	@memoize q_null(g,i,t) = (
+		admitted[g,i,t] + tr_null(g,i,t)
 	)
-	l_null(g,i,t) = @expression(model,
+	@memoize l_null(g,i,t) = (
 		discharged[g,i,t] + sum(f[g,t-t₁+1] * q_null(g,i,t₁) for t₁ in 1:t)
+	)
+	@memoize tr_null(g,i,t) = (
+		any(transfer_graph[:,g]) ?
+			sum(l_null(g₁,i,t) for g₁ in findall(transfer_graph[:,g]))
+			: 0
 	)
 	α_null = [(
 		initial[g,i] + sum((q_null(g,i,t₁) - l_null(g,i,t₁)) for t₁ in 1:t)
@@ -359,7 +373,7 @@ function patient_block_allocation(
 	# weight objective per-location by max load
 	if severity_weighting
 		load_null = [(
-			sum(active_null[g,i,t] for g in bed_groups[b]) / beds[b][i]
+			sum(α_null[g,i,t] for g in bed_groups[b]) / beds[b,i]
 			) for b in bed_types, i in 1:N, t in 1:T
 		]
 		max_load_null = maximum(load_null, dims=3)[:,:,1]
@@ -370,8 +384,16 @@ function patient_block_allocation(
 
 	if no_artificial_overflow
 		for b in bed_types, i in 1:N, t in 1:T
-			if (active_null[g,i,t] for g in bed_groups[b]) < beds[i]
-				@constraint(model, sum(active_patients[g,i,t] for g in bed_groups[b]) <= beds[b][i])
+			if sum(α_null[g,i,t] for g in bed_groups[b]) < beds[b,i]
+				@constraint(model, sum(α[g,i,t] for g in bed_groups[b]) <= beds[b,i])
+			end
+		end
+	end
+
+	if no_worse_overflow
+		for b in bed_types, i in 1:N, t in 1:T
+			if sum(α_null[g,i,t] for g in bed_groups[b]) > beds[i]
+				@constraint(model, sum(α[g,i,t] for g in bed_groups[b]) <= sum(α_null[g,i,t] for g in bed_groups[b]))
 			end
 		end
 	end
@@ -412,7 +434,7 @@ function patient_block_allocation(
 	if balancing_penalty > 0
 		@variable(model, balancing_dummy[bed_types,1:N,1:T] >= 0)
 		@constraint(model, [b in bed_types,i=1:N,t=1:T],
-			balancing_dummy[b,i,t] >= (sum(active_patients[g,i,t] for g in bed_groups[b]) / beds[b][i]) - balancing_thresh)
+			balancing_dummy[b,i,t] >= (sum(α[g,i,t] for g in bed_groups[b]) / beds[b,i]) - balancing_thresh)
 		add_to_expression!(objective, balancing_penalty * sum(balancing_dummy))
 	end
 
