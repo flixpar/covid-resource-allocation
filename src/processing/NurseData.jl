@@ -78,9 +78,16 @@ end
 ########################
 
 function load_nurse_ahrf_data()
-	nurse_data = DataFrame(CSV.File(joinpath(basepath, "data/nurses/nurses_per_county.csv")), copycols=true)
+	nurse_data = DataFrame(CSV.File(joinpath(basepath, "data/nurses/nurses_per_county.csv")))
+	nurse_data.registered_nurses = coalesce.(nurse_data.registered_nurses, 0.0)
+	nurse_data.nurse_practitioners = coalesce.(nurse_data.nurse_practitioners, 0.0)
+	nurse_data.tot_nurses = coalesce.(nurse_data.tot_nurses, 0.0)
 	nurse_data_bystate = groupby(nurse_data, :state)
-	nurse_data_ahrf = combine(nurse_data_bystate, [:registered_nurses => sum, :nurse_practitioners => sum, :tot_nurses => sum])
+	nurse_data_ahrf = combine(nurse_data_bystate, [
+		:registered_nurses => sum,
+		:nurse_practitioners => sum,
+		:tot_nurses => sum,
+	])
 	sort!(nurse_data_ahrf, :state)
 	return nurse_data_ahrf
 end
