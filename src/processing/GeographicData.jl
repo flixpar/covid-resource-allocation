@@ -66,7 +66,7 @@ end
 
 function adjacencies(locations::Array; level::Symbol=:state, source::Symbol=:google, threshold::Real=4, self_edges::Bool=false)::BitArray{2}
 	if source == :fullyconnected
-		return fully_connected(length(locations), self_edges)
+		return fully_connected(length(locations), self_edges=self_edges)
 	elseif level == :state && source == :google
 		dist_matrix, all_states = load_states_google(states=locations)
 		@assert all_states == locations
@@ -80,6 +80,10 @@ function adjacencies(locations::Array; level::Symbol=:state, source::Symbol=:goo
 		latlong, all_fips = load_counties_latlong(counties=locations)
 		@assert all_fips == locations
 		dist_matrix = haversine_distance_matrix(latlong)
+	elseif level == :hospital
+		dist_matrix = haversine_distance_matrix(locations)
+	elseif level == :other
+		dist_matrix = haversine_distance_matrix(locations)
 	else
 		error("Invalid parameters to compute_adjacencies.")
 	end
