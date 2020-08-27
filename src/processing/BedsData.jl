@@ -1,7 +1,6 @@
 module BedsData
 
 using CSV
-using Dates
 using DataFrames
 
 export n_beds
@@ -63,26 +62,26 @@ end
 ###########################
 
 function load_definitivehc()
-	beds_data = DataFrame(CSV.File(joinpath(basepath, "data/hospitals/definitivehc.csv")), copycols=true)
-	filter!(row -> !(row.HOSPITAL_TYPE in ["Psychiatric Hospital", "Rehabilitation Hospital"]), beds_data)
+	_beds_data = DataFrame(CSV.File(joinpath(basepath, "data/hospitals/definitivehc.csv")))
+	beds_data = filter(row -> !(row.HOSPITAL_TYPE in ["Psychiatric Hospital", "Rehabilitation Hospital"]), _beds_data)
 	return beds_data
 end
 
 function definitivehc_filter!(beds_data::DataFrame, locations::Array; level::Symbol=:state)
 	if level == :state
 		filter!(row -> !ismissing(row.HQ_STATE), beds_data)
-		beds_data.selected_location = beds_data.HQ_STATE
+		beds_data.selected_location = convert(Array{Union{String,Missing}}, deepcopy(beds_data.HQ_STATE))
 	elseif level == :county
 		filter!(row -> !ismissing(row.FIPS), beds_data)
-		beds_data.selected_location = Int.(beds_data.FIPS)
+		beds_data.selected_location = convert(Array{Union{Int,Missing}}, deepcopy(beds_data.FIPS))
 	elseif level == :hospital
 		filter!(row -> !ismissing(row.FIPS), beds_data)
-		beds_data.selected_location = Int.(beds_data.FIPS)
+		beds_data.selected_location = convert(Array{Union{Int,Missing}}, deepcopy(beds_data.FIPS))
 		return beds_data
 	else
 		error("Invalid parameters.")
 	end
-	beds_data = filter(row -> row.selected_location in locations, beds_data)
+	filter!(row -> row.selected_location in locations, beds_data)
 	return beds_data
 end
 
@@ -103,7 +102,7 @@ function definitivehc_select_type!(beds_data::DataFrame; bed_type::Symbol=:all)
 
 	filter!(row -> !ismissing(row[col]), beds_data)
 	filter!(row -> row[col] > 0, beds_data)
-	beds_data.selected_beds = beds_data[:,col]
+	beds_data.selected_beds = convert(Array{Union{Int,Missing}}, deepcopy(beds_data[:,col]))
 	return beds_data
 end
 
@@ -111,7 +110,9 @@ function definitivehc_aggregate(beds_data::DataFrame; locations::Array=[])
 	beds_data_agg = combine(groupby(beds_data, :selected_location), :selected_beds => sum => :selected_beds_agg)
 	if !isempty(locations)
 		missing_locs = setdiff(locations, beds_data_agg.selected_location)
-		for loc in missing_locs push!(beds_data_agg, Dict(:selected_location => loc, :selected_beds_agg => 0)) end
+		for loc in missing_locs
+			push!(beds_data_agg, Dict(:selected_location => loc, :selected_beds_agg => 0), cols=:subset)
+		end
 	end
 	sort!(beds_data_agg, :selected_location)
 	return Float32.(beds_data_agg.selected_beds_agg)
