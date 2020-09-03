@@ -152,7 +152,7 @@ function patient_allocation(
 
 	if no_artificial_overflow
 		for i in 1:N, t in 1:T
-			if active_null[i,t] < beds[i]
+			if active_null[i,t] <= beds[i]
 				@constraint(model, active_patients[i,t] <= beds[i])
 			end
 		end
@@ -160,7 +160,7 @@ function patient_allocation(
 
 	if no_worse_overflow
 		for i in 1:N, t in 1:T
-			if active_null[i,t] > beds[i]
+			if active_null[i,t] >= beds[i]
 				@constraint(model, active_patients[i,t] <= active_null[i,t])
 			end
 		end
