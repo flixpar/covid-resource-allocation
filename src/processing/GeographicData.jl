@@ -7,6 +7,7 @@ using LinearAlgebra: diagm
 
 export adjacencies
 export get_counties, get_county_names
+export haversine_distance_matrix
 
 basepath = normpath(@__DIR__, "../../")
 
@@ -121,12 +122,12 @@ function haversine_distance(lat1, lon1, lat2, lon2; dist_type=:time, speed_kph=1
 	return dist
 end
 
-function haversine_distance_matrix(locations::Array{Float64,2})
+function haversine_distance_matrix(locations::Array{Float64,2}; dist_type=:time, speed_kph=100)
 	N = size(locations, 1)
 	distancematrix = zeros(Float32, N, N)
 	for i in 1:N
 		for j in i+1:N
-			dist = haversine_distance(locations[i,:]..., locations[j,:]...)
+			dist = haversine_distance(locations[i,:]..., locations[j,:]..., dist_type=dist_type, speed_kph=speed_kph)
 			distancematrix[i,j] = dist
 			distancematrix[j,i] = dist
 		end
