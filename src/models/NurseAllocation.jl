@@ -89,14 +89,6 @@ function nurse_allocation(
 	## Optional Constraints ##
 	##########################
 
-	# if disallow_artifical_shortage
-	# 	m = 1e-5
-	# 	@variable(model, has_shortage[i=1:N,t=1:T], Bin)
-	# 	@constraint(model, [i=1:N,t=1:T], m*(demand[i,t] - active_nurses[i,t]) <= has_shortage[i,t])
-	# 	@constraint(model, [i=1:N,t=1:T], 1 + m*(demand[i,t] - active_nurses[i,t]) >= has_shortage[i,t])
-	# 	@constraint(model, [i=1:N,t=1:T], has_shortage[i,t] => {active_nurses[i,t] >= initial_nurses[i]})
-	# end
-
 	if no_artificial_shortage
 		for i in 1:N, t in 1:T
 			if initial_nurses[i] >= demand[i,t]
@@ -150,16 +142,6 @@ function nurse_allocation(
 		@constraint(model, [i=1:N,j=i+1:N], [1-setup_dummy[i,j], sum(sent[i,j,:])+sum(sent[j,i,:])] in MOI.SOS1([1.0, 1.0]))
 		add_to_expression!(objective, setup_cost*sum(setup_dummy))
 	end
-
-	# if load_penalty > 0
-	# 	@variable(model, load_dummy_abs[i=1:N,t=1:T] >= 0)
-	# 	@constraint(model, [i=1:N,t=1:T],  (active_nurses[i,t] - target_load*demand[i,t]) <= load_dummy_abs[i,t])
-	# 	@constraint(model, [i=1:N,t=1:T], -(active_nurses[i,t] - target_load*demand[i,t]) <= load_dummy_abs[i,t])
-
-	# 	@variable(model, load_dummy[i=1:N,t=1:T] >= 0)
-	# 	@constraint(model, [i=1:N,t=1:T], load_dummy[i,t] >= load_dummy_abs[i,t] - target_load_gap*demand[i,t])
-	# 	add_to_expression!(objective, load_penalty * sum(load_dummy))
-	# end
 
 	###############
 	#### Solve ####
