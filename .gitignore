@@ -22,6 +22,7 @@ __pycache__/
 *.pdf
 *.eps
 *.tex
+notebooks/**/figures/
 
 ### Other ###
 backup/
