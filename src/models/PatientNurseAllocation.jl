@@ -4,6 +4,7 @@ using JuMP
 using Gurobi
 
 using LinearAlgebra
+using Distributions
 using MathOptInterface
 
 export patient_nurse_allocation, patient_nurse_block_allocation
@@ -16,7 +17,7 @@ function patient_nurse_allocation(
 		admitted_patients::Array{<:Real,2},
 		initial_nurses::Array{<:Real,1},
 		adj_matrix::BitArray{2};
-		hospitalized_days::Int=8,
+		los=11,
 		nurse_days_per_patient_day::Real=2.0,
 		sendreceive_switch_time::Int=0,
 		min_send_amt::Real=0,
@@ -31,6 +32,8 @@ function patient_nurse_allocation(
 		disallow_nurse_shortage_sent::Bool=false,
 		disallow_nurse_shortage_newpatients::Bool=false,
 		severity_weighting::Bool=false,
+		no_artificial_overflow::Bool=false,
+		no_artificial_shortage::Bool=false,
 		verbose::Bool=false,
 )
 	N, T = size(admitted_patients)
@@ -39,6 +42,21 @@ function patient_nurse_allocation(
 	@assert(size(initial_nurses, 1) == N)
 	@assert(size(adj_matrix) == (N,N))
 	@assert(size(discharged_patients) == (N, T))
+
+	L = nothing
+	if isa(los, Int)
+		L = vcat(ones(Int, los), zeros(Int, T-los))
+	elseif isa(los, Array{<:Real,1})
+		if length(los) >= T
+			L = los
+		else
+			L = vcat(los, zeros(Float64, T-length(los)))
+		end
+	elseif isa(los, Distribution)
+		L = 1.0 .- cdf.(los, 0:T)
+	else
+		error("Invalid length of stay distribution")
+	end
 
 	model = Model(Gurobi.Optimizer)
 	if !verbose set_silent(model) end
@@ -63,7 +81,7 @@ function patient_nurse_allocation(
 	active_patients_null = [(
 			initial_patients[i]
 			- sum(discharged_patients[i,1:t])
-			+ sum(admitted_patients[i,max(1,t-hospitalized_days+1):t])
+			+ sum(L[t-t₁+1] * admitted_patients[i,t₁] for t₁ in 1:t)
 		) for i in 1:N, t in 1:T
 	]
 
@@ -126,16 +144,27 @@ function patient_nurse_allocation(
 	@constraint(model, [t=1:T], sum(sentpatients[:,:,t], dims=2) .<= admitted_patients[:,t])
 
 	# expression for the number of active patients
-	@expression(model, active_patients[i=1:N,t=0:T],
+	@expression(model, active_patients[i=1:N,t=1:T],
 		initial_patients[i]
 		- sum(discharged_patients[i,1:t])
-		+ sum(admitted_patients[i,max(1,t-hospitalized_days+1):t])
-		- sum(sentpatients[i,:,max(1,t-hospitalized_days+1):t])
-		+ sum(sentpatients[:,i,max(1,t-hospitalized_days+1):t])
+		+ sum(L[t-t₁+1] * (
+			admitted_patients[i,t₁]
+			- sum(sentpatients[i,:,t₁])
+			+ sum(sentpatients[:,i,t₁])
+		) for t₁ in 1:t)
+		+ sum(sentpatients[i,:,t])
 	)
 
 	# ensure the number of active patients is non-negative
 	@constraint(model, [i=1:N,t=1:T], active_patients[i,t] >= 0)
+
+	if no_artificial_overflow
+		for i in 1:N, t in 1:T
+			if active_patients_null[i,t] < beds[i]
+				@constraint(model, active_patients[i,t] <= beds[i])
+			end
+		end
+	end
 
 	# load balancing for patients
 	if balancing_penalty_patients > 0
@@ -145,7 +174,7 @@ function patient_nurse_allocation(
 	end
 
 	# objective - patients
-	@expression(model, patient_overflow[i=1:N,t=1:T], active_patients[i,t] + sum(sentpatients[i,:,t]) - beds[i])
+	@expression(model, patient_overflow[i=1:N,t=1:T], active_patients[i,t] - beds[i])
 	@constraint(model, [i=1:N,t=1:T], obj_dummy_patients[i,t] >= patient_overflow[i,t])
 
 	# @constraint(model, sentpatients .== 0)
@@ -169,6 +198,19 @@ function patient_nurse_allocation(
 	# nurses objective
 	@constraint(model, [i=1:N,t=1:T], obj_dummy_nurses[i,t] >= nurse_demand[i,t] - active_nurses[i,t])
 
+	nurse_demand_null = active_patients_null .* nurse_days_per_patient_day
+	if no_artificial_shortage
+		for i in 1:N, t in 1:T
+			if nurse_demand_null[i,t] > initial_nurses[i]
+				@constraint(model, active_nurses[i,t] >= initial_nurses[i])
+			end
+			if nurse_demand_null[i,t] <= initial_nurses[i]
+				# @constraint(model, active_nurses[i,t] >= nurse_demand_null[i])
+				@constraint(model, active_nurses[i,t] >= nurse_demand[i])
+			end
+		end
+	end
+
 	if disallow_nurse_shortage_sent
 		# m = 1e-5
 		# @variable(model, has_nurse_shortage[i=1:N,t=1:T], Bin)
@@ -185,7 +227,7 @@ function patient_nurse_allocation(
 
 	if disallow_nurse_shortage_newpatients
 		m = 1e-5
-		ts(t) = max(1,t-hospitalized_days+1)
+		ts(t) = max(1,t-round(Int,mean(los))+1)
 		@variable(model, has_outside_patients[i=1:N,t=1:T], Bin)
 		@constraint(model, [i=1:N,t=1:T],     m*(sum(sentpatients[:,i,ts(t):t]) - sum(sentpatients[i,:,ts(t):t])) <= has_outside_patients[i,t])
 		@constraint(model, [i=1:N,t=1:T], 1 + m*(sum(sentpatients[:,i,ts(t):t]) - sum(sentpatients[i,:,ts(t):t])) >= has_outside_patients[i,t])
