@@ -12,6 +12,7 @@ __pycache__/
 *~
 *.swp
 *.swo
+.texpadtmp
 
 ### MacOS ###
 .DS_Store
@@ -22,12 +23,15 @@ __pycache__/
 *.pdf
 *.eps
 *.tex
+figures/
 notebooks/**/figures/
 
 ### Other ###
 backup/
-rawdata/
 results/
 notebooks/dev/
 *.pkl
-.texpadtmp
+
+### Data ###
+rawdata/
+
