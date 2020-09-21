@@ -211,11 +211,12 @@ function make_key(labels, colors; debug=false, line_height=22px, ncolumns=3, sha
 	return key, height
 end;
 
-function metrics_totextable(metrics::DataFrame)
+function metrics_totextable(metrics::DataFrame; header::Bool=false)
 	n_value_cols = ncol(metrics) - 1
 	value_cols_header = repeat("r|", n_value_cols)[1:end-1]
 	s = "\\begin{tabular}{l|$(value_cols_header)}\n"
-	for row in eachrow(metrics)
+	if (header) s *= "\\hline\\hline\n" end
+	for (i,row) in enumerate(eachrow(metrics))
 		r = ""
 		for col in names(metrics)
 			v = row[col]
@@ -230,6 +231,7 @@ function metrics_totextable(metrics::DataFrame)
 		end
 		r = r[1:end-3]
 		s *= "$(r)\\\\\n"
+		if (i == 1 && header) s *= "\\hline\n" end
 	end
 	s *= "\\end{tabular}"
 	return s
