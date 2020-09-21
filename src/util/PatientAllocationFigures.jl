@@ -209,9 +209,7 @@ function compute_load_block(_sent, _initial, _discharged, _admitted, _cap, los, 
 	)
 end;
 
-skipbad(x) = filter(y -> !(ismissing(y) || isnothing(y) || isnan(y) || isinf(y)), x);
-
-function plot_metrics(config, data, results; bedtype=:all, display=true, save=true)
+function compute_metrics(config, data, results, bedtype=:all)
 	N, T = data.N, data.T
 
 	sent_out = sum(results.sent, dims=2)[:,1,:]
@@ -223,172 +221,132 @@ function plot_metrics(config, data, results; bedtype=:all, display=true, save=tr
 	o_red = (o_null - o) / o_null
 
 	total_patients = sum(data.initial) + sum(data.admitted)
-	total_patient_days = sum(results.active_nosent)
 
 	nonzero(x) = filter(!=(0), x)
-	printmetric(m, x; pct=false, int=false) = println("$(m): $(int ? x : round((pct ? x*100 : x),digits=2))" * (pct ? "%" : ""))
 
-	if display
-		println("Region: $(config.region)")
-		println("Level: $(config.alloc_level)")
-		println("Period: $(data.start_date) to $(data.end_date)")
-		println("Bed type: $(bedtype)")
-		println()
-		printmetric("Number of days", T, int=true)
-		printmetric("Number of hospitals", N, int=true)
-		printmetric("Number of hospital-days", N*T, int=true)
-		println()
-		printmetric("Total patients", sum(data.admitted) + sum(data.initial))
-		printmetric("Total patient-days", sum(results.active_nosent))
-		printmetric("Peak active patients", maximum(sum(results.active_nosent, dims=1)))
-		println()
-		printmetric("Total sent", sum(results.sent))
-		printmetric("Max sent by hospital-day", maximum(results.sent))
-		printmetric("Max sent by day", maximum(sum(results.sent, dims=[1,2])))
-		printmetric("Max sent by hospital", maximum(sum(results.sent, dims=[2,3])))
-		println()
-		printmetric("Number of transfers", sum(results.sent .> 0), int=true)
-		printmetric("Percent of hospital-days with a transfer", mean(tfr .> 0), pct=true)
-		printmetric("Percent of days with a transfer", mean(sum(tfr, dims=1) .> 0), pct=true)
-		printmetric("Percent of hospitals with a transfer", mean(sum(tfr, dims=2) .> 0), pct=true)
-		println()
-		printmetric("Overflow (without transfers)", o_null)
-		printmetric("Overflow (with transfers)", o)
-		printmetric("Overflow reduction", o_red, pct=true)
-		println()
-		printmetric("Percent overflow (without transfers)", o_null / total_patient_days, pct=true)
-		printmetric("Percent overflow (with transfers)", o / total_patient_days, pct=true)
-		printmetric("Overflow reduction", o_red, pct=true)
-		println()
-		printmetric("Number of hospital-days with an overflow (without transfers)", sum(results.overflow_nosent .> 0))
-		printmetric("Number of hospital-days with an overflow (with transfers)", sum(results.overflow .> 0))
-		printmetric("Percent of hospital-days with an overflow (without transfers)", mean(results.overflow_nosent .> 0), pct=true)
-		printmetric("Percent of hospital-days with an overflow (with transfers)", mean(results.overflow .> 0), pct=true)
-		println()
-		printmetric("Maximum overflow by hospital-day (without transfers)", maximum(results.overflow_nosent))
-		printmetric("Maximum overflow by hospital-day (with transfers)", maximum(results.overflow))
-		println()
-		printmetric("Maximum load by hospital-day (without transfers)", maximum(skipbad(results.load_nosent)))
-		printmetric("Maximum load by hospital-day (with transfers)", maximum(skipbad(results.load)))
-	end
+	metrics = [
+		("experiment",                                     :config,    :str,  true,   config.experiment),
+		("experiment date",                                :config,    :str,  false,  config.rundate),
+		("region",                                         :config,    :str,  false,  config.region),
+		("allocation level",                               :config,    :str,  false,  config.alloc_level),
+		("bed type",                                       :config,    :str,  false,  bedtype),
+		("start date",                                     :config,    :dt,   false,  data.start_date),
+		("end date",                                       :config,    :dt,   false,  data.end_date),
 
-	metrics = OrderedDict(
-		"experiment date" => config.rundate,
-		"experiment" => config.experiment,
-		"region" => config.region,
-		"allocation level" => config.alloc_level,
-		"bed type" => bedtype,
-		"start date" => data.start_date,
-		"end date" => data.end_date,
-		"number of days" => T,
-		"number of hospitals" => N,
-		"number of hospital-days" => N*T,
-		"total patients" => sum(data.admitted) + sum(data.initial),
-		"total patient-days" => sum(results.active_nosent),
-		"peak active patients" => maximum(sum(results.active_nosent, dims=1)),
-		"total patients transferred" => sum(results.sent),
-		"max sent by hospital-day" => maximum(results.sent),
-		"max sent by day" => maximum(sum(results.sent, dims=[1,2])),
-		"max sent by hospital" => maximum(sum(results.sent, dims=[2,3])),
-		"number of transfers" => sum(results.sent .> 0),
-		"proportion of hospital-days with a transfer" => mean(tfr .> 0),
-		"proportion of days with a transfer" => mean(sum(tfr, dims=1) .> 0),
-		"proportion of hospitals with a transfer" => mean(sum(tfr, dims=2) .> 0),
-		"percent overflow (without transfers)" => (o_null / total_patient_days),
-		"percent overflow (with transfers)" => (o / total_patient_days),
-		"overflow (without transfers)" => o_null,
-		"overflow (with transfers)" => o,
-		"overflow reduction" => o_red,
-		"number of hospital-days with an overflow (without transfers)" => sum(results.overflow_nosent .> 0),
-		"number of hospital-days with an overflow (with transfers)" => sum(results.overflow .> 0),
-		"proportion of hospital-days with an overflow (without transfers)" => mean(results.overflow_nosent .> 0),
-		"proportion of hospital-days with an overflow (with transfers)" => mean(results.overflow .> 0),
-		"maximum overflow by hospital-day (without transfers)" => maximum(results.overflow_nosent),
-		"maximum overflow by hospital-day (with transfers)" => maximum(results.overflow),
-		"maximum load by hospital-day (without transfers)" => maximum(skipbad(results.load_nosent)),
-		"maximum load by hospital-day (with transfers)" => maximum(skipbad(results.load)),
-		"median non-zero transfer" => iszero(results.sent) ? 0 : median(nonzero(results.sent[:])),
-		"mean non-zero transfer" => iszero(results.sent) ? 0 : mean(nonzero(results.sent[:])),
-		"max non-zero transfer" => iszero(results.sent) ? 0 : maximum(nonzero(results.sent[:])),
-	)
-	metrics_df = DataFrame(metric=collect(keys(metrics)), value=collect(values(metrics)))
-	metrics_str = metrics_totextable(metrics_df)
+		("number of days",                                 :data,      :int,  false,  T),
+		("number of hospitals",                            :data,      :int,  false,  N),
+		("number of hospital-days",                        :data,      :int,  false,  N*T),
 
-	config_metrics = OrderedDict(
-		"experiment date" => config.rundate,
-		"experiment" => config.experiment,
-		"region" => config.region,
-		"allocation level" => config.alloc_level,
-		"bed type" => bedtype,
-		"start date" => data.start_date,
-		"end date" => data.end_date,
-		"number of days" => T,
-		"number of hospitals" => N,
-		"number of hospital-days" => N*T,
-	)
-	config_metrics_df = DataFrame(metric=collect(keys(config_metrics)), value=collect(values(config_metrics)))
-	config_metrics_str = metrics_totextable(config_metrics_df)
+		("total patients",                                 :data,      :int,  false,  sum(data.admitted) + sum(data.initial)),
+		("total patient-days",                             :data,      :int,  false,  sum(results.active_nosent)),
+		("peak active patients",                           :data,      :int,  false,  maximum(sum(results.active_nosent, dims=1))),
+
+		("overflow",                                       :results,   :int,  true,   o),
+		("overflow reduction",                             :results,   :pct,  true,   o_red),
+
+		("median non-zero overflow",                       :results,   :int,  true,   iszero(results.overflow) ? 0 : median(nonzero(results.overflow[:]))),
+		("mean non-zero overflow",                         :results,   :flt,  true,   iszero(results.overflow) ? 0 : mean(nonzero(results.overflow[:]))),
+		("maximum overflow",                               :results,   :int,  true,   maximum(results.overflow)),
+
+		("median load",                                    :results,   :flt,  true,   median(skipbad(results.load[:]))),
+		("mean load",                                      :results,   :flt,  true,   mean(skipbad(results.load[:]))),
+		("max load",                                       :results,   :flt,  true,   maximum(skipbad(results.load[:]))),
+
+		("number of hospital-days with an overflow",       :results,   :int,  true,   sum(results.overflow .> 0)),
+		("percent of hospital-days with an overflow",      :results,   :pct,  true,   mean(results.overflow .> 0)),
+		("proportion of hospital-days with an overflow",   :results,   :prop, false,  mean(results.overflow .> 0)),
+
+		("total patients transferred",                     :transfer,  :int,  true,   sum(results.sent)),
+		("percent of patients transferred",                :transfer,  :pct,  true,   sum(results.sent) / total_patients),
+
+		("percent of hospital-days with a transfer",       :transfer,  :pct,  true,   mean(tfr .> 0)),
+		("percent of days with a transfer",                :transfer,  :pct,  true,   mean(sum(tfr, dims=1) .> 0)),
+		("percent of hospitals with a transfer",           :transfer,  :pct,  true,   mean(sum(tfr, dims=2) .> 0)),
+
+		("median non-zero transfer",                       :transfer,  :int,  true,   iszero(results.sent) ? 0 : median(nonzero(results.sent[:]))),
+		("mean non-zero transfer",                         :transfer,  :flt,  true,   iszero(results.sent) ? 0 : mean(nonzero(results.sent[:]))),
+		("max non-zero transfer",                          :transfer,  :int,  true,   iszero(results.sent) ? 0 : maximum(nonzero(results.sent[:]))),
+
+		("number of transfers",                            :transfer,  :int,  false,  sum(results.sent .> 0)),
+		("proportion of patients transferred",             :transfer,  :prop, false,  sum(results.sent) / total_patients),
+
+		("max sent by hospital-day",                       :transfer,  :int,  false,  maximum(results.sent)),
+		("max sent by day",                                :transfer,  :int,  false,  maximum(sum(results.sent, dims=[1,2]))),
+		("max sent by hospital",                           :transfer,  :int,  false,  maximum(sum(results.sent, dims=[2,3]))),
+
+		("proportion of hospital-days with a transfer",    :transfer,  :prop, false,  mean(tfr .> 0)),
+		("proportion of days with a transfer",             :transfer,  :prop, false,  mean(sum(tfr, dims=1) .> 0)),
+		("proportion of hospitals with a transfer",        :transfer,  :prop, false,  mean(sum(tfr, dims=2) .> 0)),
+	]
+
+	return metrics
+end;
+
+function plot_metrics(config, data, results; bedtype=:all, display=true, save=true)
+	metrics = compute_metrics(config, data, results, bedtype)
 
 	roundmetric(x) = round(x, digits=1)
 	to_percent(x) = string(roundmetric(x*100))*"%"
-	metrics_fortable = OrderedDict(
-		"experiment" => config.experiment,
+	format_value(x, m_type) = begin
+		if m_type == :pct
+			return to_percent(x)
+		elseif m_type == :flt
+			return string(roundmetric(x))
+		elseif m_type == :prop
+			return string(round(x, digits=3))
+		elseif m_type == :int && (x isa Float64 || x isa Float32)
+			return round(Int, x)
+		else
+			return string(x)
+		end
+	end
+	printmetric(m, x; m_type=:str, m_width=0) = begin
+		x = format_value(x, m_type)
+		m = m * ":"
+		m = (length(m) < m_width+1) ? rpad(m, m_width+1) : m
+		println("$(m) $(x)")
+	end
 
-		# result metrics
+	if display
+		m_cat_prev = nothing
+		m_width = maximum([length(m[1]) for m in metrics]) + 2
+		for (m_name, m_cat, m_type, _, m_val) in metrics
+			if (m_cat_prev != m_cat) println() end
+			m_cat_prev = m_cat
+			printmetric(m_name, m_val, m_type=m_type, m_width=m_width)
+		end
+	end
 
-		"overflow" => roundmetric(o),
-		"overflow reduction" => to_percent(o_red),
-
-		"median non-zero overflow" => iszero(results.overflow) ? 0 : roundmetric(median(nonzero(results.overflow[:]))),
-		"mean non-zero overflow" => iszero(results.overflow) ? 0 : roundmetric(mean(nonzero(results.overflow[:]))),
-		"max non-zero overflow" => iszero(results.overflow) ? 0 : roundmetric(maximum(nonzero(results.overflow[:]))),
-
-		"median load" => to_percent(median(skipbad(results.load[:]))),
-		"mean load" => to_percent(mean(skipbad(results.load[:]))),
-		"max load" => to_percent(maximum(skipbad(results.load[:]))),
-
-		"number of hospital-days with an overflow" => roundmetric(sum(results.overflow .> 0)),
-		"percent of hospital-days with an overflow" => to_percent(mean(results.overflow .> 0)),
-
-		# "maximum overflow by hospital-day" => roundmetric(maximum(results.overflow)),
-		# "maximum load by hospital-day" => roundmetric(maximum(skipbad(results.load))),
-
-		# transfer metrics
-
-		"total patients transferred" => roundmetric(sum(results.sent)),
-		"percent of patients transferred" => to_percent(sum(results.sent) / total_patients),
-
-		"median non-zero transfer" => iszero(results.sent) ? 0 : roundmetric(median(nonzero(results.sent[:]))),
-		"mean non-zero transfer" => iszero(results.sent) ? 0 : roundmetric(mean(nonzero(results.sent[:]))),
-		"max non-zero transfer" => iszero(results.sent) ? 0 : roundmetric(maximum(nonzero(results.sent[:]))),
-
-		# "max sent by day" => roundmetric(maximum(sum(results.sent, dims=[1,2]))),
-		# "max sent by hospital" => roundmetric(maximum(sum(results.sent, dims=[2,3]))),
-
-		"percent of hospital-days with a transfer" => to_percent(mean(tfr .> 0)),
-		"percent of days with a transfer" => to_percent(mean(sum(tfr, dims=1) .> 0)),
-		"percent of hospitals with a transfer" => to_percent(mean(sum(tfr, dims=2) .> 0)),
+	all_metrics = DataFrame(
+		metric=[m[1] for m in metrics],
+		value=[format_value(m[5], m[3]) for m in metrics],
 	)
-	metrics_table_df = DataFrame(metric=collect(keys(metrics_fortable)), value=collect(values(metrics_fortable)))
-	metrics_table_str = metrics_totextable(metrics_table_df)
+	config_metrics = DataFrame(
+		metric=[m[1] for m in metrics if m[2] == :config],
+		value=[format_value(m[5], m[3]) for m in metrics if m[2] == :config],
+	)
+	compare_metrics = DataFrame(
+		metric=[m[1] for m in metrics if m[4]],
+		value=[format_value(m[5], m[3]) for m in metrics if m[4]],
+	)
 
 	if save
 		bedtype_ext = (bedtype == :all) ? "" : (bedtype == :icu ? "_icu" : (bedtype == :ward ? "_ward" : ""))
 
-		metrics_dir = "figures/$(config.region_abbrev)/$(config.rundate)/$(config.experiment)/metrics/"
+		metrics_dir = "$(config.results_basepath)/$(config.region_abbrev)/$(config.rundate)/$(config.experiment)/metrics/"
 		if !isdir(metrics_dir) mkpath(metrics_dir) end
 
-		metrics_path_base = joinpath(metrics_dir, "metrics_$(config.experiment)$(bedtype_ext)")
-		metrics_df |> CSV.write(metrics_path_base * ".csv")
-		write(metrics_path_base * ".tex", metrics_str)
+		all_metrics_path = joinpath(metrics_dir, "metrics_all_$(config.experiment)$(bedtype_ext)")
+		all_metrics |> CSV.write(all_metrics_path * ".csv")
+		write(all_metrics_path * ".tex", metrics_totextable(all_metrics))
 
-		metrics_table_path_base = joinpath(metrics_dir, "metrics_table_$(config.experiment)$(bedtype_ext)")
-		metrics_table_df |> CSV.write(metrics_table_path_base * ".csv")
-		write(metrics_table_path_base * ".tex", metrics_table_str)
+		compare_metrics_path = joinpath(metrics_dir, "metrics_$(config.experiment)$(bedtype_ext)")
+		compare_metrics |> CSV.write(compare_metrics_path * ".csv")
+		write(compare_metrics_path * ".tex", metrics_totextable(compare_metrics, header=true))
 
-		config_metrics_path_base = joinpath(metrics_dir, "config_$(config.experiment)$(bedtype_ext)")
-		config_metrics_df |> CSV.write(config_metrics_path_base * ".csv")
-		write(config_metrics_path_base * ".tex", config_metrics_str)
+		config_metrics_path = joinpath(metrics_dir, "config_$(config.experiment)$(bedtype_ext)")
+		config_metrics |> CSV.write(config_metrics_path * ".csv")
+		write(config_metrics_path * ".tex", metrics_totextable(config_metrics))
 	end
 
 	return
