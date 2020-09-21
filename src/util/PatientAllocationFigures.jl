@@ -1,4 +1,4 @@
-module Figures
+module PatientAllocationFigures
 
 using DataFrames
 using CSV

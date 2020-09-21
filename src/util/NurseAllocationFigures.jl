@@ -1,4 +1,4 @@
-module NurseFigures
+module NurseAllocationFigures
 
 using DataFrames
 using CSV

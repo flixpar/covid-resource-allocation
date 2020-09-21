@@ -352,6 +352,13 @@ function patient_block_allocation(
 		end
 	end
 
+	# only transfer patients within groups with incoming patients
+	for g in findall(sum(admitted, dims=[2,3])[:] .== 0)
+		for i in 1:N, j in 1:N, t in 1:T
+			fix(sent[g,i,j,t], 0, force=true)
+		end
+	end
+
 	# objective constraint
 	@constraint(model, [b=1:B,i=1:N,t=1:T], obj_dummy[b,i,t] >= overflow[b,i,t])
 
@@ -472,7 +479,6 @@ function patient_allocation_robust(
 		no_worse_overflow::Bool=false,
 		capacity_cushion::Real=-1,
 		Γ::Int=3,
-		robust::Bool=false,
 		verbose::Bool=false,
 )
 	N, T = size(admitted_patients_mean)
@@ -480,7 +486,6 @@ function patient_allocation_robust(
 	@assert(size(beds, 1) == N)
 	@assert(size(adj_matrix) == (N,N))
 	@assert(size(discharged_patients) == (N, T))
-	@assert robust
 
 	###############
 	#### Setup ####

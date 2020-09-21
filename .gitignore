@@ -23,15 +23,14 @@ __pycache__/
 *.pdf
 *.eps
 *.tex
+*.jldata
 figures/
-notebooks/**/figures/
+**/figures/
+results/
+**/results/
 
 ### Other ###
 backup/
+**/backup/
 results/
-notebooks/dev/
 *.pkl
-
-### Data ###
-rawdata/
-
