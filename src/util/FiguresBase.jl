@@ -239,7 +239,14 @@ end;
 
 get_output_path(config, ext, fn) = "$(get_output_folder(config, ext))/$(fn).$(ext)"
 function get_output_folder(config, ext)
-	p = "figures/$(config.region_abbrev)/$(config.rundate)/$(config.experiment)/$(ext)/"
+	p = "$(config.results_basepath)/$(config.region_abbrev)/$(config.rundate)/$(config.experiment)/$(ext)/"
+	if !isdir(p) mkpath(p) end
+	return p
+end;
+
+get_figures_path(config, ext, fn) = "$(get_figures_folder(config))/$(fn).$(ext)"
+function get_figures_folder(config)
+	p = "$(config.paperfigures_basepath)/$(config.region_abbrev)/$(config.experiment)/"
 	if !isdir(p) mkpath(p) end
 	return p
 end;
@@ -248,7 +255,8 @@ function save_all(figure, fig_w, fig_h, fn, config)
 	figure |> PDF(get_output_path(config, "pdf", fn), fig_w, fig_h)
 	figure |> PNG(get_output_path(config, "png", fn), fig_w, fig_h, dpi=300)
 	figure |> PGF(get_output_path(config, "tex", fn), fig_w, fig_h, false, texfonts=true)
-	figure |> PS(get_output_path(config, "eps", fn), fig_w, fig_h)
+	figure |>  PS(get_output_path(config, "eps", fn), fig_w, fig_h)
+	figure |> PDF(get_figures_path(config, "pdf", fn), fig_w, fig_h)
 	return
 end;
 
