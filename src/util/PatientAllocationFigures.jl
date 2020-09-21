@@ -1167,4 +1167,55 @@ function plot_active_samples_notransfers(config, data, results; display=true, sa
 	end
 end;
 
+function plot_metrics_compare(shared_config, data, results_list; bedtype=:all, display_table=true, save=true)
+
+	roundmetric(x) = round(x, digits=1)
+	to_percent(x) = string(roundmetric(x*100))*"%"
+	format_value(x, m_type) = begin
+		if m_type == :pct
+			return to_percent(x)
+		elseif m_type == :flt
+			return string(roundmetric(x))
+		elseif m_type == :prop
+			return string(round(x, digits=3))
+		elseif m_type == :int && (x isa Float64 || x isa Float32)
+			return round(Int, x)
+		else
+			return string(x)
+		end
+	end
+
+	metrics_table = DataFrame(metric=[])
+	for (exp_name, _results) in results_list
+		_config = merge(shared_config, (experiment = exp_name,))
+		_metrics = compute_metrics(_config, data, _results)
+		_compare_metrics = DataFrame(
+			metric=[m[1] for m in _metrics if m[4]],
+			value=[format_value(m[5], m[3]) for m in _metrics if m[4]],
+		)
+		rename!(_compare_metrics, "value" => exp_name)
+		metrics_table = outerjoin(metrics_table, _compare_metrics, on=:metric)
+	end
+
+	if display_table
+		display(metrics_table)
+	end
+
+	if save
+		bedtype_ext = (bedtype == :all) ? "" : (bedtype == :icu ? "_icu" : (bedtype == :ward ? "_ward" : ""))
+
+		metrics_dir = "$(shared_config.results_basepath)/$(shared_config.region_abbrev)/$(shared_config.rundate)/compare/metrics/"
+		if !isdir(metrics_dir) mkpath(metrics_dir) end
+
+		out_path_base = joinpath(metrics_dir, "metrics_compare$(bedtype_ext)")
+		metrics_table |> CSV.write(out_path_base * ".csv")
+		write(out_path_base * ".tex", metrics_totextable(metrics_table, header=true))
+	end
+
+	return
+end;
+
+function plot_figures_list(config)
+end;
+
 end;
