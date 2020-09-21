@@ -1,0 +1,1526 @@
+[
+    {
+        "county_fips": "48295",
+        "county_name": "Lipscomb",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48421",
+        "county_name": "Sherman",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48111",
+        "county_name": "Dallam",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48195",
+        "county_name": "Hansford",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48357",
+        "county_name": "Ochiltree",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48393",
+        "county_name": "Roberts",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48211",
+        "county_name": "Hemphill",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48233",
+        "county_name": "Hutchinson",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48205",
+        "county_name": "Hartley",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48341",
+        "county_name": "Moore",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48375",
+        "county_name": "Potter",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48065",
+        "county_name": "Carson",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48179",
+        "county_name": "Gray",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48483",
+        "county_name": "Wheeler",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48359",
+        "county_name": "Oldham",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48381",
+        "county_name": "Randall",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48011",
+        "county_name": "Armstrong",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48087",
+        "county_name": "Collingsworth",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48129",
+        "county_name": "Donley",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48117",
+        "county_name": "Deaf Smith",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48369",
+        "county_name": "Parmer",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48069",
+        "county_name": "Castro",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48437",
+        "county_name": "Swisher",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48045",
+        "county_name": "Briscoe",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48075",
+        "county_name": "Childress",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48191",
+        "county_name": "Hall",
+        "tsa_id": "A",
+        "tsa_name": "Panhandle RAC"
+    },
+    {
+        "county_fips": "48197",
+        "county_name": "Hardeman",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48487",
+        "county_name": "Wilbarger",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48345",
+        "county_name": "Motley",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48101",
+        "county_name": "Cottle",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48153",
+        "county_name": "Floyd",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48189",
+        "county_name": "Hale",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48279",
+        "county_name": "Lamb",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48017",
+        "county_name": "Bailey",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48155",
+        "county_name": "Foard",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48485",
+        "county_name": "Wichita",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48077",
+        "county_name": "Clay",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48337",
+        "county_name": "Montague",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48387",
+        "county_name": "Red River",
+        "tsa_id": "F",
+        "tsa_name": "Northeast Texas RAC"
+    },
+    {
+        "county_fips": "48181",
+        "county_name": "Grayson",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48097",
+        "county_name": "Cooke",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48277",
+        "county_name": "Lamar",
+        "tsa_id": "F",
+        "tsa_name": "Northeast Texas RAC"
+    },
+    {
+        "county_fips": "48147",
+        "county_name": "Fannin",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48269",
+        "county_name": "King",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48125",
+        "county_name": "Dickens",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48107",
+        "county_name": "Crosby",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48303",
+        "county_name": "Lubbock",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48009",
+        "county_name": "Archer",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48219",
+        "county_name": "Hockley",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48275",
+        "county_name": "Knox",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48023",
+        "county_name": "Baylor",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48079",
+        "county_name": "Cochran",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48037",
+        "county_name": "Bowie",
+        "tsa_id": "F",
+        "tsa_name": "Northeast Texas RAC"
+    },
+    {
+        "county_fips": "48119",
+        "county_name": "Delta",
+        "tsa_id": "F",
+        "tsa_name": "Northeast Texas RAC"
+    },
+    {
+        "county_fips": "48237",
+        "county_name": "Jack",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48497",
+        "county_name": "Wise",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48121",
+        "county_name": "Denton",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48231",
+        "county_name": "Hunt",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48085",
+        "county_name": "Collin",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48449",
+        "county_name": "Titus",
+        "tsa_id": "F",
+        "tsa_name": "Northeast Texas RAC"
+    },
+    {
+        "county_fips": "48207",
+        "county_name": "Haskell",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48447",
+        "county_name": "Throckmorton",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48503",
+        "county_name": "Young",
+        "tsa_id": "C",
+        "tsa_name": "North Texas RAC"
+    },
+    {
+        "county_fips": "48263",
+        "county_name": "Kent",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48433",
+        "county_name": "Stonewall",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48159",
+        "county_name": "Franklin",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48169",
+        "county_name": "Garza",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48305",
+        "county_name": "Lynn",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48445",
+        "county_name": "Terry",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48501",
+        "county_name": "Yoakum",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48223",
+        "county_name": "Hopkins",
+        "tsa_id": "F",
+        "tsa_name": "Northeast Texas RAC"
+    },
+    {
+        "county_fips": "48343",
+        "county_name": "Morris",
+        "tsa_id": "F",
+        "tsa_name": "Northeast Texas RAC"
+    },
+    {
+        "county_fips": "48067",
+        "county_name": "Cass",
+        "tsa_id": "F",
+        "tsa_name": "Northeast Texas RAC"
+    },
+    {
+        "county_fips": "48063",
+        "county_name": "Camp",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48499",
+        "county_name": "Wood",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48363",
+        "county_name": "Palo Pinto",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48367",
+        "county_name": "Parker",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48439",
+        "county_name": "Tarrant",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48113",
+        "county_name": "Dallas",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48397",
+        "county_name": "Rockwall",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48379",
+        "county_name": "Rains",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48417",
+        "county_name": "Shackelford",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48253",
+        "county_name": "Jones",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48151",
+        "county_name": "Fisher",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48415",
+        "county_name": "Scurry",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48033",
+        "county_name": "Borden",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48115",
+        "county_name": "Dawson",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48429",
+        "county_name": "Stephens",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48165",
+        "county_name": "Gaines",
+        "tsa_id": "B",
+        "tsa_name": "B RAC"
+    },
+    {
+        "county_fips": "48459",
+        "county_name": "Upshur",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48315",
+        "county_name": "Marion",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48257",
+        "county_name": "Kaufman",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48467",
+        "county_name": "Van Zandt",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48203",
+        "county_name": "Harrison",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48423",
+        "county_name": "Smith",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48183",
+        "county_name": "Gregg",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48251",
+        "county_name": "Johnson",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48221",
+        "county_name": "Hood",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48139",
+        "county_name": "Ellis",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48441",
+        "county_name": "Taylor",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48227",
+        "county_name": "Howard",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48335",
+        "county_name": "Mitchell",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48133",
+        "county_name": "Eastland",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48059",
+        "county_name": "Callahan",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48317",
+        "county_name": "Martin",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48003",
+        "county_name": "Andrews",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48353",
+        "county_name": "Nolan",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48143",
+        "county_name": "Erath",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48401",
+        "county_name": "Rusk",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48365",
+        "county_name": "Panola",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48213",
+        "county_name": "Henderson",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48349",
+        "county_name": "Navarro",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48425",
+        "county_name": "Somervell",
+        "tsa_id": "E",
+        "tsa_name": "North Central Texas Trauma RAC (NCTTRAC)"
+    },
+    {
+        "county_fips": "48217",
+        "county_name": "Hill",
+        "tsa_id": "M",
+        "tsa_name": "Heart of Texas RAC"
+    },
+    {
+        "county_fips": "48093",
+        "county_name": "Comanche",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48035",
+        "county_name": "Bosque",
+        "tsa_id": "M",
+        "tsa_name": "Heart of Texas RAC"
+    },
+    {
+        "county_fips": "48073",
+        "county_name": "Cherokee",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48431",
+        "county_name": "Sterling",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48173",
+        "county_name": "Glasscock",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48329",
+        "county_name": "Midland",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48081",
+        "county_name": "Coke",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48495",
+        "county_name": "Winkler",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48135",
+        "county_name": "Ector",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48399",
+        "county_name": "Runnels",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48083",
+        "county_name": "Coleman",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48049",
+        "county_name": "Brown",
+        "tsa_id": "D",
+        "tsa_name": "Big Country RAC"
+    },
+    {
+        "county_fips": "48001",
+        "county_name": "Anderson",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48193",
+        "county_name": "Hamilton",
+        "tsa_id": "L",
+        "tsa_name": "Central Texas RAC"
+    },
+    {
+        "county_fips": "48161",
+        "county_name": "Freestone",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48109",
+        "county_name": "Culberson",
+        "tsa_id": "I",
+        "tsa_name": "Border RAC"
+    },
+    {
+        "county_fips": "48389",
+        "county_name": "Reeves",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48301",
+        "county_name": "Loving",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48229",
+        "county_name": "Hudspeth",
+        "tsa_id": "I",
+        "tsa_name": "Border RAC"
+    },
+    {
+        "county_fips": "48141",
+        "county_name": "El Paso",
+        "tsa_id": "I",
+        "tsa_name": "Border RAC"
+    },
+    {
+        "county_fips": "48419",
+        "county_name": "Shelby",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48309",
+        "county_name": "McLennan",
+        "tsa_id": "M",
+        "tsa_name": "Heart of Texas RAC"
+    },
+    {
+        "county_fips": "48347",
+        "county_name": "Nacogdoches",
+        "tsa_id": "H",
+        "tsa_name": "Deep East Texas RAC"
+    },
+    {
+        "county_fips": "48293",
+        "county_name": "Limestone",
+        "tsa_id": "M",
+        "tsa_name": "Heart of Texas RAC"
+    },
+    {
+        "county_fips": "48333",
+        "county_name": "Mills",
+        "tsa_id": "L",
+        "tsa_name": "Central Texas RAC"
+    },
+    {
+        "county_fips": "48099",
+        "county_name": "Coryell",
+        "tsa_id": "L",
+        "tsa_name": "Central Texas RAC"
+    },
+    {
+        "county_fips": "48451",
+        "county_name": "Tom Green",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48475",
+        "county_name": "Ward",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48405",
+        "county_name": "San Augustine",
+        "tsa_id": "H",
+        "tsa_name": "Deep East Texas RAC"
+    },
+    {
+        "county_fips": "48103",
+        "county_name": "Crane",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48461",
+        "county_name": "Upton",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48383",
+        "county_name": "Reagan",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48289",
+        "county_name": "Leon",
+        "tsa_id": "N",
+        "tsa_name": "Brazos Valley RAC (BVRAC)"
+    },
+    {
+        "county_fips": "48403",
+        "county_name": "Sabine",
+        "tsa_id": "H",
+        "tsa_name": "Deep East Texas RAC"
+    },
+    {
+        "county_fips": "48225",
+        "county_name": "Houston",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48095",
+        "county_name": "Concho",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48235",
+        "county_name": "Irion",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48005",
+        "county_name": "Angelina",
+        "tsa_id": "H",
+        "tsa_name": "Deep East Texas RAC"
+    },
+    {
+        "county_fips": "48145",
+        "county_name": "Falls",
+        "tsa_id": "M",
+        "tsa_name": "Heart of Texas RAC"
+    },
+    {
+        "county_fips": "48307",
+        "county_name": "McCulloch",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48411",
+        "county_name": "San Saba",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48281",
+        "county_name": "Lampasas",
+        "tsa_id": "L",
+        "tsa_name": "Central Texas RAC"
+    },
+    {
+        "county_fips": "48455",
+        "county_name": "Trinity",
+        "tsa_id": "G",
+        "tsa_name": "Piney Woods RAC"
+    },
+    {
+        "county_fips": "48371",
+        "county_name": "Pecos",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48395",
+        "county_name": "Robertson",
+        "tsa_id": "N",
+        "tsa_name": "Brazos Valley RAC (BVRAC)"
+    },
+    {
+        "county_fips": "48027",
+        "county_name": "Bell",
+        "tsa_id": "L",
+        "tsa_name": "Central Texas RAC"
+    },
+    {
+        "county_fips": "48351",
+        "county_name": "Newton",
+        "tsa_id": "R",
+        "tsa_name": "East Texas Gulf Coast RAC"
+    },
+    {
+        "county_fips": "48241",
+        "county_name": "Jasper",
+        "tsa_id": "R",
+        "tsa_name": "East Texas Gulf Coast RAC"
+    },
+    {
+        "county_fips": "48373",
+        "county_name": "Polk",
+        "tsa_id": "H",
+        "tsa_name": "Deep East Texas RAC"
+    },
+    {
+        "county_fips": "48331",
+        "county_name": "Milam",
+        "tsa_id": "L",
+        "tsa_name": "Central Texas RAC"
+    },
+    {
+        "county_fips": "48243",
+        "county_name": "Jeff Davis",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48313",
+        "county_name": "Madison",
+        "tsa_id": "N",
+        "tsa_name": "Brazos Valley RAC (BVRAC)"
+    },
+    {
+        "county_fips": "48413",
+        "county_name": "Schleicher",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48327",
+        "county_name": "Menard",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48105",
+        "county_name": "Crockett",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48457",
+        "county_name": "Tyler",
+        "tsa_id": "H",
+        "tsa_name": "Deep East Texas RAC"
+    },
+    {
+        "county_fips": "48471",
+        "county_name": "Walker",
+        "tsa_id": "Q",
+        "tsa_name": "Southeast Texas RAC (SETRAC)"
+    },
+    {
+        "county_fips": "48053",
+        "county_name": "Burnet",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48041",
+        "county_name": "Brazos",
+        "tsa_id": "N",
+        "tsa_name": "Brazos Valley RAC (BVRAC)"
+    },
+    {
+        "county_fips": "48319",
+        "county_name": "Mason",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48299",
+        "county_name": "Llano",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48491",
+        "county_name": "Williamson",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48407",
+        "county_name": "San Jacinto",
+        "tsa_id": "H",
+        "tsa_name": "Deep East Texas RAC"
+    },
+    {
+        "county_fips": "48185",
+        "county_name": "Grimes",
+        "tsa_id": "N",
+        "tsa_name": "Brazos Valley RAC (BVRAC)"
+    },
+    {
+        "county_fips": "48051",
+        "county_name": "Burleson",
+        "tsa_id": "N",
+        "tsa_name": "Brazos Valley RAC (BVRAC)"
+    },
+    {
+        "county_fips": "48267",
+        "county_name": "Kimble",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48435",
+        "county_name": "Sutton",
+        "tsa_id": "K",
+        "tsa_name": "Concho Valley RAC"
+    },
+    {
+        "county_fips": "48043",
+        "county_name": "Brewster",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48443",
+        "county_name": "Terrell",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48377",
+        "county_name": "Presidio",
+        "tsa_id": "J",
+        "tsa_name": "Texas J RAC"
+    },
+    {
+        "county_fips": "48453",
+        "county_name": "Travis",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48339",
+        "county_name": "Montgomery",
+        "tsa_id": "Q",
+        "tsa_name": "Southeast Texas RAC (SETRAC)"
+    },
+    {
+        "county_fips": "48287",
+        "county_name": "Lee",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48199",
+        "county_name": "Hardin",
+        "tsa_id": "R",
+        "tsa_name": "East Texas Gulf Coast RAC"
+    },
+    {
+        "county_fips": "48171",
+        "county_name": "Gillespie",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48031",
+        "county_name": "Blanco",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48291",
+        "county_name": "Liberty",
+        "tsa_id": "R",
+        "tsa_name": "East Texas Gulf Coast RAC"
+    },
+    {
+        "county_fips": "48021",
+        "county_name": "Bastrop",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48477",
+        "county_name": "Washington",
+        "tsa_id": "N",
+        "tsa_name": "Brazos Valley RAC (BVRAC)"
+    },
+    {
+        "county_fips": "48209",
+        "county_name": "Hays",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48137",
+        "county_name": "Edwards",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48465",
+        "county_name": "Val Verde",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48265",
+        "county_name": "Kerr",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48473",
+        "county_name": "Waller",
+        "tsa_id": "Q",
+        "tsa_name": "Southeast Texas RAC (SETRAC)"
+    },
+    {
+        "county_fips": "48361",
+        "county_name": "Orange",
+        "tsa_id": "R",
+        "tsa_name": "East Texas Gulf Coast RAC"
+    },
+    {
+        "county_fips": "48245",
+        "county_name": "Jefferson",
+        "tsa_id": "R",
+        "tsa_name": "East Texas Gulf Coast RAC"
+    },
+    {
+        "county_fips": "48149",
+        "county_name": "Fayette",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48201",
+        "county_name": "Harris",
+        "tsa_id": "Q",
+        "tsa_name": "Southeast Texas RAC (SETRAC)"
+    },
+    {
+        "county_fips": "48259",
+        "county_name": "Kendall",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48015",
+        "county_name": "Austin",
+        "tsa_id": "Q",
+        "tsa_name": "Southeast Texas RAC (SETRAC)"
+    },
+    {
+        "county_fips": "48385",
+        "county_name": "Real",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48055",
+        "county_name": "Caldwell",
+        "tsa_id": "O",
+        "tsa_name": "Capital Area Trauma RAC"
+    },
+    {
+        "county_fips": "48091",
+        "county_name": "Comal",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48089",
+        "county_name": "Colorado",
+        "tsa_id": "Q",
+        "tsa_name": "Southeast Texas RAC (SETRAC)"
+    },
+    {
+        "county_fips": "48019",
+        "county_name": "Bandera",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48071",
+        "county_name": "Chambers",
+        "tsa_id": "R",
+        "tsa_name": "East Texas Gulf Coast RAC"
+    },
+    {
+        "county_fips": "48187",
+        "county_name": "Guadalupe",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48157",
+        "county_name": "Fort Bend",
+        "tsa_id": "Q",
+        "tsa_name": "Southeast Texas RAC (SETRAC)"
+    },
+    {
+        "county_fips": "48177",
+        "county_name": "Gonzales",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48029",
+        "county_name": "Bexar",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48325",
+        "county_name": "Medina",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48285",
+        "county_name": "Lavaca",
+        "tsa_id": "S",
+        "tsa_name": "Golden Cresent RAC"
+    },
+    {
+        "county_fips": "48481",
+        "county_name": "Wharton",
+        "tsa_id": "Q",
+        "tsa_name": "Southeast Texas RAC (SETRAC)"
+    },
+    {
+        "county_fips": "48463",
+        "county_name": "Uvalde",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48271",
+        "county_name": "Kinney",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48039",
+        "county_name": "Brazoria",
+        "tsa_id": "R",
+        "tsa_name": "East Texas Gulf Coast RAC"
+    },
+    {
+        "county_fips": "48167",
+        "county_name": "Galveston",
+        "tsa_id": "R",
+        "tsa_name": "East Texas Gulf Coast RAC"
+    },
+    {
+        "county_fips": "48493",
+        "county_name": "Wilson",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48123",
+        "county_name": "De Witt",
+        "tsa_id": "S",
+        "tsa_name": "Golden Cresent RAC"
+    },
+    {
+        "county_fips": "48239",
+        "county_name": "Jackson",
+        "tsa_id": "S",
+        "tsa_name": "Golden Cresent RAC"
+    },
+    {
+        "county_fips": "48013",
+        "county_name": "Atascosa",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48321",
+        "county_name": "Matagorda",
+        "tsa_id": "Q",
+        "tsa_name": "Southeast Texas RAC (SETRAC)"
+    },
+    {
+        "county_fips": "48255",
+        "county_name": "Karnes",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48469",
+        "county_name": "Victoria",
+        "tsa_id": "S",
+        "tsa_name": "Golden Cresent RAC"
+    },
+    {
+        "county_fips": "48507",
+        "county_name": "Zavala",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48163",
+        "county_name": "Frio",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48323",
+        "county_name": "Maverick",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48175",
+        "county_name": "Goliad",
+        "tsa_id": "S",
+        "tsa_name": "Golden Cresent RAC"
+    },
+    {
+        "county_fips": "48297",
+        "county_name": "Live Oak",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48025",
+        "county_name": "Bee",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48283",
+        "county_name": "La Salle",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48311",
+        "county_name": "McMullen",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48127",
+        "county_name": "Dimmit",
+        "tsa_id": "P",
+        "tsa_name": "Southwest Texas RAC (STRAC)"
+    },
+    {
+        "county_fips": "48391",
+        "county_name": "Refugio",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48057",
+        "county_name": "Calhoun",
+        "tsa_id": "S",
+        "tsa_name": "Golden Cresent RAC"
+    },
+    {
+        "county_fips": "48479",
+        "county_name": "Webb",
+        "tsa_id": "T",
+        "tsa_name": "Seven Flags RAC"
+    },
+    {
+        "county_fips": "48409",
+        "county_name": "San Patricio",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48007",
+        "county_name": "Aransas",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48131",
+        "county_name": "Duval",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48249",
+        "county_name": "Jim Wells",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48355",
+        "county_name": "Nueces",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48273",
+        "county_name": "Kleberg",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48247",
+        "county_name": "Jim Hogg",
+        "tsa_id": "T",
+        "tsa_name": "Seven Flags RAC"
+    },
+    {
+        "county_fips": "48505",
+        "county_name": "Zapata",
+        "tsa_id": "T",
+        "tsa_name": "Seven Flags RAC"
+    },
+    {
+        "county_fips": "48047",
+        "county_name": "Brooks",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48261",
+        "county_name": "Kenedy",
+        "tsa_id": "U",
+        "tsa_name": "Coastak Bend RAC"
+    },
+    {
+        "county_fips": "48427",
+        "county_name": "Starr",
+        "tsa_id": "V",
+        "tsa_name": "Lower Rio grande Valley RAC"
+    },
+    {
+        "county_fips": "48215",
+        "county_name": "Hidalgo",
+        "tsa_id": "V",
+        "tsa_name": "Lower Rio grande Valley RAC"
+    },
+    {
+        "county_fips": "48489",
+        "county_name": "Willacy",
+        "tsa_id": "V",
+        "tsa_name": "Lower Rio grande Valley RAC"
+    },
+    {
+        "county_fips": "48061",
+        "county_name": "Cameron",
+        "tsa_id": "V",
+        "tsa_name": "Lower Rio grande Valley RAC"
+    }
+]
