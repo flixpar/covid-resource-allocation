@@ -255,6 +255,7 @@ function save_all(figure, fig_w, fig_h, fn, config)
 	figure |> PDF(get_output_path(config, "pdf", fn), fig_w, fig_h)
 	figure |> PNG(get_output_path(config, "png", fn), fig_w, fig_h, dpi=300)
 	figure |> PGF(get_output_path(config, "tex", fn), fig_w, fig_h, false, texfonts=true)
+	figure |> SVG(get_output_path(config, "svg", fn), fig_w, fig_h)
 	figure |>  PS(get_output_path(config, "eps", fn), fig_w, fig_h)
 	figure |> PDF(get_figures_path(config, "pdf", fn), fig_w, fig_h)
 	return

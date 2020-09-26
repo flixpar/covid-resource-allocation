@@ -332,21 +332,28 @@ function plot_metrics(config, data, results; bedtype=:all, display=true, save=tr
 
 	if save
 		bedtype_ext = (bedtype == :all) ? "" : (bedtype == :icu ? "_icu" : (bedtype == :ward ? "_ward" : ""))
+		ext = "$(config.experiment)$(bedtype_ext)"
 
 		metrics_dir = "$(config.results_basepath)/$(config.region_abbrev)/$(config.rundate)/$(config.experiment)/metrics/"
 		if !isdir(metrics_dir) mkpath(metrics_dir) end
 
-		all_metrics_path = joinpath(metrics_dir, "metrics_all_$(config.experiment)$(bedtype_ext)")
-		all_metrics |> CSV.write(all_metrics_path * ".csv")
-		write(all_metrics_path * ".tex", metrics_totextable(all_metrics))
+		figures_dir = "$(config.paperfigures_basepath)/$(config.region_abbrev)/$(config.experiment)/"
+		if !isdir(figures_dir) mkpath(figures_dir) end
 
-		compare_metrics_path = joinpath(metrics_dir, "metrics_$(config.experiment)$(bedtype_ext)")
-		compare_metrics |> CSV.write(compare_metrics_path * ".csv")
-		write(compare_metrics_path * ".tex", metrics_totextable(compare_metrics, header=true))
+		all_metrics |> CSV.write(joinpath(metrics_dir, "metrics_all_$(ext).csv"))
+		all_metrics_tex = metrics_totextable(all_metrics)
+		write(joinpath(metrics_dir, "metrics_all_$(ext).tex"), all_metrics_tex)
+		write(joinpath(figures_dir, "metrics_all$(bedtype_ext).tex"), all_metrics_tex)
 
-		config_metrics_path = joinpath(metrics_dir, "config_$(config.experiment)$(bedtype_ext)")
-		config_metrics |> CSV.write(config_metrics_path * ".csv")
-		write(config_metrics_path * ".tex", metrics_totextable(config_metrics))
+		compare_metrics |> CSV.write(joinpath(metrics_dir, "metrics_$(ext).csv"))
+		compare_metrics_tex = metrics_totextable(compare_metrics, header=true)
+		write(joinpath(metrics_dir, "metrics_$(ext).tex"), compare_metrics_tex)
+		write(joinpath(figures_dir, "metrics$(bedtype_ext).tex"), compare_metrics_tex)
+
+		config_metrics |> CSV.write(joinpath(metrics_dir, "config_$(ext).csv"))
+		config_metrics_tex = metrics_totextable(config_metrics)
+		write(joinpath(metrics_dir, "config_$(ext).tex"), config_metrics_tex)
+		write(joinpath(figures_dir, "config$(bedtype_ext).tex"), config_metrics_tex)
 	end
 
 	return
