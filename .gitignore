@@ -29,6 +29,10 @@ figures/
 results/
 **/results/
 
+# JHHS
+data/local/jhhs/
+rawdata/jhhs/
+
 ### Other ###
 backup/
 **/backup/
