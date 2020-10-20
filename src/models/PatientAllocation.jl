@@ -141,7 +141,7 @@ function patient_loadbalance(
 		sent_penalty::Real=0, smoothness_penalty::Real=0,
 
 		sendreceive_gap::Int=0, min_send_amt::Real=0,
-		severity_weighting::Bool=false, setup_cost::Real=0,
+		setup_cost::Real=0,
 
 		verbose::Bool=false,
 	)
@@ -228,7 +228,6 @@ function patient_loadbalance(
 	add_sent_penalty!(model, sent, objective, sent_penalty)
 	add_smoothness_penalty!(model, sent, objective, smoothness_penalty)
 	add_setup_cost!(model, sent, objective, setup_cost)
-	add_severity_weighting!(model, sent, objective, severity_weighting, overflow, active_null, beds)
 
 	###############
 	#### Solve ####
