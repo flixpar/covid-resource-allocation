@@ -6,6 +6,7 @@ using ProgressMeter
 using BlackBoxOptim
 
 export estimate_admitted_discharged
+export estimate_discharged
 export estimate_admitted_uncertainty
 export build_carepaths_data
 
@@ -84,6 +85,61 @@ function estimate_admitted_discharged(data; use_rounding=false, optim_time=1.0)
 		admitted = admitted_sim,
 		discharged = discharged_sim,
 	)
+end
+
+function estimate_discharged(data; use_rounding=false, optim_time=1.0)
+	N, T = data.N, data.T
+
+	function unpack_params(i, _discharged)
+		_discharged = _discharged .* (data.initial[i] / sum(_discharged))
+		if use_rounding
+			_discharged = round.(Int, _discharged)
+		end
+		return _discharged
+	end
+
+	function score_func(i, params; s_penalty=0.0)
+		_discharged = unpack_params(i, params)
+		_active = compute_active_nosent(data.initial[i], _discharged, data.admitted[i,:], data.los_dist, use_rounding=use_rounding)
+		score = norm(_active - data.active[i,:], 2)
+		smooth_score = norm(_active[2:end] - _active[1:end-1], 2)
+		return score + (s_penalty * smooth_score)
+	end
+
+	function param_bounds(i)
+		ub = 1 .- cdf.(data.los_dist, 1:T)
+		bds = collect(zip(zeros(Float64, length(ub)), ub))
+		return bds
+	end
+
+	discharged_sim = zeros(Float64, N, T)
+	@showprogress for i in 1:N
+		if maximum(data.active[i,:]) == 0.0
+			continue
+		end
+
+		local_score_func = params ->score_func(i, params, s_penalty=0.0)
+		local_param_bounds = param_bounds(i)
+
+		r = bboptimize(
+			local_score_func,
+			SearchRange = local_param_bounds,
+			Method = :adaptive_de_rand_1_bin_radiuslimited,
+			TraceMode = :silent,
+			MaxTime = optim_time,
+			RandomizeRngSeed = false,
+			RngSeed = 0,
+		)
+
+		_local_params = best_candidate(r)
+		discharged_sim[i,:] = unpack_params(i, _local_params)
+	end
+
+	if use_rounding
+		discharged_sim = Int.(discharged_sim)
+	end
+
+	return discharged_sim
 end
 
 function compute_active_nosent(_initial::Array{<:Real,1}, _discharged::Array{<:Real,2},
