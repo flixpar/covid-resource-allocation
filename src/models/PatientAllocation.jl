@@ -7,6 +7,7 @@ using LinearAlgebra
 using MathOptInterface
 using Distributions
 using Memoize
+using Statistics
 
 export patient_allocation, patient_block_allocation
 
@@ -15,50 +16,32 @@ export patient_allocation, patient_block_allocation
 ############# Standard Model #################
 ##############################################
 
-function patient_allocation(
+function patient_redistribution(
 		beds::Array{<:Real,1},
 		initial_patients::Array{<:Real,1},
 		discharged_patients::Array{<:Real,2},
 		admitted_patients::Array{<:Real,2},
-		adj_matrix::BitArray{2};
-		los=11,
-		sendreceive_switch_time::Int=0,
-		min_send_amt::Real=0,
-		smoothness_penalty::Real=0,
-		setup_cost::Real=0,
-		sent_penalty::Real=0,
-		balancing_thresh::Real=1.0,
-		balancing_penalty::Real=0,
-		severity_weighting::Bool=false,
-		no_artificial_overflow::Bool=false,
-		no_worse_overflow::Bool=false,
+		adj_matrix::BitArray{2}, los=11;
+
 		capacity_cushion::Real=-1,
+		no_artificial_overflow::Bool=false, no_worse_overflow::Bool=false,
+		sent_penalty::Real=0, smoothness_penalty::Real=0,
+
+		sendreceive_gap::Int=0, min_send_amt::Real=0,
+		balancing_thresh::Real=1.0, balancing_penalty::Real=0,
+		severity_weighting::Bool=false, setup_cost::Real=0,
+
 		verbose::Bool=false,
 )
-	N, T = size(admitted_patients)
-	@assert(size(initial_patients, 1) == N)
-	@assert(size(beds, 1) == N)
-	@assert(size(adj_matrix) == (N,N))
-	@assert(size(discharged_patients) == (N, T))
 
 	###############
 	#### Setup ####
 	###############
 
-	L = nothing
-	if isa(los, Int)
-		L = vcat(ones(Int, los), zeros(Int, T-los))
-	elseif isa(los, Array{<:Real,1})
-		if length(los) >= T
-			L = los
-		else
-			L = vcat(los, zeros(Float64, T-length(los)))
-		end
-	elseif isa(los, Distribution)
-		L = 1.0 .- cdf.(los, 0:T)
-	else
-		error("Invalid length of stay distribution")
-	end
+	N, T = size(admitted_patients)
+	check_sizes(initial_patients, discharged_patients, admitted_patients, beds)
+
+	L = discretize_los(los, T)
 
 	if 0 < capacity_cushion < 1
 		beds = beds .* (1.0 - capacity_cushion)
@@ -76,7 +59,7 @@ function patient_allocation(
 	###############
 
 	@variable(model, sent[1:N,1:N,1:T] >= 0)
-	@variable(model, obj_dummy[1:N,1:T] >= 0)
+	@variable(model, overflow[1:N,1:T] >= 0)
 
 	#################
 	## Expressions ##
@@ -93,18 +76,10 @@ function patient_allocation(
 		) for t₁ in 1:t)
 		+ sum(sent[i,:,t])
 	)
-	active_null = [(
-			initial_patients[i]
-			- sum(discharged_patients[i,1:t])
-			+ sum(L[t-t₁+1] * admitted_patients[i,t₁] for t₁ in 1:t)
-		) for i in 1:N, t in 1:T
-	]
-
-	# expression for the patient overflow
-	@expression(model, overflow[i=1:N,t=1:T], active_patients[i,t] - beds[i])
+	active_null = compute_active_null(initial_patients, discharged_patients, admitted_patients, L)
 
 	# objective function
-	objective = @expression(model, sum(obj_dummy))
+	objective = @expression(model, sum(overflow))
 
 	######################
 	## Hard Constraints ##
@@ -116,94 +91,24 @@ function patient_allocation(
 	# only send new patients
 	@constraint(model, [t=1:T], sum(sent[:,:,t], dims=2) .<= admitted_patients[:,t])
 
-	# only send patients between connected locations
-	for i in 1:N, j in 1:N
-		if ~adj_matrix[i,j]
-			for t in 1:T
-				fix(sent[i,j,t], 0, force=true)
-			end
-		end
-	end
-
 	# objective constraint
-	@constraint(model, [i=1:N,t=1:T], obj_dummy[i,t] >= overflow[i,t])
+	@constraint(model, [i=1:N,t=1:T], overflow[i,t] >= active_patients[i,t] - beds[i])
 
-	##########################
-	## Optional Constraints ##
-	##########################
+	################################
+	## Optional Constraints/Costs ##
+	################################
 
-	# enforce minimum transfer amount if enabled
-	if min_send_amt > 0
-		semi_cont_set = MOI.Semicontinuous(Float64(min_send_amt), Inf)
-		for i in 1:N, j in 1:N, t in 1:T
-			if !is_fixed(sent[i,j,t])
-				delete_lower_bound(sent[i,j,t])
-				@constraint(model, sent[i,j,t] in semi_cont_set)
-			end
-		end
-	end
+	enforce_adj!(model, sent, adj_matrix)
+	enforce_no_artificial_overflow!(model, no_artificial_overflow, active_patients, active_null, beds)
+	enforce_no_worse_overflow!(model, no_worse_overflow, active_patients, active_null, beds)
+	enforce_minsendamt!(model, sent, min_send_amt)
+	enforce_sendreceivegap!(model, sent, sendreceive_gap)
 
-	# weight objective per-location by max load
-	if severity_weighting
-		max_load_null = [maximum(active_null[i,:] / beds[i]) for i in 1:N]
-		severity_weight = [max_load_null[i] > 1.0 ? 0.0 : 9.0 for i in 1:N]
-		add_to_expression!(objective, dot(sum(obj_dummy, dims=2), severity_weight))
-	end
-
-	if no_artificial_overflow
-		for i in 1:N, t in 1:T
-			if active_null[i,t] <= beds[i]
-				@constraint(model, active_patients[i,t] <= beds[i])
-			end
-		end
-	end
-
-	if no_worse_overflow
-		for i in 1:N, t in 1:T
-			if active_null[i,t] >= beds[i]
-				@constraint(model, active_patients[i,t] <= active_null[i,t])
-			end
-		end
-	end
-
-	# penalize total sent if enabled
-	if sent_penalty > 0
-		add_to_expression!(objective, sent_penalty*sum(sent))
-	end
-
-	# penalize non-smoothness in sent patients if enabled
-	if smoothness_penalty > 0
-		@variable(model, smoothness_dummy[i=1:N,j=1:N,t=1:T-1] >= 0)
-		@constraint(model, [t=1:T-1],  (sent[:,:,t] - sent[:,:,t+1]) .<= smoothness_dummy[:,:,t])
-		@constraint(model, [t=1:T-1], -(sent[:,:,t] - sent[:,:,t+1]) .<= smoothness_dummy[:,:,t])
-
-		add_to_expression!(objective, smoothness_penalty * sum(smoothness_dummy))
-		add_to_expression!(objective, smoothness_penalty * sum(sent[:,:,1]))
-	end
-
-	# add setup costs if enabled
-	if setup_cost > 0
-		@variable(model, setup_dummy[i=1:N,j=i+1:N], Bin)
-		@constraint(model, [i=1:N,j=i+1:N], [1-setup_dummy[i,j], sum(sent[i,j,:])+sum(sent[j,i,:])] in MOI.SOS1([1.0, 1.0]))
-		add_to_expression!(objective, setup_cost*sum(setup_dummy))
-	end
-
-	# enforce a minimum time between sending and receiving
-	if sendreceive_switch_time > 0
-		@constraint(model, [i=1:N,t=1:T-1],
-			[sum(sent[:,i,t]), sum(sent[i,:,t:min(t+sendreceive_switch_time,T)])] in MOI.SOS1([1.0, 1.0])
-		)
-		@constraint(model, [i=1:N,t=1:T-1],
-			[sum(sent[:,i,t:min(t+sendreceive_switch_time,T)]), sum(sent[i,:,t])] in MOI.SOS1([1.0, 1.0])
-		)
-	end
-
-	# load balancing
-	if balancing_penalty > 0
-		@variable(model, balancing_dummy[1:N,1:T] >= 0)
-		@constraint(model, [i=1:N,t=1:T], balancing_dummy[i,t] >= (active_patients[i,t] / beds[i]) - balancing_thresh)
-		add_to_expression!(objective, balancing_penalty * sum(balancing_dummy))
-	end
+	add_sent_penalty!(model, sent, objective, sent_penalty)
+	add_smoothness_penalty!(model, sent, objective, smoothness_penalty)
+	add_setup_cost!(model, sent, objective, setup_cost)
+	add_loadbalancing_penalty!(model, sent, objective, balancing_penalty, balancing_thresh, active_patients, beds)
+	add_severity_weighting!(model, sent, objective, severity_weighting, overflow, active_null, beds)
 
 	###############
 	#### Solve ####
@@ -683,6 +588,178 @@ function patient_allocation_robust(
 	optimize!(model)
 
 	return model
+end
+
+##############################################
+############# Helper Functions ###############
+##############################################
+
+function discretize_los(los, T)
+	L = nothing
+	if isa(los, Int)
+		L = vcat(ones(Int, los), zeros(Int, T-los))
+	elseif isa(los, Array{<:Real,1})
+		if length(los) >= T
+			L = los
+		else
+			L = vcat(los, zeros(Float64, T-length(los)))
+		end
+	elseif isa(los, Distribution)
+		L = 1.0 .- cdf.(los, 0:T)
+	else
+		error("Invalid length of stay distribution")
+	end
+	return L
+end
+
+function compute_active_null(initial_patients, discharged_patients, admitted_patients, L)
+	N, T = size(admitted_patients)
+	active_null = [(
+			initial_patients[i]
+			- sum(discharged_patients[i,1:t])
+			+ sum(L[t-t₁+1] * admitted_patients[i,t₁] for t₁ in 1:t)
+		) for i in 1:N, t in 1:T
+	]
+	return active_null
+end
+
+function check_sizes(initial_patients, discharged_patients, admitted_patients, beds)
+	N, T = size(admitted_patients)
+	@assert(size(initial_patients, 1) == N)
+	@assert(size(beds, 1) == N)
+	@assert(size(discharged_patients) == (N, T))
+	return
+end
+
+##############################################
+########### Optional Constraints #############
+##############################################
+
+# only send patients between connected locations
+function enforce_adj!(model, sent, adj_matrix)
+	N, _, T = size(sent)
+	@assert(size(adj_matrix) == (N,N))
+	for i in 1:N, j in 1:N
+		if ~adj_matrix[i,j]
+			for t in 1:T
+				fix(sent[i,j,t], 0, force=true)
+			end
+		end
+	end
+	return
+end
+
+function enforce_no_artificial_overflow!(model, no_artificial_overflow, active_patients, active_null, beds)
+	if no_artificial_overflow
+		N, T = size(active_null)
+		for i in 1:N, t in 1:T
+			if active_null[i,t] <= beds[i]
+				@constraint(model, active_patients[i,t] <= beds[i])
+			end
+		end
+	end
+	return
+end
+
+function enforce_no_worse_overflow!(model, no_worse_overflow, active_patients, active_null, beds)
+	if no_worse_overflow
+		N, T = size(active_null)
+		for i in 1:N, t in 1:T
+			if active_null[i,t] >= beds[i]
+				@constraint(model, active_patients[i,t] <= active_null[i,t])
+			end
+		end
+	end
+	return
+end
+
+# enforce minimum transfer amount if enabled
+function enforce_minsendamt!(model, sent, min_send_amt)
+	if min_send_amt > 0
+		N, _, T = size(sent)
+		semi_cont_set = MOI.Semicontinuous(Float64(min_send_amt), Inf)
+		for i in 1:N, j in 1:N, t in 1:T
+			if !is_fixed(sent[i,j,t])
+				delete_lower_bound(sent[i,j,t])
+				@constraint(model, sent[i,j,t] in semi_cont_set)
+			end
+		end
+	end
+	return
+end
+
+# enforce a minimum time between sending and receiving
+function enforce_sendreceivegap!(model, sent, sendreceive_gap)
+	if sendreceive_gap > 0
+		N, _, T = size(sent)
+		@constraint(model, [i=1:N,t=1:T-1],
+			[sum(sent[:,i,t]), sum(sent[i,:,t:min(t+sendreceive_gap,T)])] in MOI.SOS1([1.0, 1.0])
+		)
+		@constraint(model, [i=1:N,t=1:T-1],
+			[sum(sent[:,i,t:min(t+sendreceive_gap,T)]), sum(sent[i,:,t])] in MOI.SOS1([1.0, 1.0])
+		)
+	end
+	return
+end
+
+##############################################
+############ Optional Penalties ##############
+##############################################
+
+# penalize total sent if enabled
+function add_sent_penalty!(model, sent, objective, sent_penalty)
+	if sent_penalty > 0
+		add_to_expression!(objective, sent_penalty*sum(sent))
+	end
+	return
+end
+
+# penalize non-smoothness in sent patients if enabled
+function add_smoothness_penalty!(model, sent, objective, smoothness_penalty)
+	if smoothness_penalty > 0
+		N, _, T = size(sent)
+
+		@variable(model, smoothness_dummy[i=1:N,j=1:N,t=1:T-1] >= 0)
+		@constraint(model, [t=1:T-1],  (sent[:,:,t] - sent[:,:,t+1]) .<= smoothness_dummy[:,:,t])
+		@constraint(model, [t=1:T-1], -(sent[:,:,t] - sent[:,:,t+1]) .<= smoothness_dummy[:,:,t])
+
+		add_to_expression!(objective, smoothness_penalty * sum(smoothness_dummy))
+		add_to_expression!(objective, smoothness_penalty * sum(sent[:,:,1]))
+	end
+	return
+end
+
+# add setup costs if enabled
+function add_setup_cost!(model, sent, objective, setup_cost)
+	if setup_cost > 0
+		N, _, T = size(sent)
+		@variable(model, setup_dummy[i=1:N,j=i+1:N], Bin)
+		@constraint(model, [i=1:N,j=i+1:N], [1-setup_dummy[i,j], sum(sent[i,j,:])+sum(sent[j,i,:])] in MOI.SOS1([1.0, 1.0]))
+		add_to_expression!(objective, setup_cost*sum(setup_dummy))
+	end
+	return
+end
+
+# load balancing penalty
+function add_loadbalancing_penalty!(model, sent, objective, balancing_penalty, balancing_thresh, active_patients, beds)
+	if balancing_penalty > 0
+		N, _, T = size(sent)
+		@variable(model, balancing_dummy[1:N,1:T] >= 0)
+		@constraint(model, [i=1:N,t=1:T], balancing_dummy[i,t] >= (active_patients[i,t] / beds[i]) - balancing_thresh)
+		add_to_expression!(objective, balancing_penalty * sum(balancing_dummy))
+	end
+	return
+end
+
+# weight objective per-location by max load
+function add_severity_weighting!(model, sent, objective, severity_weighting, overflow, active_null, beds)
+	if severity_weighting
+		N, _, T = size(sent)
+		max_load_null = [maximum(active_null[i,:] / beds[i]) for i in 1:N]
+		severity_weight = [max_load_null[i] > 1.0 ? 0.0 : 9.0 for i in 1:N]
+		add_to_expression!(objective, dot(sum(overflow, dims=2), severity_weight))
+	end
+	return
 end
 
 end;
