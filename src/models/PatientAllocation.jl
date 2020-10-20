@@ -17,7 +17,7 @@ export patient_allocation, patient_block_allocation
 ##############################################
 
 function patient_redistribution(
-		beds::Array{<:Real,1},
+		capacity::Array{<:Real},
 		initial_patients::Array{<:Real,1},
 		discharged_patients::Array{<:Real,2},
 		admitted_patients::Array{<:Real,2},
@@ -32,20 +32,25 @@ function patient_redistribution(
 		severity_weighting::Bool=false, setup_cost::Real=0,
 
 		verbose::Bool=false,
-)
+	)
 
 	###############
 	#### Setup ####
 	###############
 
-	N, T = size(admitted_patients)
-	check_sizes(initial_patients, discharged_patients, admitted_patients, beds)
+	if ndims(capacity) == 1
+		capacity = reshape(capacity, (:,1))
+	end
 
-	L = discretize_los(los, T)
+	N, T = size(admitted_patients)
+	C = size(capacity, 2)
+	check_sizes(initial_patients, discharged_patients, admitted_patients, capacity)
 
 	if 0 < capacity_cushion < 1
-		beds = beds .* (1.0 - capacity_cushion)
+		capacity = capacity .* (1.0 - capacity_cushion)
 	end
+
+	L = discretize_los(los, T)
 
 	###############
 	#### Model ####
@@ -59,7 +64,7 @@ function patient_redistribution(
 	###############
 
 	@variable(model, sent[1:N,1:N,1:T] >= 0)
-	@variable(model, overflow[1:N,1:T] >= 0)
+	@variable(model, overflow[1:N,1:T,1:C] >= 0)
 
 	#################
 	## Expressions ##
@@ -92,23 +97,23 @@ function patient_redistribution(
 	@constraint(model, [t=1:T], sum(sent[:,:,t], dims=2) .<= admitted_patients[:,t])
 
 	# objective constraint
-	@constraint(model, [i=1:N,t=1:T], overflow[i,t] >= active_patients[i,t] - beds[i])
+	@constraint(model, [i=1:N,t=1:T,c=1:C], overflow[i,t,c] >= active_patients[i,t] - capacity[i,c])
 
 	################################
 	## Optional Constraints/Costs ##
 	################################
 
 	enforce_adj!(model, sent, adj_matrix)
-	enforce_no_artificial_overflow!(model, no_artificial_overflow, active_patients, active_null, beds)
-	enforce_no_worse_overflow!(model, no_worse_overflow, active_patients, active_null, beds)
+	enforce_no_artificial_overflow!(model, no_artificial_overflow, active_patients, active_null, capacity)
+	enforce_no_worse_overflow!(model, no_worse_overflow, active_patients, active_null, capacity)
 	enforce_minsendamt!(model, sent, min_send_amt)
 	enforce_sendreceivegap!(model, sent, sendreceive_gap)
 
 	add_sent_penalty!(model, sent, objective, sent_penalty)
 	add_smoothness_penalty!(model, sent, objective, smoothness_penalty)
 	add_setup_cost!(model, sent, objective, setup_cost)
-	add_loadbalancing_penalty!(model, sent, objective, balancing_penalty, balancing_thresh, active_patients, beds)
-	add_severity_weighting!(model, sent, objective, severity_weighting, overflow, active_null, beds)
+	add_loadbalancing_penalty!(model, sent, objective, balancing_penalty, balancing_thresh, active_patients, capacity)
+	add_severity_weighting!(model, sent, objective, severity_weighting, overflow, active_null, capacity)
 
 	###############
 	#### Solve ####
@@ -125,7 +130,7 @@ end
 ##############################################
 
 function patient_loadbalance(
-		beds::Array{<:Real,1},
+		capacity::Array{<:Real},
 		initial_patients::Array{<:Real,1},
 		discharged_patients::Array{<:Real,2},
 		admitted_patients::Array{<:Real,2},
@@ -145,14 +150,19 @@ function patient_loadbalance(
 	#### Setup ####
 	###############
 
-	N, T = size(admitted_patients)
-	check_sizes(initial_patients, discharged_patients, admitted_patients, beds)
+	if ndims(capacity) == 1
+		capacity = reshape(capacity, (:,1))
+	end
 
-	L = discretize_los(los, T)
+	N, T = size(admitted_patients)
+	C = size(capacity, 2)
+	check_sizes(initial_patients, discharged_patients, admitted_patients, capacity)
 
 	if 0 < capacity_cushion < 1
-		beds = beds .* (1.0 - capacity_cushion)
+		capacity = capacity .* (1.0 - capacity_cushion)
 	end
+
+	L = discretize_los(los, T)
 
 	###############
 	#### Model ####
@@ -166,7 +176,7 @@ function patient_loadbalance(
 	###############
 
 	@variable(model, sent[1:N,1:N,1:T] >= 0)
-	@variable(model, load_objective[1:N,1:T] >= 0)
+	@variable(model, load_objective[1:N,1:T,1:C] >= 0)
 
 	#################
 	## Expressions ##
@@ -186,7 +196,7 @@ function patient_loadbalance(
 	active_null = compute_active_null(initial_patients, discharged_patients, admitted_patients, L)
 
 	# expression for the patient load
-	@expression(model, load[i=1:N,t=1:T], active_patients[i,t] / beds[i])
+	@expression(model, load[i=1:N,t=1:T,c=1:C], active_patients[i,t] / capacity[i,c])
 
 	# objective function
 	objective = @expression(model, sum(load_objective))
@@ -202,16 +212,16 @@ function patient_loadbalance(
 	@constraint(model, [t=1:T], sum(sent[:,:,t], dims=2) .<= admitted_patients[:,t])
 
 	# objective constraint
-	@constraint(model, [i=1:N,t=1:T],  (load[i,t] - mean(load[:,t])) <= load_objective[i,t])
-	@constraint(model, [i=1:N,t=1:T], -(load[i,t] - mean(load[:,t])) <= load_objective[i,t])
+	@constraint(model, [i=1:N,t=1:T,c=1:C],  (load[i,t,c] - mean(load[:,t,c])) <= load_objective[i,t,c])
+	@constraint(model, [i=1:N,t=1:T,c=1:C], -(load[i,t,c] - mean(load[:,t,c])) <= load_objective[i,t,c])
 
 	################################
 	## Optional Constraints/Costs ##
 	################################
 
 	enforce_adj!(model, sent, adj_matrix)
-	enforce_no_artificial_overflow!(model, no_artificial_overflow, active_patients, active_null, beds)
-	enforce_no_worse_overflow!(model, no_worse_overflow, active_patients, active_null, beds)
+	enforce_no_artificial_overflow!(model, no_artificial_overflow, active_patients, active_null, capacity)
+	enforce_no_worse_overflow!(model, no_worse_overflow, active_patients, active_null, capacity)
 	enforce_minsendamt!(model, sent, min_send_amt)
 	enforce_sendreceivegap!(model, sent, sendreceive_gap)
 
