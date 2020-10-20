@@ -21,9 +21,9 @@ function patient_redistribution(
 		initial_patients::Array{<:Real,1},
 		discharged_patients::Array{<:Real,2},
 		admitted_patients::Array{<:Real,2},
-		adj_matrix::BitArray{2}, los=11;
+		adj_matrix::BitArray{2}, los::Union{<:Distribution,Array{<:Real,1},Int};
 
-		capacity_cushion::Real=-1,
+		capacity_cushion::Real=-1, capacity_weights::Array{<:Real,1}=Int[],
 		no_artificial_overflow::Bool=false, no_worse_overflow::Bool=false,
 		sent_penalty::Real=0, smoothness_penalty::Real=0,
 
@@ -48,6 +48,10 @@ function patient_redistribution(
 
 	if 0 < capacity_cushion < 1
 		capacity = capacity .* (1.0 - capacity_cushion)
+	end
+
+	if isempty(capacity_weights)
+		capacity_weights = ones(Int, C)
 	end
 
 	L = discretize_los(los, T)
@@ -84,7 +88,7 @@ function patient_redistribution(
 	active_null = compute_active_null(initial_patients, discharged_patients, admitted_patients, L)
 
 	# objective function
-	objective = @expression(model, sum(overflow))
+	objective = @expression(model, dot(capacity_weights, sum(overflow, dims=(1,2))))
 
 	######################
 	## Hard Constraints ##
@@ -134,9 +138,9 @@ function patient_loadbalance(
 		initial_patients::Array{<:Real,1},
 		discharged_patients::Array{<:Real,2},
 		admitted_patients::Array{<:Real,2},
-		adj_matrix::BitArray{2}, los=11;
+		adj_matrix::BitArray{2}, los::Union{<:Distribution,Array{<:Real,1},Int};
 
-		capacity_cushion::Real=-1,
+		capacity_cushion::Real=-1, capacity_weights::Array{<:Real,1}=Int[],
 		no_artificial_overflow::Bool=false, no_worse_overflow::Bool=false,
 		sent_penalty::Real=0, smoothness_penalty::Real=0,
 
@@ -160,6 +164,10 @@ function patient_loadbalance(
 
 	if 0 < capacity_cushion < 1
 		capacity = capacity .* (1.0 - capacity_cushion)
+	end
+
+	if isempty(capacity_weights)
+		capacity_weights = ones(Int, C)
 	end
 
 	L = discretize_los(los, T)
@@ -199,7 +207,7 @@ function patient_loadbalance(
 	@expression(model, load[i=1:N,t=1:T,c=1:C], active_patients[i,t] / capacity[i,c])
 
 	# objective function
-	objective = @expression(model, sum(load_objective))
+	objective = @expression(model, dot(capacity_weights, sum(load_objective, dims=(1,2))))
 
 	######################
 	## Hard Constraints ##
