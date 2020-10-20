@@ -121,6 +121,116 @@ function patient_redistribution(
 end
 
 ##############################################
+############### Load Balance #################
+##############################################
+
+function patient_loadbalance(
+		beds::Array{<:Real,1},
+		initial_patients::Array{<:Real,1},
+		discharged_patients::Array{<:Real,2},
+		admitted_patients::Array{<:Real,2},
+		adj_matrix::BitArray{2}, los=11;
+
+		capacity_cushion::Real=-1,
+		no_artificial_overflow::Bool=false, no_worse_overflow::Bool=false,
+		sent_penalty::Real=0, smoothness_penalty::Real=0,
+
+		sendreceive_gap::Int=0, min_send_amt::Real=0,
+		severity_weighting::Bool=false, setup_cost::Real=0,
+
+		verbose::Bool=false,
+	)
+
+	###############
+	#### Setup ####
+	###############
+
+	N, T = size(admitted_patients)
+	check_sizes(initial_patients, discharged_patients, admitted_patients, beds)
+
+	L = discretize_los(los, T)
+
+	if 0 < capacity_cushion < 1
+		beds = beds .* (1.0 - capacity_cushion)
+	end
+
+	###############
+	#### Model ####
+	###############
+
+	model = Model(Gurobi.Optimizer)
+	if !verbose set_silent(model) end
+
+	###############
+	## Variables ##
+	###############
+
+	@variable(model, sent[1:N,1:N,1:T] >= 0)
+	@variable(model, load_objective[1:N,1:T] >= 0)
+
+	#################
+	## Expressions ##
+	#################
+
+	# expressions for the number of active patients
+	@expression(model, active_patients[i=1:N,t=1:T],
+		initial_patients[i]
+		- sum(discharged_patients[i,1:t])
+		+ sum(L[t-t₁+1] * (
+			admitted_patients[i,t₁]
+			- sum(sent[i,:,t₁])
+			+ sum(sent[:,i,t₁])
+		) for t₁ in 1:t)
+		+ sum(sent[i,:,t])
+	)
+	active_null = compute_active_null(initial_patients, discharged_patients, admitted_patients, L)
+
+	# expression for the patient load
+	@expression(model, load[i=1:N,t=1:T], active_patients[i,t] / beds[i])
+
+	# objective function
+	objective = @expression(model, sum(load_objective))
+
+	######################
+	## Hard Constraints ##
+	######################
+
+	# ensure the number of active patients is non-negative
+	@constraint(model, [i=1:N,t=1:T], active_patients[i,t] >= 0)
+
+	# only send new patients
+	@constraint(model, [t=1:T], sum(sent[:,:,t], dims=2) .<= admitted_patients[:,t])
+
+	# objective constraint
+	@constraint(model, [i=1:N,t=1:T],  (load[i,t] - mean(load[:,t])) <= load_objective[i,t])
+	@constraint(model, [i=1:N,t=1:T], -(load[i,t] - mean(load[:,t])) <= load_objective[i,t])
+
+	################################
+	## Optional Constraints/Costs ##
+	################################
+
+	enforce_adj!(model, sent, adj_matrix)
+	enforce_no_artificial_overflow!(model, no_artificial_overflow, active_patients, active_null, beds)
+	enforce_no_worse_overflow!(model, no_worse_overflow, active_patients, active_null, beds)
+	enforce_minsendamt!(model, sent, min_send_amt)
+	enforce_sendreceivegap!(model, sent, sendreceive_gap)
+
+	add_sent_penalty!(model, sent, objective, sent_penalty)
+	add_smoothness_penalty!(model, sent, objective, smoothness_penalty)
+	add_setup_cost!(model, sent, objective, setup_cost)
+	add_severity_weighting!(model, sent, objective, severity_weighting, overflow, active_null, beds)
+
+	###############
+	#### Solve ####
+	###############
+
+	@objective(model, Min, objective)
+	optimize!(model)
+
+	return model
+end
+
+##############################################
 ############### Block Model ##################
 ##############################################
 
