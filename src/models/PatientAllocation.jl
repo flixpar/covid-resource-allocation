@@ -752,9 +752,9 @@ end
 
 function check_sizes(initial_patients, discharged_patients, admitted_patients, beds)
 	N, T = size(admitted_patients)
-	@assert(size(initial_patients, 1) == N)
-	@assert(size(beds, 1) == N)
+	@assert(size(initial_patients) == (N,))
 	@assert(size(discharged_patients) == (N, T))
+	@assert(size(beds, 1) == N)
 	return
 end
 
@@ -776,23 +776,23 @@ function enforce_adj!(model, sent, adj_matrix)
 	return
 end
 
-function enforce_no_artificial_overflow!(model, no_artificial_overflow, active_patients, active_null, beds)
+function enforce_no_artificial_overflow!(model, no_artificial_overflow, active_patients, active_null, capacity)
 	if no_artificial_overflow
 		N, T = size(active_null)
 		for i in 1:N, t in 1:T
-			if active_null[i,t] <= beds[i]
-				@constraint(model, active_patients[i,t] <= beds[i])
+			if active_null[i,t] <= capacity[i,end]
+				@constraint(model, active_patients[i,t] <= capacity[i,end])
 			end
 		end
 	end
 	return
 end
 
-function enforce_no_worse_overflow!(model, no_worse_overflow, active_patients, active_null, beds)
+function enforce_no_worse_overflow!(model, no_worse_overflow, active_patients, active_null, capacity)
 	if no_worse_overflow
 		N, T = size(active_null)
 		for i in 1:N, t in 1:T
-			if active_null[i,t] >= beds[i]
+			if active_null[i,t] >= capacity[i,end]
 				@constraint(model, active_patients[i,t] <= active_null[i,t])
 			end
 		end
@@ -868,21 +868,21 @@ function add_setup_cost!(model, sent, objective, setup_cost)
 end
 
 # load balancing penalty
-function add_loadbalancing_penalty!(model, sent, objective, balancing_penalty, balancing_thresh, active_patients, beds)
+function add_loadbalancing_penalty!(model, sent, objective, balancing_penalty, balancing_thresh, active_patients, capacity)
 	if balancing_penalty > 0
 		N, _, T = size(sent)
 		@variable(model, balancing_dummy[1:N,1:T] >= 0)
-		@constraint(model, [i=1:N,t=1:T], balancing_dummy[i,t] >= (active_patients[i,t] / beds[i]) - balancing_thresh)
+		@constraint(model, [i=1:N,t=1:T], balancing_dummy[i,t] >= (active_patients[i,t] / capacity[i,1]) - balancing_thresh)
 		add_to_expression!(objective, balancing_penalty * sum(balancing_dummy))
 	end
 	return
 end
 
 # weight objective per-location by max load
-function add_severity_weighting!(model, sent, objective, severity_weighting, overflow, active_null, beds)
+function add_severity_weighting!(model, sent, objective, severity_weighting, overflow, active_null, capacity)
 	if severity_weighting
 		N, _, T = size(sent)
-		max_load_null = [maximum(active_null[i,:] / beds[i]) for i in 1:N]
+		max_load_null = [maximum(active_null[i,:] / capacity[i,1]) for i in 1:N]
 		severity_weight = [max_load_null[i] > 1.0 ? 0.0 : 9.0 for i in 1:N]
 		add_to_expression!(objective, dot(sum(overflow, dims=2), severity_weight))
 	end
