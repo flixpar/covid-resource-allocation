@@ -38,6 +38,12 @@ function compute_results(config, data, sent; use_rounding=false)
 	load = compute_load(sent, data.initial, data.discharged, data.admitted, data.beds, data.los_dist, use_rounding=use_rounding)
 	load_nosent = compute_load(sent_null, data.initial, data.discharged, data.admitted, data.beds, data.los_dist, use_rounding=use_rounding)
 
+	capacity_byday = permutedims(repeat(data.capacity, 1, 1, data.T), (1,3,2))
+	overflow_bycapacity = compute_overflow(sent, data.initial, data.discharged, data.admitted, capacity_byday, data.los_dist, use_rounding=use_rounding)
+	overflow_bycapacity_nosent = compute_overflow(sent_null, data.initial, data.discharged, data.admitted, capacity_byday, data.los_dist, use_rounding=use_rounding)
+	load_bycapacity = compute_load(sent, data.initial, data.discharged, data.admitted, capacity_byday, data.los_dist, use_rounding=use_rounding)
+	load_bycapacity_nosent = compute_load(sent_null, data.initial, data.discharged, data.admitted, capacity_byday, data.los_dist, use_rounding=use_rounding)
+
 	results_table = DataFrame(
 		date = permutedims(repeat(data.date_range, 1, N), (2,1))[:],
 		location = repeat(data.locations, 1, T)[:],
@@ -57,6 +63,10 @@ function compute_results(config, data, sent; use_rounding=false)
 		overflow_nosent = overflow_nosent,
 		load = load,
 		load_nosent = load_nosent,
+		overflow_bycapacity = overflow_bycapacity,
+		overflow_bycapacity_nosent = overflow_bycapacity_nosent,
+		load_bycapacity = load_bycapacity,
+		load_bycapacity_nosent = load_bycapacity_nosent,
 		table = results_table,
 		model_title = model_title,
 	)
@@ -707,7 +717,26 @@ function plot_active(config, data, results; add_title=true, columns=3, display=t
 	end
 end;
 
-function plot_load(config, data, results; display=true, save=true, subset=nothing, bedtype=:all)
+function plot_load(config, data, results; key_columns=3, display=true, save=true, subset=nothing, bedtype=:all, multiple_capacity=false)
+	if !multiple_capacity
+		return _plot_load(config, data, results; key_columns=key_columns, display=display, save=save, subset=subset, bedtype=bedtype, capacity_name=nothing)
+	end
+
+	C = size(data.capacity, 2)
+	_results_table = deepcopy(results.table)
+	for c in 1:C
+		cap_abbrev = data.capacity_names_abbrev[c]
+		cap_name = data.capacity_names_full[c]
+
+		_results_table[!,:load_sent] = results.load_bycapacity[:,:,c][:]
+		_results_table[!,:load_nosent] = results.load_bycapacity_nosent[:,:,c][:]
+		_results = merge(results, (table = _results_table,))
+
+		_plot_load(config, data, _results; key_columns=key_columns, display=display, save=save, subset=subset, bedtype=bedtype, capacity_name=cap_abbrev)
+	end
+end
+
+function _plot_load(config, data, results; key_columns=3, display=true, save=true, subset=nothing, bedtype=:all, capacity_name=nothing)
 	if subset == nothing
 		results_table = results.table
 		locations = data.locations
@@ -763,7 +792,7 @@ function plot_load(config, data, results; display=true, save=true, subset=nothin
 
 	## load key ##
 	load_key_labels = map(h_name -> length(h_name) > 53 ? strip(h_name[1:50])*"..." : h_name, locations)
-	load_key, load_key_h = make_key(load_key_labels, Scale.default_discrete_colors(nlocations), line_height=0.5cm, ncolumns=3, shape=:circle)
+	load_key, load_key_h = make_key(load_key_labels, Scale.default_discrete_colors(nlocations), line_height=0.6cm, ncolumns=key_columns, shape=:circle)
 
 	load_plts_withkey = compose(
 		context(0,0,1,1),
@@ -787,8 +816,11 @@ function plot_load(config, data, results; display=true, save=true, subset=nothin
 	if save
 		out_name = isnothing(subset) ? "load_bylocation" : "load_bylocation_subset"
 		out_name = (bedtype == :all) ? out_name : (bedtype == :icu ? out_name*"_icu" : (bedtype == :ward ? out_name*"_ward" : out_name))
+		out_name = isnothing(capacity_name) ? out_name : (out_name * "_" * capacity_name)
 		save_all(load_plts_withkey, 40cm, 14cm + load_key_h, out_name, config)
 	end
+
+	return
 end;
 
 function plot_sent_total(config, data, results; bedtype=:all, display=true, save=true)
