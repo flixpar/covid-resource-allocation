@@ -56,31 +56,24 @@ function add_title_top(title, _plot)
 	return plot, _totalsize
 end;
 
-function add_key_top(key, _plot)
-	_keyheight = 22px
-	_topmargin = 5px
-	_bottommargin = 15px
-	_totalsize = _topmargin + _keyheight + _bottommargin
-
+function add_key_top(key, _plot; topmargin=0px, bottommargin=10px, keyheight=22px)
+	totalsize = topmargin + keyheight + bottommargin
 	plot = compose(
 		context(0, 0, 1w, 1h),
-		compose(context(0, _topmargin, 1w, _keyheight), key),
-		compose(context(0, _totalsize, 1w, 1h - _totalsize), _plot),
+		compose(context(0, topmargin, 1w, keyheight), key),
+		compose(context(0, totalsize, 1w, 1h - totalsize), _plot),
 	)
-	return plot, _totalsize
+	return plot, totalsize
 end;
 
-function add_key_bottom(key, _plot)
-	_keyheight = 22px
-	_topmargin = 15px
-	_totalsize = _topmargin + _keyheight
-
+function add_key_bottom(key, _plot; topmargin=15px, keyheight=22px)
+	totalsize = topmargin + keyheight
 	plot = compose(
 		context(0, 0, 1w, 1h),
-		compose(context(0, 0, 1w, 1h - _totalsize), _plot),
-		compose(context(0, 1h - _keyheight, 1w, _keyheight), key),
+		compose(context(0, 0, 1w, 1h - totalsize), _plot),
+		compose(context(0, 1h - keyheight, 1w, keyheight), key),
 	)
-	return plot, _totalsize
+	return plot, totalsize
 end;
 
 function fill_background(_plot)
