@@ -371,12 +371,12 @@ function plot_estimates_total(config, data; bedtype=:all, display=true, save=tru
 	plt_active_computed = plot(
 		layer(x=data.date_range, y=sum(data.active, dims=1)[:], Geom.point, Geom.line, style(default_color=colors[1])),
 		layer(x=data.date_range, y=sum(active_computed, dims=1)[:], Geom.point, Geom.line, style(default_color=colors[2])),
-		Scale.y_continuous(format=:plain),
 		Guide.xlabel("Date"), Guide.ylabel("Active COVID Patients"), Guide.title("Total Active COVID Patients - Raw vs Computed"),
 		Guide.manual_color_key("", ["Data", "Computed"], colors[[1,2]], shape=[Shape.square], size=[1.6mm]),
 		Guide.xticks(ticks=DateTime(data.start_date):Day(14):DateTime(data.end_date)),
 		Scale.x_continuous(labels=x -> Dates.format(x, dateformat"mm-dd")),
 		Scale.y_continuous(format=:plain),
+		Coord.cartesian(ymin=0),
 		style(
 			key_position=:none,
 			minor_label_font_size=20px,
@@ -721,12 +721,14 @@ function plot_load(config, data, results; display=true, save=true, subset=nothin
 	## load plots ##
 	load_plot_max = 3.0
 	plt_nosent = Gadfly.plot(
-		results_table, x=:date, y=:load_nosent, color=:location,
-		Geom.line,
+		layer(
+			results_table, x=:date, y=:load_nosent, color=:location,
+			Geom.line,
+		),
 		Guide.xlabel("Date"), Guide.ylabel("Patient Load"),
 		Guide.title("COVID Patient Load in $(config.region) - Without Transfers"),
-		layer(ymin=[0.0], ymax=[1.0],           Geom.hband, alpha=[0.1], Theme(default_color="green"), order=-1),
-		layer(ymin=[1.0], ymax=[load_plot_max], Geom.hband, alpha=[0.1], Theme(default_color="red"),   order=-1),
+		layer(ymin=[0.0], ymax=[1.0],           Geom.hband, alpha=[0.1], style(default_color=colorant"green"), order=-1),
+		layer(ymin=[1.0], ymax=[load_plot_max], Geom.hband, alpha=[0.1], style(default_color=colorant"red"),   order=-1),
 		Coord.cartesian(xmin=data.start_date+Day(1), xmax=data.end_date-Day(1), ymin=0, ymax=load_plot_max),
 		Guide.xticks(ticks=DateTime(data.start_date):Day(14):DateTime(data.end_date)),
 		Scale.x_continuous(labels=x -> Dates.format(x, dateformat"mm-dd")),
@@ -739,12 +741,14 @@ function plot_load(config, data, results; display=true, save=true, subset=nothin
 		),
 	)
 	plt_sent = Gadfly.plot(
-		results_table, x=:date, y=:load_sent, color=:location,
-		Geom.line,
+		layer(
+			results_table, x=:date, y=:load_sent, color=:location,
+			Geom.line,
+		),
 		Guide.xlabel("Date"), Guide.ylabel("Patient Load"),
 		Guide.title("COVID Patient Load in $(config.region) - With Transfers"),
-		layer(ymin=[0.0], ymax=[1.0],           Geom.hband, alpha=[0.1], Theme(default_color="green"), order=-1),
-		layer(ymin=[1.0], ymax=[load_plot_max], Geom.hband, alpha=[0.1], Theme(default_color="red"),   order=-1),
+		layer(ymin=[0.0], ymax=[1.0],           Geom.hband, alpha=[0.1], style(default_color=colorant"green"), order=-1),
+		layer(ymin=[1.0], ymax=[load_plot_max], Geom.hband, alpha=[0.1], style(default_color=colorant"red"),   order=-1),
 		Coord.cartesian(xmin=data.start_date+Day(1), xmax=data.end_date-Day(1), ymin=0, ymax=load_plot_max),
 		Guide.xticks(ticks=DateTime(data.start_date):Day(14):DateTime(data.end_date)),
 		Scale.x_continuous(labels=x -> Dates.format(x, dateformat"mm-dd")),
