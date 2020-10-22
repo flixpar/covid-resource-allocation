@@ -383,7 +383,7 @@ function patient_surgelevel_loadbalance(
 		admitted_patients::Array{<:Real,2},
 		adj_matrix::BitArray{2}, los::Union{<:Distribution,Array{<:Real,1},Int};
 
-		capacity_cushion::Real=-1, capacity_weights::Array{<:Real,1}=Int[],
+		capacity_cushion::Real=-1,
 		no_artificial_overflow::Bool=false, no_worse_overflow::Bool=false,
 		sent_penalty::Real=0, smoothness_penalty::Real=0,
 
@@ -404,10 +404,6 @@ function patient_surgelevel_loadbalance(
 
 	if 0 < capacity_cushion < 1
 		capacity = capacity .* (1.0 - capacity_cushion)
-	end
-
-	if isempty(capacity_weights)
-		capacity_weights = ones(Int, C)
 	end
 
 	L = discretize_los(los, T)
@@ -451,7 +447,7 @@ function patient_surgelevel_loadbalance(
 	@expression(model, overflow[i=1:N,t=1:T,c=1:C], active_patients[i,t] - capacity[i,c])
 
 	# objective function
-	objective = @expression(model, dot(capacity_weights, sum(load_obj, dims=(1,2))))
+	objective = @expression(model, sum(load_obj))
 
 	######################
 	## Hard Constraints ##
