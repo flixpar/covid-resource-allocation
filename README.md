@@ -1,5 +1,7 @@
 # Resource Allocation for COVID19
 
+**Note: this project has moved to a new repository (https://github.com/flixpar/covid-patient-redistribution-site).**
+
 One of the primary dangers of the COVID-19 pandemic in the United States is its potential to overwhelm the healthcare system. Hospital beds, nurses, PPE, ventilators, and other resources are required to take care of people infected with COVID-19 who require hospitalization, yet these are limited resources and many hospitals are short on some or all of them. While hospitals are able to create some additional capacity by converting beds and re-using PPE, these methods are often insufficient or unsustainable.
 
 However, different areas are impacted with different severity, and experience their peaks in infected patients at different times. Therefore, while some hospitals are nearing capacity or running out of resources, other hospitals may have excess capacity or resources that they could share.
